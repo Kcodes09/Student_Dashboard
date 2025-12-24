@@ -6,8 +6,10 @@ type Session = {
   room: string
   courseCode: string
   section: string
-  instructors?: string[]
+  instructors: string[]
 }
+
+type SectionType = "LECTURE" | "TUTORIAL" | "PRACTICAL"
 
 export function generateStudentTT(
   courses: any[],
@@ -26,16 +28,15 @@ export function generateStudentTT(
     if (!selected) continue
 
     for (const section of course.sections) {
-      // Only include the selected section of that type
-      if (selected[section.type] !== section.section) continue
+      const type = section.type as SectionType
+
+      // 🔒 SAFETY CHECKS
+      if (!selected[type]) continue
+      if (selected[type] !== section.section) continue
 
       for (const s of section.sessions) {
         result.push({
-          day: s.day,
-          hour: s.hour, // IMPORTANT: number
-          startTime: s.startTime,
-          endTime: s.endTime,
-          room: s.room,
+          ...s,
           courseCode: course.courseCode,
           section: section.section,
           instructors: section.instructors,
