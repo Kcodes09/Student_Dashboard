@@ -19,9 +19,10 @@ export default function TimetableClient({ master }: { master: any[] }) {
   }>({})
 
   // Toggle course selection
-  const handleCourseSelect = (courseCode: string) => {
-    setActiveCourse(prev => (prev === courseCode ? null : courseCode))
-  }
+  const handleCourseSelect = (courseCode: string | null) => {
+  setActiveCourse(courseCode)
+}
+
 
   // Handle section selection
   const handleSectionSelect = (
@@ -76,6 +77,7 @@ export default function TimetableClient({ master }: { master: any[] }) {
   activeCourse={activeCourse}
   onSelect={handleCourseSelect}
 />
+
 
 
       {/* MIDDLE: Sections */}
