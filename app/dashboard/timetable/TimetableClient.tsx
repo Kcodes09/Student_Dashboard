@@ -31,28 +31,15 @@ export default function TimetableClient({ master }: { master: any[] }) {
 ) => {
   if (!activeCourse) return
 
-  setSelectedSections(prev => {
-    const courseSections = prev[activeCourse] ?? {}
-
-    // DESELECT
-    if (!section) {
-      const { [type]: _, ...rest } = courseSections
-      return {
-        ...prev,
-        [activeCourse]: rest,
-      }
-    }
-
-    // SELECT
-    return {
-      ...prev,
-      [activeCourse]: {
-        ...courseSections,
-        [type]: section,
-      },
-    }
-  })
+  setSelectedSections(prev => ({
+    ...prev,
+    [activeCourse]: {
+      ...prev[activeCourse],
+      [type]: section, // undefined = deselect
+    },
+  }))
 }
+
 
 
   // Ensure course has section bucket
@@ -70,12 +57,13 @@ export default function TimetableClient({ master }: { master: any[] }) {
   const sessions = generateStudentTT(master, selectedSections)
 
   return (
-    <div className="flex flex-1 overflow-hidden">
+    <div className="flex h-full overflow-auto">
       {/* LEFT: Courses */}
       <CourseSidebar
   courses={master}
   activeCourse={activeCourse}
-  onSelect={handleCourseSelect}
+  onSelect={handleCourseSelect} 
+
 />
 
 
@@ -90,9 +78,10 @@ export default function TimetableClient({ master }: { master: any[] }) {
       )}
 
       {/* RIGHT: Timetable */}
-      <main className="flex-1 p-6 overflow-auto">
-        <TimetableGrid sessions={sessions} />
-      </main>
+      <main className="flex-1 p-6 overflow-hidden">
+  <TimetableGrid sessions={sessions} />
+</main>
+
     </div>
   )
 }

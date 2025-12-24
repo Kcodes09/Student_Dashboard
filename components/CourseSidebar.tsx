@@ -65,7 +65,19 @@ export default function CourseSidebar({
 
   /* ---------------- RENDER ---------------- */
   return (
-    <aside className="w-80 border-r bg-[var(--bg-surface)] p-4 overflow-y-auto">
+
+    <aside
+  className="
+    w-80
+    shrink-0
+    border-r
+    bg-[var(--bg-surface)]
+    flex flex-col h-screen
+  "
+>
+
+
+
       {/* HEADER */}
       <div className="mb-3">
         <h2 className="text-sm font-semibold text-[var(--text-muted)]">
@@ -90,60 +102,76 @@ export default function CourseSidebar({
       />
 
       {/* SORT */}
-      <select
-        value={sortBy}
-        onChange={e => setSortBy(e.target.value as SortType)}
-        className="
-          mb-4 w-full rounded-md border
-          bg-[var(--bg-input)]
-          px-2 py-1 text-xs
-          text-[var(--text-primary)]
-        "
-      >
-        <option value="CODE_ASC">Code A–Z</option>
-        <option value="CODE_DESC">Code Z–A</option>
-        <option value="NAME">Name</option>
-        <option value="CREDITS">Credits</option>
-      </select>
+      <div className="relative mb-4">
+  <select
+    value={sortBy}
+    onChange={e => setSortBy(e.target.value as SortType)}
+    className="
+      w-full appearance-none
+      rounded-lg border
+      bg-[var(--bg-surface)]
+      px-3 py-2 pr-8
+      text-sm
+      text-[var(--text-primary)]
+      shadow-sm
+      transition
 
+      hover:bg-[var(--bg-surface-hover)]
+
+      focus:outline-none
+      focus:ring-2
+      focus:ring-[var(--bg-accent)]
+    "
+  >
+    <option value="CODE_ASC">Code A–Z</option>
+    <option value="CODE_DESC">Code Z–A</option>
+    <option value="NAME">Name</option>
+    <option value="CREDITS">Credits</option>
+  </select>
+
+  {/* Chevron */}
+  <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)]">
+    ▾
+  </span>
+</div>
+
+
+<div className="flex-1 overflow-y-auto pr-1 ">
       {/* COURSE LIST */}
       <div className="space-y-1">
-        {filteredCourses.map(course => {
-          const isActive = activeCourse === course.courseCode
+        {filteredCourses.map(course => (
+  <button
+    key={course.courseCode}   // ✅ REQUIRED HERE
+    onClick={() =>
+      onSelect(
+        activeCourse === course.courseCode
+          ? null
+          : course.courseCode
+      )
+    }
+    className={clsx(
+      "w-full rounded-lg px-3 py-2 text-left transition",
+      "hover:bg-[var(--bg-surface-hover)]",
+      activeCourse === course.courseCode &&
+        "bg-[var(--bg-selected)] border border-[var(--bg-accent)]"
+    )}
+  >
+    <div className="font-medium text-sm">
+      {course.courseCode}
+    </div>
+    <div className="truncate text-xs text-[var(--text-muted)]">
+      {course.courseTitle}
+    </div>
+  </button>
+))}
 
-          return (
-            <button
-  key={course.courseCode}
-  onClick={() =>
-    onSelect(
-      activeCourse === course.courseCode
-        ? null
-        : course.courseCode
-    )
-  }
-  className={clsx(
-    "w-full rounded-lg px-3 py-2 text-left transition",
-    "hover:bg-[var(--bg-hover)]",
-    activeCourse === course.courseCode &&
-      "bg-[var(--bg-selected)] ring-2 ring-[var(--bg-accent)]"
-  )}
->
-
-              <div className="font-medium text-sm">
-                {course.courseCode}
-              </div>
-              <div className="truncate text-xs text-[var(--text-muted)]">
-                {course.courseTitle}
-              </div>
-            </button>
-          )
-        })}
 
         {filteredCourses.length === 0 && (
           <p className="text-xs text-[var(--text-muted)]">
             No courses found
           </p>
         )}
+      </div>
       </div>
     </aside>
   )

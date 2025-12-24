@@ -2,14 +2,22 @@
 
 /* ---------- LIGHT MODE ---------- */
 html {
+  /* Backgrounds */
   --bg-main: rgb(243 244 246);            /* gray-100 */
   --bg-surface: rgb(255 255 255);         /* white */
-  --bg-surface-hover: rgb(249 250 251);   /* gray-50 */
-  --bg-navbar-hover: rgb(243 244 246);    /* gray-100 */
-  --bg-muted: rgb(229 231 235);
+  --bg-surface-hover: rgb(245 247 250);   /* softer than gray-50 */
+  --bg-navbar-hover: rgb(229 231 235);    /* gray-200 */
+  --bg-muted: rgb(229 231 235);           /* gray-200 */
+  --bg-selected: rgb(224 231 255);        /* indigo-100 */
+  --bg-accent: rgb(79 70 229);            /* indigo-600 */
 
-  --text-primary: rgb(17 24 39);
-  --text-muted: rgb(75 85 99);
+  /* Text */
+  --text-primary: rgb(17 24 39);          /* gray-900 */
+  --text-muted: rgb(107 114 128);         /* gray-500 */
+  --text-accent: rgb(79 70 229);          
+
+  /* Borders & dividers */
+  --border-subtle: rgb(229 231 235);      /* gray-200 */
 
   background-color: var(--bg-main);
   color: var(--text-primary);
@@ -17,18 +25,66 @@ html {
 
 /* ---------- DARK MODE ---------- */
 html.dark {
+  /* Backgrounds */
   --bg-main: rgb(3 7 18);                 /* gray-950 */
   --bg-surface: rgb(17 24 39);            /* gray-900 */
-  --bg-surface-hover: rgb(31 41 55);      /* gray-800 */
-  --bg-navbar-hover: rgb(31 41 55);       /* gray-800 */
-  --bg-muted: rgb(55 65 81);
+  --bg-surface-hover: rgb(30 41 59);      /* slate-800 */
+  --bg-navbar-hover: rgb(30 41 59);       
+  --bg-muted: rgb(51 65 85);              /* slate-700 */
+  --bg-selected: rgb(30 58 138);          /* indigo-900 */
+  --bg-accent: rgb(99 102 241);           /* indigo-500 */
 
-  --text-primary: rgb(243 244 246);
-  --text-muted: rgb(156 163 175);
+  /* Text */
+  --text-primary: rgb(243 244 246);       /* gray-100 */
+  --text-muted: rgb(148 163 184);         /* slate-400 */
+  --text-accent: rgb(129 140 248);        
+
+  /* Borders & dividers */
+  --border-subtle: rgb(51 65 85);          /* slate-700 */
 
   background-color: var(--bg-main);
   color: var(--text-primary);
 }
+* {
+  transition-property: background-color, color, border-color, transform;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+button:focus-visible {
+  outline: 2px solid var(--bg-accent);
+}
+/* ---------- COURSE SIDEBAR SCROLLBAR ---------- */
+aside::-webkit-scrollbar {
+  width: 8px;
+}
+
+aside::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background-color: var(--bg-muted);
+  border-radius: 9999px;
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-muted);
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+
+
+
+
+
 
 
 

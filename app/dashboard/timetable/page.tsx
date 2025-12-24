@@ -9,7 +9,9 @@ export default async function TimetablePage() {
   const session = await getServerSession(authOptions)
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="sticky top-0 bg-[var(--bg-surface)] ">
+
+      
       <Navbar user={session!.user} />
 
       <TimetableClient master={master} />

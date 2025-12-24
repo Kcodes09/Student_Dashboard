@@ -10,7 +10,8 @@ export default async function DashboardPage() {
   if (!session) redirect("/login")
 
   return (
-    <div className="min-h-screen bg-[var(--bg-main)]">
+    <div className="min-h-screen bg-[var(--bg-surface)] bg-[var(--bg-main)] ">
+
       <Navbar user={session.user} />
 
       <main className="p-6">
