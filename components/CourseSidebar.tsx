@@ -3,10 +3,16 @@
 import { useMemo, useState } from "react"
 import clsx from "clsx"
 
+type Course = {
+  courseCode: string
+  courseTitle: string
+  credits: number
+}
+
 type Props = {
-  courses: any[]
+  courses: Course[]
   activeCourse: string | null
-  onSelect: (courseCode: string) => void
+  setActiveCourse: (code: string | null) => void
 }
 
 type SortType = "CODE_ASC" | "CODE_DESC" | "NAME" | "CREDITS"
@@ -14,12 +20,15 @@ type SortType = "CODE_ASC" | "CODE_DESC" | "NAME" | "CREDITS"
 export default function CourseSidebar({
   courses,
   activeCourse,
-  onSelect,
+  setActiveCourse,
 }: Props) {
+  const [search, setSearch] = useState("")
   const [sortBy, setSortBy] = useState<SortType>("CODE_ASC")
 
+  /* ---------------- SORT ---------------- */
   const sortedCourses = useMemo(() => {
     const copy = [...courses]
+
     switch (sortBy) {
       case "CODE_ASC":
         return copy.sort((a, b) =>
@@ -40,51 +49,97 @@ export default function CourseSidebar({
     }
   }, [courses, sortBy])
 
+  /* ---------------- SEARCH ---------------- */
+  const filteredCourses = useMemo(() => {
+    if (!search.trim()) return sortedCourses
+
+    const q = search.toLowerCase()
+
+    return sortedCourses.filter(
+      c =>
+        c.courseCode.toLowerCase().includes(q) ||
+        c.courseTitle.toLowerCase().includes(q)
+    )
+  }, [sortedCourses, search])
+
+  /* ---------------- RENDER ---------------- */
   return (
     <aside className="w-80 border-r bg-[var(--bg-surface)] p-4 overflow-y-auto">
       {/* HEADER */}
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3">
         <h2 className="text-sm font-semibold text-[var(--text-muted)]">
           Courses
         </h2>
-
-        <select
-          value={sortBy}
-          onChange={e => setSortBy(e.target.value as SortType)}
-          className="rounded-md border px-2 py-1 text-xs"
-        >
-          <option value="CODE_ASC">Code A–Z</option>
-          <option value="CODE_DESC">Code Z–A</option>
-          <option value="NAME">Name</option>
-          <option value="CREDITS">Credits</option>
-        </select>
       </div>
+
+      {/* SEARCH */}
+      <input
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+        placeholder="Search course code or name"
+        className="
+          mb-3 w-full rounded-md border
+          bg-[var(--bg-input)]
+          px-3 py-2 text-sm
+          text-[var(--text-primary)]
+          placeholder:text-[var(--text-muted)]
+          focus:outline-none focus:ring-2
+          focus:ring-[var(--bg-accent)]
+        "
+      />
+
+      {/* SORT */}
+      <select
+        value={sortBy}
+        onChange={e => setSortBy(e.target.value as SortType)}
+        className="
+          mb-4 w-full rounded-md border
+          bg-[var(--bg-input)]
+          px-2 py-1 text-xs
+          text-[var(--text-primary)]
+        "
+      >
+        <option value="CODE_ASC">Code A–Z</option>
+        <option value="CODE_DESC">Code Z–A</option>
+        <option value="NAME">Name</option>
+        <option value="CREDITS">Credits</option>
+      </select>
 
       {/* COURSE LIST */}
       <div className="space-y-1">
-        {sortedCourses.map(c => {
-          const isActive = activeCourse === c.courseCode
+        {filteredCourses.map(course => {
+          const isActive = activeCourse === course.courseCode
 
           return (
             <button
-              key={c.courseCode}
-              onClick={() => onSelect(c.courseCode)}
+              key={course.courseCode}
+              onClick={() =>
+                setActiveCourse(
+                  isActive ? null : course.courseCode
+                )
+              }
               className={clsx(
                 "w-full rounded-lg px-3 py-2 text-left transition",
                 "hover:bg-[var(--bg-hover)]",
                 isActive &&
-                  "bg-[var(--bg-selected)] ring-1 ring-[var(--bg-accent)]"
+                  "bg-[var(--bg-selected)] ring-2 ring-[var(--bg-accent)]"
               )}
             >
               <div className="font-medium text-sm">
-                {c.courseCode}
+                {course.courseCode}
               </div>
               <div className="truncate text-xs text-[var(--text-muted)]">
-                {c.courseTitle}
+                {course.courseTitle}
               </div>
             </button>
           )
         })}
+
+        {filteredCourses.length === 0 && (
+          <p className="text-xs text-[var(--text-muted)]">
+            No courses found
+          </p>
+        )}
       </div>
     </aside>
   )
