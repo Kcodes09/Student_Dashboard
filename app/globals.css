@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* ---------- LIGHT MODE ---------- */
+html {
+  --bg-main: rgb(243 244 246);            /* gray-100 */
+  --bg-surface: rgb(255 255 255);         /* white */
+  --bg-surface-hover: rgb(249 250 251);   /* gray-50 */
+  --bg-navbar-hover: rgb(243 244 246);    /* gray-100 */
+  --bg-muted: rgb(229 231 235);
+
+  --text-primary: rgb(17 24 39);
+  --text-muted: rgb(75 85 99);
+
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+/* ---------- DARK MODE ---------- */
+html.dark {
+  --bg-main: rgb(3 7 18);                 /* gray-950 */
+  --bg-surface: rgb(17 24 39);            /* gray-900 */
+  --bg-surface-hover: rgb(31 41 55);      /* gray-800 */
+  --bg-navbar-hover: rgb(31 41 55);       /* gray-800 */
+  --bg-muted: rgb(55 65 81);
+
+  --text-primary: rgb(243 244 246);
+  --text-muted: rgb(156 163 175);
+
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+
+
+
+
