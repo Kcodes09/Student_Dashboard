@@ -12,15 +12,16 @@ type Course = {
 type Props = {
   courses: Course[]
   activeCourse: string | null
-  setActiveCourse: (code: string | null) => void
+  onSelect: (code: string | null) => void
 }
+
 
 type SortType = "CODE_ASC" | "CODE_DESC" | "NAME" | "CREDITS"
 
 export default function CourseSidebar({
   courses,
   activeCourse,
-  setActiveCourse,
+  onSelect,
 }: Props) {
   const [search, setSearch] = useState("")
   const [sortBy, setSortBy] = useState<SortType>("CODE_ASC")
@@ -112,19 +113,22 @@ export default function CourseSidebar({
 
           return (
             <button
-              key={course.courseCode}
-              onClick={() =>
-                setActiveCourse(
-                  isActive ? null : course.courseCode
-                )
-              }
-              className={clsx(
-                "w-full rounded-lg px-3 py-2 text-left transition",
-                "hover:bg-[var(--bg-hover)]",
-                isActive &&
-                  "bg-[var(--bg-selected)] ring-2 ring-[var(--bg-accent)]"
-              )}
-            >
+  key={course.courseCode}
+  onClick={() =>
+    onSelect(
+      activeCourse === course.courseCode
+        ? null
+        : course.courseCode
+    )
+  }
+  className={clsx(
+    "w-full rounded-lg px-3 py-2 text-left transition",
+    "hover:bg-[var(--bg-hover)]",
+    activeCourse === course.courseCode &&
+      "bg-[var(--bg-selected)] ring-2 ring-[var(--bg-accent)]"
+  )}
+>
+
               <div className="font-medium text-sm">
                 {course.courseCode}
               </div>
