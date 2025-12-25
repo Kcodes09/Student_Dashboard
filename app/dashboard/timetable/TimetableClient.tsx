@@ -5,6 +5,8 @@ import { useEffect, useState } from "react"
 import CourseSidebar from "@/components/CourseSidebar"
 import SectionSidebar from "@/components/SectionSidebar"
 import TimetableGrid from "@/components/TimetableGrid"
+
+import MobileTimetable from "@/components/MobileTimetable"
 import { generateStudentTT } from "../../lib/timetable/generateStudentTT"
 
 export default function TimetableClient({ master }: { master: any[] }) {
@@ -18,31 +20,28 @@ export default function TimetableClient({ master }: { master: any[] }) {
     }
   }>({})
 
-  // Toggle course selection
+  /* ---------- COURSE ---------- */
   const handleCourseSelect = (courseCode: string | null) => {
-  setActiveCourse(courseCode)
-}
+    setActiveCourse(courseCode)
+  }
 
-
-  // Handle section selection
+  /* ---------- SECTIONS ---------- */
   const handleSectionSelect = (
-  type: "LECTURE" | "TUTORIAL" | "PRACTICAL",
-  section?: string
-) => {
-  if (!activeCourse) return
+    type: "LECTURE" | "TUTORIAL" | "PRACTICAL",
+    section?: string
+  ) => {
+    if (!activeCourse) return
 
-  setSelectedSections(prev => ({
-    ...prev,
-    [activeCourse]: {
-      ...prev[activeCourse],
-      [type]: section, // undefined = deselect
-    },
-  }))
-}
+    setSelectedSections(prev => ({
+      ...prev,
+      [activeCourse]: {
+        ...prev[activeCourse],
+        [type]: section,
+      },
+    }))
+  }
 
-
-
-  // Ensure course has section bucket
+  /* ---------- ENSURE BUCKET ---------- */
   useEffect(() => {
     if (!activeCourse) return
 
@@ -57,33 +56,39 @@ export default function TimetableClient({ master }: { master: any[] }) {
   const sessions = generateStudentTT(master, selectedSections)
 
   return (
-    <div className="flex h-full overflow-auto">
-      {/* LEFT: Courses */}
-      <CourseSidebar
-  courses={master}
-  activeCourse={activeCourse}
-  onSelect={handleCourseSelect} 
-
-/>
-
-
-
-      {/* MIDDLE: Sections */}
-      {activeCourse && (
-        <SectionSidebar
-          course={master.find(c => c.courseCode === activeCourse)}
-          selected={selectedSections[activeCourse]}
-          onSelect={handleSectionSelect}
+    <div className="flex h-screen flex-col md:flex-row overflow-hidden">
+      {/* COURSE SIDEBAR */}
+      <div className="md:block">
+        <CourseSidebar
+          courses={master}
+          activeCourse={activeCourse}
+          onSelect={handleCourseSelect}
         />
+      </div>
+
+      {/* SECTION SIDEBAR (Desktop only) */}
+      {activeCourse && (
+        <div className="hidden md:block">
+          <SectionSidebar
+            course={master.find(c => c.courseCode === activeCourse)}
+            selected={selectedSections[activeCourse]}
+            onSelect={handleSectionSelect}
+          />
+        </div>
       )}
 
-      {/* RIGHT: Timetable */}
-      <main className="flex-1 p-6 overflow-hidden">
-  <TimetableGrid sessions={sessions} />
-</main>
+      {/* TIMETABLE */}
+      <main className="flex-1 overflow-hidden bg-[var(--bg-main)]">
+        {/* MOBILE VIEW */}
+        <div className="md:hidden">
+          <MobileTimetable sessions={sessions} />
+        </div>
 
+        {/* DESKTOP VIEW */}
+        <div className="hidden md:block h-full p-4 overflow-auto">
+          <TimetableGrid sessions={sessions} />
+        </div>
+      </main>
     </div>
   )
 }
-
-
