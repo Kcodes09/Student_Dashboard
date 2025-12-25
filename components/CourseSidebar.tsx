@@ -27,32 +27,31 @@ export default function CourseSidebar({
 
   /* ---------- SORT ---------- */
   const sortedCourses = useMemo(() => {
-    const copy = [...courses]
+    const list = [...courses]
 
     switch (sortBy) {
       case "CODE_ASC":
-        return copy.sort((a, b) =>
+        return list.sort((a, b) =>
           a.courseCode.localeCompare(b.courseCode)
         )
       case "CODE_DESC":
-        return copy.sort((a, b) =>
+        return list.sort((a, b) =>
           b.courseCode.localeCompare(a.courseCode)
         )
       case "NAME":
-        return copy.sort((a, b) =>
+        return list.sort((a, b) =>
           a.courseTitle.localeCompare(b.courseTitle)
         )
       case "CREDITS":
-        return copy.sort((a, b) => b.credits - a.credits)
+        return list.sort((a, b) => b.credits - a.credits)
       default:
-        return copy
+        return list
     }
   }, [courses, sortBy])
 
   /* ---------- SEARCH ---------- */
   const filteredCourses = useMemo(() => {
     if (!search.trim()) return sortedCourses
-
     const q = search.toLowerCase()
 
     return sortedCourses.filter(
@@ -66,22 +65,22 @@ export default function CourseSidebar({
     <aside
       className="
         w-full md:w-80
+        h-screen
         shrink-0
         border-r
         bg-[var(--bg-surface)]
         flex flex-col
-        h-screen
       "
     >
       {/* HEADER */}
-      <div className="px-4 pt-4 pb-2">
+      <div className="px-4 pt-4 pb-2 shrink-0">
         <h2 className="text-sm font-semibold text-[var(--text-muted)]">
           Courses
         </h2>
       </div>
 
       {/* SEARCH */}
-      <div className="px-4">
+      <div className="px-4 shrink-0">
         <input
           value={search}
           onChange={e => setSearch(e.target.value)}
@@ -100,7 +99,7 @@ export default function CourseSidebar({
       </div>
 
       {/* SORT */}
-      <div className="relative px-4 mb-3">
+      <div className="relative px-4 mb-3 shrink-0">
         <select
           value={sortBy}
           onChange={e => setSortBy(e.target.value as SortType)}
@@ -130,7 +129,7 @@ export default function CourseSidebar({
         </span>
       </div>
 
-      {/* COURSE LIST (SCROLLS) */}
+      {/* COURSE LIST (ONLY THIS SCROLLS) */}
       <div className="flex-1 overflow-y-auto px-4 pb-4">
         <div className="space-y-1">
           {filteredCourses.map(course => (
