@@ -60,6 +60,41 @@ export default function TimetableClient({ master }: { master: any[] }) {
       }))
     }
   }, [activeCourse])
+  useEffect(() => {
+  fetch("/api/timetable/load")
+    .then(res => res.json())
+    .then(data => {
+      if (data.selectedSections) {
+        setSelectedSections(data.selectedSections)
+      }
+    })
+}, [])
+
+const handleSave = async () => {
+  await fetch("/api/timetable/save", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(selectedSections),
+  })
+
+  alert("Timetable saved successfully")
+}
+useEffect(() => {
+  async function loadSavedTT() {
+    const res = await fetch("/api/timetable/load")
+    const saved = await res.json()
+
+    if (saved && Object.keys(saved).length > 0) {
+      setSelectedSections(saved)
+      setActiveCourse(Object.keys(saved)[0] ?? null)
+    }
+  }
+
+  loadSavedTT()
+}, [])
+
+
+
 
   const sessions = generateStudentTT(master, selectedSections)
 
@@ -93,6 +128,16 @@ export default function TimetableClient({ master }: { master: any[] }) {
   >
     Timetable
   </button>
+  <div className="hidden md:flex justify-end p-4">
+  <button
+    onClick={handleSave}
+    className="rounded-md bg-[var(--bg-accent)] px-4 py-2 text-sm text-white hover:opacity-90"
+  >
+    Save Timetable
+  </button>
+</div>
+
+
 </div>
 
 
@@ -147,6 +192,16 @@ export default function TimetableClient({ master }: { master: any[] }) {
         )}
 
         <main className="flex-1 p-6 overflow-hidden">
+          <div className="hidden md:flex justify-end p-4">
+  <button
+    onClick={handleSave}
+    className="rounded-md bg-[var(--bg-accent)] px-4 py-2 text-sm text-white hover:opacity-90"
+  >
+    Save Timetable
+  </button>
+</div>
+
+
           <TimetableGrid sessions={sessions} />
         </main>
       </div>

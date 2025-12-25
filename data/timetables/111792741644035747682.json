@@ -1,0 +1,27 @@
+{
+  "CHEM F241": {
+    "LECTURE": "L1",
+    "TUTORIAL": "T1"
+  },
+  "CHEM F242": {
+    "PRACTICAL": "P1"
+  },
+  "CHEM F243": {
+    "LECTURE": "L1",
+    "TUTORIAL": "T1"
+  },
+  "CHEM F244": {
+    "TUTORIAL": "T1",
+    "LECTURE": "L1"
+  },
+  "BITS F225": {
+    "LECTURE": "L1"
+  },
+  "CHEM F329": {
+    "LECTURE": "L1",
+    "PRACTICAL": "P1"
+  },
+  "HSS F235": {
+    "LECTURE": "L1"
+  }
+}

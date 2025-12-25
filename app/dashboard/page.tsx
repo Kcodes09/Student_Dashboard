@@ -29,7 +29,7 @@ export default async function DashboardPage() {
           <DashboardCard
             title="Exam Planner"
             description="Plan upcoming exams & deadlines"
-            href="/dashboard/planner"
+            href="/dashboard/exams"
           />
 
           <DashboardCard
