@@ -11,6 +11,7 @@ import { generateStudentTT } from "../../lib/timetable/generateStudentTT"
 
 export default function TimetableClient({ master }: { master: any[] }) {
   const [activeCourse, setActiveCourse] = useState<string | null>(null)
+  const [courseSearch, setCourseSearch] = useState("")
 
   const [mobileView, setMobileView] =
     useState<"TIMETABLE" | "COURSES" | "SECTIONS">("TIMETABLE")
@@ -106,10 +107,13 @@ export default function TimetableClient({ master }: { master: any[] }) {
 
           {mobileView === "COURSES" && (
             <CourseSidebar
-              courses={master}
-              activeCourse={activeCourse}
-              onSelect={handleCourseSelect}
-            />
+  courses={master}
+  activeCourse={activeCourse}
+  onSelect={handleCourseSelect}
+  search={courseSearch}
+  setSearch={setCourseSearch}
+/>
+
           )}
 
           {mobileView === "SECTIONS" && activeCourse && (
@@ -126,10 +130,13 @@ export default function TimetableClient({ master }: { master: any[] }) {
       {/* ================= DESKTOP ================= */}
       <div className="hidden md:flex h-full">
         <CourseSidebar
-          courses={master}
-          activeCourse={activeCourse}
-          onSelect={handleCourseSelect}
-        />
+  courses={master}
+  activeCourse={activeCourse}
+  onSelect={handleCourseSelect}
+  search={courseSearch}
+  setSearch={setCourseSearch}
+/>
+
 
         {activeCourse && (
           <SectionSidebar

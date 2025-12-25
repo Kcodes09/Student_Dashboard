@@ -59,10 +59,15 @@ export default function MobileTimetable({
   }, [dayClashes, playAlert])
 
   /* ---------- NORMAL SESSIONS ---------- */
-  const daySessions = useMemo(
-    () => sessions.filter(s => s.day === activeDay),
-    [sessions, activeDay]
-  )
+  const daySessions = useMemo(() => {
+  return sessions
+    .filter(s => s.day === activeDay)
+    .sort((a, b) => {
+      if (a.hour !== b.hour) return a.hour - b.hour
+      return a.startTime.localeCompare(b.startTime)
+    })
+}, [sessions, activeDay])
+
 
   return (
     <div className="h-full flex flex-col">

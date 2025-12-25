@@ -13,16 +13,20 @@ type Props = {
   courses: Course[]
   activeCourse: string | null
   onSelect: (code: string | null) => void
+
+  search: string
+  setSearch: (v: string) => void
 }
+
 
 type SortType = "CODE_ASC" | "CODE_DESC" | "NAME" | "CREDITS"
 
 export default function CourseSidebar({
   courses,
   activeCourse,
-  onSelect,
+  onSelect, search="", setSearch
 }: Props) {
-  const [search, setSearch] = useState("")
+  
   const [sortBy, setSortBy] = useState<SortType>("CODE_ASC")
 
   /* ---------- SORT ---------- */
