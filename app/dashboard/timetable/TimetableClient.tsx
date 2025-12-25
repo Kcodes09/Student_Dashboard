@@ -11,6 +11,10 @@ import { generateStudentTT } from "../../lib/timetable/generateStudentTT"
 
 export default function TimetableClient({ master }: { master: any[] }) {
   const [activeCourse, setActiveCourse] = useState<string | null>(null)
+  const [showCourses, setShowCourses] = useState(true)
+
+  const [mobileView, setMobileView] =
+  useState<"COURSES" | "SECTIONS">("COURSES")
 
   const [selectedSections, setSelectedSections] = useState<{
     [courseCode: string]: {
@@ -21,9 +25,16 @@ export default function TimetableClient({ master }: { master: any[] }) {
   }>({})
 
   /* ---------- COURSE ---------- */
-  const handleCourseSelect = (courseCode: string | null) => {
-    setActiveCourse(courseCode)
+ const handleCourseSelect = (courseCode: string | null) => {
+  setActiveCourse(courseCode)
+  setShowCourses(false) // hide course list on mobile
+
+
+  // 📱 On mobile, open section sidebar full screen
+  if (courseCode) {
+    setMobileView("SECTIONS")
   }
+}
 
   /* ---------- SECTIONS ---------- */
   const handleSectionSelect = (
@@ -56,39 +67,51 @@ export default function TimetableClient({ master }: { master: any[] }) {
   const sessions = generateStudentTT(master, selectedSections)
 
   return (
-    <div className="flex h-screen flex-col md:flex-row overflow-hidden">
-      {/* COURSE SIDEBAR */}
-      <div className="md:block">
+  <div className="h-dvh w-full overflow-hidden">  
+    {/* ---------- MOBILE ---------- */}
+    <div className="md:hidden h-full overflow-hidden">
+      {mobileView === "COURSES" && (
         <CourseSidebar
           courses={master}
           activeCourse={activeCourse}
           onSelect={handleCourseSelect}
         />
-      </div>
-
-      {/* SECTION SIDEBAR (Desktop only) */}
-      {activeCourse && (
-        <div className="hidden md:block">
-          <SectionSidebar
-            course={master.find(c => c.courseCode === activeCourse)}
-            selected={selectedSections[activeCourse]}
-            onSelect={handleSectionSelect}
-          />
-        </div>
       )}
 
-      {/* TIMETABLE */}
-      <main className="flex-1 overflow-hidden bg-[var(--bg-main)]">
-        {/* MOBILE VIEW */}
-        <div className="md:hidden">
-          <MobileTimetable sessions={sessions} />
-        </div>
+      {mobileView === "SECTIONS" && activeCourse && (
+        
 
-        {/* DESKTOP VIEW */}
-        <div className="hidden md:block h-full p-4 overflow-auto">
-          <TimetableGrid sessions={sessions} />
-        </div>
+        <SectionSidebar
+          course={master.find(c => c.courseCode === activeCourse)}
+          selected={selectedSections[activeCourse]}
+          onSelect={handleSectionSelect}
+          onBack={() => setMobileView("COURSES")}   // 👈 NEW
+        />
+
+      )}
+    </div>
+
+    {/* ---------- DESKTOP ---------- */}
+    <div className="hidden md:flex h-full">
+      <CourseSidebar
+        courses={master}
+        activeCourse={activeCourse}
+        onSelect={handleCourseSelect}
+      />
+
+      {activeCourse && (
+        <SectionSidebar
+          course={master.find(c => c.courseCode === activeCourse)}
+          selected={selectedSections[activeCourse]}
+          onSelect={handleSectionSelect}
+        />
+      )}
+
+      <main className="flex-1 p-6 overflow-hidden">
+        <TimetableGrid sessions={sessions} />
       </main>
     </div>
-  )
+  </div>
+)
+
 }

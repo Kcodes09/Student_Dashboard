@@ -42,24 +42,22 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
   }, [sessions])
 
   /* ---------- CLASH CHECK ---------- */
-  const hasClash = useMemo(() => {
-    return Array.from(clashMap.values()).some(cell => cell.length > 1)
-  }, [clashMap])
+  const hasClash = useMemo(
+    () => Array.from(clashMap.values()).some(cell => cell.length > 1),
+    [clashMap]
+  )
 
-  /* ---------- SOUND (ONLY ON NEW CLASH) ---------- */
+  /* ---------- ALERT SOUND ---------- */
   useEffect(() => {
     if (hasClash && !hasAlertedRef.current) {
       playAlert()
       hasAlertedRef.current = true
     }
-
-    if (!hasClash) {
-      hasAlertedRef.current = false
-    }
+    if (!hasClash) hasAlertedRef.current = false
   }, [hasClash, playAlert])
 
   return (
-    <div className="relative">
+    <div className="relative h-full">
       {/* CLASH WARNING */}
       {hasClash && (
         <div className="mb-2 rounded-md border border-red-500 bg-red-50 px-3 py-1 text-xs text-red-700 animate-shake">
@@ -67,69 +65,97 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
         </div>
       )}
 
-      <div className="grid grid-cols-[70px_repeat(6,1fr)] gap-px bg-border">
-        {/* HEADER */}
-        <div />
-        {DAYS.map(d => (
-          <div
-            key={d}
-            className="bg-[var(--bg-surface)] py-1 text-center text-xs font-semibold"
-          >
-            {d}
-          </div>
-        ))}
+      {/* MOBILE SCROLL CONTAINER */}
+      <div className="relative h-full overflow-x-auto">
+        <div
+          className="
+            grid
+            min-w-[650px]   /* 👈 enables horizontal scroll on mobile */
+            grid-cols-[70px_repeat(6,1fr)]
+            gap-px
+            bg-border
+          "
+        >
+          {/* HEADER */}
+          <div className="sticky top-0 left-0 z-30 bg-[var(--bg-surface)]" />
 
-        {/* GRID */}
-        {HOURS.map(hour => (
-          <React.Fragment key={hour}>
-            {/* TIME LABEL */}
-            <div className="bg-[var(--bg-surface)] py-1 px-1 text-[10px] font-medium text-center">
-              {HOUR_LABEL[hour]}
+          {DAYS.map(d => (
+            <div
+              key={d}
+              className="
+                sticky top-0 z-20
+                bg-[var(--bg-surface)]
+                py-1
+                text-center
+                text-xs font-semibold
+                border-b
+              "
+            >
+              {d}
             </div>
+          ))}
 
-            {DAYS.map(day => {
-              const key = `${day}-${hour}`
-              const cell = clashMap.get(key) ?? []
-              const isClash = cell.length > 1
+          {/* GRID */}
+          {HOURS.map(hour => (
+            <React.Fragment key={hour}>
+              {/* TIME LABEL (STICKY) */}
+              <div
+                className="
+                  sticky left-0 z-20
+                  bg-[var(--bg-surface)]
+                  py-1 px-1
+                  text-[10px] font-medium
+                  text-center
+                  border-r
+                "
+              >
+                {HOUR_LABEL[hour]}
+              </div>
 
-              return (
-                <div
-                  key={key}
-                  className={clsx(
-                    "relative min-h-[65px] border bg-[var(--bg-surface)] p-1 transition",
-                    isClash &&
-                      "ring-2 ring-red-500 bg-red-100 animate-pulse"
-                  )}
-                >
-                  {/* 🚫 DO NOT RENDER CLASHED CELLS */}
-                  {!isClash &&
-                    cell.map(s => (
-                      <div
-                        key={`${s.courseCode}-${s.section}-${s.day}-${s.hour}`}
-                        className={clsx(
-                          "rounded-md p-1 text-[10px] shadow-sm transition",
-                          "hover:scale-[1.02]",
-                          getCourseColor(s.courseCode)
-                        )}
-                      >
-                        <div className="font-semibold leading-tight">
-                          {s.courseCode}
+              {DAYS.map(day => {
+                const key = `${day}-${hour}`
+                const cell = clashMap.get(key) ?? []
+                const isClash = cell.length > 1
+
+                return (
+                  <div
+                    key={key}
+                    className={clsx(
+                      "relative min-h-[65px] border bg-[var(--bg-surface)] p-1 transition",
+                      isClash &&
+                        "ring-2 ring-red-500 bg-red-100 animate-pulse"
+                    )}
+                  >
+                    {/* 🚫 BLOCK CLASHED SESSIONS */}
+                    {!isClash &&
+                      cell.map(s => (
+                        <div
+                          key={`${s.courseCode}-${s.section}-${s.day}-${s.hour}`}
+                          className={clsx(
+                            "rounded-md p-1 text-[10px] shadow-sm transition",
+                            "hover:scale-[1.02]",
+                            getCourseColor(s.courseCode)
+                          )}
+                        >
+                          <div className="font-semibold leading-tight">
+                            {s.courseCode}
+                          </div>
+
+                          <div className="text-[9px] leading-tight">
+                            {s.startTime} – {s.endTime}
+                          </div>
+
+                          <div className="text-[9px] opacity-80 truncate">
+                            {s.room}
+                          </div>
                         </div>
-
-                        <div className="text-[9px] leading-tight">
-                          {s.startTime} – {s.endTime}
-                        </div>
-
-                        <div className="text-[9px] opacity-80 truncate">
-                          {s.room}
-                        </div>
-                      </div>
-                    ))}
-                </div>
-              )
-            })}
-          </React.Fragment>
-        ))}
+                      ))}
+                  </div>
+                )
+              })}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </div>
   )
