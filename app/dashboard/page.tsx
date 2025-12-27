@@ -1,5 +1,6 @@
 import { getServerSession } from "next-auth"
-import { authOptions } from "../api/auth/[...nextauth]/route"
+import { authOptions } from "@/app/lib/auth"
+
 import { redirect } from "next/navigation"
 import Navbar from "../components/Navbar"
 import DashboardCard from "../components/DashboardCard"

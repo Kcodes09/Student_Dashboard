@@ -1,7 +1,8 @@
 import Navbar from "@/app/components/Navbar"
 import { prisma } from "@/lib/prisma"
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+import { authOptions } from "@/app/lib/auth"
+
 
 import officialExams from "@/lib/data/exams_normalized.json"
 import academicCalendar from "@/lib/data/academic_calendar.json"
