@@ -60,25 +60,27 @@ export default function TimetableClient({ master }: { master: any[] }) {
       }))
     }
   }, [activeCourse])
-  useEffect(() => {
-  fetch("/api/timetable/load")
-    .then(res => res.json())
-    .then(data => {
-      if (data.selectedSections) {
-        setSelectedSections(data.selectedSections)
-      }
-    })
-}, [])
-
+  
 const handleSave = async () => {
-  await fetch("/api/timetable/save", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(selectedSections),
-  })
+  try {
+    const res = await fetch("/api/timetable/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(selectedSections),
+    })
 
-  alert("Timetable saved successfully")
+    if (!res.ok) {
+      const err = await res.text()
+      throw new Error(err)
+    }
+
+    alert("Timetable saved successfully")
+  } catch (err) {
+    console.error("Save timetable failed:", err)
+    alert("Failed to save timetable. Please try again.")
+  }
 }
+
 useEffect(() => {
   async function loadSavedTT() {
     const res = await fetch("/api/timetable/load")
@@ -92,6 +94,7 @@ useEffect(() => {
 
   loadSavedTT()
 }, [])
+
 
 
 

@@ -4,6 +4,7 @@ import { redirect } from "next/navigation"
 import Navbar from "../components/Navbar"
 import DashboardCard from "../components/DashboardCard"
 
+
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions)
 
@@ -42,6 +43,12 @@ export default async function DashboardPage() {
             title="Timetable"
             description="View classes, mark attendance & plan skips"
             href="/dashboard/timetable"
+          />
+
+          <DashboardCard
+            title="Calendar"
+            description="View classes, exams, and holidays in a monthly calendar"
+            href="/dashboard/calendar"
           />
 
         </div>

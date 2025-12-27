@@ -1,0 +1,595 @@
+{
+  "year": 2026,
+  "days": [
+    {
+      "date": "2026-01-04",
+      "label": "Registration for all students",
+      "holiday": false
+    },
+    {
+      "date": "2026-01-04",
+      "label": "Registration for Practice School II",
+      "holiday": false
+    },
+    {
+      "date": "2026-01-04",
+      "label": "Practice School II begins",
+      "holiday": false
+    },
+    {
+      "date": "2026-01-05",
+      "label": "Classwork begins",
+      "holiday": false
+    },
+    {
+      "date": "2026-01-13",
+      "label": "Makar Sakranti (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-01-20",
+      "label": "Last day for substitution of courses",
+      "holiday": false
+    },
+    {
+      "date": "2026-01-25",
+      "label": "Republic Day (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-02-14",
+      "label": "Maha Shivratri (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-02-19",
+      "label": "PEARL - 2026 (Class work suspended)(H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-02-20",
+      "label": "PEARL - 2026 (Class work suspended)(H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-02-21",
+      "label": "PEARL - 2026 (Class work suspended)(H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-03-03",
+      "label": "Holi (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-03-08",
+      "label": "Mid Semester Exams (Class work suspended)",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-09",
+      "label": "Mid Semester Exams (Class work suspended)",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-10",
+      "label": "Mid Semester Exams (Class work suspended)",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-11",
+      "label": "Mid Semester Exams (Class work suspended)",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-12",
+      "label": "Mid Semester Exams (Class work suspended)",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-13",
+      "label": "Mid Semester Exams (Class work suspended)",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-18",
+      "label": "Ugadi (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-03-19",
+      "label": "Last day for withdrawal from courses",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-20",
+      "label": "Id-ul-Fitr* (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-03-23",
+      "label": "Last day of returning evaluated answer scripts of Mid- Semester Test",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-25",
+      "label": "Ram Navami",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-26",
+      "label": "Last day of Mid-Semester grading",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-26",
+      "label": "ARENA-2026",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-27",
+      "label": "ARENA-2026",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-28",
+      "label": "ARENA-2026",
+      "holiday": false
+    },
+    {
+      "date": "2026-03-30",
+      "label": "Mahavir Jayanti (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-04-02",
+      "label": "Good Friday (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-04-13",
+      "label": "Ambedkar Jayanti (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-04-21",
+      "label": "Registration for Practice School I",
+      "holiday": false
+    },
+    {
+      "date": "2026-04-27",
+      "label": "Last day of Pre-comprehensive marks display",
+      "holiday": false
+    },
+    {
+      "date": "2026-04-28",
+      "label": "Last day for class work",
+      "holiday": false
+    },
+    {
+      "date": "2026-04-30",
+      "label": "Budhha Purnima (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-01",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-02",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-03",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-04",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-05",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-06",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-07",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-08",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-09",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-10",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-11",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-12",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-13",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-14",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-15",
+      "label": "Comprehensive Examination",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-18",
+      "label": "Second Semester ends",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-17",
+      "label": "Test/Interview for I Semester 2026-27 Ph.D. Admissions",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-18",
+      "label": "Test/Interview for I Semester 2026-27 Ph.D. Admissions",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-20",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-21",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-22",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-23",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-24",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-25",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-26",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-27",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-28",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-29",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-30",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-31",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-01",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-02",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-03",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-04",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-05",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-06",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-07",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-08",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-09",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-10",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-11",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-12",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-13",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-14",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-15",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-16",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-17",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-18",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-19",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-20",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-21",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-22",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-23",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-24",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-25",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-26",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-27",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-28",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-29",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-06-30",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-01",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-02",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-03",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-04",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-05",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-06",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-07",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-08",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-09",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-10",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-11",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-12",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-13",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-14",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-15",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-16",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-17",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-07-18",
+      "label": "Summer Vacation (H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-20",
+      "label": "Summer Term begins",
+      "holiday": false
+    },
+    {
+      "date": "2026-05-25",
+      "label": "Id-ul-Zuha*(H)",
+      "holiday": true
+    },
+    {
+      "date": "2026-05-24",
+      "label": "Practice School I begins",
+      "holiday": false
+    },
+    {
+      "date": "2026-06-18",
+      "label": "Practice School II ends",
+      "holiday": false
+    },
+    {
+      "date": "2026-07-17",
+      "label": "Practice School I Ends",
+      "holiday": false
+    },
+    {
+      "date": "2026-07-18",
+      "label": "Summer term ends",
+      "holiday": false
+    }
+  ]
+}

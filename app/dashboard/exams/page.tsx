@@ -1,77 +1,144 @@
-"use client"
+import Navbar from "@/app/components/Navbar"
+import { prisma } from "@/lib/prisma"
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 
-import { useEffect, useMemo, useState } from "react"
+import officialExams from "@/lib/data/exams_normalized.json"
+import academicCalendar from "@/lib/data/academic_calendar.json"
 
-type Exam = {
+import ExamsClient from "./ExamsClient"
+
+type ExamItem = {
+  id?: string
   courseCode: string
-  courseTitle: string
-  type: "MIDSEM" | "ENDSEM"
-  date: string
+  courseTitle?: string
+  type: string
+  date: string // DD/MM
   startTime: string
   endTime: string
 }
 
-function parseExamDate(date: string, time: string) {
-  const [d, m] = date.trim().split("/").map(Number)
-  const [h, min] = time.trim().split(":").map(Number)
-  return new Date(2024, m - 1, d, h, min).getTime()
+/* ---------- MIDSEM DATE FROM ACADEMIC CALENDAR ---------- */
+
+function getFirstMidsemDate(calendar: {
+  year: number
+  days: { date: string; label?: string }[]
+}) {
+  const midsemDays = calendar.days.filter(
+    d => d.label === "MIDSEM"
+  )
+
+  if (midsemDays.length === 0) return null
+
+  return new Date(
+    Math.min(
+      ...midsemDays.map(d =>
+        new Date(d.date).getTime()
+      )
+    )
+  )
 }
 
-export default function ExamPlanner() {
-  const [exams, setExams] = useState<Exam[]>([])
-  const [loading, setLoading] = useState(true)
+export default async function ExamsPage() {
+  const session = await getServerSession(authOptions)
+  if (!session?.user?.email) return null
 
-  useEffect(() => {
-    fetch("/api/exams")
-      .then(res => res.json())
-      .then(data => {
-        setExams(Array.isArray(data) ? data : [])
-        setLoading(false)
-      })
-      .catch(() => setLoading(false))
-  }, [])
+  /* ---------- SELECTED COURSES ---------- */
 
-  const sortedExams = useMemo(() => {
-    return [...exams].sort(
-      (a, b) =>
-        parseExamDate(a.date, a.startTime) -
-        parseExamDate(b.date, b.startTime)
-    )
-  }, [exams])
+  const tt = await prisma.timetable.findUnique({
+    where: { userEmail: session.user.email },
+  })
 
-  if (loading) return <p className="p-6">Loading exams…</p>
-  if (sortedExams.length === 0)
-    return <p className="p-6 text-sm">No exams scheduled</p>
+  const selectedCourses = tt
+    ? Object.keys(tt.data as Record<string, any>)
+    : []
+
+  /* ---------- USER-ADDED EXAMS ---------- */
+
+  const userExams = await prisma.exam.findMany({
+    where: { userEmail: session.user.email },
+  })
+
+  const normalizedUser: ExamItem[] = userExams.map(e => ({
+    id: e.id,
+    courseCode: e.courseCode,
+    courseTitle: e.courseTitle,
+    type: e.type,
+    date: `${e.date
+      .getDate()
+      .toString()
+      .padStart(2, "0")}/${(e.date.getMonth() + 1)
+      .toString()
+      .padStart(2, "0")}`,
+    startTime: e.startTime,
+    endTime: e.endTime,
+  }))
+
+  /* ---------- OFFICIAL EXAMS ---------- */
+
+  const official: ExamItem[] = (officialExams as ExamItem[])
+    .filter(e => selectedCourses.includes(e.courseCode))
+
+  /* ---------- MERGE ALL EXAMS ---------- */
+
+  const allExams: ExamItem[] = [
+    ...official,
+    ...normalizedUser,
+  ]
+
+  /* ---------- MIDSEM BOUNDARY ---------- */
+
+  const firstMidsemDate = getFirstMidsemDate(
+    academicCalendar
+  )
+
+  const toDate = (d: string) => {
+    const [day, month] = d.split("/").map(Number)
+    return new Date(academicCalendar.year, month - 1, day)
+  }
+
+  /* ---------- SPLIT USING CALENDAR ---------- */
+
+  const midsems = allExams.filter(
+    e => e.type === "MIDSEM"
+  )
+
+  const endsems = allExams.filter(
+    e => e.type === "ENDSEM"
+  )
+
+  const evaluations = allExams.filter(
+    e => e.type !== "MIDSEM" && e.type !== "ENDSEM"
+  )
+
+  const beforeMidsem = evaluations.filter(e =>
+    firstMidsemDate
+      ? toDate(e.date) < firstMidsemDate
+      : true
+  )
+
+  const afterMidsem = evaluations.filter(e =>
+    firstMidsemDate
+      ? toDate(e.date) >= firstMidsemDate
+      : false
+  )
 
   return (
-    <div className="p-6 space-y-6">
-      <h1 className="text-lg font-semibold">Exam Planner</h1>
+    <>
+      <Navbar user={{ email: session.user.email }} />
 
-      {(["MIDSEM", "ENDSEM"] as const).map(type => {
-        const list = sortedExams.filter(e => e.type === type)
-        if (list.length === 0) return null
+      <main className="p-4 max-w-4xl mx-auto">
+        <h1 className="mb-6 text-xl font-semibold">
+          Exams Schedule
+        </h1>
 
-        return (
-          <div key={type}>
-            <h2 className="mb-2 text-sm font-semibold">{type}</h2>
-            <div className="space-y-2">
-              {list.map(e => (
-                <div
-                  key={`${e.courseCode}-${e.type}`}
-                  className="rounded-lg border p-3"
-                >
-                  <div className="font-medium">
-                    {e.courseCode} — {e.courseTitle}
-                  </div>
-                  <div className="text-sm text-[var(--text-muted)]">
-                    {e.date} • {e.startTime} – {e.endTime}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )
-      })}
-    </div>
+        <ExamsClient
+          midsems={midsems}
+          beforeMidsem={beforeMidsem}
+          afterMidsem={afterMidsem}
+          endsems={endsems}
+        />
+      </main>
+    </>
   )
 }

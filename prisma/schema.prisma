@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id    String  @id @default(cuid())
+  email String  @unique
+  name  String?
+
+  timetable Timetable?
+  exams     Exam[]
+}
+
+model Timetable {
+  id        String @id @default(cuid())
+  data      Json
+
+  userEmail String @unique
+  user      User   @relation(fields: [userEmail], references: [email])
+}
+
+model Exam {
+  id          String   @id @default(cuid())
+  courseCode  String
+  courseTitle String
+  type        String
+  date        DateTime
+  startTime   String
+  endTime     String
+
+  userEmail String
+  user      User @relation(fields: [userEmail], references: [email])
+}

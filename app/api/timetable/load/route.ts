@@ -1,27 +1,28 @@
+import { prisma } from "@/lib/prisma"
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/lib/auth"
-import fs from "fs"
-import path from "path"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 import { NextResponse } from "next/server"
 
 export async function GET() {
-  const session = await getServerSession(authOptions)
+  try {
+    const session = await getServerSession(authOptions)
 
-  if (!session?.user?.id) {
-    return NextResponse.json({})
+    if (!session?.user?.email) {
+      return NextResponse.json({})
+    }
+
+    const tt = await prisma.timetable.findUnique({
+      where: {
+        userEmail: session.user.email,
+      },
+    })
+
+    return NextResponse.json(tt?.data ?? {})
+  } catch (err) {
+    console.error("LOAD TT ERROR:", err)
+    return NextResponse.json(
+      { error: "Failed to load timetable" },
+      { status: 500 }
+    )
   }
-
-  const filePath = path.join(
-    process.cwd(),
-    "data",
-    "timetables",
-    `${session.user.id}.json`
-  )
-
-  if (!fs.existsSync(filePath)) {
-    return NextResponse.json({})
-  }
-
-  const data = JSON.parse(fs.readFileSync(filePath, "utf-8"))
-  return NextResponse.json(data)
 }

@@ -2,6 +2,8 @@ import NextAuth, { NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 
 export const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET,
+
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -12,14 +14,9 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async signIn({ user }) {
       const email = user.email ?? ""
+      const allowedDomain = "hyderabad.bits-pilani.ac.in"
 
-      console.log("LOGIN EMAIL:", user.email)
-
-      const allowedDomain = "@hyderabad.bits-pilani.ac.in"
-
-      // Allow only university emails
-      if (!email.endsWith(allowedDomain)) {
-        console.log("Blocked login:", email)
+      if (!email.toLowerCase().endsWith(`@${allowedDomain}`)) {
         return false
       }
 
@@ -34,4 +31,3 @@ export const authOptions: NextAuthOptions = {
 
 const handler = NextAuth(authOptions)
 export { handler as GET, handler as POST }
-

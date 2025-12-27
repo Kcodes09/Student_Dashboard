@@ -1,39 +1,63 @@
+import { prisma } from "@/lib/prisma"
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/lib/auth"
-import fs from "fs"
-import path from "path"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 import { NextResponse } from "next/server"
-import exams from "../../../lib/data/exams_normalized.json"
+import exams from "@/lib/data/exams_normalized.json"
+
+type Exam = {
+  courseCode: string
+  courseTitle: string
+  type: string
+  date: string
+  startTime: string
+  endTime: string
+}
+
+function toDateTime(date: string, time: string) {
+  const [day, month] = date.split("/")
+  const paddedTime = time.length === 4 ? `0${time}` : time
+  return new Date(`2026-${month}-${day}T${paddedTime}`)
+}
 
 export async function GET() {
-  const session = await getServerSession(authOptions)
+  try {
+    const session = await getServerSession(authOptions)
 
-  if (!session?.user?.id) {
-    return NextResponse.json([])
+    if (!session?.user?.email) {
+      return NextResponse.json(
+        { error: "Unauthorized" },
+        { status: 401 }
+      )
+    }
+
+    // 1️⃣ Load saved timetable
+    const tt = await prisma.timetable.findUnique({
+      where: {
+        userEmail: session.user.email,
+      },
+    })
+
+    const selectedCourses = tt
+      ? Object.keys(tt.data as Record<string, any>)
+      : []
+
+    // 2️⃣ Filter exams
+    const filteredExams = (exams as Exam[])
+      .filter(exam =>
+        selectedCourses.includes(exam.courseCode)
+      )
+      .sort((a, b) => {
+        const da = toDateTime(a.date, a.startTime).getTime()
+        const db = toDateTime(b.date, b.startTime).getTime()
+        return da - db
+      })
+
+    return NextResponse.json(filteredExams)
+  } catch (err) {
+    console.error("EXAMS ROUTE ERROR:", err)
+    return NextResponse.json(
+      { error: "Failed to load exams" },
+      { status: 500 }
+    )
   }
-
-  const ttPath = path.join(
-    process.cwd(),
-    "data",
-    "timetables",
-    `${session.user.id}.json`
-  )
-
-  if (!fs.existsSync(ttPath)) {
-    return NextResponse.json([])
-  }
-
-  const savedTT: Record<string, any> = JSON.parse(
-    fs.readFileSync(ttPath, "utf-8")
-  )
-
-  // courses user has selected in timetable
-  const activeCourses = new Set(Object.keys(savedTT))
-
-  // filter normalized exams
-  const userExams = exams.filter(exam =>
-    activeCourses.has(exam.courseCode)
-  )
-
-  return NextResponse.json(userExams)
 }
