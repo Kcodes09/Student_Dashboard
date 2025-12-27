@@ -53,17 +53,19 @@ export default function ExamsClient({
   const [deleting, setDeleting] = useState(false)
 
   /* -------- SORT ALL SECTIONS CHRONOLOGICALLY -------- */
+const sortedBeforeMidsem = useMemo(
+    () => sortChronologically(beforeMidsem),
+    [beforeMidsem]
+  )
 
+  
+  
   const sortedMidsems = useMemo(
     () => sortChronologically(midsems),
     [midsems]
   )
 
-  const sortedBeforeMidsem = useMemo(
-    () => sortChronologically(beforeMidsem),
-    [beforeMidsem]
-  )
-
+  
   const sortedAfterMidsem = useMemo(
     () => sortChronologically(afterMidsem),
     [afterMidsem]
@@ -126,9 +128,12 @@ export default function ExamsClient({
   ) => {
     if (exams.length === 0) {
       return (
+        <div>
+         <h2 className="mb-3 text-lg font-semibold">{title}</h2>   
         <p className="mb-6 text-sm text-gray-500">
           No {title.toLowerCase()}.
         </p>
+        </div>
       )
     }
 
@@ -206,15 +211,15 @@ export default function ExamsClient({
           + Add Exam
         </button>
       </div>
-
-      {renderSection("MIDSEM", sortedMidsems, true)}
       {renderSection(
-        "Before Midsem Evaluations",
+        "BEFORE MIDSEM EVALUATIONS",
         sortedBeforeMidsem,
         false
-      )}
+      )}  
+      {renderSection("MIDSEM", sortedMidsems, true)}
+      
       {renderSection(
-        "After Midsem Evaluations",
+        "AFTER MIDSEM EVALUATIONS",
         sortedAfterMidsem,
         false
       )}
