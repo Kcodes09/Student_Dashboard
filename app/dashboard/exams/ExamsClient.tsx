@@ -28,6 +28,18 @@ type ExamsClientProps = {
   endsems: ExamItem[]
 }
 
+/* ---------------- HELPERS ---------------- */
+
+function toDateTime(exam: ExamItem) {
+  const [day, month] = exam.date.split("/").map(Number)
+  const [hour, minute] = exam.startTime.split(":").map(Number)
+  return new Date(2026, month - 1, day, hour, minute).getTime()
+}
+
+function sortChronologically(exams: ExamItem[]) {
+  return [...exams].sort((a, b) => toDateTime(a) - toDateTime(b))
+}
+
 /* ---------------- COMPONENT ---------------- */
 
 export default function ExamsClient({
@@ -40,14 +52,39 @@ export default function ExamsClient({
   const [deleteExam, setDeleteExam] = useState<ExamItem | null>(null)
   const [deleting, setDeleting] = useState(false)
 
-  /* -------- BUILD COURSE OPTIONS --------
-     From all exams, unique by courseCode.
-     (These are the user's selected courses.)
-  */
+  /* -------- SORT ALL SECTIONS CHRONOLOGICALLY -------- */
+
+  const sortedMidsems = useMemo(
+    () => sortChronologically(midsems),
+    [midsems]
+  )
+
+  const sortedBeforeMidsem = useMemo(
+    () => sortChronologically(beforeMidsem),
+    [beforeMidsem]
+  )
+
+  const sortedAfterMidsem = useMemo(
+    () => sortChronologically(afterMidsem),
+    [afterMidsem]
+  )
+
+  const sortedEndsems = useMemo(
+    () => sortChronologically(endsems),
+    [endsems]
+  )
+
+  /* -------- BUILD COURSE OPTIONS -------- */
+
   const courseOptions: CourseOption[] = useMemo(() => {
     const map = new Map<string, CourseOption>()
 
-    ;[...midsems, ...beforeMidsem, ...afterMidsem, ...endsems].forEach(e => {
+    ;[
+      ...sortedMidsems,
+      ...sortedBeforeMidsem,
+      ...sortedAfterMidsem,
+      ...sortedEndsems,
+    ].forEach(e => {
       if (!map.has(e.courseCode)) {
         map.set(e.courseCode, {
           code: e.courseCode,
@@ -57,7 +94,12 @@ export default function ExamsClient({
     })
 
     return Array.from(map.values())
-  }, [midsems, beforeMidsem, afterMidsem, endsems])
+  }, [
+    sortedMidsems,
+    sortedBeforeMidsem,
+    sortedAfterMidsem,
+    sortedEndsems,
+  ])
 
   /* ---------------- DELETE ---------------- */
 
@@ -75,7 +117,7 @@ export default function ExamsClient({
     location.reload()
   }
 
-  /* ---------------- RENDER HELPERS ---------------- */
+  /* ---------------- RENDER SECTION ---------------- */
 
   const renderSection = (
     title: string,
@@ -84,12 +126,9 @@ export default function ExamsClient({
   ) => {
     if (exams.length === 0) {
       return (
-        <div>
-        <h2 className="mb-3 text-lg font-semibold">{title}</h2>
         <p className="mb-6 text-sm text-gray-500">
           No {title.toLowerCase()}.
         </p>
-        </div>
       )
     }
 
@@ -127,8 +166,6 @@ export default function ExamsClient({
                   <span className="text-xs font-medium">
                     {exam.type}
                   </span>
-
-                  {/* Only user-added exams have id */}
                   {exam.id && (
                     <button
                       onClick={() => setDeleteExam(exam)}
@@ -170,11 +207,18 @@ export default function ExamsClient({
         </button>
       </div>
 
-      {renderSection("BEFORE MIDSEM EVALUATIONS", beforeMidsem, false)}
-      {renderSection("MIDSEM", midsems, true)}
-      {renderSection("AFTER MIDSEM EVALUATIONS", afterMidsem, false)}
-      {renderSection("ENDSEM", endsems, true)}
-
+      {renderSection("MIDSEM", sortedMidsems, true)}
+      {renderSection(
+        "Before Midsem Evaluations",
+        sortedBeforeMidsem,
+        false
+      )}
+      {renderSection(
+        "After Midsem Evaluations",
+        sortedAfterMidsem,
+        false
+      )}
+      {renderSection("ENDSEM", sortedEndsems, true)}
 
       {/* ADD MODAL */}
       {showAdd && (
