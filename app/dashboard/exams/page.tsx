@@ -3,13 +3,14 @@ import { prisma } from "@/lib/prisma"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/app/lib/auth"
 
-
 import officialExams from "@/lib/data/exams_normalized.json"
 import academicCalendar from "@/lib/data/academic_calendar.json"
 
 import ExamsClient from "./ExamsClient"
 
-type ExamItem = {
+/* ---------------- TYPES ---------------- */
+
+export type ExamItem = {
   id?: string
   courseCode: string
   courseTitle?: string
@@ -19,7 +20,7 @@ type ExamItem = {
   endTime: string
 }
 
-/* ---------- MIDSEM DATE FROM ACADEMIC CALENDAR ---------- */
+/* ---------- MIDSEM DATE FROM CALENDAR ---------- */
 
 function getFirstMidsemDate(calendar: {
   year: number
@@ -44,13 +45,13 @@ export default async function ExamsPage() {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) return null
 
-  /* ---------- SELECTED COURSES ---------- */
+  /* ---------- TIMETABLE (SOURCE OF TRUTH) ---------- */
 
   const tt = await prisma.timetable.findUnique({
     where: { userEmail: session.user.email },
   })
 
-  const selectedCourses = tt
+  const ttCourses: string[] = tt
     ? Object.keys(tt.data as Record<string, any>)
     : []
 
@@ -60,27 +61,29 @@ export default async function ExamsPage() {
     where: { userEmail: session.user.email },
   })
 
-  const normalizedUser: ExamItem[] = userExams.map(e => ({
-    id: e.id,
-    courseCode: e.courseCode,
-    courseTitle: e.courseTitle,
-    type: e.type,
-    date: `${e.date
-      .getDate()
-      .toString()
-      .padStart(2, "0")}/${(e.date.getMonth() + 1)
-      .toString()
-      .padStart(2, "0")}`,
-    startTime: e.startTime,
-    endTime: e.endTime,
-  }))
+  const normalizedUser: ExamItem[] = userExams
+    .filter(e => ttCourses.includes(e.courseCode))
+    .map(e => ({
+      id: e.id,
+      courseCode: e.courseCode,
+      courseTitle: e.courseTitle,
+      type: e.type,
+      date: `${e.date
+        .getDate()
+        .toString()
+        .padStart(2, "0")}/${(e.date.getMonth() + 1)
+        .toString()
+        .padStart(2, "0")}`,
+      startTime: e.startTime,
+      endTime: e.endTime,
+    }))
 
   /* ---------- OFFICIAL EXAMS ---------- */
 
   const official: ExamItem[] = (officialExams as ExamItem[])
-    .filter(e => selectedCourses.includes(e.courseCode))
+    .filter(e => ttCourses.includes(e.courseCode))
 
-  /* ---------- MERGE ALL EXAMS ---------- */
+  /* ---------- MERGE ---------- */
 
   const allExams: ExamItem[] = [
     ...official,
@@ -138,6 +141,7 @@ export default async function ExamsPage() {
           beforeMidsem={beforeMidsem}
           afterMidsem={afterMidsem}
           endsems={endsems}
+          ttCourses={ttCourses}
         />
       </main>
     </>

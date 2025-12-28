@@ -1,7 +1,11 @@
 import type { NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
+import { PrismaAdapter } from "@next-auth/prisma-adapter"
+import { prisma } from "@/lib/prisma"
 
 export const authOptions: NextAuthOptions = {
+  adapter: PrismaAdapter(prisma),
+
   secret: process.env.NEXTAUTH_SECRET,
 
   providers: [
@@ -15,12 +19,7 @@ export const authOptions: NextAuthOptions = {
     async signIn({ user }) {
       const email = user.email ?? ""
       const allowedDomain = "hyderabad.bits-pilani.ac.in"
-
-      if (!email.toLowerCase().endsWith(`@${allowedDomain}`)) {
-        return false
-      }
-
-      return true
+      return email.endsWith(`@${allowedDomain}`)
     },
 
     async redirect({ baseUrl }) {

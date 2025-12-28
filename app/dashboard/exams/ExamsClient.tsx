@@ -3,18 +3,9 @@
 import { useState, useMemo } from "react"
 import AddExamModal from "@/app/components/AddExamModal"
 import { detectClashes } from "@/app/lib/exams/detectClashes"
+import type { ExamItem } from "./page"
 
 /* ---------------- TYPES ---------------- */
-
-type ExamItem = {
-  id?: string
-  courseCode: string
-  courseTitle?: string
-  type: string
-  date: string // DD/MM
-  startTime: string
-  endTime: string
-}
 
 type CourseOption = {
   code: string
@@ -26,6 +17,7 @@ type ExamsClientProps = {
   beforeMidsem: ExamItem[]
   afterMidsem: ExamItem[]
   endsems: ExamItem[]
+  ttCourses: string[]
 }
 
 /* ---------------- HELPERS ---------------- */
@@ -47,25 +39,24 @@ export default function ExamsClient({
   beforeMidsem = [],
   afterMidsem = [],
   endsems = [],
+  ttCourses = [],
 }: ExamsClientProps) {
   const [showAdd, setShowAdd] = useState(false)
   const [deleteExam, setDeleteExam] = useState<ExamItem | null>(null)
   const [deleting, setDeleting] = useState(false)
 
-  /* -------- SORT ALL SECTIONS CHRONOLOGICALLY -------- */
-const sortedBeforeMidsem = useMemo(
-    () => sortChronologically(beforeMidsem),
-    [beforeMidsem]
-  )
+  /* -------- SORT SECTIONS -------- */
 
-  
-  
   const sortedMidsems = useMemo(
     () => sortChronologically(midsems),
     [midsems]
   )
 
-  
+  const sortedBeforeMidsem = useMemo(
+    () => sortChronologically(beforeMidsem),
+    [beforeMidsem]
+  )
+
   const sortedAfterMidsem = useMemo(
     () => sortChronologically(afterMidsem),
     [afterMidsem]
@@ -76,27 +67,25 @@ const sortedBeforeMidsem = useMemo(
     [endsems]
   )
 
-  /* -------- BUILD COURSE OPTIONS -------- */
+  /* -------- BUILD COURSE OPTIONS FROM TT -------- */
 
   const courseOptions: CourseOption[] = useMemo(() => {
-    const map = new Map<string, CourseOption>()
+    return ttCourses.map(code => {
+      const match =
+        [
+          ...sortedMidsems,
+          ...sortedBeforeMidsem,
+          ...sortedAfterMidsem,
+          ...sortedEndsems,
+        ].find(e => e.courseCode === code)
 
-    ;[
-      ...sortedMidsems,
-      ...sortedBeforeMidsem,
-      ...sortedAfterMidsem,
-      ...sortedEndsems,
-    ].forEach(e => {
-      if (!map.has(e.courseCode)) {
-        map.set(e.courseCode, {
-          code: e.courseCode,
-          title: e.courseTitle ?? "",
-        })
+      return {
+        code,
+        title: match?.courseTitle ?? "",
       }
     })
-
-    return Array.from(map.values())
   }, [
+    ttCourses,
     sortedMidsems,
     sortedBeforeMidsem,
     sortedAfterMidsem,
@@ -107,7 +96,6 @@ const sortedBeforeMidsem = useMemo(
 
   const remove = async () => {
     if (!deleteExam?.id) return
-
     setDeleting(true)
 
     await fetch("/api/exams/delete", {
@@ -128,12 +116,9 @@ const sortedBeforeMidsem = useMemo(
   ) => {
     if (exams.length === 0) {
       return (
-        <div>
-         <h2 className="mb-3 text-lg font-semibold">{title}</h2>   
         <p className="mb-6 text-sm text-gray-500">
           No {title.toLowerCase()}.
         </p>
-        </div>
       )
     }
 
@@ -202,7 +187,6 @@ const sortedBeforeMidsem = useMemo(
 
   return (
     <>
-      {/* ADD EXAM */}
       <div className="flex justify-end mb-4">
         <button
           onClick={() => setShowAdd(true)}
@@ -211,21 +195,20 @@ const sortedBeforeMidsem = useMemo(
           + Add Exam
         </button>
       </div>
+
+      {renderSection("MIDSEM", sortedMidsems, true)}
       {renderSection(
-        "BEFORE MIDSEM EVALUATIONS",
+        "Before Midsem Evaluations",
         sortedBeforeMidsem,
         false
-      )}  
-      {renderSection("MIDSEM", sortedMidsems, true)}
-      
+      )}
       {renderSection(
-        "AFTER MIDSEM EVALUATIONS",
+        "After Midsem Evaluations",
         sortedAfterMidsem,
         false
       )}
       {renderSection("ENDSEM", sortedEndsems, true)}
 
-      {/* ADD MODAL */}
       {showAdd && (
         <AddExamModal
           onClose={() => setShowAdd(false)}
@@ -233,7 +216,6 @@ const sortedBeforeMidsem = useMemo(
         />
       )}
 
-      {/* DELETE MODAL */}
       {deleteExam && (
         <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center">
           <div className="bg-white rounded-lg p-4 w-full max-w-sm">
