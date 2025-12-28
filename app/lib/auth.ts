@@ -15,15 +15,25 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
 
-  callbacks: {
-    async signIn({ user }) {
-      const email = user.email ?? ""
-      const allowedDomain = "hyderabad.bits-pilani.ac.in"
-      return email.endsWith(`@${allowedDomain}`)
-    },
+ callbacks: {
+  async signIn({ user, account }) {
+    const email = user.email ?? ""
+    const allowedDomain = "hyderabad.bits-pilani.ac.in"
 
-    async redirect({ baseUrl }) {
-      return `${baseUrl}/dashboard`
-    },
+    if (!email.endsWith(`@${allowedDomain}`)) {
+      return false
+    }
+
+    // ✅ allow account relinking during dev
+    return true
   },
+},
+events: {
+  async signIn({ user, account }) {
+    // optional logging
+    console.log("SIGNED IN:", user.email, account?.provider)
+  },
+}
+
+
 }
