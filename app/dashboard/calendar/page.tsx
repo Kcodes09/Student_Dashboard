@@ -117,7 +117,7 @@ export default async function CalendarPage() {
         exams={examList}
         calendar={calendar}
         initialYear={calendar.year}
-        initialMonth={3}
+        initialMonth={1}
       />
     </>
   )

@@ -9068,6 +9068,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F105"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F105"
+          },
+          {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
@@ -9084,6 +9098,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F104"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F104"
+          },
+          {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
@@ -9099,6 +9127,20 @@
           "Rajesh Kumar Tripathy"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G208"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G208"
+          },
           {
             "day": "F",
             "hour": 1,
@@ -10421,6 +10463,20 @@
         ],
         "sessions": [
           {
+            "day": "T",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "F207"
+          },
+          {
+            "day": "Th",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "F207"
+          },
+          {
             "day": "W",
             "hour": 8,
             "startTime": "15:00",
@@ -10514,6 +10570,20 @@
           "Sudatta Banerjee"
         ],
         "sessions": [
+          {
+            "day": "T",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F208"
+          },
+          {
+            "day": "Th",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F208"
+          },
           {
             "day": "F",
             "hour": 8,
@@ -10976,6 +11046,20 @@
             "startTime": "17:00",
             "endTime": "17:50",
             "room": "F104"
+          },
+          {
+            "day": "T",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F104"
+          },
+          {
+            "day": "Th",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F104"
           }
         ]
       },
@@ -10991,6 +11075,20 @@
             "hour": 10,
             "startTime": "17:00",
             "endTime": "17:50",
+            "room": "F105"
+          },
+          {
+            "day": "T",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F105"
+          },
+          {
+            "day": "Th",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
             "room": "F105"
           }
         ]
@@ -12089,6 +12187,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F105"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F105"
+          },
+          {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
@@ -12105,6 +12217,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F104"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F104"
+          },
+          {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
@@ -12120,6 +12246,20 @@
           "Rajesh Kumar Tripathy"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G208"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G208"
+          },
           {
             "day": "F",
             "hour": 1,
@@ -14087,6 +14227,20 @@
         ],
         "sessions": [
           {
+            "day": "T",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "I210"
+          },
+          {
+            "day": "Th",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "I210"
+          },
+          {
             "day": "F",
             "hour": 7,
             "startTime": "14:00",
@@ -14102,7 +14256,36 @@
           "Subhradeep Pal",
           "Sanjana Mathew"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "T",
+            "hour": 7,
+            "startTime": "14:00",
+            "endTime": "14:50",
+            "room": "W101"
+          },
+          {
+            "day": "T",
+            "hour": 8,
+            "startTime": "15:00",
+            "endTime": "15:50",
+            "room": "W101"
+          },
+          {
+            "day": "Th",
+            "hour": 7,
+            "startTime": "14:00",
+            "endTime": "14:50",
+            "room": "W101"
+          },
+          {
+            "day": "Th",
+            "hour": 8,
+            "startTime": "15:00",
+            "endTime": "15:50",
+            "room": "W101"
+          }
+        ]
       }
     ]
   },
@@ -14269,6 +14452,20 @@
         ],
         "sessions": [
           {
+            "day": "T",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "I114"
+          },
+          {
+            "day": "Th",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "I114"
+          },
+          {
             "day": "W",
             "hour": 7,
             "startTime": "14:00",
@@ -14284,7 +14481,36 @@
           "Mithun Mondal",
           "Banala Rathan Kumar"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "T",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J114"
+          },
+          {
+            "day": "T",
+            "hour": 10,
+            "startTime": "17:00",
+            "endTime": "17:50",
+            "room": "J114"
+          },
+          {
+            "day": "Th",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J114"
+          },
+          {
+            "day": "Th",
+            "hour": 10,
+            "startTime": "17:00",
+            "endTime": "17:50",
+            "room": "J114"
+          }
+        ]
       }
     ]
   },
@@ -14372,6 +14598,20 @@
         ],
         "sessions": [
           {
+            "day": "T",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "F208"
+          },
+          {
+            "day": "Th",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "F208"
+          },
+          {
             "day": "W",
             "hour": 7,
             "startTime": "14:00",
@@ -14396,6 +14636,20 @@
           "Shreya Biswas"
         ],
         "sessions": [
+          {
+            "day": "T",
+            "hour": 7,
+            "startTime": "14:00",
+            "endTime": "14:50",
+            "room": "F208"
+          },
+          {
+            "day": "Th",
+            "hour": 7,
+            "startTime": "14:00",
+            "endTime": "14:50",
+            "room": "F208"
+          },
           {
             "day": "F",
             "hour": 5,
@@ -14562,6 +14816,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J107"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J107"
+          },
+          {
             "day": "F",
             "hour": 9,
             "startTime": "16:00",
@@ -14585,6 +14853,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "J206"
+          },
+          {
+            "day": "W",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "J206"
+          },
+          {
             "day": "F",
             "hour": 4,
             "startTime": "11:00",
@@ -14607,6 +14889,20 @@
           "DEBAJIT BORA"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J206"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J206"
+          },
           {
             "day": "F",
             "hour": 9,
@@ -15342,6 +15638,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J120"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J120"
+          },
+          {
             "day": "F",
             "hour": 9,
             "startTime": "16:00",
@@ -15364,6 +15674,20 @@
           "PRASUNA M G"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "J121"
+          },
+          {
+            "day": "W",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "J121"
+          },
           {
             "day": "F",
             "hour": 4,
@@ -15388,6 +15712,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J214"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "J214"
+          },
+          {
             "day": "F",
             "hour": 9,
             "startTime": "16:00",
@@ -15410,6 +15748,20 @@
           "ARUNA LOLLA"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "J121"
+          },
+          {
+            "day": "W",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "J121"
+          },
           {
             "day": "F",
             "hour": 2,
@@ -15435,6 +15787,20 @@
         ],
         "sessions": [
           {
+            "day": "T",
+            "hour": 8,
+            "startTime": "15:00",
+            "endTime": "15:50",
+            "room": "J214"
+          },
+          {
+            "day": "Th",
+            "hour": 8,
+            "startTime": "15:00",
+            "endTime": "15:50",
+            "room": "J214"
+          },
+          {
             "day": "W",
             "hour": 10,
             "startTime": "17:00",
@@ -15458,6 +15824,20 @@
           "Harsh Mittal"
         ],
         "sessions": [
+          {
+            "day": "T",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "J107"
+          },
+          {
+            "day": "Th",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "J107"
+          },
           {
             "day": "W",
             "hour": 7,
@@ -15488,6 +15868,20 @@
             "startTime": "14:00",
             "endTime": "14:50",
             "room": "J120"
+          },
+          {
+            "day": "T",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "J120"
+          },
+          {
+            "day": "Th",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "J120"
           }
         ]
       }
@@ -15506,6 +15900,20 @@
           "Ufaque Paiker"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 11,
+            "startTime": "18:00",
+            "endTime": "18:50",
+            "room": "J206"
+          },
+          {
+            "day": "W",
+            "hour": 11,
+            "startTime": "18:00",
+            "endTime": "18:50",
+            "room": "J206"
+          },
           {
             "day": "T",
             "hour": 10,
@@ -15530,6 +15938,20 @@
           "Madhavi Jha"
         ],
         "sessions": [
+          {
+            "day": "T",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "J219"
+          },
+          {
+            "day": "Th",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "J219"
+          },
           {
             "day": "W",
             "hour": 7,
@@ -15597,6 +16019,20 @@
             "hour": 8,
             "startTime": "15:00",
             "endTime": "15:50",
+            "room": "F102"
+          },
+          {
+            "day": "T",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "F102"
+          },
+          {
+            "day": "Th",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
             "room": "F102"
           }
         ]
@@ -16466,6 +16902,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F105"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F105"
+          },
+          {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
@@ -16482,6 +16932,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F104"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F104"
+          },
+          {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
@@ -16497,6 +16961,20 @@
           "Rajesh Kumar Tripathy"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G208"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G208"
+          },
           {
             "day": "F",
             "hour": 1,
@@ -18102,6 +18580,20 @@
             "startTime": "14:00",
             "endTime": "14:50",
             "room": "I111"
+          },
+          {
+            "day": "T",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "I111"
+          },
+          {
+            "day": "Th",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "I111"
           }
         ]
       },
@@ -18256,6 +18748,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "F103"
+          },
+          {
+            "day": "W",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "F103"
+          },
+          {
             "day": "F",
             "hour": 2,
             "startTime": "09:00",
@@ -18272,6 +18778,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "F104"
+          },
+          {
+            "day": "W",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "F104"
+          },
+          {
             "day": "F",
             "hour": 2,
             "startTime": "09:00",
@@ -18287,6 +18807,20 @@
           "Jhuma Sen Gupta"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "G208"
+          },
+          {
+            "day": "W",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "G208"
+          },
           {
             "day": "F",
             "hour": 2,
@@ -18701,6 +19235,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F104"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F104"
+          },
+          {
             "day": "F",
             "hour": 9,
             "startTime": "16:00",
@@ -18716,6 +19264,20 @@
           "Sabyasachi Dey"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F106"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F106"
+          },
           {
             "day": "F",
             "hour": 9,
@@ -18733,6 +19295,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F102"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F102"
+          },
+          {
             "day": "F",
             "hour": 9,
             "startTime": "16:00",
@@ -18749,6 +19325,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F107"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F107"
+          },
+          {
             "day": "F",
             "hour": 9,
             "startTime": "16:00",
@@ -18764,6 +19354,20 @@
           "Nirman Ganguly"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F108"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F108"
+          },
           {
             "day": "F",
             "hour": 9,
@@ -19175,6 +19779,20 @@
           "Sajith P"
         ],
         "sessions": [
+          {
+            "day": "T",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "G107"
+          },
+          {
+            "day": "Th",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "G107"
+          },
           {
             "day": "F",
             "hour": 8,
@@ -19989,6 +20607,20 @@
         ],
         "sessions": [
           {
+            "day": "T",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F107"
+          },
+          {
+            "day": "Th",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F107"
+          },
+          {
             "day": "F",
             "hour": 8,
             "startTime": "15:00",
@@ -20004,6 +20636,20 @@
           "Santanu Prasad Datta"
         ],
         "sessions": [
+          {
+            "day": "T",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F108"
+          },
+          {
+            "day": "Th",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "F108"
+          },
           {
             "day": "F",
             "hour": 8,
@@ -20164,6 +20810,20 @@
         ],
         "sessions": [
           {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F107"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F107"
+          },
+          {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
@@ -20179,6 +20839,20 @@
           "Abhishek Sarkar"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F108"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "F108"
+          },
           {
             "day": "F",
             "hour": 1,
@@ -20761,6 +21435,20 @@
         ],
         "sessions": [
           {
+            "day": "T",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "G205"
+          },
+          {
+            "day": "Th",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "G205"
+          },
+          {
             "day": "W",
             "hour": 7,
             "startTime": "14:00",
@@ -20782,7 +21470,22 @@
         "instructors": [
           "NANDANAVANAM JALAIAH"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "T",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "F107"
+          },
+          {
+            "day": "Th",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "F107"
+          }
+        ]
       },
       {
         "section": "L2",
@@ -20790,7 +21493,22 @@
         "instructors": [
           "Mrinal Ketan Jagirdar"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "T",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "F108"
+          },
+          {
+            "day": "Th",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "F108"
+          }
+        ]
       },
       {
         "section": "T1",
@@ -21149,6 +21867,20 @@
         ],
         "sessions": [
           {
+            "day": "T",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "G206"
+          },
+          {
+            "day": "Th",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "G206"
+          },
+          {
             "day": "W",
             "hour": 7,
             "startTime": "14:00",
@@ -21172,6 +21904,20 @@
           "Bagadi Ramana Murthy"
         ],
         "sessions": [
+          {
+            "day": "M",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "G207"
+          },
+          {
+            "day": "W",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "G207"
+          },
           {
             "day": "F",
             "hour": 5,
@@ -21744,6 +22490,20 @@
             "startTime": "14:00",
             "endTime": "14:50",
             "room": "I212"
+          },
+          {
+            "day": "T",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "I212"
+          },
+          {
+            "day": "Th",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "I212"
           }
         ]
       },
@@ -21882,6 +22642,20 @@
             "startTime": "14:00",
             "endTime": "14:50",
             "room": "G206"
+          },
+          {
+            "day": "T",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "G206"
+          },
+          {
+            "day": "Th",
+            "hour": 5,
+            "startTime": "12:00",
+            "endTime": "12:50",
+            "room": "G206"
           }
         ]
       }
@@ -21901,6 +22675,20 @@
           "Phaneendra Kiran Chaganti"
         ],
         "sessions": [
+          {
+            "day": "T",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "G204"
+          },
+          {
+            "day": "Th",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "G204"
+          },
           {
             "day": "W",
             "hour": 7,
@@ -22614,7 +23402,22 @@
         "instructors": [
           "A SAJELI BEGUM"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "M",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G205"
+          },
+          {
+            "day": "W",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G205"
+          }
+        ]
       },
       {
         "section": "T1",
@@ -23339,6 +24142,20 @@
         ],
         "sessions": [
           {
+            "day": "T",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "G106"
+          },
+          {
+            "day": "Th",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "G106"
+          },
+          {
             "day": "F",
             "hour": 7,
             "startTime": "14:00",
@@ -23355,7 +24172,36 @@
           "Gatade Ketki Umesh",
           "S R Rashmi"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "M",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "A009"
+          },
+          {
+            "day": "M",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "A009"
+          },
+          {
+            "day": "W",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "A009"
+          },
+          {
+            "day": "W",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "A009"
+          }
+        ]
       }
     ]
   },
@@ -23992,6 +24838,20 @@
             "hour": 8,
             "startTime": "15:00",
             "endTime": "15:50",
+            "room": "G201"
+          },
+          {
+            "day": "T",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "G201"
+          },
+          {
+            "day": "Th",
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
             "room": "G201"
           }
         ]
