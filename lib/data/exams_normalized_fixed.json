@@ -83,7 +83,7 @@
     "courseCode": "BIO F241",
     "courseTitle": "ECOLOGY &\r\nENVIRONMENTAL SCIENCE",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -627,7 +627,7 @@
     "courseCode": "CE F242",
     "courseTitle": "CONSTRUCTION\r\nPLANNING & TECH",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -851,7 +851,7 @@
     "courseCode": "CHE F241",
     "courseTitle": "HEAT TRANSFER",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -1251,7 +1251,7 @@
     "courseCode": "CS F213",
     "courseTitle": "OBJECT ORIENTED PROG",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "2:00",
     "endTime": "3:30"
   },
@@ -1555,7 +1555,7 @@
     "courseCode": "ECE F241",
     "courseTitle": "MICROPROC &\r\nINTERFACING",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -1731,7 +1731,7 @@
     "courseCode": "ECON F243",
     "courseTitle": "MACROECONOMICS",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -1891,7 +1891,7 @@
     "courseCode": "EEE F241",
     "courseTitle": "MICROPROC &\r\nINTERFACING",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -2963,7 +2963,7 @@
     "courseCode": "MAC F241",
     "courseTitle": "NUMERICAL ANALYSIS",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -3027,7 +3027,7 @@
     "courseCode": "MATH F113",
     "courseTitle": "PROBABILITY AND\r\nSTATISTICS",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "11:30",
     "endTime": "1:000"
   },
@@ -3075,7 +3075,7 @@
     "courseCode": "MATH F242",
     "courseTitle": "OPERATIONS RESEARCH",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -3299,7 +3299,7 @@
     "courseCode": "ME F218",
     "courseTitle": "ADVANCED MECHANICS\r\nOF SOLIDS",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -3827,7 +3827,7 @@
     "courseCode": "PHA F214",
     "courseTitle": "ANATOMY PHYSIO &\r\nHYGIENE",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "11:30",
     "endTime": "1:000"
   },
@@ -3859,7 +3859,7 @@
     "courseCode": "PHA F241",
     "courseTitle": "PHARMACEUTICAL\r\nCHEMISTRY",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
@@ -4147,7 +4147,7 @@
     "courseCode": "PHY F241",
     "courseTitle": "ELECTROMAGNETIC\r\nTHEORY II",
     "type": "MIDSEM",
-    "date": "09/03",
+    "date": "9/03",
     "startTime": "4:00",
     "endTime": "5:30"
   },
