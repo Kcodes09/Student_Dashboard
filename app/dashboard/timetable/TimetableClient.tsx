@@ -149,6 +149,12 @@ useEffect(() => {
 
         {/* MOBILE CONTENT */}
         <div className="h-[calc(100%-48px)]">
+          <button
+    onClick={handleSave}
+    className="rounded-md bg-[var(--bg-accent)] px-4 py-2 text-sm text-white hover:opacity-90"
+  >
+    Save Timetable
+  </button>
           {mobileView === "TIMETABLE" && (
             <MobileTimetable sessions={sessions} />
           )}
