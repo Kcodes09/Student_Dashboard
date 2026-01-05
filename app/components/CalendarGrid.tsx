@@ -31,7 +31,8 @@ export default function CalendarGrid({
 }) {
   const [year, setYear] = useState(initialYear)
   const [month, setMonth] = useState(initialMonth)
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null)
+  const [selectedDate, setSelectedDate] =
+    useState<Date | null>(null)
 
   const jsMonth = month - 1
   const totalDays = daysInMonth(year, jsMonth)
@@ -44,7 +45,9 @@ export default function CalendarGrid({
   const getDayClasses = (date: Date) => {
     const weekday = date.getDay()
     if (weekday === 0) return []
-    return sessions.filter(s => DAY_INDEX[s.day] === weekday)
+    return sessions.filter(
+      s => DAY_INDEX[s.day] === weekday
+    )
   }
 
   const getDayExams = (date: Date) => {
@@ -75,11 +78,11 @@ export default function CalendarGrid({
   }
 
   return (
-    <main className="p-4 max-w-6xl mx-auto">
+    <main className="p-2 sm:p-4 max-w-6xl mx-auto">
       {/* HEADER */}
-      <div className="mb-4 flex items-center justify-between">
+      <div className="mb-3 flex items-center justify-between">
         <button onClick={prevMonth}>←</button>
-        <h1 className="text-xl font-semibold">
+        <h1 className="text-lg sm:text-xl font-semibold">
           {new Date(year, jsMonth).toLocaleString("default", {
             month: "long",
           })}{" "}
@@ -88,74 +91,133 @@ export default function CalendarGrid({
         <button onClick={nextMonth}>→</button>
       </div>
 
-      {/* WEEK HEADER */}
-      <div className="grid grid-cols-7 text-xs font-semibold mb-1">
-        {["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(d => (
-          <div key={d} className="text-center">{d}</div>
-        ))}
-      </div>
+      {/* SCROLL WRAPPER */}
+      <div className="overflow-x-auto">
+        <div className="min-w-[700px] sm:min-w-0">
+          {/* WEEK HEADER */}
+          <div
+            className="grid grid-cols-7 text-[11px] font-semibold mb-1 sticky top-0 z-10"
+            style={{ backgroundColor: "var(--bg-main)" }}
+          >
+            {[
+              "Sun",
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+            ].map(d => (
+              <div key={d} className="text-center py-1">
+                {d}
+              </div>
+            ))}
+          </div>
 
-      {/* GRID */}
-      <div className="grid grid-cols-7 gap-2 text-xs">
-        {Array.from({ length: firstWeekday }).map((_, i) => (
-          <div key={`empty-${i}`} />
-        ))}
+          {/* GRID */}
+          <div className="grid grid-cols-7 gap-1 text-[11px]">
+            {Array.from({ length: firstWeekday }).map(
+              (_, i) => (
+                <div key={`empty-${i}`} />
+              )
+            )}
 
-        {Array.from({ length: totalDays }, (_, i) => {
-          const dateObj = new Date(year, jsMonth, i + 1)
-          const iso = dateObj.toISOString().slice(0, 10)
-          const meta = calendarMap.get(iso)
-          const dayExams = getDayExams(dateObj)
+            {Array.from({ length: totalDays }, (_, i) => {
+              const dateObj = new Date(
+                year,
+                jsMonth,
+                i + 1
+              )
+              const iso = dateObj
+                .toISOString()
+                .slice(0, 10)
+              const meta = calendarMap.get(iso)
+              const dayExams = getDayExams(dateObj)
 
-          return (
-            <div
-              key={iso}
-              onClick={() => setSelectedDate(dateObj)}
-              className="cursor-pointer border rounded p-2 min-h-[100px]"
-            >
-              <div className="font-semibold">{i + 1}</div>
+              // 🎨 NEW: background logic
+              let bgColor = "var(--bg-surface)"
 
-              {meta?.label && (
-                <div className="text-[10px] font-medium">
-                  {meta.label}
-                </div>
-              )}
+              if (meta?.holiday) {
+                bgColor = "rgba(34,197,94,0.15)" // green
+              } else if (dayExams.length > 0) {
+                bgColor = "rgba(239,68,68,0.15)" // red
+              }
 
-              {dayExams.map((e, idx) => (
+              return (
                 <div
-                  key={idx}
-                  className="mt-1 rounded bg-purple-100 px-1 py-[2px] text-[10px]"
+                  key={iso}
+                  onClick={() => setSelectedDate(dateObj)}
+                  className="cursor-pointer rounded p-1 sm:p-2 min-h-[72px] sm:min-h-[100px]"
+                  style={{
+                    backgroundColor: bgColor,
+                    border: "1px solid var(--border-subtle)",
+                  }}
                 >
-                  {e.courseCode} ({e.startTime})
-                </div>
-              ))}
+                  <div className="font-semibold text-xs sm:text-sm">
+                    {i + 1}
+                  </div>
 
-              {showHint(dateObj, meta) && (
-                <div className="mt-2 text-[10px] text-gray-500">
-                  Click to display class schedule
+                  {meta?.label && (
+                    <div className="text-[9px] sm:text-[10px] font-medium text-[var(--text-muted)]">
+                      {meta.label}
+                    </div>
+                  )}
+
+                  {dayExams.map((e, idx) => (
+                    <div
+                      key={idx}
+                      className="mt-0.5 rounded px-1 py-[1px] text-[9px] sm:text-[10px]"
+                      style={{
+                        backgroundColor:
+                          "rgba(239,68,68,0.6)", // red pill
+                        color: "white",
+                      }}
+                    >
+                      {e.courseCode}
+                    </div>
+                  ))}
+
+                  {showHint(dateObj, meta) && (
+                    <div className="mt-1 text-[9px] text-[var(--text-muted)] hidden sm:block">
+                      Click to display class schedule
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          )
-        })}
+              )
+            })}
+          </div>
+        </div>
       </div>
 
-      {/* DAY MODAL */}
+      {/* DAY MODAL (unchanged except colors auto-adapt) */}
       {selectedDate && (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl p-4 w-[90%] max-w-md">
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-2">
+          <div
+            className="rounded-xl p-4 w-full max-w-md max-h-[90vh] overflow-y-auto"
+            style={{ backgroundColor: "var(--bg-surface)" }}
+          >
             <h2 className="text-lg font-semibold mb-2">
               {selectedDate.toDateString()}
             </h2>
 
-            {/* EXAMS */}
             {getDayExams(selectedDate).length > 0 && (
               <>
-                <h3 className="font-semibold text-sm mb-1">Exams</h3>
+                <h3 className="font-semibold text-sm mb-1">
+                  Exams
+                </h3>
                 <ul className="mb-3 space-y-2">
                   {getDayExams(selectedDate).map((e, i) => (
-                    <li key={i} className="rounded bg-purple-100 px-3 py-2">
-                      <div className="font-medium">{e.courseCode}</div>
+                    <li
+                      key={i}
+                      className="rounded px-3 py-2"
+                      style={{
+                        backgroundColor:
+                          "rgba(239,68,68,0.15)",
+                      }}
+                    >
+                      <div className="font-medium">
+                        {e.courseCode}
+                      </div>
                       <div className="text-xs">
                         {e.startTime} – {e.endTime}
                       </div>
@@ -165,15 +227,27 @@ export default function CalendarGrid({
               </>
             )}
 
-            {/* CLASSES */}
-            <h3 className="font-semibold text-sm mb-1">Classes</h3>
+            <h3 className="font-semibold text-sm mb-1">
+              Classes
+            </h3>
             {getDayClasses(selectedDate).length === 0 ? (
-              <p className="text-sm">No classes</p>
+              <p className="text-sm text-[var(--text-muted)]">
+                No classes
+              </p>
             ) : (
               <ul className="space-y-2">
                 {getDayClasses(selectedDate).map((c, i) => (
-                  <li key={i} className="rounded bg-blue-100 px-3 py-2">
-                    <div className="font-medium">{c.courseCode}</div>
+                  <li
+                    key={i}
+                    className="rounded px-3 py-2"
+                    style={{
+                      backgroundColor:
+                        "var(--bg-muted)",
+                    }}
+                  >
+                    <div className="font-medium">
+                      {c.courseCode}
+                    </div>
                     <div className="text-xs">
                       {c.startTime} – {c.endTime}
                     </div>
@@ -184,7 +258,11 @@ export default function CalendarGrid({
 
             <button
               onClick={() => setSelectedDate(null)}
-              className="mt-4 w-full bg-black text-white py-2 rounded"
+              className="mt-4 w-full py-2 rounded"
+              style={{
+                backgroundColor: "var(--bg-accent)",
+                color: "white",
+              }}
             >
               Close
             </button>

@@ -20,13 +20,19 @@ export type ExamItem = {
   endTime: string
 }
 
-/* ---------- MIDSEM DATE FROM CALENDAR ---------- */
+/* ---------------- HELPERS ---------------- */
 
-function getFirstMidsemDate(calendar: {
-  year: number
-  days: { date: string; label?: string }[]
-}) {
-  const midsemDays = calendar.days.filter(
+function normalizeCourseCode(code: string) {
+  return code.replace(/\s+/g, "").toUpperCase()
+}
+
+function toDate(exam: ExamItem) {
+  const [day, month] = exam.date.split("/").map(Number)
+  return new Date(academicCalendar.year, month - 1, day)
+}
+
+function getFirstMidsemDate() {
+  const midsemDays = academicCalendar.days.filter(
     d => d.label === "MIDSEM"
   )
 
@@ -34,35 +40,48 @@ function getFirstMidsemDate(calendar: {
 
   return new Date(
     Math.min(
-      ...midsemDays.map(d =>
-        new Date(d.date).getTime()
-      )
+      ...midsemDays.map(d => new Date(d.date).getTime())
     )
   )
 }
+
+/* ---------------- PAGE ---------------- */
 
 export default async function ExamsPage() {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) return null
 
-  /* ---------- TIMETABLE (SOURCE OF TRUTH) ---------- */
+  const email = session.user.email
+
+  /* ---------- TIMETABLE ---------- */
 
   const tt = await prisma.timetable.findUnique({
-    where: { userEmail: session.user.email },
+    where: { userEmail: email },
   })
 
-  const ttCourses: string[] = tt
-    ? Object.keys(tt.data as Record<string, any>)
+  const ttCourses = tt
+    ? Object.entries(tt.data as Record<string, any>)
+        .filter(
+          ([_, v]) =>
+            v &&
+            typeof v === "object" &&
+            Object.keys(v).length > 0
+        )
+        .map(([code]) => normalizeCourseCode(code))
     : []
 
-  /* ---------- USER-ADDED EXAMS ---------- */
+  /* ---------- USER EXAMS ---------- */
 
-  const userExams = await prisma.exam.findMany({
-    where: { userEmail: session.user.email },
+  const userExamsRaw = await prisma.exam.findMany({
+    where: { userEmail: email },
   })
 
-  const normalizedUser: ExamItem[] = userExams
-    .filter(e => ttCourses.includes(e.courseCode))
+  const userExams: ExamItem[] = userExamsRaw
+    .filter(e =>
+      ttCourses.includes(
+        normalizeCourseCode(e.courseCode)
+      )
+    )
     .map(e => ({
       id: e.id,
       courseCode: e.courseCode,
@@ -80,28 +99,23 @@ export default async function ExamsPage() {
 
   /* ---------- OFFICIAL EXAMS ---------- */
 
-  const official: ExamItem[] = (officialExams as ExamItem[])
-    .filter(e => ttCourses.includes(e.courseCode))
+  const officialExamsFiltered: ExamItem[] =
+    (officialExams as ExamItem[]).filter(e =>
+      ttCourses.includes(
+        normalizeCourseCode(e.courseCode)
+      )
+    )
 
   /* ---------- MERGE ---------- */
 
   const allExams: ExamItem[] = [
-    ...official,
-    ...normalizedUser,
+    ...officialExamsFiltered,
+    ...userExams,
   ]
 
-  /* ---------- MIDSEM BOUNDARY ---------- */
+  /* ---------- MIDSEM SPLIT ---------- */
 
-  const firstMidsemDate = getFirstMidsemDate(
-    academicCalendar
-  )
-
-  const toDate = (d: string) => {
-    const [day, month] = d.split("/").map(Number)
-    return new Date(academicCalendar.year, month - 1, day)
-  }
-
-  /* ---------- SPLIT USING CALENDAR ---------- */
+  const firstMidsemDate = getFirstMidsemDate()
 
   const midsems = allExams.filter(
     e => e.type === "MIDSEM"
@@ -117,31 +131,31 @@ export default async function ExamsPage() {
 
   const beforeMidsem = evaluations.filter(e =>
     firstMidsemDate
-      ? toDate(e.date) < firstMidsemDate
+      ? toDate(e) < firstMidsemDate
       : true
   )
 
   const afterMidsem = evaluations.filter(e =>
     firstMidsemDate
-      ? toDate(e.date) >= firstMidsemDate
+      ? toDate(e) >= firstMidsemDate
       : false
   )
 
   return (
     <>
-      <Navbar user={{ email: session.user.email }} />
+      <Navbar user={{ email }} />
 
-      <main className="p-4 max-w-4xl mx-auto">
-        <h1 className="mb-6 text-xl font-semibold">
-          Exams Schedule
+      <main className="max-w-4xl mx-auto px-3 sm:px-4 py-4">
+        <h1 className="text-lg sm:text-xl font-semibold mb-5">
+          Exams & Evaluations
         </h1>
 
+        {/* CLIENT */}
         <ExamsClient
-          midsems={midsems}
           beforeMidsem={beforeMidsem}
+          midsems={midsems}
           afterMidsem={afterMidsem}
           endsems={endsems}
-          ttCourses={ttCourses}
         />
       </main>
     </>

@@ -7,20 +7,23 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-/* ================= NEXTAUTH MODELS ================= */
+/**
+ * ================= NEXTAUTH MODELS =================
+ */
 
 model User {
-  id            String   @id @default(cuid())
-  email         String   @unique
+  id            String    @id @default(cuid())
+  email         String    @unique
   name          String?
   emailVerified DateTime?
   image         String?
 
-  accounts  Account[]
-  sessions  Session[]
+  accounts Account[]
+  sessions Session[]
 
-  timetable Timetable?
-  exams     Exam[]
+  timetable   Timetable?
+  exams       Exam[]
+  attendances Attendance[]
 }
 
 model Account {
@@ -59,11 +62,13 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
-/* ================= YOUR APP MODELS ================= */
+/**
+ * ================= YOUR APP MODELS =================
+ */
 
 model Timetable {
-  id        String @id @default(cuid())
-  data      Json
+  id   String @id @default(cuid())
+  data Json
 
   userEmail String @unique
   user      User   @relation(fields: [userEmail], references: [email], onDelete: Cascade)
@@ -79,5 +84,16 @@ model Exam {
   endTime     String
 
   userEmail String
-  user      User @relation(fields: [userEmail], references: [email], onDelete: Cascade)
+  user      User   @relation(fields: [userEmail], references: [email], onDelete: Cascade)
+}
+
+model Attendance {
+  id         String   @id @default(cuid())
+  userEmail  String
+  courseCode String
+  date       DateTime
+
+  user User @relation(fields: [userEmail], references: [email], onDelete: Cascade)
+
+  @@unique([userEmail, courseCode, date])
 }

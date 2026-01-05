@@ -11,7 +11,11 @@ import officialExams from "@/lib/data/exams_normalized.json"
 import masterTT from "@/data/mastertt.json"
 
 import { generateStudentTT } from "@/app/lib/timetable/generateStudentTT"
-import type { Session as CalendarSession, WeekDay, Exam } from "@/types/timetable"
+import type {
+  Session as CalendarSession,
+  WeekDay,
+  Exam,
+} from "@/types/timetable"
 
 type SelectedSections = {
   [courseCode: string]: {
@@ -19,6 +23,12 @@ type SelectedSections = {
     TUTORIAL?: string
     PRACTICAL?: string
   }
+}
+
+/* -------- helpers (ADDITIVE) -------- */
+
+function normalizeCourseCode(code: string) {
+  return code.replace(/\s+/g, "").toUpperCase()
 }
 
 export default async function CalendarPage() {
@@ -34,41 +44,68 @@ export default async function CalendarPage() {
   const selectedSections =
     (tt?.data as SelectedSections) ?? {}
 
+  /* -------- CLEAN + NORMALIZE COURSES -------- */
+
+  const selectedCourses = Object.entries(selectedSections)
+    .filter(
+      ([_, v]) =>
+        v &&
+        typeof v === "object" &&
+        Object.keys(v).length > 0
+    )
+    .map(([code]) => normalizeCourseCode(code))
+
+  /* -------- CLASSES (UNCHANGED LOGIC) -------- */
+
   const rawSessions = generateStudentTT(
     masterTT,
     selectedSections
   )
 
-  const sessions: CalendarSession[] = rawSessions.map(s => ({
-    ...s,
-    day: s.day as WeekDay,
-  }))
-
-  const selectedCourses = Object.keys(selectedSections)
+  const sessions: CalendarSession[] = rawSessions.map(
+    s => ({
+      ...s,
+      day: s.day as WeekDay,
+      courseCode: normalizeCourseCode(s.courseCode),
+    })
+  )
 
   /* -------- OFFICIAL EXAMS -------- */
 
   const official: Exam[] = (officialExams as any[])
-    .filter(e => selectedCourses.includes(e.courseCode))
+    .filter(e =>
+      selectedCourses.includes(
+        normalizeCourseCode(e.courseCode)
+      )
+    )
     .map(e => ({
-      courseCode: e.courseCode,
-      date: `2026-${e.date.split("/").reverse().join("-")}`,
+      courseCode: normalizeCourseCode(e.courseCode),
+      date: `2026-${e.date
+        .split("/")
+        .reverse()
+        .join("-")}`,
       startTime: e.startTime,
       endTime: e.endTime,
     }))
 
   /* -------- USER EXAMS -------- */
 
-  const userExams = await prisma.exam.findMany({
+  const userExamsRaw = await prisma.exam.findMany({
     where: { userEmail: session.user.email },
   })
 
-  const user: Exam[] = userExams.map(e => ({
-    courseCode: e.courseCode,
-    date: e.date.toISOString().slice(0, 10),
-    startTime: e.startTime,
-    endTime: e.endTime,
-  }))
+  const user: Exam[] = userExamsRaw
+    .filter(e =>
+      selectedCourses.includes(
+        normalizeCourseCode(e.courseCode)
+      )
+    )
+    .map(e => ({
+      courseCode: normalizeCourseCode(e.courseCode),
+      date: e.date.toISOString().slice(0, 10),
+      startTime: e.startTime,
+      endTime: e.endTime,
+    }))
 
   const examList: Exam[] = [...official, ...user]
 

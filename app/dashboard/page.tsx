@@ -5,27 +5,31 @@ import { redirect } from "next/navigation"
 import Navbar from "../components/Navbar"
 import DashboardCard from "../components/DashboardCard"
 
-
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions)
 
   if (!session) redirect("/login")
 
   return (
-    <div className="min-h-screen bg-[var(--bg-surface)] bg-[var(--bg-main)] ">
-
+    <div className="min-h-screen bg-[var(--bg-main)]">
       <Navbar user={session.user} />
 
-      <main className="p-6">
-        <h1 className="mb-6 text-2xl font-bold text-[var(--text-primary)]">
+      <main className="p-4 sm:p-6 max-w-6xl mx-auto">
+        <h1 className="mb-6 text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
           Welcome, {session.user?.name}
         </h1>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           <DashboardCard
             title="Attendance"
             description="Track your attendance percentage"
             href="/dashboard/attendance"
+          />
+
+          <DashboardCard
+            title="Classes"
+            description="See when classes begin and today’s schedule"
+            href="/dashboard/classes"
           />
 
           <DashboardCard
@@ -51,12 +55,8 @@ export default async function DashboardPage() {
             description="View classes, exams, and holidays in a monthly calendar"
             href="/dashboard/calendar"
           />
-
         </div>
       </main>
     </div>
   )
 }
-
-
-
