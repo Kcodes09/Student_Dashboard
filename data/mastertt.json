@@ -5039,10 +5039,10 @@
         ],
         "sessions": [
           {
-            "day": "M",
+            "day": "Th",
             "hour": 10,
-            "startTime": "17:00",
-            "endTime": "17:50",
+            "startTime": "08:00",
+            "endTime": "08:50",
             "room": "G103"
           }
         ]
