@@ -5076,7 +5076,11 @@
         "sessions": [
           {
             "day": "Th",
+<<<<<<< HEAD
             "hour": 1,
+=======
+            "hour": 10,
+>>>>>>> 576c705797d261faac39b1bf5aa073861dc4f627
             "startTime": "08:00",
             "endTime": "08:50",
             "room": "G103"
