@@ -2255,8 +2255,8 @@
     ]
   },
   {
-    "courseCode": "TBA",
-    "courseTitle": "TO BE ANNUOUNCED",
+    "courseCode": "HSS F101",
+    "courseTitle": "UNDERSTANDING SELF AND SOCIETY",
     "credits": 2,
     "sections": [
       {
@@ -2581,14 +2581,14 @@
         ],
         "sessions": [
           {
-            "day": "W",
+            "day": "Th",
             "hour": 2,
             "startTime": "09:00",
             "endTime": "09:50",
             "room": "A022"
           },
           {
-            "day": "W",
+            "day": "Th",
             "hour": 3,
             "startTime": "10:00",
             "endTime": "10:50",
@@ -3093,25 +3093,25 @@
         ],
         "sessions": [
           {
-            "day": "M",
+            "day": "W",
             "hour": 7,
             "startTime": "14:00",
             "endTime": "14:50",
-            "room": "F203"
+            "room": "G108"
           },
           {
             "day": "T",
-            "hour": 5,
-            "startTime": "12:00",
-            "endTime": "12:50",
-            "room": "F203"
+            "hour": 4,
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "G108"
           },
           {
             "day": "Th",
             "hour": 5,
-            "startTime": "12:00",
-            "endTime": "12:50",
-            "room": "F203"
+            "startTime": "11:00",
+            "endTime": "11:50",
+            "room": "G108"
           }
         ]
       }
@@ -3641,7 +3641,7 @@
             "hour": 7,
             "startTime": "14:00",
             "endTime": "14:50",
-            "room": "F109"
+            "room": "D208 B"
           }
         ]
       }
@@ -4255,16 +4255,16 @@
           },
           {
             "day": "Th",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
+            "hour": 10,
+            "startTime": "17:00",
+            "endTime": "17:50",
             "room": "D208 A"
           },
           {
-            "day": "F",
-            "hour": 8,
-            "startTime": "15:00",
-            "endTime": "15:50",
+            "day": "Th",
+            "hour": 11,
+            "startTime": "18:00",
+            "endTime": "18:50",
             "room": "D208 A"
           }
         ]
@@ -4410,7 +4410,7 @@
         "instructors": [
           "D PURNIMA",
           "Padmasri K",
-          "Y Lavanya"
+          "Muin U Din Dar"
         ],
         "sessions": [
           {
@@ -4778,6 +4778,43 @@
     ]
   },
   {
+    "courseCode": "CHEM F111",
+    "courseTitle": "COLLOID & SURFACE CHEM",
+    "credits": 3,
+    "sections": [
+      {
+        "section": "L1",
+        "type": "LECTURE",
+        "instructors": [
+          "SUBIT KUMAR SAHA", "N Rajesh"," Amrita Chakraborty"
+        ],
+        "sessions": [
+          {
+            "day": "M",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "G107"
+          },
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "G107"
+          },
+          {
+            "day": "F",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "G107"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "courseCode": "CHEM F223",
     "courseTitle": "COLLOID & SURFACE CHEM",
     "credits": 3,
@@ -5034,15 +5071,14 @@
         "type": "TUTORIAL",
         "instructors": [
           "Pralok Kumar Samanta",
-          "Suryoday Prodhan",
-          "SATYA NARAYAN GU I N"
+          "Suryoday Prodhan"
         ],
         "sessions": [
           {
-            "day": "M",
-            "hour": 10,
-            "startTime": "17:00",
-            "endTime": "17:50",
+            "day": "Th",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
             "room": "G103"
           }
         ]
@@ -6739,7 +6775,7 @@
         "instructors": [
           "K Madhavi",
           "Mutyala Bavana Harshitha",
-          "Tba-eee"
+          "Subhajit Karmakar"
         ],
         "sessions": [
           {
@@ -7305,14 +7341,14 @@
         ],
         "sessions": [
           {
-            "day": "W",
+            "day": "M",
             "hour": 8,
             "startTime": "15:00",
             "endTime": "15:50",
             "room": "I013"
           },
           {
-            "day": "W",
+            "day": "M",
             "hour": 9,
             "startTime": "16:00",
             "endTime": "16:50",
@@ -7329,14 +7365,14 @@
         ],
         "sessions": [
           {
-            "day": "M",
+            "day": "W",
             "hour": 8,
             "startTime": "15:00",
             "endTime": "15:50",
             "room": "I013"
           },
           {
-            "day": "M",
+            "day": "W",
             "hour": 9,
             "startTime": "16:00",
             "endTime": "16:50",
@@ -7415,9 +7451,9 @@
         "sessions": [
           {
             "day": "T",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
+            "hour": 10,
+            "startTime": "17:00",
+            "endTime": "17:50",
             "room": "I113"
           }
         ]
@@ -8543,7 +8579,7 @@
         "instructors": [
           "K Madhavi",
           "Mutyala Bavana Harshitha",
-          "Tba-eee"
+          "Subhajit Karmakar"
         ],
         "sessions": [
           {
@@ -9132,21 +9168,21 @@
             "hour": 1,
             "startTime": "08:00",
             "endTime": "08:50",
-            "room": "G208"
+            "room": "F106"
           },
           {
             "day": "W",
             "hour": 1,
             "startTime": "08:00",
             "endTime": "08:50",
-            "room": "G208"
+            "room": "F106"
           },
           {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
             "endTime": "08:50",
-            "room": "G208"
+            "room": "F106"
           }
         ]
       },
@@ -10042,9 +10078,9 @@
         "sessions": [
           {
             "day": "T",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
+            "hour": 11,
+            "startTime": "18:00",
+            "endTime": "18:50",
             "room": "I114"
           }
         ]
@@ -11067,7 +11103,7 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "Tba-eee"
+          "Subhajit Karmakar"
         ],
         "sessions": [
           {
@@ -11256,7 +11292,7 @@
         "section": "T9",
         "type": "TUTORIAL",
         "instructors": [
-          "Tba-eee"
+          "Subhajit Karmakar"
         ],
         "sessions": [
           {
@@ -11272,7 +11308,7 @@
         "section": "T10",
         "type": "TUTORIAL",
         "instructors": [
-          "Tba-eee"
+          "Subhajit Karmakar"
         ],
         "sessions": [
           {
@@ -11662,7 +11698,7 @@
         "instructors": [
           "K Madhavi",
           "Mutyala Bavana Harshitha",
-          "Tba-eee"
+          "Subhajit Karmakar"
         ],
         "sessions": [
           {
@@ -12251,21 +12287,21 @@
             "hour": 1,
             "startTime": "08:00",
             "endTime": "08:50",
-            "room": "G208"
+            "room": "F106"
           },
           {
             "day": "W",
             "hour": 1,
             "startTime": "08:00",
             "endTime": "08:50",
-            "room": "G208"
+            "room": "F106"
           },
           {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
             "endTime": "08:50",
-            "room": "G208"
+            "room": "F106"
           }
         ]
       },
@@ -13641,9 +13677,9 @@
         "sessions": [
           {
             "day": "T",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
+            "hour": 11,
+            "startTime": "18:00",
+            "endTime": "18:50",
             "room": "I114"
           }
         ]
@@ -15902,23 +15938,23 @@
         "sessions": [
           {
             "day": "M",
-            "hour": 11,
-            "startTime": "18:00",
-            "endTime": "18:50",
+            "hour": 10,
+            "startTime": "17:00",
+            "endTime": "17:50",
             "room": "J206"
           },
           {
             "day": "W",
-            "hour": 11,
-            "startTime": "18:00",
-            "endTime": "18:50",
+            "hour": 10,
+            "startTime": "17:00",
+            "endTime": "17:50",
             "room": "J206"
           },
           {
             "day": "T",
-            "hour": 10,
-            "startTime": "17:00",
-            "endTime": "17:50",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
             "room": "J206"
           }
         ]
@@ -16377,7 +16413,7 @@
         "instructors": [
           "K Madhavi",
           "Mutyala Bavana Harshitha",
-          "Tba-eee"
+          "Subhajit Karmakar"
         ],
         "sessions": [
           {
@@ -16966,21 +17002,21 @@
             "hour": 1,
             "startTime": "08:00",
             "endTime": "08:50",
-            "room": "G208"
+            "room": "F106"
           },
           {
             "day": "W",
             "hour": 1,
             "startTime": "08:00",
             "endTime": "08:50",
-            "room": "G208"
+            "room": "F106"
           },
           {
             "day": "F",
             "hour": 1,
             "startTime": "08:00",
             "endTime": "08:50",
-            "room": "G208"
+            "room": "F106"
           }
         ]
       },
@@ -18023,9 +18059,9 @@
         "sessions": [
           {
             "day": "T",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
+            "hour": 11,
+            "startTime": "18:00",
+            "endTime": "18:50",
             "room": "I114"
           }
         ]
@@ -18625,7 +18661,7 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "TBA MATH"
+          "ASHOK KUMAR VAIKUNTAM"
         ],
         "sessions": [
           {
@@ -18655,7 +18691,7 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Tba Math",
+          "ASHOK KUMAR VAIKUNTAM",
           "Guru Charan A"
         ],
         "sessions": [
@@ -18679,7 +18715,7 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Tba-math",
+          "ASHOK KUMAR VAIKUNTAM",
           "Mintu Mandal",
           "SUMIT KUMAR\r\r\nVISHWAKARMA",
           "ROHIT GUPTA",
@@ -19198,36 +19234,6 @@
         ]
       },
       {
-        "section": "L2",
-        "type": "LECTURE",
-        "instructors": [
-          "Dipak Kumar Satpathi"
-        ],
-        "sessions": [
-          {
-            "day": "M",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
-            "room": "F105"
-          },
-          {
-            "day": "W",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
-            "room": "F105"
-          },
-          {
-            "day": "F",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
-            "room": "F105"
-          }
-        ]
-      },
-      {
         "section": "L3",
         "type": "LECTURE",
         "instructors": [
@@ -19359,21 +19365,21 @@
             "hour": 9,
             "startTime": "16:00",
             "endTime": "16:50",
-            "room": "F108"
+            "room": "F105"
           },
           {
             "day": "W",
             "hour": 9,
             "startTime": "16:00",
             "endTime": "16:50",
-            "room": "F108"
+            "room": "F105"
           },
           {
             "day": "F",
             "hour": 9,
             "startTime": "16:00",
             "endTime": "16:50",
-            "room": "F108"
+            "room": "F105"
           }
         ]
       },
@@ -19393,22 +19399,7 @@
           }
         ]
       },
-      {
-        "section": "T2",
-        "type": "TUTORIAL",
-        "instructors": [
-          "Dipak Kumar Satpathi"
-        ],
-        "sessions": [
-          {
-            "day": "Th",
-            "hour": 8,
-            "startTime": "15:00",
-            "endTime": "15:50",
-            "room": "G104"
-          }
-        ]
-      },
+      
       {
         "section": "T3",
         "type": "TUTORIAL",
@@ -20938,10 +20929,10 @@
         ],
         "sessions": [
           {
-            "day": "Th",
-            "hour": 1,
-            "startTime": "08:00",
-            "endTime": "08:50",
+            "day": "M",
+            "hour": 8,
+            "startTime": "15:00",
+            "endTime": "15:50",
             "room": "F202"
           }
         ]
@@ -21254,7 +21245,7 @@
         ],
         "sessions": [
           {
-            "day": "W",
+            "day": "F",
             "hour": 3,
             "startTime": "10:00",
             "endTime": "10:50",
@@ -21823,9 +21814,7 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "MORAPAKALA SRINIVAS",
-          "Anka Datta",
-          "Morapakala Srinivas"
+          "MORAPAKALA SRINIVAS"
         ],
         "sessions": [
           {
@@ -23348,14 +23337,14 @@
         ],
         "sessions": [
           {
-            "day": "Th",
+            "day": "W",
             "hour": 2,
             "startTime": "09:00",
             "endTime": "09:50",
             "room": "A001E"
           },
           {
-            "day": "Th",
+            "day": "W",
             "hour": 3,
             "startTime": "10:00",
             "endTime": "10:50",
@@ -23634,17 +23623,17 @@
         ],
         "sessions": [
           {
-            "day": "Th",
-            "hour": 8,
-            "startTime": "15:00",
-            "endTime": "15:50",
+           "day": "Th",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
             "room": "A025"
           },
           {
             "day": "Th",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
+            "hour": 10,
+            "startTime": "17:00",
+            "endTime": "17:50",
             "room": "A025"
           }
         ]
@@ -23812,24 +23801,24 @@
         "sessions": [
           {
             "day": "M",
-            "hour": 2,
-            "startTime": "09:00",
-            "endTime": "09:50",
-            "room": "G106"
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G208"
           },
           {
             "day": "W",
-            "hour": 2,
-            "startTime": "09:00",
-            "endTime": "09:50",
-            "room": "G106"
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G208"
           },
           {
             "day": "F",
-            "hour": 2,
-            "startTime": "09:00",
-            "endTime": "09:50",
-            "room": "G106"
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "G208"
           }
         ]
       }
@@ -23939,10 +23928,10 @@
             "room": "G107"
           },
           {
-            "day": "F",
-            "hour": 4,
-            "startTime": "11:00",
-            "endTime": "11:50",
+            "day": "T",
+            "hour": 7,
+            "startTime": "14:00",
+            "endTime": "14:50",
             "room": "G107"
           }
         ]
@@ -23958,31 +23947,31 @@
         ],
         "sessions": [
           {
-            "day": "T",
+            "day": "F",
+            "hour": 1,
+            "startTime": "08:00",
+            "endTime": "08:50",
+            "room": "A022"
+          },
+          {
+            "day": "F",
+            "hour": 2,
+            "startTime": "09:00",
+            "endTime": "09:50",
+            "room": "A022"
+          },
+          {
+            "day": "F",
+            "hour": 3,
+            "startTime": "10:00",
+            "endTime": "10:50",
+            "room": "A022"
+          },
+          {
+            "day": "F",
             "hour": 4,
             "startTime": "11:00",
             "endTime": "11:50",
-            "room": "A022"
-          },
-          {
-            "day": "T",
-            "hour": 5,
-            "startTime": "12:00",
-            "endTime": "12:50",
-            "room": "A022"
-          },
-          {
-            "day": "Th",
-            "hour": 4,
-            "startTime": "11:00",
-            "endTime": "11:50",
-            "room": "A022"
-          },
-          {
-            "day": "Th",
-            "hour": 5,
-            "startTime": "12:00",
-            "endTime": "12:50",
             "room": "A022"
           }
         ]
@@ -25013,17 +25002,17 @@
             "room": "A211"
           },
           {
-            "day": "F",
-            "hour": 2,
-            "startTime": "09:00",
-            "endTime": "09:50",
+            "day": "W",
+            "hour": 6,
+            "startTime": "13:00",
+            "endTime": "13:50",
             "room": "A211"
           },
           {
-            "day": "F",
-            "hour": 3,
-            "startTime": "10:00",
-            "endTime": "10:50",
+            "day": "W",
+            "hour": 7,
+            "startTime": "14:00",
+            "endTime": "14:50",
             "room": "A211"
           }
         ]
@@ -25644,16 +25633,9 @@
           },
           {
             "day": "T",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
-            "room": "G106"
-          },
-          {
-            "day": "T",
-            "hour": 9,
-            "startTime": "16:00",
-            "endTime": "16:50",
+            "hour": 11,
+            "startTime": "18:00",
+            "endTime": "18:50",
             "room": "G106"
           }
         ]
