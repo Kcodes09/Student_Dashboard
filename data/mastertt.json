@@ -15498,6 +15498,13 @@
             "startTime": "15:00",
             "endTime": "15:50",
             "room": "J219"
+          },
+          {
+            "day": "W",
+            "hour": 10,
+            "startTime": "17:00",
+            "endTime": "17:50",
+            "room": "J219"
           }
         ]
       }
@@ -15516,13 +15523,6 @@
           "Suchismita Satpathy"
         ],
         "sessions": [
-          {
-            "day": "W",
-            "hour": 10,
-            "startTime": "17:00",
-            "endTime": "17:50",
-            "room": "J219"
-          },
           {
             "day": "M",
             "hour": 7,
