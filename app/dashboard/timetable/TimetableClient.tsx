@@ -12,9 +12,8 @@ import MobileTimetable from "@/components/MobileTimetable"
 
 import { generateStudentTT } from "../../lib/timetable/generateStudentTT"
 
-/* ---------- CONSTANTS ---------- */
+/* ---------- ICS CONSTANTS ---------- */
 
-// Map internal weekday to ICS weekday
 const DAY_TO_ICS: Record<string, string> = {
   M: "MO",
   T: "TU",
@@ -24,14 +23,18 @@ const DAY_TO_ICS: Record<string, string> = {
   S: "SA",
 }
 
-// Semester boundaries (Classwork begins → before Compre)
-// You can later compute this dynamically from academic_calendar.json
-const SEM_START = [2026, 1, 5]  // Jan 5, 2026
-const SEM_END_UTC = "20260425T235959Z" // Apr 25, 2026 (UTC end of day)
+const SEM_START = [2026, 1, 5] // Classwork begins
+const SEM_END_UTC = "20260425T235959Z"
+
+/* ---------- UTILS ---------- */
+
+const isMobile = () =>
+  /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
 
 export default function TimetableClient({ master }: { master: any[] }) {
   const [activeCourse, setActiveCourse] = useState<string | null>(null)
   const [courseSearch, setCourseSearch] = useState("")
+  const [toast, setToast] = useState<string | null>(null)
 
   const [mobileView, setMobileView] =
     useState<"TIMETABLE" | "COURSES" | "SECTIONS">("TIMETABLE")
@@ -44,9 +47,14 @@ export default function TimetableClient({ master }: { master: any[] }) {
     }
   }>({})
 
-  /* ---------- EXPORT REFS ---------- */
+  /* ---------- EXPORT REF (DESKTOP GRID ALWAYS) ---------- */
   const desktopExportRef = useRef<HTMLDivElement>(null)
-  const mobileExportRef = useRef<HTMLDivElement>(null)
+
+  /* ---------- TOAST ---------- */
+  const showToast = (msg: string) => {
+    setToast(msg)
+    setTimeout(() => setToast(null), 2000)
+  }
 
   /* ---------- COURSE SELECT ---------- */
   const handleCourseSelect = (courseCode: string | null) => {
@@ -91,10 +99,9 @@ export default function TimetableClient({ master }: { master: any[] }) {
       })
 
       if (!res.ok) throw new Error(await res.text())
-      alert("Timetable saved successfully")
-    } catch (err) {
-      console.error("Save timetable failed:", err)
-      alert("Failed to save timetable")
+      showToast("Timetable saved")
+    } catch {
+      showToast("Failed to save timetable")
     }
   }
 
@@ -116,55 +123,68 @@ export default function TimetableClient({ master }: { master: any[] }) {
   /* ---------- GENERATE SESSIONS ---------- */
   const sessions = generateStudentTT(master, selectedSections)
 
-  /* ---------- EXPORT PNG ---------- */
+  /* ---------- EXPORT PNG (MOBILE SAFE) ---------- */
   const exportPNG = async () => {
-    const node =
-      window.innerWidth < 768
-        ? mobileExportRef.current
-        : desktopExportRef.current
+  if (!desktopExportRef.current) return
 
-    if (!node) return
-
-    const dataUrl = await htmlToImage.toPng(node, {
+  const blob = await htmlToImage.toBlob(
+    desktopExportRef.current,
+    {
       pixelRatio: 2,
       backgroundColor: getComputedStyle(
         document.documentElement
       ).getPropertyValue("--bg-surface"),
-    })
+    }
+  )
 
-    const link = document.createElement("a")
-    link.download = "timetable.png"
-    link.href = dataUrl
-    link.click()
+  if (!blob) {
+    showToast("Failed to generate image")
+    return
   }
 
-  /* ---------- EXPORT ICS (FIXED) ---------- */
+  const blobUrl = URL.createObjectURL(blob)
+
+  const a = document.createElement("a")
+  a.href = blobUrl
+  a.download = "timetable.png"
+  a.rel = "noopener"
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+
+  // ⏳ delay revoke — CRITICAL on mobile
+  setTimeout(() => URL.revokeObjectURL(blobUrl), 1000)
+
+  showToast("PNG ready — save from browser")
+}
+
+
+
+
+  /* ---------- EXPORT ICS ---------- */
   const exportICS = () => {
     const events: any[] = []
 
     sessions.forEach(s => {
-      const [sh, sm] = s.startTime.split(":").map(Number)
-      const [eh, em] = s.endTime.split(":").map(Number)
-
       const byDay = DAY_TO_ICS[s.day]
       if (!byDay) return
+
+      const [sh, sm] = s.startTime.split(":").map(Number)
+      const [eh, em] = s.endTime.split(":").map(Number)
 
       events.push({
         title: `${s.courseCode} Class`,
         start: [...SEM_START, sh, sm],
         end: [...SEM_START, eh, em],
-
         location: s.room,
         description: `Section: ${s.section}`,
-
         recurrenceRule: `FREQ=WEEKLY;BYDAY=${byDay};UNTIL=${SEM_END_UTC}`,
       })
     })
 
     createEvents(events, (error, value) => {
       if (error) {
-        console.error(error)
-        alert("Failed to export ICS")
+        showToast("ICS export failed")
         return
       }
 
@@ -176,14 +196,21 @@ export default function TimetableClient({ master }: { master: any[] }) {
       link.href = URL.createObjectURL(blob)
       link.download = "timetable.ics"
       link.click()
+      showToast("ICS exported")
     })
   }
 
   return (
     <div className="h-screen w-full overflow-hidden">
+      {/* TOAST */}
+      {toast && (
+        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-lg bg-[var(--bg-surface)] px-4 py-2 text-sm shadow">
+          {toast}
+        </div>
+      )}
+
       {/* ================= MOBILE ================= */}
       <div className="md:hidden h-full flex flex-col">
-        {/* TOP BAR */}
         <div className="flex items-center justify-between px-4 py-3 border-b bg-[var(--bg-surface)]">
           <button
             onClick={() => setMobileView("COURSES")}
@@ -210,29 +237,16 @@ export default function TimetableClient({ master }: { master: any[] }) {
           </button>
 
           <div className="flex gap-2">
-            <button
-              onClick={exportPNG}
-              className="text-sm text-[var(--text-accent)]"
-            >
-              PNG
-            </button>
-            <button
-              onClick={exportICS}
-              className="text-sm text-[var(--text-accent)]"
-            >
-              ICS
-            </button>
+            <button onClick={handleSave}>Save</button>
+            <button onClick={exportPNG}>PNG</button>
+            <button onClick={exportICS}>ICS</button>
           </div>
         </div>
 
-        {/* CONTENT */}
         <div className="flex-1 overflow-auto">
           {mobileView === "TIMETABLE" && (
-            <div ref={mobileExportRef}>
-              <MobileTimetable sessions={sessions} />
-            </div>
+            <MobileTimetable sessions={sessions} />
           )}
-
           {mobileView === "COURSES" && (
             <CourseSidebar
               courses={master}
@@ -242,7 +256,6 @@ export default function TimetableClient({ master }: { master: any[] }) {
               setSearch={setCourseSearch}
             />
           )}
-
           {mobileView === "SECTIONS" && activeCourse && (
             <SectionSidebar
               course={master.find(c => c.courseCode === activeCourse)}
@@ -251,15 +264,6 @@ export default function TimetableClient({ master }: { master: any[] }) {
               onBack={() => setMobileView("COURSES")}
             />
           )}
-        </div>
-
-        <div className="p-3 border-t">
-          <button
-            onClick={handleSave}
-            className="w-full rounded-md bg-[var(--bg-accent)] py-2 text-white"
-          >
-            Save Timetable
-          </button>
         </div>
       </div>
 
@@ -283,26 +287,9 @@ export default function TimetableClient({ master }: { master: any[] }) {
 
         <main className="flex-1 p-6 overflow-hidden">
           <div className="flex justify-end gap-2 mb-4">
-            <button
-              onClick={handleSave}
-              className="rounded-md bg-[var(--bg-accent)] px-4 py-2 text-sm text-white"
-            >
-              Save Timetable
-            </button>
-
-            <button
-              onClick={exportPNG}
-              className="rounded-md bg-[var(--bg-muted)] px-4 py-2 text-sm"
-            >
-              Export PNG
-            </button>
-
-            <button
-              onClick={exportICS}
-              className="rounded-md bg-[var(--bg-muted)] px-4 py-2 text-sm"
-            >
-              Export ICS
-            </button>
+            <button onClick={handleSave}>Save</button>
+            <button onClick={exportPNG}>Export PNG</button>
+            <button onClick={exportICS}>Export ICS</button>
           </div>
 
           <div ref={desktopExportRef}>
