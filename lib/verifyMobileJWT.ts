@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { MobileJWTPayload } from "./types";
+import { MobileJWTPayload } from "@/lib/types";
 
 export function verifyMobileJWT(token?: string): MobileJWTPayload | null {
   if (!token) return null;
