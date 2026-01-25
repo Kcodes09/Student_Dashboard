@@ -16,6 +16,7 @@
     "google-auth-library": "^10.5.0",
     "html-to-image": "^1.11.13",
     "ics": "^3.8.1",
+    "jsonwebtoken": "^9.0.3",
     "next": "16.1.0",
     "next-auth": "^4.24.13",
     "pnpm": "^10.26.2",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20.19.27",
     "@types/react": "^19",
     "@types/react-dom": "^19",

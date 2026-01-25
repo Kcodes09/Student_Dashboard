@@ -1,32 +1,63 @@
 import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 import { OAuth2Client } from "google-auth-library";
+import jwt from "jsonwebtoken";
 
-const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+const google = new OAuth2Client(process.env.GOOGLE_WEB_CLIENT_ID);
 
 export async function POST(req: Request) {
   try {
     const { idToken } = await req.json();
 
-    const ticket = await client.verifyIdToken({
+    // 1. Verify Google ID token
+    const ticket = await google.verifyIdToken({
       idToken,
-      audience: process.env.GOOGLE_CLIENT_ID,
+      audience: [
+        process.env.GOOGLE_ANDROID_CLIENT_ID!,
+        process.env.GOOGLE_WEB_CLIENT_ID!,
+      ]
     });
 
     const payload = ticket.getPayload();
-
     if (!payload) {
-      return NextResponse.json({ error: "Invalid token" }, { status: 400 });
+      return NextResponse.json({ error: "Invalid Google token" }, { status: 401 });
     }
 
-    const session = {
-      email: payload.email!,
-      name: payload.name!,
-      token: idToken,
-    };
+    const email = payload.email!;
+    const name = payload.name!;
+    const picture = payload.picture || null;
 
-    return NextResponse.json(session);
-  } catch (err) {
-    console.error(err);
-    return NextResponse.json({ error: "Auth failed" }, { status: 500 });
+    // 2. Domain restriction
+    if (!email.endsWith("@hyderabad.bits-pilani.ac.in")) {
+      return NextResponse.json({ error: "Unauthorized domain" }, { status: 403 });
+    }
+
+    // 3. Create or update user
+    const user = await prisma.user.upsert({
+      where: { email },
+      update: { name, image: picture },
+      create: {
+        email,
+        name,
+        image: picture,
+      }
+    });
+
+    // 4. Create mobile JWT session
+    const token = jwt.sign(
+      {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+      },
+      process.env.JWT_SECRET!,
+      { expiresIn: "30d" }
+    );
+
+    return NextResponse.json({ ok: true, token, user });
+
+  } catch (err: any) {
+    console.error("Mobile Auth Error:", err);
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
