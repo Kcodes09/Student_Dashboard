@@ -3,13 +3,17 @@ import { OAuth2Client } from "google-auth-library";
 import jwt from "jsonwebtoken";
 import { prisma } from "@/lib/prisma";
 
-const google = new OAuth2Client(process.env.GOOGLE_WEB_CLIENT_ID);
+// Load Google client
+const google = new OAuth2Client();
 
 export async function POST(req: Request) {
   try {
     const { idToken } = await req.json();
+    if (!idToken) {
+      return NextResponse.json({ error: "Missing idToken" }, { status: 400 });
+    }
 
-    // 1. Verify Google ID token
+    // 1. Verify Google ID Token
     const ticket = await google.verifyIdToken({
       idToken,
       audience: [
@@ -23,32 +27,59 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Invalid Google token" }, { status: 401 });
     }
 
-    const email = payload.email!;
-    const name = payload.name!;
-    const picture = payload.picture || "";
+    console.log("GOOGLE PAYLOAD:", payload);
 
-    // 2. Domain restriction
+    const email = payload.email!;
+    const name = payload.name ?? "";
+    const avatar = payload.picture ?? "";
+
+    // 2. HARD DOMAIN CHECK (server-side)
     if (!email.endsWith("@hyderabad.bits-pilani.ac.in")) {
-      return NextResponse.json({ error: "Unauthorized domain" }, { status: 403 });
+      console.log("BLOCKED LOGIN:", email);
+
+      return NextResponse.json(
+        { error: "Only BITS Hyderabad accounts are allowed." },
+        { status: 403 }
+      );
     }
 
-    // 3. Create/update user
+    // 3. Upsert user in Prisma
     const user = await prisma.user.upsert({
       where: { email },
-      update: { name, image: picture },
-      create: { email, name, image: picture },
+      update: { name, image: avatar },
+      create: { email, name, image: avatar },
     });
 
-    // 4. Create JWT for mobile
+    // 4. Create mobile-safe JWT
     const token = jwt.sign(
-      { id: user.id, email: user.email, name: user.name },
+      {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+      },
       process.env.JWT_SECRET!,
       { expiresIn: "30d" }
     );
 
-    return NextResponse.json({ ok: true, token, user });
+    console.log("LOGIN SUCCESS:", user.email);
+
+    // 5. Return token + user object
+    return NextResponse.json({
+      ok: true,
+      token,
+      user: {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        image: user.image,
+      },
+    });
   } catch (err: any) {
-    console.error("Mobile-auth error:", err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+    console.error("MOBILE AUTH ERROR:", err);
+
+    return NextResponse.json(
+      { error: err.message ?? "Internal Server Error" },
+      { status: 500 }
+    );
   }
 }
