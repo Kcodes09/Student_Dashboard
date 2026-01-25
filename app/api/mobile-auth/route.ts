@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma";
 
 // Load Google client
 const google = new OAuth2Client();
+console.log("MOBILE AUTH API HIT");
 
 export async function POST(req: Request) {
   try {
@@ -32,6 +33,7 @@ export async function POST(req: Request) {
     const email = payload.email!;
     const name = payload.name ?? "";
     const avatar = payload.picture ?? "";
+      console.log("GOOGLE PAYLOAD EMAIL:", email);
 
     // 2. HARD DOMAIN CHECK (server-side)
     if (!email.endsWith("@hyderabad.bits-pilani.ac.in")) {
