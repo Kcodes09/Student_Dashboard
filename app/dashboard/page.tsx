@@ -18,6 +18,7 @@ export default async function DashboardPage() {
         <h1 className="mb-6 text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
           Welcome, {session.user?.name}
         </h1>
+        
 
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           <DashboardCard

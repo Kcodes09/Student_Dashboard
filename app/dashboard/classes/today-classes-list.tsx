@@ -138,4 +138,45 @@ export default function TodayClassesList({
     </ul>
   )
 }
+function NextClass({
+  classes,
+  dateISO,
+}: Props) {
+  
+  
+
+  return (
+    <ul className="space-y-3">
+      {classes.map((c, i) => {
+        
+
+        return (
+          <li
+            key={i}
+            className="rounded-lg px-3 py-3"
+            style={{ backgroundColor: "var(--bg-muted)" }}
+          >
+            <div className="flex justify-between items-start">
+              <div>
+                <div className="font-medium">
+                  {c.courseCode}
+                </div>
+                <div className="text-sm text-[var(--text-muted)]">
+                  {c.startTime} – {c.endTime}
+                </div>
+              </div>
+
+              <div className="flex gap-2">
+                
+              </div>
+            </div>
+
+           
+           
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
   

@@ -1,5 +1,6 @@
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/app/lib/auth"
+import Image from "next/image"
 
 import Navbar from "@/app/components/Navbar"
 
@@ -42,6 +43,14 @@ export default async function ProfilePage() {
             <p className="font-medium text-[var(--text-primary)] break-all">
               {session.user.email}
             </p>
+          </div>
+          <div>
+            <p className="text-sm text-[var(--text-muted)]">
+              Email
+            </p>
+            <img src={`${session.user.image}`} width={500} height={500} />
+              
+            
           </div>
         </div>
       </main>

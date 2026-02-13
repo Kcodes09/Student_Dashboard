@@ -17,9 +17,9 @@ export default function Navbar({ user }: NavbarProps) {
   return (
     <nav className="relative flex items-center justify-between bg-[var(--bg-surface)] px-4 py-3 shadow-sm md:px-6">
       {/* LEFT: LOGO */}
-      <div className="font-semibold text-sm md:text-base text-[var(--text-primary)]">
+      <a href="/dashboard" className="font-semibold text-sm md:text-base text-[var(--text-primary)]">
         Campus Dashboard
-      </div>
+      </a>
 
       {/* RIGHT: DESKTOP */}
       <div className="hidden md:flex items-center gap-3">
