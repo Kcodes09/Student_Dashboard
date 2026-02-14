@@ -22,7 +22,6 @@ export async function POST(req: Request) {
         date: new Date(date),
       },
     })
-    prisma.account.fields.
 
     return NextResponse.json({ ok: true })
   } catch (e) {
