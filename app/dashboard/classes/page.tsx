@@ -41,72 +41,7 @@ function toMinutes(time: string) {
   const [h, m] = time.split(":").map(Number)
   return h * 60 + m
 }
-export async function NextClass(){
-  const session = await getServerSession(authOptions)
-  if (!session?.user?.email) return null
 
-  const email = session.user.email
-
-  const tt = await prisma.timetable.findUnique({
-    where: { userEmail: email },
-  })
-
-  const selectedSections =
-    (tt?.data as Record<string, any>) ?? {}
-
-  const rawSessions = generateStudentTT(
-    masterTT,
-    selectedSections
-  )
-
-  const sessions: Session[] = rawSessions.map(s => ({
-    ...s,
-    courseCode: normalizeCourseCode(s.courseCode),
-    day: s.day as WeekDay,
-  }))
-    
-    const realToday = new Date()
-    
-
-    const realTime= realToday.getTime()
-    const Time=String(realTime)
-    
-    const academicToday = new Date(
-    academicCalendar.year,
-    realToday.getMonth(),
-    realToday.getDate()
-  )
-
-  const academicISO = academicToday
-    .toISOString()
-    .slice(0, 10)
-
-  const todayMeta = academicCalendar.days.find(
-    d => d.date === academicISO
-  )
-
-  const weekday = getWeekDayFromDate(academicToday)
-  const todayClasses =
-    weekday === null
-      ? []
-      : sessions
-          .filter(s => s.day === weekday)
-          .sort(
-            (a, b) =>
-              toMinutes(a.startTime) -
-              toMinutes(b.startTime)
-          )
-  console.log(Number(sessions[1].endTime))
-  if (realTime > Number(sessions[-1].endTime)){
-    realToday.setDate(realToday.getDate() + 1)
-    
-  }
-  else
-  return{
-    
-  }
-}
-NextClass()
 
 /* ---------------- PAGE ---------------- */
 
