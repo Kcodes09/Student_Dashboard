@@ -19,6 +19,7 @@ type Props = {
 }
 
 
+
 type SortType = "CODE_ASC" | "CODE_DESC" | "NAME" | "CREDITS"
 
 export default function CourseSidebar({

@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET(req: Request) {
   const auth = req.headers.get("authorization");
+  // console.log("Auth Header:", auth); // <--- Keep debug log for now
   if (!auth?.startsWith("Bearer "))
     return NextResponse.json({ error: "Missing token" }, { status: 401 });
 
@@ -11,9 +12,14 @@ export async function GET(req: Request) {
   if (!decoded)
     return NextResponse.json({ error: "Invalid token" }, { status: 403 });
 
+  console.log("Fetching TT for:", decoded.email); // <--- Keep debug log
+
   const tt = await prisma.timetable.findUnique({
     where: { userEmail: decoded.email },
   });
+
+  console.log("DB Result:", tt ? "Found Data" : "NULL/Empty"); // <--- DEBUG LOG
+  if (tt) console.log("Keys:", Object.keys(tt.data || {}));
 
   return NextResponse.json(tt?.data ?? {});
 }

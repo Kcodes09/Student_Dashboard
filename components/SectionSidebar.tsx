@@ -5,10 +5,18 @@ import { useEffect, useMemo, useState } from "react"
 
 type SectionType = "LECTURE" | "TUTORIAL" | "PRACTICAL"
 
+type Session = {
+  day: string
+  startTime: string
+  endTime: string
+  room: string
+}
+
 type Section = {
   section: string
   type: SectionType
   instructors: string[]
+  sessions: Session[]
 }
 
 type Course = {
@@ -170,6 +178,22 @@ export default function SectionSidebar({
               <div className="mt-1 text-xs text-[var(--text-muted)]">
                 {section.instructors.join(", ")}
               </div>
+
+              {section.sessions && section.sessions.length > 0 && (() => {
+                // Get unique time slot (all sessions usually same time)
+                const { startTime, endTime } = section.sessions[0]
+                const fmt = (t: string) => {
+                  const [h, m] = t.split(":").map(Number)
+                  const ampm = h >= 12 ? "PM" : "AM"
+                  return `${h % 12 || 12}:${String(m).padStart(2, "0")} ${ampm}`
+                }
+                const days = section.sessions.map(s => s.day).join(" ")
+                return (
+                  <div className="mt-1 text-xs font-mono text-[var(--bg-accent)]">
+                    {days} · {fmt(startTime)} – {fmt(endTime)}
+                  </div>
+                )
+              })()}
             </button>
           )
         })}

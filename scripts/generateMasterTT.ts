@@ -21,8 +21,16 @@ const dataRows = raw.slice(1)
 const cleanedRows = dataRows.map((row) => {
   const obj: any = {}
   for (let i = 0; i < headerRow.length; i++) {
-    const key = headerRow[i]
-    if (key) obj[key.trim()] = row[i]
+    let key = headerRow[i]
+    if (key) {
+      key = key.trim()
+      if (key.includes("INSTRUCTOR")) {
+        key = "INSTRUCTOR_IN_CHARGE/INS TRUCTOR"
+      } else if (key === "HOURS" || key === "HOUR S") {
+        key = "HOUR S"
+      }
+      obj[key] = row[i]
+    }
   }
   return obj
 })
@@ -38,6 +46,10 @@ for (const row of cleanedRows) {
     if (row[key] === "") {
       filled[key] = last[key]
     }
+  }
+
+  if (filled["HOUR S"] !== undefined && filled["HOUR S"] !== null) {
+    filled["HOUR S"] = String(filled["HOUR S"]).replace(/,/g, "").trim()
   }
 
   last = filled

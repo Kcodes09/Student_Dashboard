@@ -1,1487 +1,1552 @@
 {
-  "AN F312": {
-    "courseTitle": "AIRCRAFT PROPULSION",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "AN F311": {
+    "courseTitle": "PRINCIPLES OF\nAERODYNAMICS",
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "16/12 FN"
   },
-  "AN F315": {
-    "courseTitle": "AIRCRAFT STRUCTURES",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "AN F313": {
+    "courseTitle": "FLIGHT MECHANICS AND\nCONTROLS",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "BIO F101": {
-    "courseTitle": "INTRODUCTION TO BIOLOGICAL SCIENCE",
-    "midsem": "14/03 - 9.30 - 11.00AM",
-    "endsem": "14/05 FN"
+  "BIO F110": {
+    "courseTitle": "BIOLOGY LABORATORY",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "BIO F215": {
-    "courseTitle": "BIOPHYSICS",
-    "midsem": "14/03 - 4.00 - 5.30PM",
-    "endsem": "15/05 AN"
+  "BIO F111": {
+    "courseTitle": "GENERAL BIOLOGY",
+    "midsem": "07/10 -  1.30 - 3.00PM",
+    "endsem": "04/12 FN"
   },
-  "BIO F217": {
-    "courseTitle": "LAB FOR WATER SANITATION & SOLID WASTE MANAGEMENT",
-    "midsem": "07/03 - 4.00 - 5.30PM",
-    "endsem": "30/04 FN"
+  "BIO F211": {
+    "courseTitle": "BIOLOGICAL CHEMISTRY",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
   },
-  "BIO F241": {
-    "courseTitle": "ECOLOGY & ENVIRONMENTAL SCIENCE",
-    "midsem": "9/03 - 4.00 - 5.30PM",
-    "endsem": "04/05 AN"
+  "BIO F212": {
+    "courseTitle": "MICROBIOLOGY",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "BIO F242": {
-    "courseTitle": "INTRODUCTION TO BIOINFORMATICS",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "BIO F213": {
+    "courseTitle": "CELL BIOLOGY",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "BIO F243": {
-    "courseTitle": "GENETICS",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+  "BIO F214": {
+    "courseTitle": "INTEGRATED BIOLOGY",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "BIO F244": {
-    "courseTitle": "INSTRU METHODS OF ANAL",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+  "BIO F216": {
+    "courseTitle": "WATER SANITATION AND SOLID WASTE\nMANAGEMENT",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
-  "BIO F341": {
-    "courseTitle": "DEVELOPMENTAL BIOLOGY",
-    "midsem": "12/03 - 4.00 - 5.30PM",
-    "endsem": "11/05 AN"
+  "BIO F311": {
+    "courseTitle": "RECOMBINANT DNA TECH",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "BIO F342": {
-    "courseTitle": "IMMUNOLOGY",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "BIO F312": {
+    "courseTitle": "PLANT PHYSIOLOGY",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 AN"
   },
-  "BIO F413": {
-    "courseTitle": "MOLECULAR BIO OF CELL",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "BIO F313": {
+    "courseTitle": "ANIMAL PHYSIOLOGY",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
-  "BIO F417": {
-    "courseTitle": "BIOMOLECULAR MODELING",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "BIO G510": {
+    "courseTitle": "APPL OF COMP AND STATS\nIN BIOLOGY",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "BIO F451": {
-    "courseTitle": "BIOPROCESS TECHNOLOGY",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "BIO G512": {
+    "courseTitle": "MOLEC MECH OF GENE\nEXPRE",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "BIO G523": {
-    "courseTitle": "ADV & APPLIED MICROBIO",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "BIO G514": {
+    "courseTitle": "MOLECULAR\nIMMUNOLOGY",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "BIO G542": {
-    "courseTitle": "ADVANCED CELL AND MOLECULAR BIOLOGY",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "BIO G524": {
+    "courseTitle": "ANIMAL CELL TECHNOLOGY",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "BIO G570": {
-    "courseTitle": "RECENT DEVELOPMENTS IN BIOLOGY",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "BIO G525": {
+    "courseTitle": "ENVIR BIOTECH & WASTE\nMGMT",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "BIO G643": {
-    "courseTitle": "PLANT BIOTECHNOLOGY",
-    "midsem": "12/03 - 4.00 - 5.30PM",
-    "endsem": "11/05 AN"
+  "BIO G561": {
+    "courseTitle": "ADV RECOMBINANT DNA\nTECH",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
+  },
+  "BIO G651": {
+    "courseTitle": "PROTEIN & ENZYME\nBIOENGG",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
+  },
+  "BIOT F345": {
+    "courseTitle": "PROTEOMICS",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
+  },
+  "BIOT F422": {
+    "courseTitle": "NANOBIOTECHOLOGY",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
   "BITS E661": {
-    "courseTitle": "RESEARCH METHODOLOGY I",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+    "courseTitle": "RESEARCH\nMETHODOLOGY I",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "BITS F102": {
-    "courseTitle": "INNOVATION AND DESIGN THINKING",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
-  },
-  "BITS F103": {
-    "courseTitle": "Engineering design and Prototyping",
-    "midsem": "13/03 - 11.30 - 1.00PM",
-    "endsem": "12/05 FN"
+  "BITS F110": {
+    "courseTitle": "ENGINEERING GRAPHICS",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "15/12 FN"
   },
   "BITS F111": {
     "courseTitle": "THERMODYNAMICS",
-    "midsem": "10/03 - 11.30 - 1.00PM",
-    "endsem": "05/05 FN"
+    "midsem": "08/10 -  3.30 - 5.00PM",
+    "endsem": "06/12 AN"
   },
-  "TBA": {
-    "courseTitle": "TO BE ANNUOUNCED",
-    "midsem": "12/03 - 9.30 - 11.00AM",
-    "endsem": "09/05 FN"
+  "BITS F112": {
+    "courseTitle": "TECHNICAL REPORT\nWRITING",
+    "midsem": "10/10 -  1.30 - 3.00PM",
+    "endsem": "11/12 FN"
   },
-  "BITS F114": {
-    "courseTitle": "GENERAL MATHEMATICS II",
-    "midsem": "11/03 - 11.30 - 1.00PM",
-    "endsem": "07/05 AN"
+  "BITS F113": {
+    "courseTitle": "GENERAL MATHEMATICS I",
+    "midsem": "06/10 -  1.30 - 3.00PM",
+    "endsem": "02/12 FN"
   },
-  "BITS F219": {
-    "courseTitle": "PROCESS ENGINEERING",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "BITS F214": {
+    "courseTitle": "SCIENCE TECH &\nMODERNITY",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
+  },
+  "BITS F218": {
+    "courseTitle": "GENERAL MATHEMATICS III",
+    "midsem": "06/10 -  9.30 - 11.00AM",
+    "endsem": "01/12 FN"
   },
   "BITS F225": {
     "courseTitle": "ENVIRONMENTAL STUDIES",
-    "midsem": "14/03 - 2.00 - 3.30PM",
-    "endsem": "15/05 FN"
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "15/12 AN"
   },
   "BITS F232": {
-    "courseTitle": "FOUNDATIONS OF DATA STRUCTURES AND ALGORITHMS",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+    "courseTitle": "FOUNDATIONS OF DATA STRUCTURES AND\nALGORITHMS",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "BITS F235": {
-    "courseTitle": "DIGITAL FUNDAMENTALS",
-    "midsem": "14/03 - 2.00 - 3.30PM",
-    "endsem": "15/05 FN"
+  "BITS F314": {
+    "courseTitle": "GAME THEORY AND ITS\nAPPLICATIONS",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "BITS F241": {
-    "courseTitle": "SYSTEMS ENGG PRINCIPLES",
-    "midsem": "14/03 - 2.00 - 3.30PM",
-    "endsem": "15/05 FN"
+  "BITS F316": {
+    "courseTitle": "NONLINEAR DYNA &\nCHAOS",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "BITS F364": {
-    "courseTitle": "HUMAN COMPUTER INTERACTION",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "BITS F385": {
+    "courseTitle": "INTRO TO GENDER STUDIES",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
   "BITS F386": {
-    "courseTitle": "QUANTUM INFO & COMPUTING",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
-  },
-  "BITS F399": {
-    "courseTitle": "HUMANISTIC THEO OF SC & TECH",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+    "courseTitle": "QUANTUM INFO &\nCOMPUTING",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
   "BITS F415": {
     "courseTitle": "INTRODUCTION TO MEMS",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "BITS F417": {
-    "courseTitle": "MICRO-FLUIDICS & ITS APP",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "BITS F416": {
+    "courseTitle": "INTRO TO NANO SCIENCE",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
   "BITS F418": {
-    "courseTitle": "INTRO TO BIOMEDICAL ENGG",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+    "courseTitle": "INTRO TO BIOMEDICAL\nENGG",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
   "BITS F428": {
-    "courseTitle": "ESSENTIALS OF STRATE MGT",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+    "courseTitle": "ESSENTIALS OF STRATE\nMGT",
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "16/12 FN"
   },
-  "BITS F441": {
-    "courseTitle": "ROBOTICS",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "BITS F431": {
+    "courseTitle": "FLEXIBLE\nMANUFACTURING SYSTEMS",
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "16/12 FN"
   },
-  "BITS F442": {
-    "courseTitle": "REMOTE SENS & IMAGE PROC",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "BITS F437": {
+    "courseTitle": "TECHNICAL\nCOMMUNICATION",
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "15/12 FN"
+  },
+  "BITS F452": {
+    "courseTitle": "BLOCKCHAIN TECHNOLOGY",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
+  },
+  "BITS F459": {
+    "courseTitle": "Computer Vision",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
+  },
+  "BITS F462": {
+    "courseTitle": "RENEWABLE ENERGY",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
   "BITS F463": {
     "courseTitle": "CRYPTOGRAPHY",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "16/12 FN"
   },
-  "BITS F464": {
-    "courseTitle": "MACHINE LEARNING",
-    "midsem": "07/03 - 11.30 - 1.00PM",
-    "endsem": "30/04 AN"
+  "BITS G553": {
+    "courseTitle": "REAL TIME SYSTEMS",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "BITS G527": {
-    "courseTitle": "DATA SCIENCES II",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "CE F211": {
+    "courseTitle": "MECHANICS OF SOLIDS",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "CE F241": {
-    "courseTitle": "ANALYSIS OF STRUCTURES",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+  "CE F213": {
+    "courseTitle": "SURVEYING",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "CE F242": {
-    "courseTitle": "CONSTRUCTION PLANNING & TECH",
-    "midsem": "9/03 - 4.00 - 5.30PM",
-    "endsem": "04/05 AN"
+  "CE F230": {
+    "courseTitle": "CIVIL ENGINEERING\nMATERIALS",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "CE F243": {
-    "courseTitle": "SOIL MECHANICS",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "CE F231": {
+    "courseTitle": "FLUID MECHANICS",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
   },
-  "CE F244": {
-    "courseTitle": "HIGHWAY ENGINEERING",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+  "CE F312": {
+    "courseTitle": "HYDRAULIC ENGINEERING",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "CE F321": {
-    "courseTitle": "ENGINEERING HYDROLOGY",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+  "CE F313": {
+    "courseTitle": "FOUNDATION\nENGINEERING",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
   },
-  "CE F342": {
-    "courseTitle": "WATER & WASTEWATER TREAT",
-    "midsem": "10/03 - 9.30 - 11.00AM",
-    "endsem": "05/05 AN"
+  "CE F320": {
+    "courseTitle": "DESIGN OF REINFORCED\nCONCRETE",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
   },
-  "CE F343": {
-    "courseTitle": "DESIGN OF STEEL STRUCTURES",
-    "midsem": "14/03 - 11.30 - 1.00PM",
-    "endsem": "14/05 AN"
+  "CE F323": {
+    "courseTitle": "INTRO TO ENVIRN ENGG",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "CE F423": {
-    "courseTitle": "GREEN BUILD & ENER CONSE",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "CE F411": {
+    "courseTitle": "OPER RESEARCH FOR\nENGIN",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "CE F425": {
-    "courseTitle": "AIRPORT RAIL & WATERWAYS",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "CE F417": {
+    "courseTitle": "APP OF AI IN CIVIL ENGG",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "CE F426": {
-    "courseTitle": "GEOSYN & REIN SOIL STR",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "CE F420": {
+    "courseTitle": "INTRO TO BRIDGE ENGG",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
-  "CE F435": {
-    "courseTitle": "INTRODUCTION TO FEM",
-    "midsem": "13/03 - 9.30 - 11.00AM",
-    "endsem": "12/05 FN"
+  "CE G534": {
+    "courseTitle": "PAVEMENT MATERIAL\nCHARAC",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "CE G514": {
-    "courseTitle": "STRUCTURAL OPTIMIZATION",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "CE G538": {
+    "courseTitle": "PROJECT PLAN & MGMT",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "CE G613": {
-    "courseTitle": "ADV CONCRETE STRUCTURES",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "CE G545": {
+    "courseTitle": "AIRPORT PLANNING & DES",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "CE G615": {
-    "courseTitle": "EARTHQUAKE ENGINEERING",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+  "CE G551": {
+    "courseTitle": "DYNAMICS OF\nSTRUCTURES",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "CE G616": {
-    "courseTitle": "BRIDGE ENGINEERING",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "CE G552": {
+    "courseTitle": "ADV STR MECH &\nSTABILITY",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "CHE F241": {
-    "courseTitle": "HEAT TRANSFER",
-    "midsem": "9/03 - 4.00 - 5.30PM",
-    "endsem": "04/05 AN"
+  "CE G562": {
+    "courseTitle": "ADVANCED CONCRETE\nTECHNOLOGY",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "CHE F242": {
-    "courseTitle": "NUM METHOD FOR CHEM ENGG",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+  "CE G565": {
+    "courseTitle": "TRANSPORTATION\nPLANNING",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "CHE F243": {
-    "courseTitle": "MATERIAL SCIENCE & ENGINEERING",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+  "CE G567": {
+    "courseTitle": "HIGHWAY DESIGN",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "CHE F244": {
-    "courseTitle": "SEPARATION PROCESSES I",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "CE G568": {
+    "courseTitle": "TRAFFIC SYSTEMS\nANALYSIS",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "CHE F341": {
-    "courseTitle": "CHEMICAL ENGG LAB II",
-    "midsem": "",
-    "endsem": ""
+  "CE G569": {
+    "courseTitle": "TRANSPORTATION\nECONOMICS",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "CHE F342": {
-    "courseTitle": "PROCESS DYN & CONTROL",
-    "midsem": "14/03 - 11.30 - 1.00PM",
-    "endsem": "14/05 AN"
+  "CE G571": {
+    "courseTitle": "ROAD ASSET\nMANAGEMENT",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "CHE F343": {
-    "courseTitle": "PROCESS DES PRINCIPLE II",
-    "midsem": "10/03 - 9.30 - 11.00AM",
-    "endsem": "05/05 AN"
+  "CE G572": {
+    "courseTitle": "TRANSPORTATION DATA\nANALYTICS",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
-  "CHE F412": {
-    "courseTitle": "PROCESS EQUIPMENT DESIGN",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "CE G612": {
+    "courseTitle": "ADVANCED STEEL\nSTRUCTURE",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
+  },
+  "CE G614": {
+    "courseTitle": "PRESTRESS CONCRETE\nSTRUC",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
+  },
+  "CE G617": {
+    "courseTitle": "ADVANCE STRUC ANALYSIS",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
+  },
+  "CE G619": {
+    "courseTitle": "FINITE ELEMENT ANALYSIS",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
+  },
+  "CE G620": {
+    "courseTitle": "ADVANCE FOUNDATION\nENGG",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
+  },
+  "CHE F211": {
+    "courseTitle": "CHEMICAL PROCESS\nCALCULA",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
+  },
+  "CHE F212": {
+    "courseTitle": "FLUID MECHANICS",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
+  },
+  "CHE F213": {
+    "courseTitle": "CHEM ENGG\nTHERMODYNAMICS",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
+  },
+  "CHE F214": {
+    "courseTitle": "ENGINEERING CHEMISTRY",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
+  },
+  "CHE F311": {
+    "courseTitle": "KINETICS & REACTOR\nDESIGN",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
+  },
+  "CHE F312": {
+    "courseTitle": "CHEMICAL ENGG LAB I",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
+  },
+  "CHE F313": {
+    "courseTitle": "SEPARATION PROCESSES II",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
+  },
+  "CHE F314": {
+    "courseTitle": "PROCESS DES PRINCIPLES I",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
+  },
+  "CHE F411": {
+    "courseTitle": "ENVIR POLLUTION\nCONTROL",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
   "CHE F418": {
-    "courseTitle": "MODEL & SIMU IN CHE ENGG",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+    "courseTitle": "MODEL & SIMU IN CHE\nENGG",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "CHE F421": {
-    "courseTitle": "BIOCHEMICAL ENGINEERING",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+  "CHE F422": {
+    "courseTitle": "PETRO. REFI. TECH.",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "CHE G558": {
-    "courseTitle": "CHEMICAL PROCESS OPTIMIZATION",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "CHE G522": {
+    "courseTitle": "POLYMER TECHNOLOGY",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "CHEM F223": {
-    "courseTitle": "COLLOID & SURFACE CHEM",
-    "midsem": "07/03 - 9.30 - 11.00AM",
-    "endsem": "16/05 FN"
+  "CHE G523": {
+    "courseTitle": "MATHEMATICAL METHODS IN CHEMICAL\nENGINEERING",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "CHEM F241": {
-    "courseTitle": "INORGANIC CHEMISTRY II",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+  "CHE G528": {
+    "courseTitle": "INTRO TO NANO SCI &\nTECH",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "CHEM F242": {
-    "courseTitle": "CHEMICAL EXPER I",
-    "midsem": "",
-    "endsem": ""
+  "CHE G622": {
+    "courseTitle": "ADV CHEMICAL ENGG\nTHERMO",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "CHEM F243": {
-    "courseTitle": "ORGANIC CHEMISTRY II",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "CHEM F110": {
+    "courseTitle": "CHEMISTRY LABORATORY",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "CHEM F244": {
-    "courseTitle": "PHYSICAL CHEMISTRY III",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+  "CHEM F111": {
+    "courseTitle": "GENERAL CHEMISTRY",
+    "midsem": "07/10 -  1.30 - 3.00PM",
+    "endsem": "04/12 FN"
   },
-  "CHEM F327": {
-    "courseTitle": "ELECTROCHEM FUNDA & APPL",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "CHEM F211": {
+    "courseTitle": "PHYSICAL CHEMISTRY I",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "CHEM F329": {
-    "courseTitle": "ANALYTICAL CHEMISTRY",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "CHEM F212": {
+    "courseTitle": "ORGANIC CHEMISTRY I",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "CHEM F341": {
-    "courseTitle": "CHEMICAL EXPER II",
-    "midsem": "",
-    "endsem": ""
+  "CHEM F213": {
+    "courseTitle": "PHYSICAL CHEMISTRY II",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "CHEM F342": {
-    "courseTitle": "ORGANIC CHEMISTRY IV",
-    "midsem": "12/03 - 4.00 - 5.30PM",
-    "endsem": "11/05 AN"
+  "CHEM F214": {
+    "courseTitle": "INORGANIC CHEMISTRY I",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
   },
-  "CHEM F343": {
-    "courseTitle": "INORGANIC CHEMISTRY III",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "CHEM F311": {
+    "courseTitle": "ORGANIC CHEMISTRY III",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "CHEM F412": {
-    "courseTitle": "PHOTOCHEM & LASER SPECTR",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "CHEM F312": {
+    "courseTitle": "PHYSICAL CHEMISTRY IV",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
-  "CHEM F414": {
-    "courseTitle": "BIO & CHEMICAL SENSORS",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "CHEM F313": {
+    "courseTitle": "INSTRU METHODS OF ANAL",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
   },
-  "CHEM G551": {
-    "courseTitle": "ADV ORGANIC CHEMISTRY",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "CHEM F325": {
+    "courseTitle": "POLYMER CHEMISTRY",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
-  "CHEM G552": {
-    "courseTitle": "ADVANCED INORGANIC CHEMISTRY",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+  "CHEM F326": {
+    "courseTitle": "SOLID STATE CHEMISTRY",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
+  },
+  "CHEM F416": {
+    "courseTitle": "APPLIED\nCRYSTALLOGRAPHY",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
+  },
+  "CHEM G553": {
+    "courseTitle": "ADVANCED PHYSICAL\nCHEMISTRY",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
+  },
+  "CHEM G554": {
+    "courseTitle": "PHY METHODS IN\nCHEMISTRY",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
   "CS F111": {
-    "courseTitle": "COMPUTER PROGRAMMING",
-    "midsem": "13/03 - 11.30 - 1.00PM",
-    "endsem": "12/05 AN"
-  },
-  "CS F211": {
-    "courseTitle": "DATA STRUCTURES & ALGO",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+    "courseTitle": "COMPUTER\nPROGRAMMING",
+    "midsem": "09/10 -  3.30 - 5.00PM",
+    "endsem": "09/12 AN"
   },
   "CS F212": {
     "courseTitle": "DATA BASE SYSTEMS",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
   "CS F213": {
     "courseTitle": "OBJECT ORIENTED PROG",
-    "midsem": "9/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "CS F241": {
-    "courseTitle": "MICROPROC & INTERFACING",
-    "midsem": "9/03 -  4.00 - 5.30PM",
-    "endsem": "04/05 AN"
+  "CS F214": {
+    "courseTitle": "LOGIC IN COMPUTER SC",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "CS F303": {
-    "courseTitle": "COMPUTER NETWORKS",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+  "CS F215": {
+    "courseTitle": "DIGITAL DESIGN",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "CS F317": {
-    "courseTitle": "REINFORCEMENT LEARNING",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "CS F222": {
+    "courseTitle": "DISCR STRUC FOR COMP\nSCI",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
+  },
+  "CS F301": {
+    "courseTitle": "PRINCIPLES OF PROGG\nLANG",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
+  },
+  "CS F320": {
+    "courseTitle": "FOUNDATIONS OF DATA\nSCIENCE",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
+  },
+  "CS F321": {
+    "courseTitle": "SYSTEM SECURITY",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
   "CS F342": {
     "courseTitle": "COMPUTER ARCHITECTURE",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
   "CS F351": {
     "courseTitle": "THEORY OF COMPUTATION",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
-  },
-  "CS F363": {
-    "courseTitle": "COMPILER CONSTRUCTION",
-    "midsem": "10/03 - 9.30 - 11.00AM",
-    "endsem": "05/05 AN"
-  },
-  "CS F364": {
-    "courseTitle": "DESIGN & ANAL OF ALGO",
-    "midsem": "13/03 -9.30 -11.00AM",
-    "endsem": "12/05 FN"
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
   },
   "CS F372": {
     "courseTitle": "OPERATING SYSTEMS",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
   "CS F407": {
     "courseTitle": "ARTIFICIAL INTELLIGENCE",
-    "midsem": "11/03 - 09.30 - 11.00AM",
-    "endsem": "07/05 FN"
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "CS F415": {
-    "courseTitle": "DATA MINING",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "CS F425": {
+    "courseTitle": "DEEP LEARNING",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
-  "CS F431": {
-    "courseTitle": "COMBINATORIAL OPTIMIZATION",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "CS F429": {
+    "courseTitle": "NATURAL LANGUAGE\nPROCESSING",
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "16/12 FN"
   },
-  "CS F433": {
-    "courseTitle": "COMPUTATIONAL\r\r\nNEUROSCIENCE",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "CS F434": {
+    "courseTitle": "DATA SCIENCE FOR\nHEALTHCARE",
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "16/12 FN"
   },
-  "CS F437": {
-    "courseTitle": "GENERATIVE ARTIFICIAL\r\r\nINTELLIGENCE",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "CS G516": {
+    "courseTitle": "ADVANCED DATABASE\nSYSTEMS",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "CS F469": {
-    "courseTitle": "INFORMATION RETRIEVAL",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "CS G519": {
+    "courseTitle": "SOCIAL MEDIA ANALYTICS",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "CS G513": {
-    "courseTitle": "NETWORK SECURITY",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "CS G525": {
+    "courseTitle": "ADV COMPUTER\nNETWORKS",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "CS G523": {
-    "courseTitle": "SOFTWARE FOR EMBEDDED\r\r\nSYS",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "CS G526": {
+    "courseTitle": "ADV ALGORITHMS &\nCOMPLEXITY",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "15/12 FN"
   },
-  "CS G524": {
-    "courseTitle": "ADV COMPUTER\r\r\nARCHITECTURE",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+  "CS G553": {
+    "courseTitle": "RECONFIGURABLE\nCOMPUTING",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "CS G527": {
-    "courseTitle": "CLOUD COMPUTING",
-    "midsem": "14/03 - 11.30 - 1.00PM",
-    "endsem": "14/05 AN"
+  "CS G623": {
+    "courseTitle": "ADVANCED OPERAT\nSYSTEMS",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "ECE F241": {
-    "courseTitle": "MICROPROC & INTERFACING",
-    "midsem": "9/03 -  4.00 - 5.30PM",
-    "endsem": "04/05 AN"
+  "DE G514": {
+    "courseTitle": "FRACTURE MECHANICS",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "ECE F242": {
-    "courseTitle": "CONTROL SYSTEMS",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "DE G531": {
+    "courseTitle": "PRODUCT DESIGN",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "ECE F243": {
-    "courseTitle": "SIGNALS & SYSTEMS",
-    "midsem": "10/03-2.00 -3.30PM",
-    "endsem": "06/05 FN"
+  "DE G611": {
+    "courseTitle": "DYNAMICS & VIBRATION",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
-  "ECE F244": {
-    "courseTitle": "MICROELECTRONIC CIRCUITS",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+  "DE G631": {
+    "courseTitle": "MATERIALS TECH AND\nTESTING",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "ECE F341": {
-    "courseTitle": "ANALOG ELECTRONICS",
-    "midsem": "10/03 - 9.30 - 11.00AM",
-    "endsem": "05/05 AN"
+  "ECE F211": {
+    "courseTitle": "ELECTRICAL MACHINES",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "ECE F343": {
-    "courseTitle": "COMMUNICATION  NETWORKS",
-    "midsem": "14/03 - 11.30 - 1.00PM",
-    "endsem": "14/05 AN"
+  "ECE F212": {
+    "courseTitle": "ELECTROMAGNETIC THEO I",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
   },
-  "ECE F344": {
-    "courseTitle": "INFO THEORY & CODING",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+  "ECE F214": {
+    "courseTitle": "ELECTRONIC DEVICES",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "ECE F423": {
-    "courseTitle": "ELECT MATERIAL DES & SIMUL\r\r\nLAB",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "ECE F215": {
+    "courseTitle": "DIGITAL DESIGN",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "ECE F424": {
-    "courseTitle": "SMART GRID FOR\r\r\nSUSTAINABLE ENERGY",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "ECE F216": {
+    "courseTitle": "ELECTRONIC DEVICES SIMULATION LABORATORY",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "ECE F428": {
-    "courseTitle": "ENERGY STORAGE SYSTEMS",
-    "midsem": "10/03 -  4.00 - 5.30PM",
-    "endsem": "06/05 AN"
+  "ECE F311": {
+    "courseTitle": "COMMUNICATION\nSYSTEMS",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
+  },
+  "ECE F331": {
+    "courseTitle": "MICROWAVE\nENGINEERING",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
+  },
+  "ECE F434": {
+    "courseTitle": "DIGITAL SIGNAL PROCESS",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
+  },
+  "ECE F438": {
+    "courseTitle": "ELECTRIC VEHICLES",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
   "ECON F211": {
-    "courseTitle": "PRINCIPLES OF ECONOMICS",
-    "midsem": "12/03 - 2.00 - 3.30PM",
-    "endsem": "11/05 FN"
+    "courseTitle": "PRINCIPLES OF\nECONOMICS",
+    "midsem": "07/10 -  9.30 - 11.00AM",
+    "endsem": "03/12 FN"
   },
   "ECON F212": {
-    "courseTitle": "FUNDA OF FIN AND ACCOUNT",
-    "midsem": "07/03 - 9.30 - 11.00AM",
-    "endsem": "16/05 FN"
+    "courseTitle": "FUNDA OF FIN AND\nACCOUNT",
+    "midsem": "04/10 -  3.30 - 5.00PM",
+    "endsem": "16/12 AN"
   },
-  "ECON F241": {
-    "courseTitle": "ECONOMETRIC METHODS",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+  "ECON F213": {
+    "courseTitle": "MATHEMATIC & STAT\nMETHOD",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
   },
-  "ECON F242": {
-    "courseTitle": "MICROECONOMICS",
-    "midsem": "11/03 -2.00 -3.30PM",
-    "endsem": "08/05AN"
+  "ECON F214": {
+    "courseTitle": "ECONOMIC ENV OF\nBUSINESS",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "ECON F243": {
-    "courseTitle": "MACROECONOMICS",
-    "midsem": "9/03 -  4.00 - 5.30PM",
-    "endsem": "04/05 AN"
+  "ECON F311": {
+    "courseTitle": "INTERNATIONAL\nECONOMICS",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
   },
-  "ECON F244": {
-    "courseTitle": "ECONOMIC OF GROWTH & DEV",
-    "midsem": "13/03 -2.00 -3.30PM",
-    "endsem": "13/05 FN"
+  "ECON F312": {
+    "courseTitle": "MONEY BANKING & FIN\nMARKETS",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
+  },
+  "ECON F313": {
+    "courseTitle": "ISSUES IN ECONOMIC DEV",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
   "ECON F315": {
     "courseTitle": "FINANCIAL MANAGEMENT",
-    "midsem": "07/03 - 9.30 - 11.00AM",
-    "endsem": "16/05 FN"
-  },
-  "ECON F341": {
-    "courseTitle": "PUBLIC FIN THEO & POLICY",
-    "midsem": "12/03 - 4.00 - 5.30PM",
-    "endsem": "11/05 AN"
-  },
-  "ECON F342": {
-    "courseTitle": "APPLIED ECONOMETRICS",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
-  },
-  "ECON F343": {
-    "courseTitle": "ECONOMIC ANAL OF PUB POL",
-    "midsem": "14/03 -  4.00 - 5.30PM",
-    "endsem": "15/05 AN"
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
   "ECON F354": {
-    "courseTitle": "DERIVATIVES & RISK MGMT",
-    "midsem": "07/03 - 4.00 - 5.30PM",
-    "endsem": "30/04 FN"
+    "courseTitle": "DERIVATIVES & RISK\nMGMT",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
   "ECON F355": {
     "courseTitle": "BUSS ANAL & VALUATION",
-    "midsem": "07/03-11.30-1.00PM",
-    "endsem": "30/04AN"
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
   "ECON F412": {
-    "courseTitle": "SECUR ANAL & PORTFOL MGT",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
-  },
-  "ECON F413": {
-    "courseTitle": "FINANCIAL ENGINEERING",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+    "courseTitle": "SECUR ANAL & PORTFOL\nMGT",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
   "EEE F111": {
     "courseTitle": "ELECTRICAL SCIENCES",
-    "midsem": "14/03 - 9.30 - 11.00AM",
-    "endsem": "14/05 FN"
+    "midsem": "09/10 -  3.30 - 5.00PM",
+    "endsem": "09/12 AN"
   },
-  "EEE F241": {
-    "courseTitle": "MICROPROC & INTERFACING",
-    "midsem": "9/03 -  4.00 - 5.30PM",
-    "endsem": "04/05 AN"
+  "EEE F211": {
+    "courseTitle": "ELECTRICAL MACHINES",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "EEE F242": {
-    "courseTitle": "CONTROL SYSTEMS",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "EEE F212": {
+    "courseTitle": "ELECTROMAGNETIC THEO I",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
   },
-  "EEE F243": {
-    "courseTitle": "SIGNALS & SYSTEMS",
-    "midsem": "10/03 -2.00 -3.30PM",
-    "endsem": "06/05 FN"
+  "EEE F214": {
+    "courseTitle": "ELECTRONIC DEVICES",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "EEE F244": {
-    "courseTitle": "MICROELECTRONIC CIRCUITS",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+  "EEE F215": {
+    "courseTitle": "DIGITAL DESIGN",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "EEE F245": {
-    "courseTitle": "CONTROL SYSTEMS\r\r\nLABORATORY",
-    "midsem": "",
-    "endsem": ""
+  "EEE F311": {
+    "courseTitle": "COMMUNICATION\nSYSTEMS",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
   },
-  "EEE F246": {
-    "courseTitle": "ELECTRICAL & ELECTRONIC CIRCUITS LABORATORY",
-    "midsem": "",
-    "endsem": ""
+  "EEE F313": {
+    "courseTitle": "ANALOG & DIGITAL VLSI\nDES",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
   },
-  "EEE F312": {
-    "courseTitle": "POWER SYSTEMS",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+  "EEE F348": {
+    "courseTitle": "FPGA BASED SYSTEM\nDESIGN LAB",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
-  "EEE F314": {
-    "courseTitle": "FPGA BASED SYSTEM DESIGN",
-    "midsem": "13/03 -  4.00 - 5.30PM",
-    "endsem": "13/05 AN"
+  "EEE F411": {
+    "courseTitle": "INTERNET OF THINGS",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
-  "EEE F341": {
-    "courseTitle": "ANALOG ELECTRONICS",
-    "midsem": "10/03 - 9.30 - 11.00AM",
-    "endsem": "05/05 AN"
+  "EEE F422": {
+    "courseTitle": "MODERN CONTROL\nSYSTEMS",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "EEE F342": {
-    "courseTitle": "POWER ELECTRONICS",
-    "midsem": "13/03 - 9.30 - 11.00AM",
-    "endsem": "12/05 FN"
+  "EEE F434": {
+    "courseTitle": "DIGITAL SIGNAL PROCESS",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "EEE F423": {
-    "courseTitle": "ELECT MATERIAL DES & SIMUL\r\r\nLAB",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "EEE F435": {
+    "courseTitle": "DIGITAL IMAGE\nPROCESSING",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "EEE F424": {
-    "courseTitle": "SMART GRID FOR\r\r\nSUSTAINABLE ENERGY",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "EEE F438": {
+    "courseTitle": "ELECTRIC VEHICLES",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "EEE F426": {
-    "courseTitle": "FIBRE OPTICS & OPTOELECT",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "EEE G510": {
+    "courseTitle": "RF MICROELECTRONICS",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "EEE F428": {
-    "courseTitle": "ENERGY STORAGE SYSTEMS",
-    "midsem": "10/03 -  4.00 - 5.30PM",
-    "endsem": "06/05 AN"
-  },
-  "EEE F432": {
-    "courseTitle": "MEDICAL INSTRUMENTATION",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
-  },
-  "EEE F437": {
-    "courseTitle": "SEMICONDUCTOR\r\r\nFABRICATION TECHNOLOGY",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
-  },
-  "EEE F474": {
-    "courseTitle": "ANTENNA THEORY AND DESIGN",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
-  },
-  "EEE F477": {
-    "courseTitle": "MODELING OF FIELD-EFFECT\r\r\nNANO DEVICES",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "EEE G512": {
+    "courseTitle": "EMBEDDED SYSTEM\nDESIGN",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
   "EEE G513": {
-    "courseTitle": "MACHINE LEARNING FOR\r\r\nELECTRONICS ENGINEERS",
-    "midsem": "13/03 -  4.00 - 5.30PM",
-    "endsem": "13/05 AN"
+    "courseTitle": "MACHINE LEARNING FOR ELECTRONICS ENGINEERS",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "EEE G523": {
-    "courseTitle": "Processor Architecture and Design",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "EEE G541": {
+    "courseTitle": "DISTRIBUTION APPARATUS AND CONFIGURATIONS",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "EEE G525": {
-    "courseTitle": "Wireless Communication Systems",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "EEE G542": {
+    "courseTitle": "POWER ELECTRONIC\nCONVERT",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "EEE G526": {
-    "courseTitle": "Lightwave Engineering",
-    "midsem": "12/03 -4.00-5.30PM",
-    "endsem": "11/05AN"
-  },
-  "EEE G540": {
-    "courseTitle": "Advanced Control Techniques for\r\r\nPower Converters and Drives",
-    "midsem": "10/03 -  4.00 - 5.30PM",
-    "endsem": "06/05 AN"
+  "EEE G543": {
+    "courseTitle": "POWER DEVICE MICROELECTRONICS AND\nSELECTION",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
   "EEE G547": {
     "courseTitle": "DEVICE DRIVERS",
-    "midsem": "12/03 -  4.00 - 5.30PM",
-    "endsem": "11/05 AN"
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "EEE G552": {
-    "courseTitle": "SOLID STATE DRIVES",
-    "midsem": "12/03 -4.00-5.30PM",
-    "endsem": "11/05AN"
+  "EEE G581": {
+    "courseTitle": "RF & MICROWAVE ENGG",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "FIN F311": {
-    "courseTitle": "DERIVATIVES & RISK MGMT",
-    "midsem": "07/03 - 4.00 - 5.30PM",
-    "endsem": "30/04 FN"
+  "EEE G591": {
+    "courseTitle": "OPTICAL\nCOMMUNICATION",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "FIN F313": {
-    "courseTitle": "SECUR ANAL & PORTFOL MGT",
-    "midsem": "09/03 -2.00 -3.30PM",
-    "endsem": "04/05 FN"
+  "EEE G612": {
+    "courseTitle": "CODING THEORY &\nPRACTICE",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "FIN F315": {
-    "courseTitle": "FINANCIAL MANAGEMENT",
-    "midsem": "07/03 -9.30 -11.00AM",
-    "endsem": "16/05 FN"
+  "EEE G613": {
+    "courseTitle": "ADV DIGITAL SIGNAL PROC",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
+  },
+  "EEE G614": {
+    "courseTitle": "ADVANCED WIRELESS\nCOMMUNICATIONS",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
+  },
+  "EEE G622": {
+    "courseTitle": "ADVANCED DIGITAL\nCOMMUNICATION",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
+  },
+  "EEE G626": {
+    "courseTitle": "HARDWARE SOFTWARE\nCO-DSN",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
   "FIN F414": {
-    "courseTitle": "FINANCIAL RISK ANALYTICS\r\r\nAND MANAGEMENT",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+    "courseTitle": "FINANCIAL RISK ANALYTICS AND MANAGEMENT",
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "16/12 FN"
+  },
+  "GS F212": {
+    "courseTitle": "ENVIRON DEV & CLIMATE",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
   "GS F223": {
     "courseTitle": "INTRO TO MASS COMM",
-    "midsem": "14/03 - 4.00 - 5.30PM",
-    "endsem": "15/05 AN"
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
   "GS F232": {
-    "courseTitle": "INTRODUCTORY PSYCHOLOGY",
-    "midsem": "14/03 - 4.00 - 5.30PM",
-    "endsem": "15/05 AN"
-  },
-  "GS F233": {
-    "courseTitle": "PUBLICPOLICY",
-    "midsem": "09/03 -9.30 -11.00AM",
-    "endsem": "02/05AN"
-  },
-  "GS F241": {
-    "courseTitle": "CREATIVEWRITING",
-    "midsem": "14/03 -4.00 -5.30PM",
-    "endsem": "15/05AN"
+    "courseTitle": "INTRODUCTORY\nPSYCHOLOGY",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
   "GS F244": {
-    "courseTitle": "REPORT &WRITEFORMEDIA",
-    "midsem": "09/03 -9.30 -11.00AM",
-    "endsem": "02/05AN"
+    "courseTitle": "REPORT & WRITE FOR\nMEDIA",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
   },
-  "GS F245": {
-    "courseTitle": "EFFECTIVE PUBLIC SPEAK",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "GS F331": {
+    "courseTitle": "TECH IN SOCIAL RESEARCH",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "GS F326": {
-    "courseTitle": "CREATIVE THINKING",
-    "midsem": "12/03 - 4.00 - 5.30PM",
-    "endsem": "11/05 AN"
+  "GS F333": {
+    "courseTitle": "PUBLIC ADMINISTRATION",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
   "GS F342": {
-    "courseTitle": "COMPUTER MEDIATED COMM",
-    "midsem": "11/03-4.00-5.30PM",
-    "endsem": "08/05 FN"
+    "courseTitle": "COMPUTER MEDIATED\nCOMM",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
   },
-  "HSS F222": {
-    "courseTitle": "LINGUISTICS",
-    "midsem": "11/03-9.30-11.00AM",
-    "endsem": "07/05 FN"
+  "GS F345": {
+    "courseTitle": "CONSTITUTION OF INDIA",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 AN"
   },
-  "HSS F234": {
-    "courseTitle": "MAIN CURRENT OF MODERN HIS",
-    "midsem": "09/03-9.30-11.00AM",
-    "endsem": "02/05 AN"
+  "HSS F233": {
+    "courseTitle": "MAIN TRENDS IN IND\nHIST",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
   "HSS F235": {
-    "courseTitle": "INTRODUCTORY PHILOSOPHY",
-    "midsem": "09/03-9.30-11.00AM",
-    "endsem": "02/05 AN"
-  },
-  "HSS F237": {
-    "courseTitle": "CONTEMPORARY INDIAN ENGLISH FICTION",
-    "midsem": "14/03-4.00-5.30PM",
-    "endsem": "15/05 AN"
+    "courseTitle": "INTRODUCTORY\nPHILOSOPHY",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
   "HSS F242": {
-    "courseTitle": "INTRODUCTION TO PHONOLOGY",
-    "midsem": "07/03-9.30-11.00AM",
-    "endsem": "16/05 FN"
+    "courseTitle": "INTRODUCTION TO\nPHONOLOGY",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
   "HSS F243": {
-    "courseTitle": "INTRODUCTION TO CRITICAL PEDAGOGY",
-    "midsem": "07/03-9.30-11.00AM",
-    "endsem": "16/05 FN"
+    "courseTitle": "INTRODUCTION TO\nCRITICAL PEDAGOGY",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "HSS F245": {
-    "courseTitle": "GENDER SCIENCE AND TECHNOLOGY",
-    "midsem": "11/03-9.30-11.00AM",
-    "endsem": "07/05 FN"
+  "HSS F244": {
+    "courseTitle": "CRIME AND NEW MEDIA",
+    "midsem": "11/10 - 11.30 - 1.00PM",
+    "endsem": "12/12 AN"
   },
   "HSS F246": {
-    "courseTitle": "PHILOSOPHY OF NAGARJUNA",
-    "midsem": "11/03-9.30-11.00AM",
-    "endsem": "07/05 FN"
-  },
-  "HSS F247": {
-    "courseTitle": "SOCIAL INFORMATICS",
-    "midsem": "11/03-9.30-11.00AM",
-    "endsem": "07/05 FN"
-  },
-  "HSS F248": {
-    "courseTitle": "INTRODUCTION TO DISABILITY STUDIES",
-    "midsem": "14/03-4.00-5.30PM",
-    "endsem": "15/05 AN"
-  },
-  "HSS F316": {
-    "courseTitle": "POP LITER & CULT OF S ASIA",
-    "midsem": "09/03-2.00-3.30PM",
-    "endsem": "04/05 FN"
+    "courseTitle": "PHILOSOPHY OF\nNAGARJUNA",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
   "HSS F317": {
     "courseTitle": "INTRO TO GLOBALIZATION",
-    "midsem": "12/03-4.00-5.30PM",
-    "endsem": "11/05 AN"
+    "midsem": "11/10 - 11.30 - 1.00PM",
+    "endsem": "12/12 AN"
   },
-  "HSS F320": {
-    "courseTitle": "INTRODUCTION TO SOCIOLOGY OF W",
-    "midsem": "12/03-4.00-5.30PM",
-    "endsem": "11/05 AN"
+  "HSS F318": {
+    "courseTitle": "INTRO TO ANTHROPOLOGY",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
-  "HSS F322": {
-    "courseTitle": "SOCIAL AND POLITICAL ECOLOGY",
-    "midsem": "09/03-9.30-11.00AM",
-    "endsem": "02/05 AN"
+  "HSS F325": {
+    "courseTitle": "CINEMATIC ADAPTATION",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
+  },
+  "HSS F328": {
+    "courseTitle": "HUMAN RESOURCES DEV",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
+  },
+  "HSS F331": {
+    "courseTitle": "SANKARA'S THOUGHTS",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
   "HSS F332": {
     "courseTitle": "CINEMATIC ART",
-    "midsem": "12/03-4.00-5.30PM",
-    "endsem": "11/05 AN"
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 AN"
   },
   "HSS F334": {
     "courseTitle": "SRIMAD BHAGAVAD GITA",
-    "midsem": "07/03 - 9.30 - 11.00AM",
-    "endsem": "16/05 FN"
+    "midsem": "11/10 - 11.30 - 1.00PM",
+    "endsem": "12/12 AN"
   },
-  "OSS F337": {
-    "courseTitle": "ENGLISH LITERARY FORMS\r\r\nAND MOVEMENTS",
-    "midsem": "09/03 -9.30 -11.00AM",
-    "endsem": "02/05AN"
+  "HSS F336": {
+    "courseTitle": "MODERN FICTION",
+    "midsem": "11/10 - 11.30 - 1.00PM",
+    "endsem": "12/12 AN"
+  },
+  "HSS F337": {
+    "courseTitle": "ENGLISH LITERARY FORMS AND MOVEMENTS",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
   "HSS F338": {
     "courseTitle": "COMPARATIVE INDIAN LIT",
-    "midsem": "14/03 -4.00 -5.30PM",
-    "endsem": "15/05AN"
-  },
-  "HSS F340": {
-    "courseTitle": "POST COLONIAL LITERATURE",
-    "midsem": "09/03 -9.30 -11.00AM",
-    "endsem": "02/05AN"
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
   "HSS F342": {
-    "courseTitle": "ADV COMMUNICATIVE ENG",
-    "midsem": "11/03 -9.30 -11.00AM",
-    "endsem": "07/05 FN"
+    "courseTitle": "ADV COMMUNICATIVE\nENG",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
   "HSS F346": {
-    "courseTitle": "INTERNATIONAL  RELATIONS",
-    "midsem": "12/03 -4.00 -5.30PM",
-    "endsem": "11/05AN"
+    "courseTitle": "INTERNATIONAL\nRELATIONS",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 AN"
   },
   "HSS F361": {
-    "courseTitle": "URBAN POLICY AND\r\r\nGOVERNANCE",
-    "midsem": "09/03-2.00-3.30PM",
-    "endsem": "04/05 FN"
+    "courseTitle": "URBAN POLICY AND\nGOVERNANCE",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 AN"
   },
   "HSS F363": {
-    "courseTitle": "DISASTER AND DEVELOPMENT",
-    "midsem": "11/03-4.00 -5.30PM",
-    "endsem": "08/05 FN"
+    "courseTitle": "DISASTER AND\nDEVELOPMENT",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
   "HSS F369": {
-    "courseTitle": "CASTE AND GENDER IN INDIA",
-    "midsem": "13/03 -4.00 -5.30PM",
-    "endsem": "13/05AN"
+    "courseTitle": "CASTE AND GENDER IN\nINDIA",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 AN"
+  },
+  "HSS F372": {
+    "courseTitle": "INTRODUCTION TO SOCIAL\nPSYCHOLOGY",
+    "midsem": "11/10 - 11.30 - 1.00PM",
+    "endsem": "12/12 AN"
   },
   "HSS F375": {
-    "courseTitle": "Bus & Pol in Col & Pos Col Ind",
-    "midsem": "09/03 -2.00-3.30PM",
-    "endsem": "04/05 FN"
+    "courseTitle": "Bus & Pol in Col & Pos Col\nInd",
+    "midsem": "11/10 - 11.30 - 1.00PM",
+    "endsem": "12/12 AN"
   },
   "HSS F385": {
-    "courseTitle": "MENTAL HEALTH LITERACY\r\r\nFOR YOUTH",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+    "courseTitle": "MENTAL HEALTH LITERACY\nFOR YOUTH",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 AN"
   },
-  "INSTR F241": {
-    "courseTitle": "MICROPROC & INTERFACING",
-    "midsem": "9/03 -  4.00-5.30PM",
-    "endsem": "04/05AN"
+  "HSS F386": {
+    "courseTitle": "OCEAN HUMANITIES",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
-  "INSTR F242": {
-    "courseTitle": "CONTROL SYSTEMS",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "HSS F388": {
+    "courseTitle": "GANDHI IN LITERATURE",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "INSTR F243": {
-    "courseTitle": "SIGNALS & SYSTEMS",
-    "midsem": "10/03-2.00-3.30PM",
-    "endsem": "06/05 FN"
+  "INSTR F211": {
+    "courseTitle": "ELECTRICAL MACHINES",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "INSTR F244": {
-    "courseTitle": "MICROELECTRONIC CIRCUITS",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+  "INSTR F212": {
+    "courseTitle": "ELECTROMAGNETIC\nTHEORY I",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
   },
-  "INSTR F341": {
-    "courseTitle": "ANALOG ELECTRONICS",
-    "midsem": "10/03 - 9.30 - 11.00AM",
-    "endsem": "05/05 AN"
+  "INSTR F214": {
+    "courseTitle": "ELECTRONIC DEVICES",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "INSTR F342": {
-    "courseTitle": "POWER ELECTRONICS",
-    "midsem": "13/03 - 9.30 - 11.00AM",
-    "endsem": "12/05 FN"
+  "INSTR F215": {
+    "courseTitle": "DIGITAL DESIGN",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "INSTR F343": {
-    "courseTitle": "INDUS INSTRUMENT & CONT",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+  "INSTR F311": {
+    "courseTitle": "ELECTRO INST & INST TECH",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
   },
-  "INSTR F423": {
-    "courseTitle": "ELECT MATERIAL DES & SIMUL\r\r\nLAB",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "INSTR F312": {
+    "courseTitle": "TRANSD & MEASUREMENT\nTEC",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "INSTR F424": {
-    "courseTitle": "SMART GRID FOR\r\r\nSUSTAINABLE ENERGY",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "INSTR F313": {
+    "courseTitle": "ANALOG & DIGITAL VLSI\nDES",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
   },
-  "INSTR F428": {
-    "courseTitle": "ENERGY STORAGE SYSTEMS",
-    "midsem": "10/03 -  4.00 - 5.30PM",
-    "endsem": "06/05 AN"
+  "INSTR F438": {
+    "courseTitle": "ELECTRIC VEHICLES",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "INSTR F432": {
-    "courseTitle": "MEDICAL INSTRUMENTAITON",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "IS F311": {
+    "courseTitle": "COMPUTER GRAPHICS",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
   "IS F341": {
     "courseTitle": "Software Engineering",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "MAC F241": {
+  "ITEB G621": {
+    "courseTitle": "SUPPLY CHAIN\nMANAGEMENT",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
+  },
+  "MAC F211": {
+    "courseTitle": "LINEAR ALGEBRA AND ITS\nAPP",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
+  },
+  "MAC F212": {
+    "courseTitle": "OBJECT ORIENTED\nPROGRAMMING",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
+  },
+  "MAC F213": {
+    "courseTitle": "DISCRETE MATHEMATICS",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
+  },
+  "MAC F214": {
+    "courseTitle": "ELEMENTARY REAL\nANALYSIS",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
+  },
+  "MATH F111": {
+    "courseTitle": "MATHEMATICS I",
+    "midsem": "06/10 -  1.30 - 3.00PM",
+    "endsem": "02/12 FN"
+  },
+  "MATH F211": {
+    "courseTitle": "MATHEMATICS III",
+    "midsem": "06/10 -  9.30 - 11.00AM",
+    "endsem": "01/12 FN"
+  },
+  "MATH F212": {
+    "courseTitle": "OPTIMIZATION",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
+  },
+  "MATH F213": {
+    "courseTitle": "DISCRETE MATHEMATICS",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
+  },
+  "MATH F214": {
+    "courseTitle": "ELEMENTARY REAL\nANALYSIS",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
+  },
+  "MATH F215": {
+    "courseTitle": "ALGEBRA I",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
+  },
+  "MATH F311": {
+    "courseTitle": "INTRODUCTION TO\nTOPOLOGY",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
+  },
+  "MATH F312": {
+    "courseTitle": "ORDINARY DIFF\nEQUATIONS",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
+  },
+  "MATH F313": {
     "courseTitle": "NUMERICAL ANALYSIS",
-    "midsem": "9/03 -  4.00 - 5.30PM",
-    "endsem": "04/05 AN"
-  },
-  "MAC F242": {
-    "courseTitle": "DATA STRUCTURES &\r\r\nALGORITHMS",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
-  },
-  "MAC F243": {
-    "courseTitle": "NUMERICAL OPTIMIZATION",
-    "midsem": "11/03 -2.00 -3.30PM",
-    "endsem": "08/05AN"
-  },
-  "MAC F244": {
-    "courseTitle": "STOCHASTICCALCU & APP TO\r\r\nFN",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
-  },
-  "MAC F245": {
-    "courseTitle": "SCIENTIFIC COMPUTING LAB",
-    "midsem": "",
-    "endsem": ""
-  },
-  "MATH F102": {
-    "courseTitle": "LIN ALGEB & COMP VARIA",
-    "midsem": "11/03 - 11.30 - 1.00PM",
-    "endsem": "07/05 AN"
-  },
-  "MATH F113": {
-    "courseTitle": "PROBABILITYANDSTATISTICS",
-    "midsem": "9/03 - 11.30 - 1.00PM0",
-    "endsem": "02/05 FN"
-  },
-  "MATH F231": {
-    "courseTitle": "NUMBER THEORY",
-    "midsem": "07/03 - 9.30 - 11.00AM",
-    "endsem": "16/05 FN"
-  },
-  "MATH F241": {
-    "courseTitle": "MATHEMATICAL METHODS",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
-  },
-  "MATH F242": {
-    "courseTitle": "OPERATIONS RESEARCH",
-    "midsem": "9/03 -  4.00 - 5.30PM",
-    "endsem": "04/05 AN"
-  },
-  "MATH F243": {
-    "courseTitle": "GRAPHS AND NETWORKS",
-    "midsem": "13/03 -2.00 -3.30PM",
-    "endsem": "13/05 FN"
-  },
-  "MATH F244": {
-    "courseTitle": "MEASURE & INTEGRATION",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
-  },
-  "MATH F315": {
-    "courseTitle": "INTRO TO STATISTICAL\r\r\nINFERENCE",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
-  },
-  "MATH F341": {
-    "courseTitle": "INTRO TO FUNCTIONAL  ANAL",
-    "midsem": "14/03 -  4.00 - 5.30PM",
-    "endsem": "15/05 AN"
-  },
-  "MATH F342": {
-    "courseTitle": "DIFFERENTIAL GEOMETRY",
-    "midsem": "12/03 - 4.00 - 5.30PM",
-    "endsem": "11/05 AN"
-  },
-  "MATH F343": {
-    "courseTitle": "PARTIAL DIFF EQUATIONS",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
-  },
-  "MATH F420": {
-    "courseTitle": "MATHEMATICAL MODELLING",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "04/12 AN"
   },
   "MATH F421": {
-    "courseTitle": "COMBINATORIAL MATHEMATICS",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+    "courseTitle": "COMBINATORIAL\nMATHEMATICS",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
+  },
+  "MATH F424": {
+    "courseTitle": "APPLIED STOCHASTIC\nPROCESS",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
   "MATH F432": {
-    "courseTitle": "APPLIED STATISTICAL\r\r\nMETHODS",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+    "courseTitle": "APPLIED STATISTICAL\nMETHODS",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
   "MATH F456": {
     "courseTitle": "COSMOLOGY",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "MATH F471": {
-    "courseTitle": "NONLINEAR OPTIMIZATION",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "ME F112": {
+    "courseTitle": "WORKSHOP PRACTICE",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "15/12 FN"
   },
-  "MATH G514": {
-    "courseTitle": "TOPICS IN ANALYSIS",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "ME F211": {
+    "courseTitle": "MECHANICS OF SOLIDS",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "MATH G515": {
-    "courseTitle": "TOPICS IN DIFFER.EQUATIONS",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+  "ME F212": {
+    "courseTitle": "FLUID MECHANICS",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "ME F218": {
-    "courseTitle": "ADVANCED MECHANICS OF\r\r\nSOLIDS",
-    "midsem": "9/03 -  4.00 - 5.30PM",
-    "endsem": "04/05 AN"
+  "ME F216": {
+    "courseTitle": "MATERIALS SCIENCE AND\nENGINEER",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
   },
-  "ME F219": {
-    "courseTitle": "MANUFACTURING PROCESSES",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "ME F217": {
+    "courseTitle": "APPLIED\nTHERMODYNAMICS",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "ME F220": {
-    "courseTitle": "HEAT TRANSFER",
-    "midsem": "13/03-2.00 -3.30PM",
-    "endsem": "13/05 FN"
-  },
-  "MEF221": {
-    "courseTitle": "MECHANISMSANDMACHINES",
-    "midsem": "10/03 -2.00 -3.30PM",
-    "endsem": "06/05 FN"
+  "ME F314": {
+    "courseTitle": "DESIGN OF MACHINE\nELEMENTS",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
   },
   "ME F315": {
-    "courseTitle": "ADVANCED MANUFACTURING\r\r\nPROCESSES",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+    "courseTitle": "ADVANCED\nMANUFACTURING PROCESSES",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
+  },
+  "ME F316": {
+    "courseTitle": "MANUFACTURING\nMANAGEMENT",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
   "ME F317": {
-    "courseTitle": "ENGINES MOTORS AND\r\r\nMOBILITY",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
-  },
-  "ME F318": {
-    "courseTitle": "COMPUTER-AIDED DESIGN",
-    "midsem": "13/03 - 9.30 - 11.00AM",
-    "endsem": "12/05 FN"
-  },
-  "ME F319": {
-    "courseTitle": "VIBRATIONS AND CONTROL",
-    "midsem": "10/03 - 9.30 - 11.00AM",
-    "endsem": "05/05 AN"
+    "courseTitle": "ENGINES  MOTORS AND\nMOBILITY",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
   "ME F320": {
-    "courseTitle": "ENGINEERING OPTIMIZATION",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+    "courseTitle": "ENGINEERING\nOPTIMIZATION",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "ME F321": {
-    "courseTitle": "DATA MINING IN MECHANICAL\r\r\nSCI",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "ME F425": {
+    "courseTitle": "ADDITIVE\nMANUFACTURING",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
-  "ME F323": {
-    "courseTitle": "ENERGY STORAGE\r\r\nTECHNOLOGIES",
-    "midsem": "09/03 -2.00 -3.30PM",
-    "endsem": "04/05 FN"
+  "ME F443": {
+    "courseTitle": "QUALI CONTRO ASSUR &\nREL",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   },
-  "ME F341": {
-    "courseTitle": "PRIMEMOVERS&FLUIDMACH",
-    "midsem": "14/03 -11.30 -1.00PM",
-    "endsem": "14/05 AN"
+  "ME F452": {
+    "courseTitle": "COMPOSITE MATERIAL &\nDES",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "ME F423": {
-    "courseTitle": "MICRO-FLUIDICS & ITS APP",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "ME G511": {
+    "courseTitle": "MECHANISMS & ROBOTICS",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "ME F426": {
-    "courseTitle": "INDUSTRY 4.0 IN\r\r\nMANUFACTURING",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "ME G512": {
+    "courseTitle": "FINITE ELEMENT METHOD",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "ME F434": {
-    "courseTitle": "DIGITAL TWINS MECHANICAL ENGINEERING",
-    "midsem": "13/03 -  4.00 - 5.30PM",
-    "endsem": "13/05 AN"
+  "ME G513": {
+    "courseTitle": "HEATING & COOL OF BUILD",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "ME F483": {
-    "courseTitle": "WIND ENERGY",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "ME G532": {
+    "courseTitle": "MACHINE TOOL\nENGINEERING",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
-  "ME F484": {
-    "courseTitle": "AUTOMOTIVE TECHNOLOGY",
-    "midsem": "09/03 -2.00 -3.30PM",
-    "endsem": "04/05 FN"
+  "ME G533": {
+    "courseTitle": "COND & RAD HEAT\nTRANSFER",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "ME G515": {
-    "courseTitle": "COMPUT FLUID DYNAMICS",
-    "midsem": "09/03 -9.30 -11.00AM",
-    "endsem": "02/05AN"
+  "ME G535": {
+    "courseTitle": "ADV ENGG MATHEMATICS",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "ME G534": {
-    "courseTitle": "CONVECT HEAT & MASS TRAN",
-    "midsem": "10/03 -  4.00 - 5.30PM",
-    "endsem": "06/05 AN"
+  "ME G621": {
+    "courseTitle": "FLUID DYNAMICS",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "ME G538": {
-    "courseTitle": "TOYOTA PRODUCTION SYSTEM",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "ME G641": {
+    "courseTitle": "THEORY OF ELASTICITY &\nPLAST",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "ME G539": {
-    "courseTitle": "COMP INTEGRATED MANUFACT",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "MEL G611": {
+    "courseTitle": "IC FABRICATION\nTECHNOLOGY",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "ME G611": {
-    "courseTitle": "COMP AIDED ANAL & DESIGN",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "MEL G621": {
+    "courseTitle": "VLSI DESIGN",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "ME  G624": {
-    "courseTitle": "Microfluidics for Thermal Engineers",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "MEL G624": {
+    "courseTitle": "ADV VLSI ARCHITECTURES",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "ME  G633": {
-    "courseTitle": "Wind Energy Systems Modelling\r\r\nand Analysis",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "MEL G626": {
+    "courseTitle": "VLSI TEST & TESTABILITY",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
-  "MEL G623": {
-    "courseTitle": "ADVANCED VLSI DESIGN",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "MEL G631": {
+    "courseTitle": "PHYSICS AND MODELLING OF MICROELECTRONIC DEVICES",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
-  "MEL G632": {
-    "courseTitle": "ANALOG IC DESIGN",
-    "midsem": "12/03 -  4.00-5.30PM",
-    "endsem": "11/05AN"
-  },
-  "MEL G641": {
-    "courseTitle": "CAD FOR IC DESIGN",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
-  },
-  "MF F418": {
-    "courseTitle": "LEAN MANUFACTURING",
-    "midsem": "11/03-4.00-05.30PM",
-    "endsem": "08/05 FN"
+  "MF F311": {
+    "courseTitle": "MECHATRONICS &\nAUTOMAT",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
   "MF F421": {
-    "courseTitle": "SUPPLY CHAIN MANAGEMENT",
-    "midsem": "09/03-2.00-3.30PM",
-    "endsem": "04/05 FN"
-  },
-  "MF F485": {
-    "courseTitle": "SUSTAINABLE\r\r\nMANUFACTURING",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+    "courseTitle": "SUPPLY CHAIN\nMANAGEMENT",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
   "MGTS F211": {
-    "courseTitle": "PRINCIPLES OF MANAGEMENT",
-    "midsem": "12/03 - 2.00 - 3.30PM",
-    "endsem": "11/05 FN"
+    "courseTitle": "PRINCIPLES OF\nMANAGEMENT",
+    "midsem": "07/10 -  9.30 - 11.00AM",
+    "endsem": "03/12 FN"
   },
-  "MGTS F314": {
-    "courseTitle": "ESSENTIALS OF FINANCIAL\r\r\nMGT.",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "MGTS F313": {
+    "courseTitle": "PRODUCT AND BRAND\nMANAGEMENT",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "MGTS F315": {
-    "courseTitle": "FOUNDATIONS OF BUSINESS ANALYTICS",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "MGTS F316": {
+    "courseTitle": "MANAGERIAL &\nLEADERSHIP SKILLS",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "MSE G512": {
-    "courseTitle": "MANUFACTURING  PLANNING\r\r\nCONT",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "MSE G511": {
+    "courseTitle": "MECHATRONICS",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "MST G522": {
-    "courseTitle": "ADVANCED COMPOSITES",
-    "midsem": "12/03 -  4.00 - 5.30PM",
-    "endsem": "11/05 AN"
+  "MSE G521": {
+    "courseTitle": "WORLD-CLASS\nMANUFACTUR",
+    "midsem": "07/10 - 11.30 - 1.00PM",
+    "endsem": "03/12 AN"
   },
-  "PHAF214": {
-    "courseTitle": "ANATOMYPHYSIO& HYGIENE",
-    "midsem": "9/03 - 11.30 - 1.00PM0",
-    "endsem": "02/05 FN"
+  "PHA F211": {
+    "courseTitle": "PHARMACEUTICAL\nANALYSIS",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "PHA F216": {
-    "courseTitle": "PHARMACEUTICAL\r\r\nFORMULATIONS I",
-    "midsem": "10/03 - 11.30 - 1.00PM",
-    "endsem": "05/05 FN"
+  "PHA F215": {
+    "courseTitle": "INTRODUCTION TO\nMOLECULAR BIO & IMMUNOLOGY",
+    "midsem": "11/10 -  3.30 - 5.00PM",
+    "endsem": "13/12 AN"
   },
-  "PHA F241": {
-    "courseTitle": "PHARMACEUTICAL CHEMISTRY",
-    "midsem": "9/03 -  4.00 - 5.30PM",
-    "endsem": "04/05 AN"
+  "PHA F217": {
+    "courseTitle": "PHARMACEUTICAL\nMICROBIOLOGY",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "PHA F242": {
-    "courseTitle": "BIOLOGICAL CHEMISTRY",
-    "midsem": "13/03 - 2.00 - 3.30PM",
-    "endsem": "13/05 FN"
+  "PHA F244": {
+    "courseTitle": "PHYSICAL PHARMACY",
+    "midsem": "06/10 -  3.30 - 5.00PM",
+    "endsem": "02/12 AN"
   },
-  "PHAF313": {
-    "courseTitle": "INSTRUMETHODSOFANAL",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+  "PHA F311": {
+    "courseTitle": "PHARMACOLOGY I",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "PHA F341": {
-    "courseTitle": "PHARMACOLOGY II",
-    "midsem": "12/03 - 11.30 - 1.00PM",
-    "endsem": "09/05 AN"
+  "PHA F312": {
+    "courseTitle": "MEDICINAL CHEMISTRY I",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
   },
-  "PHA F342": {
-    "courseTitle": "MEDICINAL CHEMISTRY II",
-    "midsem": "10/03 - 9.30 - 11.00AM",
-    "endsem": "05/05 AN"
+  "PHA F315": {
+    "courseTitle": "PHARMACEUTICAL\nFORMULATIONS II",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "PHA F343": {
-    "courseTitle": "FORENSIC PHARMACY",
-    "midsem": "14/03 - 11.30 - 1.00PM",
-    "endsem": "14/05 AN"
+  "PHA F415": {
+    "courseTitle": "PATHOPHYSIOLOGY",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "PHA F344": {
-    "courseTitle": "NATURAL DRUGS",
-    "midsem": "13/03 - 9.30 - 11.00AM",
-    "endsem": "12/05 FN"
+  "PHA F422": {
+    "courseTitle": "COSMETIC SCIENCE",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "PHA F413": {
-    "courseTitle": "PHARMA MANG & QUAL CONTR",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "PHA G535": {
+    "courseTitle": "BIOMATERIALS",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
-  "PHA F414": {
-    "courseTitle": "BIOPHARMACEUTICS",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "PHA G537": {
+    "courseTitle": "PARENTERAL PRODUCT\nDEVELOPMENT",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
-  "PHA F417": {
-    "courseTitle": "PHARMACOECONOMICS",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+  "PHA G538": {
+    "courseTitle": "IMMUNOPHARMACOLOGY",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "PHA G532": {
-    "courseTitle": "Q & A & REGULATORY AFFAIRS",
-    "midsem": "13/03 - 4.00 - 05.30PM",
-    "endsem": "13/05 AN"
+  "PHA G540": {
+    "courseTitle": "MODERN PHARMACEUTICAL ANALYTICAL TECHNIQUES",
+    "midsem": "08/10 -  1.30 - 3.00PM",
+    "endsem": "06/12 FN"
   },
-  "PHA G546": {
-    "courseTitle": "PHARMACEUTICAL BIO",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "PHA G542": {
+    "courseTitle": "ADVANCE PHYSICAL\nPHARMA",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "PHA G611": {
-    "courseTitle": "ADVANCED PHARMACOLOGY",
-    "midsem": "10/03 - 4.00 - 5.30PM",
-    "endsem": "06/05 AN"
+  "PHA G543": {
+    "courseTitle": "CLINICAL RESEARCH",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
-  "PHA G612": {
-    "courseTitle": "PHARM KINET & CLINIC PHA",
-    "midsem": "11/03 -2.00-3.30PM",
-    "endsem": "08/05AN"
+  "PHA G545": {
+    "courseTitle": "IPR AND\nPHARMACEUTICALS",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "PHA G617": {
-    "courseTitle": "ADV DRUG DELIVERY SYSTEM",
-    "midsem": "12/03 -  4.00 - 5.30PM",
-    "endsem": "11/05 AN"
+  "PHA G547": {
+    "courseTitle": "QUALI-BY-DESIGN IN PHARMACEUTICAL PROD\nDEVEL",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "PHA G624": {
-    "courseTitle": "PRINCIPLES OF TOXICOLOGY",
-    "midsem": "12/03 -  4.00 - 5.30PM",
-    "endsem": "11/05 AN"
+  "PHA G619": {
+    "courseTitle": "SCR METHOD & TECH IN\nPHA",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "PHY F101": {
-    "courseTitle": "OSCILLATIONS AND WAVES",
-    "midsem": "10/03 - 11.30 - 1.00PM",
-    "endsem": "05/05 FN"
+  "PHA G625": {
+    "courseTitle": "CELLULAR AND MOLECULAR\nPHARMACOLOGY",
+    "midsem": "10/10 -  3.30 - 5.00PM",
+    "endsem": "11/12 FN"
   },
-  "PHY F215": {
-    "courseTitle": "INTRO TO ASTRO & ASTROPH",
-    "midsem": "07/03 - 9.30 - 11.00AM",
-    "endsem": "16/05 FN"
+  "PHA G626": {
+    "courseTitle": "PHARMACOVIGILANCE",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "PHY F241": {
-    "courseTitle": "ELECTROMAGNETIC THEORY II",
-    "midsem": "9/03 -  4.00-5.30PM",
-    "endsem": "04/05AN"
+  "PHA G632": {
+    "courseTitle": "DOSAGE FORM DESIGN",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "PHY F242": {
-    "courseTitle": "QUANTUM MECHANICS I",
-    "midsem": "10/03 - 2.00 - 3.30PM",
-    "endsem": "06/05 FN"
+  "PHY F110": {
+    "courseTitle": "PHYSICS LABORATORY",
+    "midsem": "09/10 -  1.30 - 3.00PM",
+    "endsem": "09/12 FN"
   },
-  "PHY F243": {
-    "courseTitle": "MATHEMATICAL METHODS OF\r\r\nPHYSICS",
-    "midsem": "11/03 - 2.00 - 3.30PM",
-    "endsem": "08/05 AN"
+  "PHY F111": {
+    "courseTitle": "MECH OSCIL & WAVES",
+    "midsem": "08/10 -  3.30 - 5.00PM",
+    "endsem": "06/12 AN"
   },
-  "PHY F244": {
-    "courseTitle": "MODERN PHYSICS LAB",
-    "midsem": "",
-    "endsem": ""
+  "PHY F112": {
+    "courseTitle": "GENERAL PHYSICS",
+    "midsem": "08/10 -  3.30 - 5.00PM",
+    "endsem": "06/12 AN"
   },
-  "PHY F315": {
-    "courseTitle": "THEORY OF RELATIVITY",
-    "midsem": "11/03 - 9.30 - 11.00AM",
-    "endsem": "07/05 FN"
+  "PHY F211": {
+    "courseTitle": "CLASSICAL MECHANICS",
+    "midsem": "09/10 - 11.30 - 1.00PM",
+    "endsem": "08/12 AN"
   },
-  "PHY F318": {
-    "courseTitle": "ATOMS AND PHOTONS",
-    "midsem": "07/03 - 9.30 - 11.00AM",
-    "endsem": "16/05 FN"
+  "PHY F212": {
+    "courseTitle": "ELECTROMAGNETIC THEO I",
+    "midsem": "10/10 -  9.30 - 11.00AM",
+    "endsem": "10/12 FN"
   },
-  "PHY F341": {
-    "courseTitle": "SOLID STATE PHYSICS",
-    "midsem": "14/03 -  4.00 - 5.30PM",
-    "endsem": "15/05 AN"
+  "PHY F213": {
+    "courseTitle": "OPTICS",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "PHY F342": {
-    "courseTitle": "ATOMIC & MOLECULAR PHY",
-    "midsem": "09/03 - 9.30 - 11.00AM",
-    "endsem": "02/05 AN"
+  "PHY F214": {
+    "courseTitle": "ELEC MAGNET & OPTICS\nLAB",
+    "midsem": "08/10 - 11.30 - 1.00PM",
+    "endsem": "05/12 AN"
   },
-  "PHY F343": {
-    "courseTitle": "NUCLEAR & PARTICLE PHY",
-    "midsem": "12/03 - 4.00 - 5.30PM",
-    "endsem": "11/05 AN"
+  "PHY F311": {
+    "courseTitle": "QUANTUM MECHANICS II",
+    "midsem": "06/10 - 11.30 - 1.00PM",
+    "endsem": "01/12 AN"
   },
-  "PHY F344": {
-    "courseTitle": "ADVANCED PHYSICS LAB",
-    "midsem": "",
-    "endsem": ""
+  "PHY F312": {
+    "courseTitle": "STATISTICAL MECHANICS",
+    "midsem": "07/10 -  3.30 - 5.00PM",
+    "endsem": "04/12 AN"
   },
-  "PHY F379": {
-    "courseTitle": "THIN FILM TECHNOLOGY",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "PHY F313": {
+    "courseTitle": "COMPUTATIONAL PHYSICS",
+    "midsem": "11/10 -  9.30 - 11.00AM",
+    "endsem": "12/12 FN"
   },
-  "PHY F412": {
-    "courseTitle": "INTRO TO QUAN FIELD THEO",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "PHY F316": {
+    "courseTitle": "MUSICAL ACOUSTICS",
+    "midsem": "08/10 -  9.30 - 11.00AM",
+    "endsem": "05/12 FN"
   },
-  "PHY F419": {
-    "courseTitle": "ADV SOLID STATE PHYSICS",
-    "midsem": "10/03 - 4.00 - 05.30PM",
-    "endsem": "06/05 AN"
+  "PHY F346": {
+    "courseTitle": "LASER SCIENCE &\nTECHNOLOGY",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
+  },
+  "PHY F414": {
+    "courseTitle": "PHYSICS OF ADVANCED\nMATERIALS",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
+  },
+  "PHY F415": {
+    "courseTitle": "GENERAL THEORY OF RELATIVITY AND\nCOSMOLOGY",
+    "midsem": "04/10 -  9.30 - 11.00AM",
+    "endsem": "16/12 FN"
   },
   "PHY F420": {
     "courseTitle": "QUANTUM OPTICS",
-    "midsem": "11/03 - 4.00 - 05.30PM",
-    "endsem": "08/05 FN"
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
   },
-  "PHY F431": {
-    "courseTitle": "GEOMETRICAL METHODS IN",
-    "midsem": "09/03 - 2.00 - 3.30PM",
-    "endsem": "04/05 FN"
+  "PHY F421": {
+    "courseTitle": "ADV QUANTUM\nMECHANICS",
+    "midsem": "11/10 -  1.30 - 3.00PM",
+    "endsem": "13/12 FN"
   },
-  "PHY F435": {
-    "courseTitle": "ADVANCED COMPUTATIONAL PHYSICS",
-    "midsem": "13/03 - 4.00 - 5.30PM",
-    "endsem": "13/05 AN"
+  "PHY F426": {
+    "courseTitle": "PHY OF SEMICONDUCTOR\nDEV",
+    "midsem": "10/10 - 11.30 - 1.00PM",
+    "endsem": "10/12 AN"
+  },
+  "PHY F428": {
+    "courseTitle": "QUANTUM INFORMATION\nTHEORY",
+    "midsem": "09/10 -  9.30 - 11.00AM",
+    "endsem": "08/12 FN"
   }
 }

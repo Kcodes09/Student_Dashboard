@@ -1,6 +1,6 @@
 import XLSX from "xlsx"
 
-const INPUT = "DRAFT TIMETABLE II SEM 2025 -26.xlsx"
+const INPUT = "DRAFT TIMETABLE I SEM 2025 -26 (1).xlsx"
 const OUTPUT = "DRAFT_TIMETABLE_CLEANED.xlsx"
 
 const workbook = XLSX.readFile(INPUT)
@@ -9,6 +9,7 @@ const sheet = workbook.Sheets[workbook.SheetNames[0]]
 const rows = XLSX.utils.sheet_to_json<any[]>(sheet, {
   header: 1,
   defval: "",
+  raw: false,
 })
 
 // Skip title rows — first row is title, second row is headers

@@ -9,7 +9,10 @@ console.log("MOBILE AUTH API HIT");
 
 export async function POST(req: Request) {
   try {
-    const { idToken } = await req.json();
+    const body = await req.json();
+    console.log("Mobile Auth Request:", body); // <--- DEBUG LOG
+
+    const { idToken } = body;
     if (!idToken) {
       return NextResponse.json({ error: "Missing idToken" }, { status: 400 });
     }
@@ -33,7 +36,7 @@ export async function POST(req: Request) {
     const email = payload.email!;
     const name = payload.name ?? "";
     const avatar = payload.picture ?? "";
-      console.log("GOOGLE PAYLOAD EMAIL:", email);
+    console.log("GOOGLE PAYLOAD EMAIL:", email);
 
     // 2. HARD DOMAIN CHECK (server-side)
     if (!email.endsWith("@hyderabad.bits-pilani.ac.in")) {
