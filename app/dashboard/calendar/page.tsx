@@ -109,6 +109,29 @@ export default async function CalendarPage() {
 
   const examList: Exam[] = [...official, ...user]
 
+  const calendarDates = calendar.days.map(d => d.date).sort()
+  const minDateStr = calendarDates[0]
+  const maxDateStr = calendarDates[calendarDates.length - 1]
+
+  const today = new Date()
+  // Format today's date in local time to avoid UTC shift
+  const y = today.getFullYear()
+  const m = String(today.getMonth() + 1).padStart(2, "0")
+  const d = String(today.getDate()).padStart(2, "0")
+  const todayStr = `${y}-${m}-${d}`
+
+  let initialYear = calendar.year
+  let initialMonth = 7
+
+  if (minDateStr && maxDateStr && todayStr >= minDateStr && todayStr <= maxDateStr) {
+    initialYear = today.getFullYear()
+    initialMonth = today.getMonth() + 1
+  } else if (minDateStr) {
+    const firstDateObj = new Date(minDateStr)
+    initialYear = firstDateObj.getUTCFullYear()
+    initialMonth = firstDateObj.getUTCMonth() + 1
+  }
+
   return (
     <>
       <Navbar user={{ email: session.user.email }} />
@@ -116,9 +139,10 @@ export default async function CalendarPage() {
         sessions={sessions}
         exams={examList}
         calendar={calendar}
-        initialYear={calendar.year}
-        initialMonth={1}
+        initialYear={initialYear}
+        initialMonth={initialMonth}
       />
     </>
   )
+
 }
