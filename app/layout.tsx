@@ -2,10 +2,21 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { ThemeProvider } from "./components/ThemeProvider"
 import AuthProvider from "./components/SessionProvider"
+import { NotificationManager } from "./components/NotificationManager"
 
 export const metadata: Metadata = {
   title: "Student Dashboard",
   description: "Smart Student Dashboard",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Student Dashboard",
+  },
+}
+
+export const viewport = {
+  themeColor: "#ffffff",
 }
 
 export default function RootLayout({
@@ -37,7 +48,10 @@ export default function RootLayout({
       </head>
       <body className="h-screen ">
         <AuthProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <NotificationManager />
+            {children}
+          </ThemeProvider>
         </AuthProvider>
       </body>
     </html>
