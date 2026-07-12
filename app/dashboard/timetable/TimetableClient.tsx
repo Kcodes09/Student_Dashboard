@@ -184,7 +184,7 @@ export default function TimetableClient({ master }: { master: any[] }) {
     })
 
     createEvents(events, (error, value) => {
-      if (error) {
+      if (error || !value) {
         showToast("ICS export failed")
         return
       }
@@ -196,7 +196,13 @@ export default function TimetableClient({ master }: { master: any[] }) {
       const link = document.createElement("a")
       link.href = URL.createObjectURL(blob)
       link.download = "timetable.ics"
+      document.body.appendChild(link)
       link.click()
+      document.body.removeChild(link)
+      
+      // Delay revoke for mobile compatibility
+      setTimeout(() => URL.revokeObjectURL(link.href), 1000)
+      
       showToast("ICS exported")
     })
   }
@@ -297,7 +303,7 @@ export default function TimetableClient({ master }: { master: any[] }) {
       </div>
 
       {/* ================= DESKTOP ================= */}
-      <div className="hidden md:flex h-full">
+      <div className="flex h-full max-md:absolute max-md:-left-[9999px] max-md:top-0 max-md:w-[1200px] max-md:h-[800px] max-md:opacity-0 max-md:pointer-events-none">
         <CourseSidebar
           courses={master}
           activeCourse={activeCourse}
