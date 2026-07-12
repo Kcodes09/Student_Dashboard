@@ -39,11 +39,15 @@ export default async function DashboardPage() {
             href="/dashboard/exams"
           />
 
-
           <DashboardCard
             title="Timetable"
             description="View classes, mark attendance & plan skips"
             href="/dashboard/timetable"
+          />
+          <DashboardCard
+            title="Alarms"
+            description="Set custom alarms for your classes"
+            href="/dashboard/alarms"
           />
 
           <DashboardCard

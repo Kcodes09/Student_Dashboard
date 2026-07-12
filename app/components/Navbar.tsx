@@ -25,6 +25,7 @@ export default function Navbar({ user }: NavbarProps) {
     { name: "Exams", href: "/dashboard/exams" },
     { name: "Timetable", href: "/dashboard/timetable" },
     { name: "Calendar", href: "/dashboard/calendar" },
+    { name: "Alarms", href: "/dashboard/alarms" },
   ]
 
   return (

@@ -124,6 +124,12 @@ export default function TimetableClient({ master }: { master: any[] }) {
   /* ---------- GENERATE SESSIONS ---------- */
   const sessions = generateStudentTT(master, selectedSections)
 
+  useEffect(() => {
+    if (typeof window !== "undefined" && sessions.length > 0) {
+      localStorage.setItem("student_dashboard_sessions", JSON.stringify(sessions))
+    }
+  }, [sessions])
+
   /* ---------- EXPORT PNG (MOBILE SAFE) ---------- */
   const exportPNG = async () => {
     try {

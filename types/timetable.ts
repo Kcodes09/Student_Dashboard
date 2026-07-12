@@ -5,6 +5,10 @@ export type Session = {
   courseCode: string
   startTime: string
   endTime: string
+  type?: string
+  room?: string
+  section?: string
+  hour?: number
 }
 
 export type Exam = {

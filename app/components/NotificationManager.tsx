@@ -47,6 +47,19 @@ export function NotificationManager() {
     // In a real PWA, you might use Web Push or background sync, 
     // but local interval works while the app is active.
     const checkUpcoming = () => {
+      let currentSessions = sessions;
+      let alarms: Record<string, number> = {};
+      
+      try {
+        const storedSessions = localStorage.getItem("student_dashboard_sessions");
+        if (storedSessions) currentSessions = JSON.parse(storedSessions);
+        
+        const storedAlarms = localStorage.getItem("student_dashboard_alarms");
+        if (storedAlarms) alarms = JSON.parse(storedAlarms);
+      } catch (e) {
+        console.error("Error reading from localStorage in NotificationManager", e);
+      }
+
       const now = new Date();
       const currentDay = now.getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
       const days = ["S", "M", "T", "W", "Th", "F", "S"];
@@ -54,27 +67,35 @@ export function NotificationManager() {
 
       const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
-      sessions.forEach(session => {
+      currentSessions.forEach(session => {
         if (session.day !== dayStr) return;
+
+        const key = `class-${session.courseCode}-${session.day}-${session.startTime}`;
+        const offset = alarms[key];
+
+        if (!offset || offset <= 0) return; // No alarm set
 
         // parse startTime (e.g., "08:00" or "08:30")
         const [h, m] = session.startTime.split(":").map(Number);
         const sessionMinutes = h * 60 + m;
 
-        // Notify 10 minutes before
-        if (sessionMinutes - currentMinutes === 10) {
+        // Notify precisely at the configured offset
+        if (sessionMinutes - currentMinutes === offset) {
+          const title = `Upcoming Class: ${session.courseCode}`;
+          const body = `Starts in ${offset} minutes at ${session.startTime} in ${session.room}`;
+
           // Send to Service Worker or show directly
           if (navigator.serviceWorker && navigator.serviceWorker.controller) {
             navigator.serviceWorker.controller.postMessage({
               type: "SCHEDULE_NOTIFICATION",
-              title: `Upcoming Class: ${session.courseCode}`,
-              body: `Starts in 10 minutes at ${session.startTime}`,
-              tag: `class-${session.courseCode}-${session.startTime}`,
+              title,
+              body,
+              tag: key,
             });
           } else {
-            new Notification(`Upcoming Class: ${session.courseCode}`, {
-              body: `Starts in 10 minutes at ${session.startTime}`,
-              tag: `class-${session.courseCode}-${session.startTime}`,
+            new Notification(title, {
+              body,
+              tag: key,
             });
           }
         }
@@ -95,7 +116,7 @@ export function NotificationManager() {
   return (
     <div className="bg-blue-50 dark:bg-blue-900/30 border-b border-blue-200 dark:border-blue-800 px-4 py-2 flex items-center justify-between">
       <p className="text-sm text-blue-800 dark:text-blue-200">
-        Enable notifications to get alerts 10 minutes before your classes start.
+        Enable notifications to get custom alerts before your classes start.
       </p>
       <button
         onClick={requestPermission}
