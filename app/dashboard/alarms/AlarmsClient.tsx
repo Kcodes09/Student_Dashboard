@@ -81,12 +81,12 @@ export default function AlarmsClient() {
   const getAndroidClockIntentUrl = (session: Session) => {
     const key = `class-${session.courseCode}-${session.day}-${session.startTime}`
     const offset = alarms[key] || 10
-    
+
     const [h, m] = session.startTime.split(":").map(Number)
-    
+
     // Subtract offset
     const totalMinutes = h * 60 + m - offset
-    
+
     // Handle day wrap around if alarm is before midnight (unlikely for classes but good practice)
     let alarmH = Math.floor(totalMinutes / 60)
     let alarmM = totalMinutes % 60
@@ -96,12 +96,12 @@ export default function AlarmsClient() {
       alarmH -= 1
       if (alarmH < 0) alarmH += 24
     }
-    
+
     // Replace spaces with underscores because spaces can break Android intent parsing in some Chrome versions
     const message = `${session.courseCode}_in_${session.room}`.replace(/\s+/g, "_")
-    
+
     // Standard Android Intent for setting an alarm
-    return `intent:#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${message};i.android.intent.extra.alarm.HOUR=${alarmH};i.android.intent.extra.alarm.MINUTES=${alarmM};B.android.intent.extra.alarm.SKIP_UI=false;package=com.google.android.deskclock;end`
+    return `intent:#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${message};i.android.intent.extra.alarm.HOUR=${alarmH};i.android.intent.extra.alarm.MINUTES=${alarmM};B.android.intent.extra.alarm.SKIP_UI=false;end`
   }
 
   // Group sessions by day
@@ -166,8 +166,8 @@ export default function AlarmsClient() {
                         key={`${key}-${idx}`}
                         className={clsx(
                           "p-4 rounded-xl border flex flex-col gap-3 transition-all",
-                          currentOffset > 0 
-                            ? "border-[var(--bg-accent)] shadow-[0_0_15px_var(--bg-accent)] shadow-opacity-10 bg-[var(--bg-surface)]" 
+                          currentOffset > 0
+                            ? "border-[var(--bg-accent)] shadow-[0_0_15px_var(--bg-accent)] shadow-opacity-10 bg-[var(--bg-surface)]"
                             : "border-[var(--border-subtle)] bg-[var(--bg-surface)] opacity-80 hover:opacity-100"
                         )}
                       >
