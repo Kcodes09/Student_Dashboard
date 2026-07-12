@@ -14,7 +14,7 @@ export default function TestAlarmsPage() {
       const h = now.getHours()
       const m = now.getMinutes()
       const msg = "TEST101_Class"
-      setAndroidIntentUrl(`intent:#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${msg};i.android.intent.extra.alarm.HOUR=${h};i.android.intent.extra.alarm.MINUTES=${m};b.android.intent.extra.alarm.SKIP_UI=false;package=com.google.android.deskclock;end`)
+      setAndroidIntentUrl(`intent:#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${msg};i.android.intent.extra.alarm.HOUR=${h};i.android.intent.extra.alarm.MINUTES=${m};B.android.intent.extra.alarm.SKIP_UI=false;package=com.google.android.deskclock;end`)
     }
     update()
     const timer = setInterval(update, 10000)
