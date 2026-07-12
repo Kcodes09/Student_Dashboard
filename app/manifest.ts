@@ -24,16 +24,16 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     screenshots: [
       {
-        src: '/screenshot-desktop.svg',
+        src: '/screenshot-desktop.png',
         sizes: '1280x720',
-        type: 'image/svg+xml',
+        type: 'image/png',
         // @ts-ignore - next.js types might not have form_factor yet
         form_factor: 'wide',
       },
       {
-        src: '/screenshot-mobile.svg',
+        src: '/screenshot-mobile.png',
         sizes: '720x1280',
-        type: 'image/svg+xml',
+        type: 'image/png',
         // @ts-ignore
         form_factor: 'narrow',
       }
