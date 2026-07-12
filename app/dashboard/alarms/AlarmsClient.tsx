@@ -20,10 +20,14 @@ export default function AlarmsClient() {
   const [alarms, setAlarms] = useState<Record<string, number>>({})
   const [permission, setPermission] = useState<NotificationPermission>("default")
   const [toast, setToast] = useState<string | null>(null)
+  const [isAndroid, setIsAndroid] = useState(false)
 
   useEffect(() => {
-    if ("Notification" in window) {
-      setPermission(Notification.permission)
+    if (typeof window !== "undefined") {
+      setIsAndroid(/android/i.test(navigator.userAgent))
+      if ("Notification" in window) {
+        setPermission(Notification.permission)
+      }
     }
 
     try {
@@ -72,6 +76,33 @@ export default function AlarmsClient() {
     setAlarms(newAlarms)
     localStorage.setItem("student_dashboard_alarms", JSON.stringify(newAlarms))
     showToast(offset === 0 ? "Alarm removed" : `Alarm set for ${offset} mins before`)
+  }
+
+  const openAndroidClock = (session: Session) => {
+    const key = `class-${session.courseCode}-${session.day}-${session.startTime}`
+    const offset = alarms[key] || 10
+    
+    const [h, m] = session.startTime.split(":").map(Number)
+    
+    // Subtract offset
+    const totalMinutes = h * 60 + m - offset
+    
+    // Handle day wrap around if alarm is before midnight (unlikely for classes but good practice)
+    let alarmH = Math.floor(totalMinutes / 60)
+    let alarmM = totalMinutes % 60
+    if (alarmH < 0) alarmH += 24
+    if (alarmM < 0) {
+      alarmM += 60
+      alarmH -= 1
+      if (alarmH < 0) alarmH += 24
+    }
+    
+    const message = encodeURIComponent(`${session.courseCode} in ${session.room}`)
+    
+    // Standard Android Intent for setting an alarm
+    const intentUrl = `intent://#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${message};i.android.intent.extra.alarm.HOUR=${alarmH};i.android.intent.extra.alarm.MINUTES=${alarmM};B.android.intent.extra.alarm.SKIP_UI=false;end`
+    
+    window.location.href = intentUrl
   }
 
   // Group sessions by day
@@ -156,17 +187,31 @@ export default function AlarmsClient() {
 
                         <div className="mt-auto pt-2 border-t border-[var(--border-subtle)] flex items-center justify-between">
                           <span className="text-xs font-medium text-[var(--text-muted)]">Remind me:</span>
-                          <select
-                            value={currentOffset}
-                            onChange={(e) => handleSetAlarm(s, Number(e.target.value))}
-                            className="bg-[var(--bg-surface-hover)] border border-[var(--border-subtle)] text-[var(--text-primary)] text-xs rounded-lg px-2 py-1.5 font-medium outline-none focus:ring-2 focus:ring-[var(--bg-accent)]"
-                          >
-                            <option value={0}>Off</option>
-                            <option value={5}>5 mins before</option>
-                            <option value={10}>10 mins before</option>
-                            <option value={15}>15 mins before</option>
-                            <option value={30}>30 mins before</option>
-                          </select>
+                          <div className="flex items-center gap-2">
+                            {isAndroid && (
+                              <button
+                                onClick={() => openAndroidClock(s)}
+                                className="p-1.5 rounded-lg bg-green-100 text-green-700 hover:bg-green-200 transition-colors"
+                                title="Add to Android Clock App"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                  <circle cx="12" cy="12" r="10"></circle>
+                                  <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                              </button>
+                            )}
+                            <select
+                              value={currentOffset}
+                              onChange={(e) => handleSetAlarm(s, Number(e.target.value))}
+                              className="bg-[var(--bg-surface-hover)] border border-[var(--border-subtle)] text-[var(--text-primary)] text-xs rounded-lg px-2 py-1.5 font-medium outline-none focus:ring-2 focus:ring-[var(--bg-accent)]"
+                            >
+                              <option value={0}>Off</option>
+                              <option value={5}>5 mins before</option>
+                              <option value={10}>10 mins before</option>
+                              <option value={15}>15 mins before</option>
+                              <option value={30}>30 mins before</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     )

@@ -398,6 +398,7 @@ export default function TimetableClient({ master }: { master: any[] }) {
               onSelect={handleCourseSelect}
               search={courseSearch}
               setSearch={setCourseSearch}
+              selectedSections={selectedSections}
             />
           )}
           {mobileView === "SECTIONS" && activeCourse && (
@@ -419,6 +420,7 @@ export default function TimetableClient({ master }: { master: any[] }) {
           onSelect={handleCourseSelect}
           search={courseSearch}
           setSearch={setCourseSearch}
+          selectedSections={selectedSections}
         />
 
         {activeCourse && (

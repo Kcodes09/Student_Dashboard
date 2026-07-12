@@ -147,6 +147,29 @@ export default function TestAlarmsPage() {
         </button>
       </div>
 
+      <div className="bg-[var(--bg-surface)] p-6 rounded-2xl border border-[var(--border-subtle)] space-y-4 shadow-sm mt-6">
+        <h2 className="font-bold text-lg text-[var(--text-primary)]">3. Android Clock App Integration</h2>
+        <p className="text-sm text-[var(--text-muted)]">Test if the Android intent correctly opens your native clock app with an alarm.</p>
+        
+        <button 
+          onClick={() => {
+            const now = new Date()
+            now.setMinutes(now.getMinutes() + 15)
+            const h = now.getHours()
+            const m = now.getMinutes()
+            const msg = encodeURIComponent("TEST101 in Test Room")
+            window.location.href = `intent://#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${msg};i.android.intent.extra.alarm.HOUR=${h};i.android.intent.extra.alarm.MINUTES=${m};B.android.intent.extra.alarm.SKIP_UI=false;end`
+          }}
+          className="px-4 py-2 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold hover:bg-emerald-200 active:scale-95 transition-all shadow-sm w-full sm:w-auto flex items-center justify-center gap-2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Test Android Clock (15 mins from now)
+        </button>
+      </div>
+
     </div>
   )
 }
