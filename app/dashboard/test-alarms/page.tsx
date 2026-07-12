@@ -154,7 +154,8 @@ export default function TestAlarmsPage() {
         <button 
           onClick={() => {
             const now = new Date()
-            now.setMinutes(now.getMinutes() + 15)
+            // Native Android alarms only support Hours and Minutes, so 1 minute is the shortest possible test
+            now.setMinutes(now.getMinutes() + 1)
             const h = now.getHours()
             const m = now.getMinutes()
             const msg = encodeURIComponent("TEST101 in Test Room")
@@ -166,7 +167,7 @@ export default function TestAlarmsPage() {
             <circle cx="12" cy="12" r="10"></circle>
             <polyline points="12 6 12 12 16 14"></polyline>
           </svg>
-          Test Android Clock (15 mins from now)
+          Test Android Clock (1 min from now)
         </button>
       </div>
 
