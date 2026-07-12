@@ -4,6 +4,9 @@ import { ThemeProvider } from "./components/ThemeProvider"
 import AuthProvider from "./components/SessionProvider"
 import { NotificationManager } from "./components/NotificationManager"
 
+import { ProductTour } from "./components/ProductTour"
+import { PwaInstallPrompt } from "./components/PwaInstallPrompt"
+
 export const metadata: Metadata = {
   title: "Student Dashboard",
   description: "Smart Student Dashboard",
@@ -49,7 +52,9 @@ export default function RootLayout({
       <body className="h-screen ">
         <AuthProvider>
           <ThemeProvider>
+            <PwaInstallPrompt />
             <NotificationManager />
+            <ProductTour />
             {children}
           </ThemeProvider>
         </AuthProvider>

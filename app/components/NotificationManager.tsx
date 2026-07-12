@@ -2,12 +2,16 @@
 
 import { useEffect, useState } from "react";
 import type { Session, Exam } from "@/types/timetable";
+import { useSession } from "next-auth/react";
 
 export function NotificationManager() {
+  const { status } = useSession();
   const [permission, setPermission] = useState<NotificationPermission>("default");
   const [sessions, setSessions] = useState<Session[]>([]);
 
   useEffect(() => {
+    if (status !== "authenticated") return;
+    
     if ("Notification" in window) {
       setPermission(Notification.permission);
     }
@@ -21,7 +25,7 @@ export function NotificationManager() {
     } catch (e) {
       console.error(e);
     }
-  }, []);
+  }, [status]);
 
   const requestPermission = async () => {
     if ("Notification" in window) {
@@ -86,6 +90,7 @@ export function NotificationManager() {
   }, [permission, sessions]);
 
   if (permission === "granted") return null;
+  if (status !== "authenticated") return null;
 
   return (
     <div className="bg-blue-50 dark:bg-blue-900/30 border-b border-blue-200 dark:border-blue-800 px-4 py-2 flex items-center justify-between">
