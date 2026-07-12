@@ -1,9 +1,25 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function TestAlarmsPage() {
   const [toast, setToast] = useState<string | null>(null)
+  const [androidIntentUrl, setAndroidIntentUrl] = useState<string>("#")
+
+  // Update intent url every 10 seconds to keep it ~1 min ahead
+  useEffect(() => {
+    const update = () => {
+      const now = new Date()
+      now.setMinutes(now.getMinutes() + 1)
+      const h = now.getHours()
+      const m = now.getMinutes()
+      const msg = encodeURIComponent("TEST101 in Test Room")
+      setAndroidIntentUrl(`intent://#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${msg};i.android.intent.extra.alarm.HOUR=${h};i.android.intent.extra.alarm.MINUTES=${m};B.android.intent.extra.alarm.SKIP_UI=false;end`)
+    }
+    update()
+    const timer = setInterval(update, 10000)
+    return () => clearInterval(timer)
+  }, [])
 
   const showToast = (msg: string) => {
     setToast(msg)
@@ -151,16 +167,8 @@ export default function TestAlarmsPage() {
         <h2 className="font-bold text-lg text-[var(--text-primary)]">3. Android Clock App Integration</h2>
         <p className="text-sm text-[var(--text-muted)]">Test if the Android intent correctly opens your native clock app with an alarm.</p>
         
-        <button 
-          onClick={() => {
-            const now = new Date()
-            // Native Android alarms only support Hours and Minutes, so 1 minute is the shortest possible test
-            now.setMinutes(now.getMinutes() + 1)
-            const h = now.getHours()
-            const m = now.getMinutes()
-            const msg = encodeURIComponent("TEST101 in Test Room")
-            window.location.href = `intent://#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${msg};i.android.intent.extra.alarm.HOUR=${h};i.android.intent.extra.alarm.MINUTES=${m};B.android.intent.extra.alarm.SKIP_UI=false;end`
-          }}
+        <a 
+          href={androidIntentUrl}
           className="px-4 py-2 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold hover:bg-emerald-200 active:scale-95 transition-all shadow-sm w-full sm:w-auto flex items-center justify-center gap-2"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -168,7 +176,7 @@ export default function TestAlarmsPage() {
             <polyline points="12 6 12 12 16 14"></polyline>
           </svg>
           Test Android Clock (1 min from now)
-        </button>
+        </a>
       </div>
 
     </div>

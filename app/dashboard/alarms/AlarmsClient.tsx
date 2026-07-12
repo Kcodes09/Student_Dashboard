@@ -78,7 +78,7 @@ export default function AlarmsClient() {
     showToast(offset === 0 ? "Alarm removed" : `Alarm set for ${offset} mins before`)
   }
 
-  const openAndroidClock = (session: Session) => {
+  const getAndroidClockIntentUrl = (session: Session) => {
     const key = `class-${session.courseCode}-${session.day}-${session.startTime}`
     const offset = alarms[key] || 10
     
@@ -100,9 +100,7 @@ export default function AlarmsClient() {
     const message = encodeURIComponent(`${session.courseCode} in ${session.room}`)
     
     // Standard Android Intent for setting an alarm
-    const intentUrl = `intent://#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${message};i.android.intent.extra.alarm.HOUR=${alarmH};i.android.intent.extra.alarm.MINUTES=${alarmM};B.android.intent.extra.alarm.SKIP_UI=false;end`
-    
-    window.location.href = intentUrl
+    return `intent://#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${message};i.android.intent.extra.alarm.HOUR=${alarmH};i.android.intent.extra.alarm.MINUTES=${alarmM};B.android.intent.extra.alarm.SKIP_UI=false;end`
   }
 
   // Group sessions by day
@@ -189,16 +187,16 @@ export default function AlarmsClient() {
                           <span className="text-xs font-medium text-[var(--text-muted)]">Remind me:</span>
                           <div className="flex items-center gap-2">
                             {isAndroid && (
-                              <button
-                                onClick={() => openAndroidClock(s)}
-                                className="p-1.5 rounded-lg bg-green-100 text-green-700 hover:bg-green-200 transition-colors"
+                              <a
+                                href={getAndroidClockIntentUrl(s)}
+                                className="p-1.5 rounded-lg bg-green-100 text-green-700 hover:bg-green-200 transition-colors inline-block"
                                 title="Add to Android Clock App"
                               >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                   <circle cx="12" cy="12" r="10"></circle>
                                   <polyline points="12 6 12 12 16 14"></polyline>
                                 </svg>
-                              </button>
+                              </a>
                             )}
                             <select
                               value={currentOffset}
