@@ -24,8 +24,8 @@ const DAY_TO_ICS: Record<string, string> = {
   S: "SA",
 }
 
-const SEM_START = [2026, 1, 5] // Classwork begins
-const SEM_END_UTC = "20260425T235959Z"
+const SEM_START = [2026, 8, 1] // Classwork begins Aug 1
+const SEM_END_UTC = "20261231T235959Z" // End of Dec
 
 /* ---------- UTILS ---------- */
 
@@ -126,66 +126,147 @@ export default function TimetableClient({ master }: { master: any[] }) {
 
   /* ---------- EXPORT PNG (MOBILE SAFE) ---------- */
   const exportPNG = async () => {
-  if (!desktopExportRef.current) return
+    try {
+      if (!desktopExportRef.current) {
+        showToast("Export ref is null")
+        return
+      }
 
-  const blob = await htmlToImage.toBlob(
-    desktopExportRef.current,
-    {
-      pixelRatio: 2,
-      backgroundColor: getComputedStyle(
-        document.documentElement
-      ).getPropertyValue("--bg-surface"),
+      showToast("Generating PNG...")
+
+      const target = desktopExportRef.current
+      
+      // Save original styles
+      const originalOverflow = target.style.overflow
+      const originalWidth = target.style.width
+      const originalHeight = target.style.height
+      
+      // Force full size for export
+      target.style.overflow = "visible"
+      target.style.width = "max-content"
+      target.style.height = "max-content"
+
+      // Also force inner grid container to not scroll
+      const innerGrid = target.querySelector('.overflow-x-auto') as HTMLElement
+      let originalInnerOverflow = ""
+      if (innerGrid) {
+         originalInnerOverflow = innerGrid.style.overflow
+         innerGrid.style.overflow = "visible"
+      }
+
+      // Small delay to allow browser to apply styles before capturing
+      await new Promise(r => setTimeout(r, 100))
+
+      const blob = await htmlToImage.toBlob(
+        target,
+        {
+          pixelRatio: 2,
+          backgroundColor: getComputedStyle(
+            document.documentElement
+          ).getPropertyValue("--bg-surface") || "#ffffff",
+        }
+      )
+
+      // Restore styles
+      target.style.overflow = originalOverflow
+      target.style.width = originalWidth
+      target.style.height = originalHeight
+      if (innerGrid) {
+          innerGrid.style.overflow = originalInnerOverflow
+      }
+
+      if (!blob) {
+        showToast("Failed to generate image (null blob)")
+        return
+      }
+
+      // For mobile: Try to use Web Share API if possible
+      if (isMobile() && navigator.share && navigator.canShare) {
+        const file = new File([blob], "timetable.png", { type: "image/png" })
+        if (navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              title: "My Timetable",
+              files: [file]
+            })
+            return
+          } catch (err: any) {
+            if (err.name !== "AbortError") {
+              console.error("Share failed", err)
+            }
+          }
+        }
+      }
+
+      const blobUrl = URL.createObjectURL(blob)
+
+      const a = document.createElement("a")
+      a.href = blobUrl
+      a.download = "timetable.png"
+      a.rel = "noopener"
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+
+      // ⏳ delay revoke — CRITICAL on mobile
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 1000)
+
+      showToast("PNG ready — save from browser")
+    } catch (err: any) {
+      showToast(`PNG Error: ${err.message || String(err)}`)
+      
+      // Ensure styles are restored on error
+      if (desktopExportRef.current) {
+         desktopExportRef.current.style.overflow = ""
+         desktopExportRef.current.style.width = ""
+         desktopExportRef.current.style.height = ""
+         const innerGrid = desktopExportRef.current.querySelector('.overflow-x-auto') as HTMLElement
+         if (innerGrid) innerGrid.style.overflow = ""
+      }
     }
-  )
-
-  if (!blob) {
-    showToast("Failed to generate image")
-    return
   }
-
-  const blobUrl = URL.createObjectURL(blob)
-
-  const a = document.createElement("a")
-  a.href = blobUrl
-  a.download = "timetable.png"
-  a.rel = "noopener"
-  document.body.appendChild(a)
-  a.click()
-  document.body.removeChild(a)
-
-  // ⏳ delay revoke — CRITICAL on mobile
-  setTimeout(() => URL.revokeObjectURL(blobUrl), 1000)
-
-  showToast("PNG ready — save from browser")
-}
 
 
 
 
   /* ---------- EXPORT ICS ---------- */
   const exportICS = () => {
-    const events: any[] = []
+    try {
+      const events: any[] = []
 
-    sessions.forEach(s => {
-      const byDay = DAY_TO_ICS[s.day]
-      if (!byDay) return
+      sessions.forEach(s => {
+        const byDay = DAY_TO_ICS[s.day]
+        if (!byDay) return
 
-      const [sh, sm] = s.startTime.split(":").map(Number)
-      const [eh, em] = s.endTime.split(":").map(Number)
+        const [sh, sm] = s.startTime.split(":").map(Number)
+        const [eh, em] = s.endTime.split(":").map(Number)
 
-      events.push({
-        title: `${s.courseCode} Class`,
-        start: [...SEM_START, sh, sm],
-        end: [...SEM_START, eh, em],
-        location: s.room,
-        description: `Section: ${s.section}`,
-        recurrenceRule: `FREQ=WEEKLY;BYDAY=${byDay};UNTIL=${SEM_END_UTC}`,
+        if (isNaN(sh) || isNaN(sm) || isNaN(eh) || isNaN(em)) return
+
+        events.push({
+          title: `${s.courseCode} Class`,
+          start: [...SEM_START, sh, sm],
+          end: [...SEM_START, eh, em],
+          location: s.room,
+          description: `Section: ${s.section}`,
+          recurrenceRule: `FREQ=WEEKLY;BYDAY=${byDay};UNTIL=${SEM_END_UTC}`,
+        })
       })
-    })
+      
+      if (events.length === 0) {
+          showToast("No classes selected to export.")
+          return
+      }
 
-    createEvents(events, (error, value) => {
-      if (error || !value) {
-        showToast("ICS export failed")
+      // Use synchronous call so that Safari doesn't block the download
+      const { error, value } = createEvents(events)
+      
+      if (error) {
+        showToast(`ICS Error: ${error.message || String(error)}`)
+        return
+      }
+      if (!value) {
+        showToast("ICS value is empty")
         return
       }
 
@@ -193,18 +274,40 @@ export default function TimetableClient({ master }: { master: any[] }) {
         type: "text/calendar;charset=utf-8",
       })
 
+      // Try web share first on mobile
+      if (isMobile() && navigator.share && navigator.canShare) {
+        const file = new File([blob], "timetable.ics", { type: "text/calendar" })
+        if (navigator.canShare({ files: [file] })) {
+          navigator.share({
+            title: "Timetable Calendar",
+            files: [file]
+          }).then(() => {
+              showToast("ICS Shared")
+          }).catch((err) => {
+              if (err.name !== "AbortError") {
+                 showToast("Share failed, trying download...")
+                 downloadFile(blob, "timetable.ics")
+              }
+          })
+          return
+        }
+      }
+
+      downloadFile(blob, "timetable.ics")
+      showToast("ICS exported")
+    } catch (err: any) {
+      showToast(`ICS Try/Catch: ${err.message || String(err)}`)
+    }
+  }
+
+  const downloadFile = (blob: Blob, filename: string) => {
       const link = document.createElement("a")
       link.href = URL.createObjectURL(blob)
-      link.download = "timetable.ics"
+      link.download = filename
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
-      
-      // Delay revoke for mobile compatibility
       setTimeout(() => URL.revokeObjectURL(link.href), 1000)
-      
-      showToast("ICS exported")
-    })
   }
 
   /* ---------- PORTAL FOR NAVBAR ACTIONS ---------- */
@@ -303,7 +406,7 @@ export default function TimetableClient({ master }: { master: any[] }) {
       </div>
 
       {/* ================= DESKTOP ================= */}
-      <div className="flex h-full max-md:absolute max-md:-left-[9999px] max-md:top-0 max-md:w-[1200px] max-md:h-[800px] max-md:opacity-0 max-md:pointer-events-none">
+      <div className="flex h-full max-md:fixed max-md:top-0 max-md:left-0 max-md:-z-50 max-md:w-[1200px] max-md:h-[800px] max-md:pointer-events-none max-md:overflow-hidden max-md:opacity-100">
         <CourseSidebar
           courses={master}
           activeCourse={activeCourse}
