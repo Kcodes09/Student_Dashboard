@@ -12,9 +12,31 @@ export default function manifest(): MetadataRoute.Manifest {
     icons: [
       {
         src: '/favicon.ico',
-        sizes: 'any',
+        sizes: '256x256',
         type: 'image/x-icon',
+      },
+      {
+        src: '/globe.svg',
+        sizes: '512x512',
+        type: 'image/svg+xml',
+        purpose: 'maskable'
       }
     ],
+    screenshots: [
+      {
+        src: '/screenshot-desktop.svg',
+        sizes: '1280x720',
+        type: 'image/svg+xml',
+        // @ts-ignore - next.js types might not have form_factor yet
+        form_factor: 'wide',
+      },
+      {
+        src: '/screenshot-mobile.svg',
+        sizes: '720x1280',
+        type: 'image/svg+xml',
+        // @ts-ignore
+        form_factor: 'narrow',
+      }
+    ]
   };
 }
