@@ -70,43 +70,48 @@ export default function MobileTimetable({
 
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col bg-[var(--bg-surface)]">
       {dayClashes.length > 0 && (
-        <div className="mx-3 mt-3 rounded-md border border-red-500 bg-red-50 px-3 py-2 text-xs text-red-700 animate-shake">
-          ⚠️ Clash detected<br />
-          <span className="font-semibold">
-            {DAY_LABEL[activeDay]} · {dayClashes[0].startTime} –{" "}
-            {dayClashes[0].endTime}
-          </span>
+        <div className="mx-3 mt-3 shrink-0 rounded-lg border border-red-500/50 bg-red-500/10 px-3 py-2 text-xs font-medium text-red-600 dark:text-red-400 animate-shake flex items-start gap-2">
+          <span className="mt-0.5">⚠️</span>
+          <div className="flex flex-col gap-0.5">
+            <span className="font-bold">Clash detected</span>
+            <span>
+              {DAY_LABEL[activeDay]} · {dayClashes[0].startTime} –{" "}
+              {dayClashes[0].endTime}
+            </span>
+          </div>
         </div>
       )}
       {/* DAY TABS */}
-      <div className="flex border-b bg-[var(--bg-surface)]">
+      <div className="flex border-b border-[var(--border-subtle)] bg-[var(--bg-surface-hover)] shadow-sm">
         {DAYS.map(d => (
           <button
             key={d}
             onClick={() => setActiveDay(d)}
             className={clsx(
-              "flex-1 py-2 text-sm font-semibold transition",
+              "flex-1 py-3 text-sm font-bold transition-all relative",
               activeDay === d
-                ? "border-b-2 border-[var(--bg-accent)] text-[var(--bg-accent)]"
-                : "text-[var(--text-muted)]"
+                ? "text-[var(--text-accent)]"
+                : "text-[var(--text-muted)] hover:bg-[var(--bg-muted)]"
             )}
           >
             {d}
+            {activeDay === d && (
+              <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[var(--bg-accent)] rounded-t-md" />
+            )}
           </button>
         ))}
       </div>
 
-      {/* ⚠️ CLASH WARNING */}
-      
-
       {/* SESSIONS */}
-      <div className="flex-1 overflow-y-auto p-3 space-y-2">
+      <div className="flex-1 overflow-y-auto p-3 space-y-3 bg-[var(--bg-main)]">
         {daySessions.length === 0 && (
-          <p className="text-sm text-[var(--text-muted)] text-center">
-            No classes
-          </p>
+          <div className="flex items-center justify-center h-full">
+            <p className="text-sm font-medium text-[var(--text-muted)]">
+              No classes scheduled
+            </p>
+          </div>
         )}
 
         {daySessions.map(s => {
@@ -117,21 +122,18 @@ export default function MobileTimetable({
             <div
               key={`${s.courseCode}-${s.section}-${s.hour}`}
               className={clsx(
-                "rounded-lg p-3 text-sm shadow-sm transition",
+                "rounded-xl p-3.5 shadow-sm transition-all border",
                 getCourseColor(s.courseCode),
-                isClash && "ring-2 ring-red-500 bg-red-100"
+                isClash ? "ring-2 ring-red-500 bg-red-500/10 border-red-500/50" : "border-transparent"
               )}
             >
-              <div className="font-semibold">
-                {s.courseCode} ({s.section})
+              <div className="font-bold tracking-tight text-base mb-1">
+                {s.courseCode} <span className="opacity-80 font-medium">{s.type === "LECTURE" ? "(L)" : s.type === "PRACTICAL" ? "(P)" : s.type === "TUTORIAL" ? "(T)" : ""}</span> <span className="opacity-75 font-normal text-xs ml-1">Sec: {s.section}</span>
               </div>
 
-              <div className="text-xs mt-1">
-                {s.startTime} – {s.endTime}
-              </div>
-
-              <div className="text-xs opacity-80">
-                {s.room}
+              <div className="text-sm font-medium opacity-90 flex items-center justify-between mt-2">
+                <span>{s.startTime} – {s.endTime}</span>
+                <span className="text-xs px-2 py-0.5 rounded-md bg-black/10 dark:bg-white/20 font-bold">{s.room}</span>
               </div>
             </div>
           )

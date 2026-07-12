@@ -39,11 +39,6 @@ export default async function DashboardPage() {
             href="/dashboard/exams"
           />
 
-          <DashboardCard
-            title="Profile"
-            description="View your account details"
-            href="/dashboard/profile"
-          />
 
           <DashboardCard
             title="Timetable"

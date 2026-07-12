@@ -134,7 +134,7 @@ export default async function CalendarPage() {
 
   return (
     <>
-      <Navbar user={{ email: session.user.email }} />
+      <Navbar user={session.user} />
       <CalendarGrid
         sessions={sessions}
         exams={examList}

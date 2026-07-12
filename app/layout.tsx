@@ -14,7 +14,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+                
+                if (localStorage.getItem('worldCupMode') === 'true') {
+                  const team = localStorage.getItem('activeTeam') || 'Argentina';
+                  document.documentElement.dataset.team = team.toLowerCase().replace(/\\s+/g, '-');
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
       <body className="h-screen ">
         <AuthProvider>
           <ThemeProvider>{children}</ThemeProvider>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import clsx from "clsx"
-import * as htmlToImage from "html-to-image"
+import { createPortal } from "react-dom"
 import { createEvents } from "ics"
 
 import CourseSidebar from "@/components/CourseSidebar"
@@ -11,6 +11,7 @@ import TimetableGrid from "@/components/TimetableGrid"
 import MobileTimetable from "@/components/MobileTimetable"
 
 import { generateStudentTT } from "../../lib/timetable/generateStudentTT"
+import * as htmlToImage from "html-to-image"
 
 /* ---------- ICS CONSTANTS ---------- */
 
@@ -200,8 +201,42 @@ export default function TimetableClient({ master }: { master: any[] }) {
     })
   }
 
+  /* ---------- PORTAL FOR NAVBAR ACTIONS ---------- */
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  const portalNode = typeof document !== "undefined" ? document.getElementById("navbar-actions-portal") : null
+
+  const actionButtons = (
+    <div className="flex items-center gap-2">
+      <button 
+        onClick={handleSave}
+        className="px-4 py-1.5 text-xs font-bold rounded-lg transition-all text-white shadow-[0_0_15px_var(--bg-accent)] shadow-opacity-30 hover:scale-105 active:scale-95 hover:shadow-lg"
+        style={{ backgroundColor: "var(--bg-accent)" }}
+      >
+        Save
+      </button>
+      <button 
+        onClick={exportPNG}
+        className="px-3 py-1.5 text-xs font-semibold rounded-lg transition-all text-[var(--text-primary)] border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] shadow-sm hover:shadow active:scale-95"
+      >
+        <span className="md:hidden">PNG</span>
+        <span className="hidden md:inline">Export PNG</span>
+      </button>
+      <button 
+        onClick={exportICS}
+        className="px-3 py-1.5 text-xs font-semibold rounded-lg transition-all text-[var(--text-primary)] border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] shadow-sm hover:shadow active:scale-95"
+      >
+        <span className="md:hidden">ICS</span>
+        <span className="hidden md:inline">Export ICS</span>
+      </button>
+    </div>
+  )
+
   return (
     <div className="h-screen w-full overflow-hidden">
+      {/* RENDER ACTIONS TO NAVBAR */}
+      {mounted && portalNode && createPortal(actionButtons, portalNode)}
+
       {/* TOAST */}
       {toast && (
         <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-lg bg-[var(--bg-surface)] px-4 py-2 text-sm shadow">
@@ -224,7 +259,7 @@ export default function TimetableClient({ master }: { master: any[] }) {
             Courses
           </button>
 
-          <button
+            <button
             onClick={() => setMobileView("TIMETABLE")}
             className={clsx(
               "text-sm font-semibold",
@@ -235,12 +270,6 @@ export default function TimetableClient({ master }: { master: any[] }) {
           >
             Timetable
           </button>
-
-          <div className="flex gap-2">
-            <button onClick={handleSave}>Save</button>
-            <button onClick={exportPNG}>PNG</button>
-            <button onClick={exportICS}>ICS</button>
-          </div>
         </div>
 
         <div className="flex-1 overflow-auto">
@@ -285,14 +314,8 @@ export default function TimetableClient({ master }: { master: any[] }) {
           />
         )}
 
-        <main className="flex-1 p-6 overflow-hidden">
-          <div className="flex justify-end gap-2 mb-4">
-            <button onClick={handleSave}>Save</button>
-            <button onClick={exportPNG}>Export PNG</button>
-            <button onClick={exportICS}>Export ICS</button>
-          </div>
-
-          <div ref={desktopExportRef}>
+        <main className="flex-1 overflow-auto p-1.5 md:p-3">
+          <div ref={desktopExportRef} className="bg-[var(--bg-surface)] rounded-xl overflow-hidden shadow-sm border border-[var(--border-subtle)] w-full h-fit">
             <TimetableGrid sessions={sessions} />
           </div>
         </main>

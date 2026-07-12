@@ -57,7 +57,7 @@ export default async function AttendancePage() {
 
   return (
     <>
-      <Navbar user={{ email }} />
+      <Navbar user={session.user} />
 
       <main className="max-w-4xl mx-auto px-4 py-4 sm:py-6 space-y-4">
         <h1 className="text-lg sm:text-xl font-semibold">

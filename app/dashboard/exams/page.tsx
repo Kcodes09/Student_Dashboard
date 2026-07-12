@@ -145,7 +145,7 @@ export default async function ExamsPage() {
 
   return (
     <>
-      <Navbar user={{ email }} />
+      <Navbar user={session.user} />
 
       <main className="max-w-4xl mx-auto px-3 sm:px-4 py-4">
         <h1 className="text-lg sm:text-xl font-semibold mb-5">

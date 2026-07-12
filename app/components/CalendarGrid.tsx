@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import clsx from "clsx"
 import type { Session, Exam, CalendarDay } from "@/types/timetable"
 
 const DAY_INDEX: Record<Session["day"], number> = {
@@ -87,89 +88,98 @@ export default function CalendarGrid({
   }
 
   return (
-    <main className="p-2 sm:p-4 max-w-6xl mx-auto">
+    <main className="p-2 sm:px-6 sm:py-4 max-w-7xl mx-auto w-full h-[calc(100vh-64px)] flex flex-col">
       {/* HEADER */}
-      <div className="mb-3 flex items-center justify-between">
-        <button onClick={prevMonth}>←</button>
-        <h1 className="text-lg sm:text-xl font-semibold">
+      <div className="mb-4 flex items-center justify-between shrink-0">
+        <button onClick={prevMonth} className="px-3 py-1.5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] transition-all active:scale-95 text-sm font-bold shadow-sm">← Prev</button>
+        <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-primary)]">
           {new Date(year, jsMonth).toLocaleString("default", {
             month: "long",
           })}{" "}
           {year}
         </h1>
-        <button onClick={nextMonth}>→</button>
+        <button onClick={nextMonth} className="px-3 py-1.5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] transition-all active:scale-95 text-sm font-bold shadow-sm">Next →</button>
       </div>
 
-      {/* SCROLL */}
-      <div className="overflow-x-auto">
-        <div className="min-w-[700px] sm:min-w-0">
-          {/* WEEK HEADER */}
-          <div className="grid grid-cols-7 text-[11px] font-semibold mb-1 sticky top-0 z-10"
-            style={{ backgroundColor: "var(--bg-main)" }}
-          >
-            {["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(d => (
-              <div key={d} className="text-center py-1">{d}</div>
-            ))}
-          </div>
+      {/* NO SCROLL - FIT HEIGHT */}
+      <div className="w-full flex-1 rounded-xl shadow-sm border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex flex-col min-h-0 overflow-hidden">
+        {/* WEEK HEADER */}
+        <div className="grid grid-cols-7 text-[10px] sm:text-xs font-bold shrink-0 border-b border-[var(--border-subtle)]"
+          style={{ backgroundColor: "var(--bg-surface-hover)" }}
+        >
+          {["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(d => (
+            <div key={d} className="text-center py-2.5 uppercase tracking-wider text-[var(--text-muted)]">{d}</div>
+          ))}
+        </div>
 
-          {/* GRID */}
-          <div className="grid grid-cols-7 gap-1 text-[11px]">
-            {Array.from({ length: firstWeekday }).map((_, i) => (
-              <div key={`empty-${i}`} />
-            ))}
+        {/* GRID */}
+        <div className="grid grid-cols-7 auto-rows-fr gap-px text-[11px] bg-[var(--border-subtle)] flex-1 min-h-0">
+          {Array.from({ length: firstWeekday }).map((_, i) => (
+            <div key={`empty-${i}`} className="bg-[var(--bg-surface)]" />
+          ))}
 
-            {Array.from({ length: totalDays }, (_, i) => {
-              const dateObj = new Date(year, jsMonth, i + 1)
-              const iso = toLocalISO(dateObj)
-              const meta = calendarMap.get(iso)
-              const dayExams = getDayExams(dateObj)
+          {Array.from({ length: totalDays }, (_, i) => {
+            const dateObj = new Date(year, jsMonth, i + 1)
+            const iso = toLocalISO(dateObj)
+            const meta = calendarMap.get(iso)
+            const dayExams = getDayExams(dateObj)
 
-              let bgColor = "var(--bg-surface)"
-              if (meta?.holiday) bgColor = "rgba(34,197,94,0.15)"
-              else if (dayExams.length > 0) bgColor = "rgba(239,68,68,0.15)"
+            let bgColor = "var(--bg-surface)"
+            let hoverColor = "var(--bg-surface-hover)"
+            if (meta?.holiday) { bgColor = "rgba(34,197,94,0.3)"; hoverColor = "rgba(34,197,94,0.4)"; }
+            else if (dayExams.length > 0) { bgColor = "rgba(239,68,68,0.3)"; hoverColor = "rgba(239,68,68,0.4)"; }
 
-              return (
-                <div
-                  key={iso}
-                  onClick={() => setSelectedDate(dateObj)}
-                  className="cursor-pointer rounded p-1 sm:p-2 min-h-[72px] sm:min-h-[100px]"
-                  style={{
-                    backgroundColor: bgColor,
-                    border: "1px solid var(--border-subtle)",
-                  }}
-                >
-                  <div className="font-semibold text-xs sm:text-sm">
+            return (
+              <div
+                key={iso}
+                onClick={() => setSelectedDate(dateObj)}
+                className="cursor-pointer p-1.5 sm:p-2.5 transition-all relative group flex flex-col overflow-hidden min-h-0"
+                style={{
+                  backgroundColor: bgColor,
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = hoverColor}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = bgColor}
+              >
+                  {/* Subtle inner border on hover */}
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-[var(--bg-accent)] pointer-events-none transition-colors" />
+                  
+                  <div className="font-bold text-xs sm:text-sm mb-1 text-[var(--text-primary)]">
                     {i + 1}
                   </div>
 
                   {meta?.label && (
-                    <div className="text-[9px] sm:text-[10px] font-medium text-[var(--text-muted)]">
+                    <div className={clsx(
+                      "text-[9px] sm:text-[10px] font-bold leading-tight line-clamp-2 mb-1 px-1 py-0.5 rounded-sm",
+                      meta.holiday 
+                        ? "bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300"
+                        : "bg-[var(--bg-selected)] text-[var(--text-accent)]"
+                    )}>
                       {meta.label}
                     </div>
                   )}
 
-                  {dayExams.map((e, idx) => (
-                    <div
-                      key={idx}
-                      className="mt-0.5 rounded px-1 py-[1px] text-[9px] sm:text-[10px]"
-                      style={{
-                        backgroundColor: "rgba(239,68,68,0.6)",
-                        color: "white",
-                      }}
-                    >
-                      {e.courseCode}
-                    </div>
-                  ))}
+                  <div className="flex flex-col gap-0.5 mt-auto">
+                    {dayExams.map((e, idx) => (
+                      <div
+                        key={idx}
+                        className="rounded px-1 py-[2px] text-[8px] sm:text-[9px] font-bold truncate text-white shadow-sm"
+                        style={{
+                          backgroundColor: "rgba(239,68,68,0.8)",
+                        }}
+                      >
+                        {e.courseCode} EXAM
+                      </div>
+                    ))}
+                  </div>
 
                   {showHint(dateObj, meta) && (
-                    <div className="mt-1 text-[9px] text-[var(--text-muted)] hidden sm:block">
-                      Click to display class schedule
+                    <div className="mt-1 text-[9px] text-[var(--text-muted)] hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity">
+                      Click for schedule
                     </div>
                   )}
                 </div>
               )
             })}
-          </div>
         </div>
       </div>
 

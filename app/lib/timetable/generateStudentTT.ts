@@ -7,6 +7,7 @@ type Session = {
   courseCode: string
   section: string
   instructors: string[]
+  type?: string
 }
 
 type SectionType = "LECTURE" | "TUTORIAL" | "PRACTICAL"
@@ -40,6 +41,7 @@ export function generateStudentTT(
           courseCode: course.courseCode,
           section: section.section,
           instructors: section.instructors,
+          type: section.type,
         })
       }
     }

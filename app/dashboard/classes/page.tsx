@@ -105,7 +105,7 @@ export default async function ClassesPage() {
 
   return (
     <>
-      <Navbar user={{ email }} />
+      <Navbar user={session.user} />
 
       <main className="max-w-4xl mx-auto px-4 py-4 sm:py-6">
         <section

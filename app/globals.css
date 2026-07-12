@@ -46,28 +46,34 @@ html.dark {
   color: var(--text-primary);
 }
 * {
-  transition-property: background-color, color, border-color, transform;
-  transition-duration: 150ms;
-  transition-timing-function: ease;
+  transition-property: background-color, color, border-color, fill, stroke, transform;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
 }
 button:focus-visible {
   outline: 2px solid var(--bg-accent);
 }
-/* ---------- COURSE SIDEBAR SCROLLBAR ---------- */
-aside::-webkit-scrollbar {
-  width: 8px;
+/* ---------- GLOBAL SCROLLBARS ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-muted) transparent;
 }
 
-aside::-webkit-scrollbar-track {
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
   background: transparent;
 }
 
-aside::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--bg-muted);
   border-radius: 9999px;
 }
 
-aside::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-muted);
 }
 @keyframes shake {
@@ -90,3 +96,501 @@ aside::-webkit-scrollbar-thumb:hover {
 
 
 
+
+
+/* ---------- WORLD CUP TEAMS ---------- */
+html[data-team] {
+  --bg-main: color-mix(in srgb, var(--bg-accent) 8%, #f3f4f6);
+  --bg-surface: color-mix(in srgb, var(--bg-accent) 4%, #ffffff);
+  --bg-surface-hover: color-mix(in srgb, var(--bg-accent) 10%, #f5f7fa);
+  --bg-navbar-hover: color-mix(in srgb, var(--bg-accent) 15%, #e5e7eb);
+  --border-subtle: color-mix(in srgb, var(--bg-accent) 15%, #e5e7eb);
+}
+
+html.dark[data-team] {
+  --bg-main: color-mix(in srgb, var(--bg-accent) 12%, #030712);
+  --bg-surface: color-mix(in srgb, var(--bg-accent) 8%, #111827);
+  --bg-surface-hover: color-mix(in srgb, var(--bg-accent) 15%, #1e293b);
+  --bg-navbar-hover: color-mix(in srgb, var(--bg-accent) 20%, #1e293b);
+  --border-subtle: color-mix(in srgb, var(--bg-accent) 20%, #334155);
+}
+html[data-team="argentina"] {
+  --bg-accent: rgb(74 179 238);
+  --bg-selected: rgb(224 242 254);
+  --text-accent: rgb(74 179 238);
+}
+html.dark[data-team="argentina"] {
+  --bg-accent: rgb(74 179 238);
+  --bg-selected: rgb(12 74 110);
+  --text-accent: rgb(125 211 252);
+}
+html[data-team="brazil"] {
+  --bg-accent: rgb(255 204 0);
+  --bg-selected: rgb(254 249 195);
+  --text-accent: rgb(255 204 0);
+}
+html.dark[data-team="brazil"] {
+  --bg-accent: rgb(255 204 0);
+  --bg-selected: rgb(113 63 18);
+  --text-accent: rgb(253 224 71);
+}
+html[data-team="france"] {
+  --bg-accent: rgb(0 35 149);
+  --bg-selected: rgb(219 234 254);
+  --text-accent: rgb(0 35 149);
+}
+html.dark[data-team="france"] {
+  --bg-accent: rgb(0 35 149);
+  --bg-selected: rgb(30 58 138);
+  --text-accent: rgb(96 165 250);
+}
+html[data-team="germany"] {
+  --bg-accent: rgb(22 22 22);
+  --bg-selected: rgb(243 244 246);
+  --text-accent: rgb(22 22 22);
+}
+html.dark[data-team="germany"] {
+  --bg-accent: rgb(22 22 22);
+  --bg-selected: rgb(17 24 39);
+  --text-accent: rgb(209 213 219);
+}
+html[data-team="spain"] {
+  --bg-accent: rgb(170 21 27);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(170 21 27);
+}
+html.dark[data-team="spain"] {
+  --bg-accent: rgb(170 21 27);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="portugal"] {
+  --bg-accent: rgb(228 37 24);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(228 37 24);
+}
+html.dark[data-team="portugal"] {
+  --bg-accent: rgb(228 37 24);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="england"] {
+  --bg-accent: rgb(206 17 36);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(206 17 36);
+}
+html.dark[data-team="england"] {
+  --bg-accent: rgb(206 17 36);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="usa"] {
+  --bg-accent: rgb(0 40 104);
+  --bg-selected: rgb(219 234 254);
+  --text-accent: rgb(0 40 104);
+}
+html.dark[data-team="usa"] {
+  --bg-accent: rgb(0 40 104);
+  --bg-selected: rgb(30 58 138);
+  --text-accent: rgb(96 165 250);
+}
+html[data-team="mexico"] {
+  --bg-accent: rgb(0 104 71);
+  --bg-selected: rgb(209 250 229);
+  --text-accent: rgb(0 104 71);
+}
+html.dark[data-team="mexico"] {
+  --bg-accent: rgb(0 104 71);
+  --bg-selected: rgb(6 78 59);
+  --text-accent: rgb(52 211 153);
+}
+html[data-team="canada"] {
+  --bg-accent: rgb(216 6 33);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(216 6 33);
+}
+html.dark[data-team="canada"] {
+  --bg-accent: rgb(216 6 33);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="italy"] {
+  --bg-accent: rgb(0 100 170);
+  --bg-selected: rgb(219 234 254);
+  --text-accent: rgb(0 100 170);
+}
+html.dark[data-team="italy"] {
+  --bg-accent: rgb(0 100 170);
+  --bg-selected: rgb(30 58 138);
+  --text-accent: rgb(96 165 250);
+}
+html[data-team="netherlands"] {
+  --bg-accent: rgb(243 112 33);
+  --bg-selected: rgb(255 237 213);
+  --text-accent: rgb(243 112 33);
+}
+html.dark[data-team="netherlands"] {
+  --bg-accent: rgb(243 112 33);
+  --bg-selected: rgb(124 45 18);
+  --text-accent: rgb(253 186 116);
+}
+html[data-team="uruguay"] {
+  --bg-accent: rgb(0 164 228);
+  --bg-selected: rgb(224 242 254);
+  --text-accent: rgb(0 164 228);
+}
+html.dark[data-team="uruguay"] {
+  --bg-accent: rgb(0 164 228);
+  --bg-selected: rgb(12 74 110);
+  --text-accent: rgb(125 211 252);
+}
+html[data-team="croatia"] {
+  --bg-accent: rgb(255 0 0);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(255 0 0);
+}
+html.dark[data-team="croatia"] {
+  --bg-accent: rgb(255 0 0);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="belgium"] {
+  --bg-accent: rgb(237 41 57);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(237 41 57);
+}
+html.dark[data-team="belgium"] {
+  --bg-accent: rgb(237 41 57);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="japan"] {
+  --bg-accent: rgb(0 5 85);
+  --bg-selected: rgb(219 234 254);
+  --text-accent: rgb(0 5 85);
+}
+html.dark[data-team="japan"] {
+  --bg-accent: rgb(0 5 85);
+  --bg-selected: rgb(30 58 138);
+  --text-accent: rgb(96 165 250);
+}
+html[data-team="senegal"] {
+  --bg-accent: rgb(0 133 63);
+  --bg-selected: rgb(209 250 229);
+  --text-accent: rgb(0 133 63);
+}
+html.dark[data-team="senegal"] {
+  --bg-accent: rgb(0 133 63);
+  --bg-selected: rgb(6 78 59);
+  --text-accent: rgb(52 211 153);
+}
+html[data-team="morocco"] {
+  --bg-accent: rgb(193 39 45);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(193 39 45);
+}
+html.dark[data-team="morocco"] {
+  --bg-accent: rgb(193 39 45);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="south korea"] {
+  --bg-accent: rgb(205 46 58);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(205 46 58);
+}
+html.dark[data-team="south korea"] {
+  --bg-accent: rgb(205 46 58);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="switzerland"] {
+  --bg-accent: rgb(213 43 30);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(213 43 30);
+}
+html.dark[data-team="switzerland"] {
+  --bg-accent: rgb(213 43 30);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="denmark"] {
+  --bg-accent: rgb(200 16 46);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(200 16 46);
+}
+html.dark[data-team="denmark"] {
+  --bg-accent: rgb(200 16 46);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="colombia"] {
+  --bg-accent: rgb(252 209 22);
+  --bg-selected: rgb(254 249 195);
+  --text-accent: rgb(252 209 22);
+}
+html.dark[data-team="colombia"] {
+  --bg-accent: rgb(252 209 22);
+  --bg-selected: rgb(113 63 18);
+  --text-accent: rgb(253 224 71);
+}
+html[data-team="chile"] {
+  --bg-accent: rgb(213 43 30);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(213 43 30);
+}
+html.dark[data-team="chile"] {
+  --bg-accent: rgb(213 43 30);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="nigeria"] {
+  --bg-accent: rgb(0 135 81);
+  --bg-selected: rgb(209 250 229);
+  --text-accent: rgb(0 135 81);
+}
+html.dark[data-team="nigeria"] {
+  --bg-accent: rgb(0 135 81);
+  --bg-selected: rgb(6 78 59);
+  --text-accent: rgb(52 211 153);
+}
+html[data-team="cameroon"] {
+  --bg-accent: rgb(0 122 94);
+  --bg-selected: rgb(209 250 229);
+  --text-accent: rgb(0 122 94);
+}
+html.dark[data-team="cameroon"] {
+  --bg-accent: rgb(0 122 94);
+  --bg-selected: rgb(6 78 59);
+  --text-accent: rgb(52 211 153);
+}
+html[data-team="ghana"] {
+  --bg-accent: rgb(206 17 38);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(206 17 38);
+}
+html.dark[data-team="ghana"] {
+  --bg-accent: rgb(206 17 38);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="algeria"] {
+  --bg-accent: rgb(0 102 51);
+  --bg-selected: rgb(209 250 229);
+  --text-accent: rgb(0 102 51);
+}
+html.dark[data-team="algeria"] {
+  --bg-accent: rgb(0 102 51);
+  --bg-selected: rgb(6 78 59);
+  --text-accent: rgb(52 211 153);
+}
+html[data-team="ivory coast"] {
+  --bg-accent: rgb(247 127 0);
+  --bg-selected: rgb(255 237 213);
+  --text-accent: rgb(247 127 0);
+}
+html.dark[data-team="ivory coast"] {
+  --bg-accent: rgb(247 127 0);
+  --bg-selected: rgb(124 45 18);
+  --text-accent: rgb(253 186 116);
+}
+html[data-team="egypt"] {
+  --bg-accent: rgb(206 17 38);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(206 17 38);
+}
+html.dark[data-team="egypt"] {
+  --bg-accent: rgb(206 17 38);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="ecuador"] {
+  --bg-accent: rgb(255 209 0);
+  --bg-selected: rgb(254 249 195);
+  --text-accent: rgb(255 209 0);
+}
+html.dark[data-team="ecuador"] {
+  --bg-accent: rgb(255 209 0);
+  --bg-selected: rgb(113 63 18);
+  --text-accent: rgb(253 224 71);
+}
+html[data-team="peru"] {
+  --bg-accent: rgb(217 16 35);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(217 16 35);
+}
+html.dark[data-team="peru"] {
+  --bg-accent: rgb(217 16 35);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="wales"] {
+  --bg-accent: rgb(200 16 46);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(200 16 46);
+}
+html.dark[data-team="wales"] {
+  --bg-accent: rgb(200 16 46);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="serbia"] {
+  --bg-accent: rgb(198 54 60);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(198 54 60);
+}
+html.dark[data-team="serbia"] {
+  --bg-accent: rgb(198 54 60);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="poland"] {
+  --bg-accent: rgb(220 20 60);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(220 20 60);
+}
+html.dark[data-team="poland"] {
+  --bg-accent: rgb(220 20 60);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="sweden"] {
+  --bg-accent: rgb(254 203 0);
+  --bg-selected: rgb(254 249 195);
+  --text-accent: rgb(254 203 0);
+}
+html.dark[data-team="sweden"] {
+  --bg-accent: rgb(254 203 0);
+  --bg-selected: rgb(113 63 18);
+  --text-accent: rgb(253 224 71);
+}
+html[data-team="australia"] {
+  --bg-accent: rgb(255 205 0);
+  --bg-selected: rgb(254 249 195);
+  --text-accent: rgb(255 205 0);
+}
+html.dark[data-team="australia"] {
+  --bg-accent: rgb(255 205 0);
+  --bg-selected: rgb(113 63 18);
+  --text-accent: rgb(253 224 71);
+}
+html[data-team="iran"] {
+  --bg-accent: rgb(35 159 64);
+  --bg-selected: rgb(209 250 229);
+  --text-accent: rgb(35 159 64);
+}
+html.dark[data-team="iran"] {
+  --bg-accent: rgb(35 159 64);
+  --bg-selected: rgb(6 78 59);
+  --text-accent: rgb(52 211 153);
+}
+html[data-team="saudi arabia"] {
+  --bg-accent: rgb(0 108 53);
+  --bg-selected: rgb(209 250 229);
+  --text-accent: rgb(0 108 53);
+}
+html.dark[data-team="saudi arabia"] {
+  --bg-accent: rgb(0 108 53);
+  --bg-selected: rgb(6 78 59);
+  --text-accent: rgb(52 211 153);
+}
+html[data-team="costa rica"] {
+  --bg-accent: rgb(206 17 38);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(206 17 38);
+}
+html.dark[data-team="costa rica"] {
+  --bg-accent: rgb(206 17 38);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="jamaica"] {
+  --bg-accent: rgb(0 155 58);
+  --bg-selected: rgb(209 250 229);
+  --text-accent: rgb(0 155 58);
+}
+html.dark[data-team="jamaica"] {
+  --bg-accent: rgb(0 155 58);
+  --bg-selected: rgb(6 78 59);
+  --text-accent: rgb(52 211 153);
+}
+html[data-team="panama"] {
+  --bg-accent: rgb(194 32 46);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(194 32 46);
+}
+html.dark[data-team="panama"] {
+  --bg-accent: rgb(194 32 46);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="honduras"] {
+  --bg-accent: rgb(0 115 207);
+  --bg-selected: rgb(219 234 254);
+  --text-accent: rgb(0 115 207);
+}
+html.dark[data-team="honduras"] {
+  --bg-accent: rgb(0 115 207);
+  --bg-selected: rgb(30 58 138);
+  --text-accent: rgb(96 165 250);
+}
+html[data-team="mali"] {
+  --bg-accent: rgb(20 181 58);
+  --bg-selected: rgb(209 250 229);
+  --text-accent: rgb(20 181 58);
+}
+html.dark[data-team="mali"] {
+  --bg-accent: rgb(20 181 58);
+  --bg-selected: rgb(6 78 59);
+  --text-accent: rgb(52 211 153);
+}
+html[data-team="tunisia"] {
+  --bg-accent: rgb(231 0 19);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(231 0 19);
+}
+html.dark[data-team="tunisia"] {
+  --bg-accent: rgb(231 0 19);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="qatar"] {
+  --bg-accent: rgb(141 27 61);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(141 27 61);
+}
+html.dark[data-team="qatar"] {
+  --bg-accent: rgb(141 27 61);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="new zealand"] {
+  --bg-accent: rgb(255 255 255);
+  --bg-selected: rgb(243 244 246);
+  --text-accent: rgb(255 255 255);
+}
+html.dark[data-team="new zealand"] {
+  --bg-accent: rgb(255 255 255);
+  --bg-selected: rgb(31 41 55);
+  --text-accent: rgb(209 213 219);
+}
+html[data-team="venezuela"] {
+  --bg-accent: rgb(128 0 0);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(128 0 0);
+}
+html.dark[data-team="venezuela"] {
+  --bg-accent: rgb(128 0 0);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}
+html[data-team="paraguay"] {
+  --bg-accent: rgb(213 43 30);
+  --bg-selected: rgb(254 226 226);
+  --text-accent: rgb(213 43 30);
+}
+html.dark[data-team="paraguay"] {
+  --bg-accent: rgb(213 43 30);
+  --bg-selected: rgb(127 29 29);
+  --text-accent: rgb(248 113 113);
+}

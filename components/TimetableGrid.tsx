@@ -57,38 +57,39 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
   }, [hasClash, playAlert])
 
   return (
-    <div className="relative h-full">
+    <div className="relative h-fit">
       {/* CLASH WARNING */}
       {hasClash && (
-        <div className="mb-2 rounded-md border border-red-500 bg-red-50 px-3 py-1 text-xs text-red-700 animate-shake">
-          ⚠️ Clash detected. Conflicting classes are blocked.
+        <div className="mb-2 shrink-0 rounded-lg border border-red-500/50 bg-red-500/10 px-3 py-2 text-xs font-medium text-red-600 dark:text-red-400 animate-shake flex items-center gap-2">
+          <span>⚠️</span>
+          <span>Clash detected. Conflicting classes are highlighted.</span>
         </div>
       )}
 
       {/* MOBILE SCROLL CONTAINER */}
-      <div className="relative h-full overflow-x-auto">
+      <div className="relative overflow-x-auto rounded-xl border border-[var(--border-subtle)] shadow-sm h-fit">
         <div
           className="
             grid
-            min-w-[650px]   /* 👈 enables horizontal scroll on mobile */
-            grid-cols-[70px_repeat(6,1fr)]
+            min-w-[700px]   /* enables horizontal scroll on mobile */
+            grid-cols-[60px_repeat(6,1fr)]
             gap-px
-            bg-border
+            bg-[var(--border-subtle)]
           "
         >
-          {/* HEADER */}
-          <div className="sticky top-0 left-0 z-30 bg-[var(--bg-surface)]" />
+          {/* HEADER ROW */}
+          <div className="sticky top-0 left-0 z-30 bg-[var(--bg-surface-hover)]" />
 
           {DAYS.map(d => (
             <div
               key={d}
               className="
                 sticky top-0 z-20
-                bg-[var(--bg-surface)]
-                py-1
+                bg-[var(--bg-surface-hover)]
+                py-2
                 text-center
-                text-xs font-semibold
-                border-b
+                text-xs font-bold uppercase tracking-wider
+                text-[var(--text-muted)]
               "
             >
               {d}
@@ -102,14 +103,14 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
               <div
                 className="
                   sticky left-0 z-20
-                  bg-[var(--bg-surface)]
-                  py-1 px-1
-                  text-[10px] font-medium
-                  text-center
-                  border-r
+                  bg-[var(--bg-surface-hover)]
+                  py-1.5 px-1
+                  text-[9px] font-semibold
+                  text-center text-[var(--text-muted)]
+                  flex items-center justify-center
                 "
               >
-                {HOUR_LABEL[hour]}
+                <span className="-rotate-90 md:rotate-0 whitespace-nowrap">{HOUR_LABEL[hour]}</span>
               </div>
 
               {DAYS.map(day => {
@@ -121,9 +122,8 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
                   <div
                     key={key}
                     className={clsx(
-                      "relative min-h-[65px] border bg-[var(--bg-surface)] p-1 transition",
-                      isClash &&
-                        "ring-2 ring-red-500 bg-red-100 animate-pulse"
+                      "relative min-h-[55px] bg-[var(--bg-surface)] p-1 transition-colors hover:bg-[var(--bg-surface-hover)]",
+                      isClash && "ring-2 ring-inset ring-red-500/70 bg-red-500/10 animate-pulse"
                     )}
                   >
                     {/* 🚫 BLOCK CLASHED SESSIONS */}
@@ -132,20 +132,20 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
                         <div
                           key={`${s.courseCode}-${s.section}-${s.day}-${s.hour}`}
                           className={clsx(
-                            "rounded-md p-1 text-[10px] shadow-sm transition",
-                            "hover:scale-[1.02]",
+                            "rounded-md p-1.5 text-[10px] shadow-sm transition-transform",
+                            "hover:scale-[1.03] hover:shadow-md hover:z-10 relative cursor-pointer",
                             getCourseColor(s.courseCode)
                           )}
                         >
-                          <div className="font-semibold leading-tight">
-                            {s.courseCode}
+                          <div className="font-bold tracking-tight leading-none mb-0.5">
+                            {s.courseCode} <span className="opacity-80 font-medium">{s.type === "LECTURE" ? "(L)" : s.type === "PRACTICAL" ? "(P)" : s.type === "TUTORIAL" ? "(T)" : ""}</span>
                           </div>
 
-                          <div className="text-[9px] leading-tight">
+                          <div className="text-[9px] leading-tight font-medium opacity-90">
                             {s.startTime} – {s.endTime}
                           </div>
 
-                          <div className="text-[9px] opacity-80 truncate">
+                          <div className="text-[9px] opacity-75 truncate mt-0.5">
                             {s.room}
                           </div>
                         </div>

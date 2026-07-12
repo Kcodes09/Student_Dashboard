@@ -59,12 +59,20 @@ export default function AddExamModal({
 
   return (
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-4 w-full max-w-sm">
+      <div 
+        className="rounded-lg p-4 w-full max-w-sm shadow-xl"
+        style={{
+          backgroundColor: "var(--bg-surface)",
+          border: "1px solid var(--border-subtle)",
+          color: "var(--text-primary)"
+        }}
+      >
         <h2 className="font-semibold mb-3">Add Exam</h2>
 
         {/* COURSE SELECT */}
         <select
-          className="w-full mb-2 border p-2 rounded"
+          className="w-full mb-2 border p-2 rounded outline-none"
+          style={{ backgroundColor: "var(--bg-main)", borderColor: "var(--border-subtle)", color: "var(--text-primary)" }}
           onChange={e => onCourseChange(e.target.value)}
           defaultValue=""
         >
@@ -85,7 +93,8 @@ export default function AddExamModal({
         {isOther && (
           <input
             placeholder="Course Code"
-            className="w-full mb-2 border p-2 rounded"
+            className="w-full mb-2 border p-2 rounded outline-none"
+            style={{ backgroundColor: "var(--bg-main)", borderColor: "var(--border-subtle)", color: "var(--text-primary)" }}
             value={form.courseCode}
             onChange={e =>
               setForm({ ...form, courseCode: e.target.value })
@@ -96,7 +105,8 @@ export default function AddExamModal({
         {/* COURSE TITLE */}
         <input
           placeholder="Course Title"
-          className="w-full mb-2 border p-2 rounded"
+          className="w-full mb-2 border p-2 rounded outline-none disabled:opacity-50"
+          style={{ backgroundColor: "var(--bg-main)", borderColor: "var(--border-subtle)", color: "var(--text-primary)" }}
           value={form.courseTitle}
           disabled={!isOther}
           onChange={e =>
@@ -106,7 +116,8 @@ export default function AddExamModal({
 
         {/* TYPE */}
         <select
-          className="w-full mb-2 border p-2 rounded"
+          className="w-full mb-2 border p-2 rounded outline-none"
+          style={{ backgroundColor: "var(--bg-main)", borderColor: "var(--border-subtle)", color: "var(--text-primary)" }}
           value={form.type}
           onChange={e =>
             setForm({ ...form, type: e.target.value })
@@ -120,7 +131,8 @@ export default function AddExamModal({
         {/* DATE */}
         <input
           type="date"
-          className="w-full mb-2 border p-2 rounded"
+          className="w-full mb-2 border p-2 rounded outline-none"
+          style={{ backgroundColor: "var(--bg-main)", borderColor: "var(--border-subtle)", color: "var(--text-primary)" }}
           onChange={e =>
             setForm({ ...form, date: e.target.value })
           }
@@ -130,14 +142,16 @@ export default function AddExamModal({
         <div className="flex gap-2">
           <input
             type="time"
-            className="w-full border p-2 rounded"
+            className="w-full border p-2 rounded outline-none"
+            style={{ backgroundColor: "var(--bg-main)", borderColor: "var(--border-subtle)", color: "var(--text-primary)" }}
             onChange={e =>
               setForm({ ...form, startTime: e.target.value })
             }
           />
           <input
             type="time"
-            className="w-full border p-2 rounded"
+            className="w-full border p-2 rounded outline-none"
+            style={{ backgroundColor: "var(--bg-main)", borderColor: "var(--border-subtle)", color: "var(--text-primary)" }}
             onChange={e =>
               setForm({ ...form, endTime: e.target.value })
             }
@@ -145,11 +159,18 @@ export default function AddExamModal({
         </div>
 
         {/* ACTIONS */}
-        <div className="mt-4 flex justify-end gap-2">
-          <button onClick={onClose}>Cancel</button>
+        <div className="mt-4 flex justify-end gap-3">
+          <button 
+            onClick={onClose}
+            className="px-3 py-1.5 rounded text-sm hover:opacity-80 transition-opacity"
+            style={{ color: "var(--text-primary)" }}
+          >
+            Cancel
+          </button>
           <button
             onClick={submit}
-            className="bg-blue-600 text-white px-3 py-1 rounded"
+            className="px-3 py-1.5 rounded text-sm text-white hover:opacity-90 transition-opacity shadow-sm"
+            style={{ backgroundColor: "var(--bg-accent)" }}
           >
             Add
           </button>
