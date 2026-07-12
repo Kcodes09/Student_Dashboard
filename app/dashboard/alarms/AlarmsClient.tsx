@@ -101,7 +101,7 @@ export default function AlarmsClient() {
     const message = `${session.courseCode}_in_${session.room}`.replace(/\s+/g, "_")
 
     // Standard Android Intent for setting an alarm
-    return `intent:#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${message};i.android.intent.extra.alarm.HOUR=${alarmH};i.android.intent.extra.alarm.MINUTES=${alarmM};B.android.intent.extra.alarm.SKIP_UI=false;end`
+    return `intent:#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${message};i.android.intent.extra.alarm.HOUR=${alarmH};i.android.intent.extra.alarm.MINUTES=${alarmM};B.android.intent.extra.alarm.SKIP_UI=false;component=com.google.android.deskclock/com.android.deskclock.HandleSetApiCalls;end`
   }
 
   // Group sessions by day
