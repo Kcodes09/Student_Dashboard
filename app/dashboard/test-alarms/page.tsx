@@ -13,8 +13,8 @@ export default function TestAlarmsPage() {
       now.setMinutes(now.getMinutes() + 1)
       const h = now.getHours()
       const m = now.getMinutes()
-      const msg = encodeURIComponent("TEST101 in Test Room")
-      setAndroidIntentUrl(`intent://#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${msg};i.android.intent.extra.alarm.HOUR=${h};i.android.intent.extra.alarm.MINUTES=${m};B.android.intent.extra.alarm.SKIP_UI=false;end`)
+      const msg = "TEST101_Class"
+      setAndroidIntentUrl(`intent://#Intent;action=android.intent.action.SET_ALARM;S.android.intent.extra.alarm.MESSAGE=${msg};i.android.intent.extra.alarm.HOUR=${h};i.android.intent.extra.alarm.MINUTES=${m};b.android.intent.extra.alarm.SKIP_UI=false;end`)
     }
     update()
     const timer = setInterval(update, 10000)
