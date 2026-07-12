@@ -48,6 +48,7 @@ export default async function DashboardPage() {
             title="Alarms"
             description="Set custom alarms for your classes"
             href="/dashboard/alarms"
+            comingSoon
           />
 
           <DashboardCard
