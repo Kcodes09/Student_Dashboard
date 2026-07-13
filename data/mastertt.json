@@ -19806,14 +19806,14 @@
         ],
         "sessions": [
           {
-            "day": "M",
+            "day": "W",
             "hour": 8,
             "startTime": "15:00",
             "endTime": "15:50",
             "room": "K125"
           },
           {
-            "day": "M",
+            "day": "W",
             "hour": 9,
             "startTime": "16:00",
             "endTime": "16:50",
