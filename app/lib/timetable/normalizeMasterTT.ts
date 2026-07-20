@@ -148,15 +148,12 @@ export function normalizeMasterTT(rows: RawRow[]): MasterCourse[] {
     }
 
     /* ---- instructors ---- */
-    row["INSTRUCTOR_IN_CHARGE/INS TRUCTOR"]
-      .split(",")
-      .map(i => i.trim())
-      .filter(Boolean)
-      .forEach(i => {
-        if (!section!.instructors.includes(i)) {
-          section!.instructors.push(i)
-        }
-      })
+    if (section!.instructors.length === 0) {
+      const rawInst = row["INSTRUCTOR_IN_CHARGE/INS TRUCTOR"]
+      if (rawInst) {
+        section!.instructors = [rawInst.trim()]
+      }
+    }
 
     /* ---- sessions ---- */
     const days = parseDays(row.DAYS)

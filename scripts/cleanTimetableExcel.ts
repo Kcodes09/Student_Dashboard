@@ -1,7 +1,9 @@
 import XLSX from "xlsx"
 
-const INPUT = "DRAFT TIMETABLE I SEM 2026 -27.xlsx"
-const OUTPUT = "DRAFT_TIMETABLE_CLEANED.xlsx"
+import path from "path"
+
+const INPUT = "DRAFT TIMETABLE I SEM 2026 -27 (1).xlsx"
+const OUTPUT = path.join("data", "DRAFT_TIMETABLE_CLEANED.xlsx")
 
 const workbook = XLSX.readFile(INPUT)
 const sheet = workbook.Sheets[workbook.SheetNames[0]]
@@ -46,11 +48,7 @@ for (const row of dataRows) {
     String(hours).trim() === ""
 
   if (isInstructorOnly && lastTeachingRow) {
-    lastTeachingRow[INSTRUCTOR_COL] =
-      lastTeachingRow[INSTRUCTOR_COL]
-        ? `${lastTeachingRow[INSTRUCTOR_COL]}, ${instructor}`
-        : instructor
-    continue
+    continue // ignore extra instructors
   }
 
   cleaned.push(row)

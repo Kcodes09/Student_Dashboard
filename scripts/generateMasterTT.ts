@@ -2,7 +2,7 @@ import fs from "fs"
 import XLSX from "xlsx"
 import { normalizeMasterTT } from "../app/lib/timetable/normalizeMasterTT.js"
 
-const INPUT = "forward_filled_timetable.xlsx"
+const INPUT = "data/forward_filled_tt.xlsx"
 const OUTPUT = "data/mastertt.json"
 
 const workbook = XLSX.readFile(INPUT)
@@ -28,6 +28,8 @@ const cleanedRows = dataRows.map((row) => {
         key = "INSTRUCTOR_IN_CHARGE/INS TRUCTOR"
       } else if (key === "HOURS" || key === "HOUR S") {
         key = "HOUR S"
+      } else if (key === "SE C" || key === "SEC") {
+        key = "SEC"
       }
       obj[key] = row[i]
     }
