@@ -627,6 +627,728 @@
           "title": "Design of Steel Structures"
         }
       ]
+    },
+    "Architecture and Urban Engineering": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "AUE F211",
+          "title": "Basic Design for Visualization"
+        },
+        {
+          "code": "AUE F212",
+          "title": "Structural Mechanics"
+        },
+        {
+          "code": "AUE F213",
+          "title": "Fluid Mechanics and Applications"
+        },
+        {
+          "code": "CE F230",
+          "title": "Civil Engineering Materials"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "AUE F241",
+          "title": "Architectural Design Studio I"
+        },
+        {
+          "code": "AUE F242",
+          "title": "Building Construction & Technology"
+        },
+        {
+          "code": "AUE F243",
+          "title": "Construction Economics"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "AUE F311",
+          "title": "Architectural Design Studio II"
+        },
+        {
+          "code": "AUE F312",
+          "title": "Geotechnical Design"
+        },
+        {
+          "code": "AUE F313",
+          "title": "Design of Reinforced Concrete Structures"
+        },
+        {
+          "code": "AUE F314",
+          "title": "Highway Planning, Analysis and Design"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "AUE F341",
+          "title": "Urban Planning and Sustainable Communities"
+        },
+        {
+          "code": "AUE F342",
+          "title": "Building Acoustics and Lighting Design"
+        },
+        {
+          "code": "AUE F343",
+          "title": "Design of Steel Structures"
+        },
+        {
+          "code": "AUE F344",
+          "title": "Directed Research in Architecture - I"
+        }
+      ]
+    },
+    "Biotechnology": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "BIOT F211",
+          "title": "Biological Chemistry"
+        },
+        {
+          "code": "BIOT F212",
+          "title": "Microbiology"
+        },
+        {
+          "code": "BIOT F215",
+          "title": "Biophysics"
+        },
+        {
+          "code": "BIOT F213",
+          "title": "Cell Biology"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "BIOT F241",
+          "title": "Genetic Engineering Techniques"
+        },
+        {
+          "code": "BIOT F243",
+          "title": "Genetics"
+        },
+        {
+          "code": "BIOT F245",
+          "title": "Introduction to Environmental Biotechnology"
+        },
+        {
+          "code": "BIOT F244",
+          "title": "Instrumental Methods of Analysis"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "BIOT F311",
+          "title": "Recombinant DNA Technology"
+        },
+        {
+          "code": "BIOT F314",
+          "title": "Industrial Microbiology & Bioprocess Engineering"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "BIOT F342",
+          "title": "Immunology"
+        },
+        {
+          "code": "BIOT F343",
+          "title": "Experiments in Biotechnology"
+        },
+        {
+          "code": "BIOT F344",
+          "title": "Downstream Processing"
+        }
+      ]
+    },
+    "Biotechnology with Specialization in Applied Molecular Biology": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "BIOT F211",
+          "title": "Biological Chemistry"
+        },
+        {
+          "code": "BIOT F212",
+          "title": "Microbiology"
+        },
+        {
+          "code": "BIOT F215",
+          "title": "Biophysics"
+        },
+        {
+          "code": "BIOT F213",
+          "title": "Cell Biology"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "BIOT F241",
+          "title": "Genetic Engineering Techniques"
+        },
+        {
+          "code": "BIOT F243",
+          "title": "Genetics"
+        },
+        {
+          "code": "BIOT F245",
+          "title": "Introduction to Environmental Biotechnology"
+        },
+        {
+          "code": "BIOT F244",
+          "title": "Instrumental Methods of Analysis"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "BIOT F311",
+          "title": "Recombinant DNA Technology"
+        },
+        {
+          "code": "BIOT F314",
+          "title": "Industrial Microbiology & Bioprocess Engineering"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "BIOT F342",
+          "title": "Immunology"
+        },
+        {
+          "code": "BIOT F343",
+          "title": "Experiments in Biotechnology"
+        },
+        {
+          "code": "BIOT F344",
+          "title": "Downstream Processing"
+        }
+      ]
+    },
+    "Chemical with Specialization in Energy, Environment, and Sustainability": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "CHE F211",
+          "title": "Chemical Process Calculations"
+        },
+        {
+          "code": "CHE F214",
+          "title": "Engineering Chemistry"
+        },
+        {
+          "code": "CHE F213",
+          "title": "Chemical Engineering Thermodynamics"
+        },
+        {
+          "code": "CHE F212",
+          "title": "Fluid Mechanics"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "CHE F241",
+          "title": "Heat Transfer"
+        },
+        {
+          "code": "CHE F242",
+          "title": "Numerical Methods for Chemical Engineers"
+        },
+        {
+          "code": "CHE F243",
+          "title": "Material Science & Engineering"
+        },
+        {
+          "code": "CHE F244",
+          "title": "Separation Processes I"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "CHE F312",
+          "title": "Chemical Engineering Laboratory I"
+        },
+        {
+          "code": "CHE F313",
+          "title": "Separation Processes II"
+        },
+        {
+          "code": "CHE F311",
+          "title": "Kinetics & Reactor Design"
+        },
+        {
+          "code": "CHE F314",
+          "title": "Process Design Principles I"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "CHE F341",
+          "title": "Chemical Engineering Laboratory II"
+        },
+        {
+          "code": "CHE F342",
+          "title": "Process Dynamics & Control"
+        },
+        {
+          "code": "CHE F343",
+          "title": "Process Design Principles II"
+        }
+      ]
+    },
+    "Electronics & Computer Engineering": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "ECOM F213",
+          "title": "Object Oriented Programming"
+        },
+        {
+          "code": "ECOM F214",
+          "title": "Electronic Devices"
+        },
+        {
+          "code": "ECOM F215",
+          "title": "Digital Design"
+        },
+        {
+          "code": "ECOM F222",
+          "title": "Discrete Structures for Computer Science"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "ECOM F211",
+          "title": "Data Structures and Algorithms"
+        },
+        {
+          "code": "ECOM F241",
+          "title": "Microprocessors and Interfacing"
+        },
+        {
+          "code": "ECOM F242",
+          "title": "Control Systems"
+        },
+        {
+          "code": "ECOM F243",
+          "title": "Signals & Systems"
+        },
+        {
+          "code": "ECOM F244",
+          "title": "Microelectronic Circuits"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "ECOM F313",
+          "title": "Analog & Digital VLSI Design"
+        },
+        {
+          "code": "ECOM F342",
+          "title": "Computer Architecture"
+        },
+        {
+          "code": "ECOM F343",
+          "title": "Communication Networks"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "ECOM F321",
+          "title": "Real Time Operating Systems"
+        },
+        {
+          "code": "ECOM F462",
+          "title": "Network Programming"
+        }
+      ]
+    },
+    "Mechanical with Specialization in Aerospace": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "ME F211",
+          "title": "Mechanics of Solids"
+        },
+        {
+          "code": "ME F212",
+          "title": "Fluid Mechanics"
+        },
+        {
+          "code": "ME F216",
+          "title": "Materials Science & Engineering"
+        },
+        {
+          "code": "ME F217",
+          "title": "Applied Thermodynamics"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        },
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "ME F218",
+          "title": "Advanced Mechanics of Solids"
+        },
+        {
+          "code": "ME F219",
+          "title": "Manufacturing Processes"
+        },
+        {
+          "code": "ME F220",
+          "title": "Heat Transfer"
+        },
+        {
+          "code": "ME F221",
+          "title": "Mechanisms and Machines"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "ME F314",
+          "title": "Design of Machine Elements"
+        },
+        {
+          "code": "ME F315",
+          "title": "Advanced Manufacturing Processes"
+        },
+        {
+          "code": "ME F316",
+          "title": "Manufacturing Management"
+        },
+        {
+          "code": "ME F317",
+          "title": "Engines, Motors, and Mobility"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "ME F318",
+          "title": "Computer-Aided Design"
+        },
+        {
+          "code": "ME F319",
+          "title": "Vibrations & Control"
+        },
+        {
+          "code": "ME F320",
+          "title": "Engineering Optimization"
+        },
+        {
+          "code": "ME F341",
+          "title": "Prime Movers & Fluid Machines"
+        }
+      ]
+    },
+    "Manufacturing": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "MF F211",
+          "title": "Mechanics of Solids"
+        },
+        {
+          "code": "MF F216",
+          "title": "Materials Science & Engineering"
+        },
+        {
+          "code": "MF F217",
+          "title": "Machine Drawing"
+        },
+        {
+          "code": "MF F218",
+          "title": "Transport Phenomena in Manufacturing"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        },
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "MF F219",
+          "title": "Operations Management"
+        },
+        {
+          "code": "MF F220",
+          "title": "Metrology and Quality Assurance"
+        },
+        {
+          "code": "MF F221",
+          "title": "Mechanisms and Machines"
+        },
+        {
+          "code": "MF F222",
+          "title": "Casting, Forming and Welding"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "MF F314",
+          "title": "Design of Machine Elements"
+        },
+        {
+          "code": "MF F315",
+          "title": "Automation and Control"
+        },
+        {
+          "code": "MF F316",
+          "title": "Machining and Machine Tools"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "MF F317",
+          "title": "Computer Aided Design and Manufacturing"
+        },
+        {
+          "code": "MF F318",
+          "title": "Non Traditional Manufacturing Processes"
+        },
+        {
+          "code": "MF F319",
+          "title": "Supply Chain Management"
+        },
+        {
+          "code": "MF F320",
+          "title": "Engineering Optimization"
+        }
+      ]
+    },
+    "Mathematics and Computing": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "MAC F211",
+          "title": "Linear Algebra and Applications"
+        },
+        {
+          "code": "MAC F212",
+          "title": "Object Oriented Programming"
+        },
+        {
+          "code": "MAC F213",
+          "title": "Discrete Mathematics"
+        },
+        {
+          "code": "MAC F214",
+          "title": "Elementary Real Analysis"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "MAC F241",
+          "title": "Numerical Analysis"
+        },
+        {
+          "code": "MAC F242",
+          "title": "Data Structures & Algorithms"
+        },
+        {
+          "code": "MAC F243",
+          "title": "Numerical Optimization"
+        },
+        {
+          "code": "MAC F244",
+          "title": "Stochastic Calculus and Application to Finance"
+        },
+        {
+          "code": "MAC F245",
+          "title": "Scientific Computing Laboratory"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "MAC F311",
+          "title": "Algebra I"
+        },
+        {
+          "code": "MAC F312",
+          "title": "Foundations of Data Science"
+        },
+        {
+          "code": "MAC F313",
+          "title": "Statistical Data Analysis"
+        },
+        {
+          "code": "MAC F314",
+          "title": "Mathematical Modelling"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "MAC F341",
+          "title": "Design and Analysis of Algorithms"
+        },
+        {
+          "code": "MAC F342",
+          "title": "Computational Partial Differential Equations"
+        }
+      ]
+    },
+    "Pharmacy": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "PHA F211",
+          "title": "Pharmaceutical Analysis"
+        },
+        {
+          "code": "BITS F219",
+          "title": "Process Engineering"
+        },
+        {
+          "code": "PHA F242",
+          "title": "Biological Chemistry"
+        },
+        {
+          "code": "PHA F217",
+          "title": "Pharmaceutical Microbiology"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "BITS F111",
+          "title": "Thermodynamics"
+        },
+        {
+          "code": "PHA F241",
+          "title": "Pharmaceutical Chemistry"
+        },
+        {
+          "code": "MATH F113",
+          "title": "Probability and Statistics"
+        },
+        {
+          "code": "PHA F215",
+          "title": "Introduction to Molecular Biology and Immunology"
+        },
+        {
+          "code": "PHA F244",
+          "title": "Physical Pharmacy"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "PHA F311",
+          "title": "Pharmacology I"
+        },
+        {
+          "code": "PHA F312",
+          "title": "Medicinal Chemistry I"
+        },
+        {
+          "code": "PHA F313",
+          "title": "Instrumental Methods of Analysis"
+        },
+        {
+          "code": "PHA F315",
+          "title": "Pharmaceutical Formulations II"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "PHA F341",
+          "title": "Pharmacology II"
+        },
+        {
+          "code": "PHA F342",
+          "title": "Medicinal Chemistry II"
+        },
+        {
+          "code": "PHA F343",
+          "title": "Forensic Pharmacy"
+        },
+        {
+          "code": "PHA F344",
+          "title": "Natural Drugs"
+        }
+      ]
     }
   },
   "MSc": {
@@ -1025,6 +1747,286 @@
         {
           "code": "ECON F343",
           "title": "Economic Analysis of Public Policy"
+        }
+      ]
+    },
+    "General Studies - Communication and Media Studies": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "GS F221",
+          "title": "Business Communication"
+        },
+        {
+          "code": "GS F222",
+          "title": "Language Lab Practice"
+        },
+        {
+          "code": "GS F223",
+          "title": "Introduction to Mass Communication"
+        },
+        {
+          "code": "GS F224",
+          "title": "Print & Audio Visual Advertising"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "GS F244",
+          "title": "Reporting & Writing for Media"
+        },
+        {
+          "code": "GS F241",
+          "title": "Creative Writing"
+        },
+        {
+          "code": "GS F245",
+          "title": "Effective Public Speaking"
+        },
+        {
+          "code": "GS F243",
+          "title": "Current Affairs"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "GS F321",
+          "title": "Mass Media Content & Design"
+        },
+        {
+          "code": "GS F322",
+          "title": "Critical Analysis of Literature & Cinema"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "GS F342",
+          "title": "Computer Mediated Communication"
+        },
+        {
+          "code": "GS F343",
+          "title": "Short Film & Video Production"
+        }
+      ]
+    },
+    "General Studies - Development Studies": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "GS F211",
+          "title": "Modern Political Concepts"
+        },
+        {
+          "code": "GS F212",
+          "title": "Environment, Development & Climate Change"
+        },
+        {
+          "code": "GS F213",
+          "title": "Development Theories"
+        },
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "MGTS F211",
+          "title": "Principles of Management"
+        },
+        {
+          "code": "GS F231",
+          "title": "Dynamics of Social Change"
+        },
+        {
+          "code": "GS F232",
+          "title": "Introductory Psychology"
+        },
+        {
+          "code": "GS F233",
+          "title": "Public Policy"
+        },
+        {
+          "code": "GS F234",
+          "title": "Development Economics"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "GS F311",
+          "title": "Introduction to Conflict Management"
+        },
+        {
+          "code": "GS F312",
+          "title": "Applied Philosophy"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "GS F331",
+          "title": "Techniques in Social Research"
+        },
+        {
+          "code": "GS F332",
+          "title": "Contemporary India"
+        },
+        {
+          "code": "GS F333",
+          "title": "Public Administration"
+        },
+        {
+          "code": "GS F334",
+          "title": "Global Business Technology & Knowledge Sharing"
+        }
+      ]
+    }
+  },
+  "BBA": {
+    "Business Administration (Honours)": {
+      "year1_sem1": [
+        {
+          "code": "MATH F114",
+          "title": "Mathematics for Business"
+        },
+        {
+          "code": "CS F111",
+          "title": "Computer Programming"
+        },
+        {
+          "code": "BITS F115",
+          "title": "Introduction to Basic Sciences"
+        },
+        {
+          "code": "BITS F330",
+          "title": "Negotiation Skills and Techniques"
+        },
+        {
+          "code": "MGTS F211",
+          "title": "Principles of Management"
+        },
+        {
+          "code": "HSS F211",
+          "title": "Introduction to Arabic (or Chinese / French)"
+        }
+      ],
+      "year1_sem2": [
+        {
+          "code": "MATH F113",
+          "title": "Probability and Statistics"
+        },
+        {
+          "code": "BITS F121",
+          "title": "Introduction to Python"
+        },
+        {
+          "code": "BITS F122",
+          "title": "Introduction to Spreadsheet Analysis"
+        },
+        {
+          "code": "BBA F121",
+          "title": "Business Ethics and Corporate Social Responsibility"
+        },
+        {
+          "code": "ECON F242",
+          "title": "Microeconomics"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        },
+        {
+          "code": "BITS F123",
+          "title": "Introduction to Engineering"
+        }
+      ],
+      "year2_sem1": [
+        {
+          "code": "MATH F212",
+          "title": "Optimization"
+        },
+        {
+          "code": "MGTS F351",
+          "title": "Organizational Behaviour"
+        },
+        {
+          "code": "GS F221",
+          "title": "Business Communication"
+        },
+        {
+          "code": "BBA F211",
+          "title": "Financial and Management Accounting"
+        },
+        {
+          "code": "ECON F243",
+          "title": "Macroeconomics"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "MGTS F314",
+          "title": "Essentials of Financial Management"
+        },
+        {
+          "code": "BBA F221",
+          "title": "Human Resource Management"
+        },
+        {
+          "code": "BBA F222",
+          "title": "Business Law and Compliance"
+        },
+        {
+          "code": "MGTS F311",
+          "title": "Marketing"
+        },
+        {
+          "code": "ECON F241",
+          "title": "Econometric Methods"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "ECON F414",
+          "title": "Creating and Leading Entrepreneurial Organization"
+        },
+        {
+          "code": "MF F219",
+          "title": "Operations Management"
+        },
+        {
+          "code": "BBA F311",
+          "title": "Design Thinking"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "ECON F434",
+          "title": "International Business"
+        },
+        {
+          "code": "BBA F321",
+          "title": "Digital Enterprises"
+        },
+        {
+          "code": "BITS F428",
+          "title": "Essentials of Strategic Management"
         }
       ]
     }

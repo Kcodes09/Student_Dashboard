@@ -10,20 +10,7 @@ type Props = {
   onClose: () => void
 }
 
-const BRANCH_MAP: Record<string, { type: "BE" | "MSc", branch: string }> = {
-  "A1": { type: "BE", branch: "Chemical" },
-  "A2": { type: "BE", branch: "Civil" },
-  "A3": { type: "BE", branch: "Electrical & Electronics" },
-  "A4": { type: "BE", branch: "Mechanical" },
-  "A7": { type: "BE", branch: "Computer Science" },
-  "A8": { type: "BE", branch: "Electronics & Instrumentation" },
-  "AA": { type: "BE", branch: "Electronics & Communication" },
-  "B1": { type: "MSc", branch: "Biological Sciences" },
-  "B2": { type: "MSc", branch: "Chemistry" },
-  "B3": { type: "MSc", branch: "Economics" },
-  "B4": { type: "MSc", branch: "Mathematics" },
-  "B5": { type: "MSc", branch: "Physics" },
-}
+
 
 const YEAR_SEM_OPTIONS_SINGLE = [
   { label: "Year 2 — Semester 1", key: "year2_sem1" },

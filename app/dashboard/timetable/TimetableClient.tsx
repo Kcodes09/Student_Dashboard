@@ -164,14 +164,28 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
         localStorage.setItem("student_timetables", JSON.stringify(updated))
       }
 
-      // 2. Sync to server ONLY if active
+      // 2. Always sync this draft to server
+      const draftPayload = {
+        id: timetableId,
+        name: localTimetable.name,
+        bitsId: localTimetable.bitsId,
+        isActive: localTimetable.isActive,
+        sections: selectedSections,
+      }
+      const res = await fetch("/api/timetable/drafts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(draftPayload),
+      })
+      if (!res.ok) throw new Error(await res.text())
+
+      // 3. If active, also sync to legacy endpoint (for exams integration)
       if (localTimetable.isActive) {
-        const res = await fetch("/api/timetable/save", {
+        await fetch("/api/timetable/save", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(selectedSections),
         })
-        if (!res.ok) throw new Error(await res.text())
       }
 
       savedSectionsRef.current = JSON.stringify(selectedSections)

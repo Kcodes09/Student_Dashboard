@@ -7,14 +7,23 @@ const BRANCH_MAP: Record<string, { type: "BE" | "MSc"; branch: string }> = {
   A2: { type: "BE", branch: "Civil" },
   A3: { type: "BE", branch: "Electrical & Electronics" },
   A4: { type: "BE", branch: "Mechanical" },
+  A5: { type: "BE", branch: "Pharmacy" },
   A7: { type: "BE", branch: "Computer Science" },
   A8: { type: "BE", branch: "Electronics & Instrumentation" },
+  A9: { type: "BE", branch: "Biotechnology" },
   AA: { type: "BE", branch: "Electronics & Communication" },
+  AB: { type: "BE", branch: "Manufacturing" },
+  AC: { type: "BE", branch: "Electronics & Computer Engineering" },
+  AD: { type: "BE", branch: "Mathematics and Computing" },
+  AE: { type: "BE", branch: "Architecture and Urban Engineering" },
+  AF: { type: "BE", branch: "Chemical with Specialization in Energy, Environment, and Sustainability" },
+  AJ: { type: "BE", branch: "Environmental and Sustainability Engineering" },
   B1: { type: "MSc", branch: "Biological Sciences" },
   B2: { type: "MSc", branch: "Chemistry" },
   B3: { type: "MSc", branch: "Economics" },
   B4: { type: "MSc", branch: "Mathematics" },
   B5: { type: "MSc", branch: "Physics" },
+  B7: { type: "MSc", branch: "Semiconductor and Nanoscience" },
 }
 
 export function parseBitsId(idNumber: string) {

@@ -4,23 +4,30 @@ import { useState, useEffect } from "react"
 import { useSession } from "next-auth/react"
 
 const BE_BRANCHES = [
-  { code: "A1", label: "Chemical (A1)" },
-  { code: "A2", label: "Civil (A2)" },
-  { code: "A3", label: "EEE (A3)" },
-  { code: "A4", label: "Mechanical (A4)" },
-  { code: "A7", label: "Computer Science (A7)" },
-  { code: "A8", label: "ENI (A8)" },
-  { code: "AA", label: "ECE (AA)" },
-  { code: "AB", label: "Manufacturing (AB)" },
+  { code: "A1", label: "Chemical Engineering (A1)" },
+  { code: "A2", label: "Civil Engineering (A2)" },
+  { code: "A3", label: "Electrical & Electronics Engineering (A3)" },
+  { code: "A4", label: "Mechanical Engineering (A4)" },
   { code: "A5", label: "B.Pharm (A5)" },
+  { code: "A7", label: "Computer Science & Engineering (A7)" },
+  { code: "A8", label: "Electronics & Instrumentation Engineering (A8)" },
+  { code: "A9", label: "Biotechnology (A9)" },
+  { code: "AA", label: "Electronics & Communication Engineering (AA)" },
+  { code: "AB", label: "Manufacturing Engineering (AB)" },
+  { code: "AC", label: "Electronics & Computer Engineering (AC)" },
+  { code: "AD", label: "Mathematics and Computing (AD)" },
+  { code: "AE", label: "Architectural and Urban Engineering (AE)" },
+  { code: "AF", label: "Chemical Engineering - Energy & Sustainability (AF)" },
+  { code: "AJ", label: "Environmental and Sustainability Engineering (AJ)" },
 ]
 
 const MSC_BRANCHES = [
-  { code: "B1", label: "Biology (B1)" },
+  { code: "B1", label: "Biological Sciences (B1)" },
   { code: "B2", label: "Chemistry (B2)" },
   { code: "B3", label: "Economics (B3)" },
   { code: "B4", label: "Mathematics (B4)" },
   { code: "B5", label: "Physics (B5)" },
+  { code: "B7", label: "Semiconductor and Nanoscience (B7)" },
 ]
 
 export default function BranchPrompt() {

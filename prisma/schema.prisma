@@ -18,12 +18,13 @@ model User {
   emailVerified DateTime?
   image         String?
 
-  accounts Account[]
-  sessions Session[]
+  accounts        Account[]
+  sessions        Session[]
 
-  timetable   Timetable?
-  exams       Exam[]
-  attendances Attendance[]
+  timetable       Timetable?
+  timetableDrafts TimetableDraft[]
+  exams           Exam[]
+  attendances     Attendance[]
 }
 
 model Account {
@@ -71,6 +72,18 @@ model Timetable {
   data Json
 
   userEmail String @unique
+  user      User   @relation(fields: [userEmail], references: [email], onDelete: Cascade)
+}
+
+model TimetableDraft {
+  id        String   @id
+  name      String
+  bitsId    String
+  isActive  Boolean  @default(false)
+  sections  Json
+  updatedAt DateTime @updatedAt
+
+  userEmail String
   user      User   @relation(fields: [userEmail], references: [email], onDelete: Cascade)
 }
 

@@ -16,23 +16,30 @@ export interface LocalTimetable {
 
 // Branch Options for the Modal
 const BE_BRANCHES = [
-  { code: "A1", label: "Chemical (A1)" },
-  { code: "A2", label: "Civil (A2)" },
-  { code: "A3", label: "EEE (A3)" },
-  { code: "A4", label: "Mechanical (A4)" },
-  { code: "A7", label: "Computer Science (A7)" },
-  { code: "A8", label: "ENI (A8)" },
-  { code: "AA", label: "ECE (AA)" },
-  { code: "AB", label: "Manufacturing (AB)" },
+  { code: "A1", label: "Chemical Engineering (A1)" },
+  { code: "A2", label: "Civil Engineering (A2)" },
+  { code: "A3", label: "Electrical & Electronics Engineering (A3)" },
+  { code: "A4", label: "Mechanical Engineering (A4)" },
   { code: "A5", label: "B.Pharm (A5)" },
+  { code: "A7", label: "Computer Science & Engineering (A7)" },
+  { code: "A8", label: "Electronics & Instrumentation Engineering (A8)" },
+  { code: "A9", label: "Biotechnology (A9)" },
+  { code: "AA", label: "Electronics & Communication Engineering (AA)" },
+  { code: "AB", label: "Manufacturing Engineering (AB)" },
+  { code: "AC", label: "Electronics & Computer Engineering (AC)" },
+  { code: "AD", label: "Mathematics and Computing (AD)" },
+  { code: "AE", label: "Architectural and Urban Engineering (AE)" },
+  { code: "AF", label: "Chemical Engineering - Energy & Sustainability (AF)" },
+  { code: "AJ", label: "Environmental and Sustainability Engineering (AJ)" },
 ]
 
 const MSC_BRANCHES = [
-  { code: "B1", label: "Biology (B1)" },
+  { code: "B1", label: "Biological Sciences (B1)" },
   { code: "B2", label: "Chemistry (B2)" },
   { code: "B3", label: "Economics (B3)" },
   { code: "B4", label: "Mathematics (B4)" },
   { code: "B5", label: "Physics (B5)" },
+  { code: "B7", label: "Semiconductor and Nanoscience (B7)" },
 ]
 
 export default function TimetableDashboard({ userEmail }: { userEmail?: string | null }) {
@@ -40,6 +47,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
   const [timetables, setTimetables] = useState<LocalTimetable[]>([])
   const [loading, setLoading] = useState(true)
   const [showModal, setShowModal] = useState(false)
+  const [syncStatus, setSyncStatus] = useState<"idle" | "syncing" | "synced" | "error">("idle")
 
   // Modal State
   const [newName, setNewName] = useState("New Timetable")
@@ -60,29 +68,91 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
         }
       }
 
-      // Auto Migration: If no timetables exist, try to load from the server (legacy behavior)
-      if (parsed.length === 0) {
-        try {
-          const res = await fetch("/api/timetable/load")
-          if (res.ok) {
-            const serverData = await res.json()
-            if (serverData && Object.keys(serverData).length > 0) {
-              const defaultBitsId = localStorage.getItem("student_bits_id") || "2024A7PS0000P"
-              const migratedTT: LocalTimetable = {
-                id: crypto.randomUUID(),
-                name: "Main Timetable (Server)",
-                bitsId: defaultBitsId,
-                isActive: true,
-                sections: serverData,
-                updatedAt: Date.now()
+      // Fetch server drafts and merge (server wins for same id)
+      try {
+        setSyncStatus("syncing")
+        const res = await fetch("/api/timetable/drafts")
+        if (res.ok) {
+          const serverDrafts: any[] = await res.json()
+
+          if (serverDrafts.length > 0) {
+            // Build a map of server drafts by id
+            const serverMap = new Map(serverDrafts.map(d => [d.id, {
+              id: d.id,
+              name: d.name,
+              bitsId: d.bitsId,
+              isActive: d.isActive,
+              sections: d.sections,
+              updatedAt: new Date(d.updatedAt).getTime(),
+            } as LocalTimetable]))
+
+            // Find local drafts not yet on the server
+            const localOnlyDrafts = parsed.filter(t => !serverMap.has(t.id))
+
+            // Merge: server versions override local for same id; keep local-only ones
+            const merged: LocalTimetable[] = []
+            serverMap.forEach(draft => merged.push(draft))
+            localOnlyDrafts.forEach(t => merged.push(t))
+            parsed = merged
+            localStorage.setItem("student_timetables", JSON.stringify(parsed))
+
+            // Upload local-only drafts to server in background
+            if (localOnlyDrafts.length > 0) {
+              for (const draft of localOnlyDrafts) {
+                fetch("/api/timetable/drafts", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(draft),
+                }).catch(err => console.error("Failed to upload local draft", draft.id, err))
               }
-              parsed = [migratedTT]
-              localStorage.setItem("student_timetables", JSON.stringify(parsed))
+            }
+
+            setSyncStatus("synced")
+          } else {
+            // Server has no drafts at all — upload all local ones
+            if (parsed.length > 0) {
+              for (const draft of parsed) {
+                fetch("/api/timetable/drafts", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(draft),
+                }).catch(err => console.error("Failed to upload local draft", draft.id, err))
+              }
+              setSyncStatus("synced")
+            } else {
+              // Legacy migration: try old single-timetable endpoint
+              const legacyRes = await fetch("/api/timetable/load")
+              if (legacyRes.ok) {
+                const serverData = await legacyRes.json()
+                if (serverData && Object.keys(serverData).length > 0) {
+                  const defaultBitsId = localStorage.getItem("student_bits_id") || "2024A7PS0000P"
+                  const migratedTT: LocalTimetable = {
+                    id: crypto.randomUUID(),
+                    name: "Main Timetable",
+                    bitsId: defaultBitsId,
+                    isActive: true,
+                    sections: serverData,
+                    updatedAt: Date.now()
+                  }
+                  parsed = [migratedTT]
+                  localStorage.setItem("student_timetables", JSON.stringify(parsed))
+                  // Sync the migrated draft to the new server endpoint
+                  await fetch("/api/timetable/drafts", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(migratedTT),
+                  })
+                }
+              }
+              setSyncStatus("synced")
             }
           }
-        } catch (err) {
-          console.error("Migration fetch failed", err)
+        } else {
+          setSyncStatus("error")
         }
+      } catch (err) {
+        console.error("Server sync failed", err)
+        setSyncStatus("error")
       }
 
       // Auto-fix legacy campus codes and 0000 IDs
@@ -112,8 +182,6 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
 
         if (updated) {
           localStorage.setItem("student_timetables", JSON.stringify(parsed))
-          
-          // Also update the global one just in case
           let globalId = localStorage.getItem("student_bits_id")
           if (globalId) {
              if (globalId.endsWith("P") && correctCampus !== "P") {
@@ -169,7 +237,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
     setShowModal(true)
   }
 
-  const handleCreate = () => {
+  const handleCreate = async () => {
     // Extract year from email if possible, else 2024
     const match = userEmail?.match(/f(20\d{2})/i)
     const batchYear = match ? match[1] : "2024"
@@ -194,27 +262,48 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
       id: crypto.randomUUID(),
       name: newName,
       bitsId: generatedId,
-      isActive: timetables.length === 0, // First one is active by default
+      isActive: timetables.length === 0,
       sections: {},
       updatedAt: Date.now()
     }
 
+    // Save locally first (optimistic)
     const updated = [...timetables, newTT]
     localStorage.setItem("student_timetables", JSON.stringify(updated))
     setTimetables(updated)
     setShowModal(false)
+
+    // Sync to server in background
+    try {
+      await fetch("/api/timetable/drafts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newTT),
+      })
+    } catch (err) {
+      console.error("Failed to sync new draft to server", err)
+    }
+
     router.push(`/dashboard/timetable?id=${newTT.id}`)
   }
 
-  const deleteTimetable = (e: React.MouseEvent, id: string) => {
+  const deleteTimetable = async (e: React.MouseEvent, id: string) => {
     e.stopPropagation()
     const updated = timetables.filter(t => t.id !== id)
     // If we deleted the active one, make another one active if possible
     if (!updated.some(t => t.isActive) && updated.length > 0) {
       updated[0].isActive = true
     }
+    // Optimistic local delete
     localStorage.setItem("student_timetables", JSON.stringify(updated))
     setTimetables(updated)
+
+    // Sync delete to server in background
+    try {
+      await fetch(`/api/timetable/drafts/${id}`, { method: "DELETE" })
+    } catch (err) {
+      console.error("Failed to delete draft from server", err)
+    }
   }
 
   if (loading) {
@@ -232,7 +321,27 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
           style={{ background: "linear-gradient(135deg, var(--bg-accent), #4f46e5)" }}>
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 blur-3xl rounded-full" />
           <div className="relative z-10">
-            <h1 className="text-3xl font-bold mb-1 tracking-tight">Timetable Manager</h1>
+            <div className="flex items-center gap-3 flex-wrap">
+              <h1 className="text-3xl font-bold mb-1 tracking-tight">Timetable Manager</h1>
+              {syncStatus === "syncing" && (
+                <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-white/20 text-white/90 animate-pulse flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-yellow-300 inline-block" />
+                  Syncing…
+                </span>
+              )}
+              {syncStatus === "synced" && (
+                <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-white/20 text-white/90 flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-300 inline-block" />
+                  Synced ☁
+                </span>
+              )}
+              {syncStatus === "error" && (
+                <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-white/20 text-white/90 flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-300 inline-block" />
+                  Offline
+                </span>
+              )}
+            </div>
             <p className="text-white/80 text-sm font-medium">Create multiple drafts, test branch changes, and set your active schedule.</p>
           </div>
         </div>
