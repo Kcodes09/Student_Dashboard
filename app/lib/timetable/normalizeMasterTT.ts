@@ -54,9 +54,11 @@ const HOUR_TIME_MAP: Record<number, { start: string; end: string }> = {
 
 /* ---------------- HELPERS ---------------- */
 
-function getType(sec: string): Section["type"] {
-  if (sec.startsWith("P")) return "PRACTICAL"
-  if (sec.startsWith("T")) return "TUTORIAL"
+function getType(sec: string | undefined): Section["type"] {
+  if (!sec) return "LECTURE"
+  const s = String(sec)
+  if (s.startsWith("P")) return "PRACTICAL"
+  if (s.startsWith("T")) return "TUTORIAL"
   return "LECTURE"
 }
 

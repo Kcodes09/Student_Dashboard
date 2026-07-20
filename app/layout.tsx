@@ -1,15 +1,16 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import { ThemeProvider } from "./components/ThemeProvider"
+import { ThemeProvider } from "@/app/components/ThemeProvider"
 import AuthProvider from "./components/SessionProvider"
 import { NotificationManager } from "./components/NotificationManager"
 
 import { ProductTour } from "./components/ProductTour"
 import { PwaInstallPrompt } from "./components/PwaInstallPrompt"
+import BranchPrompt from "./components/BranchPrompt"
 
 export const metadata: Metadata = {
   title: "Student Dashboard",
-  description: "Smart Student Dashboard",
+  description: "Your smart academic companion — track attendance, classes, exams, and more.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -30,6 +31,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+          crossOrigin="anonymous"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -52,6 +60,7 @@ export default function RootLayout({
       <body className="h-screen ">
         <AuthProvider>
           <ThemeProvider>
+            <BranchPrompt />
             <PwaInstallPrompt />
             <NotificationManager />
             <ProductTour />

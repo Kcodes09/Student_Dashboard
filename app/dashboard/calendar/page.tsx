@@ -1,8 +1,6 @@
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/app/lib/auth"
 
-import { prisma } from "@/lib/prisma"
-
 import Navbar from "@/app/components/Navbar"
 import CalendarGrid from "@/app/components/CalendarGrid"
 
@@ -11,11 +9,14 @@ import officialExams from "@/lib/data/exams_normalized.json"
 import masterTT from "@/data/mastertt.json"
 
 import { generateStudentTT } from "@/app/lib/timetable/generateStudentTT"
+import { getCachedTimetable, getCachedExams } from "@/lib/cachedData"
 import type {
   Session as CalendarSession,
   WeekDay,
   Exam,
 } from "@/types/timetable"
+
+export const revalidate = 60
 
 type SelectedSections = {
   [courseCode: string]: {
@@ -31,15 +32,19 @@ function normalizeCourseCode(code: string) {
   return code.replace(/\s+/g, "").toUpperCase()
 }
 
+function formatTime(t: string) {
+  let [h, m] = t.split(":").map(Number)
+  if (h < 8) h += 12
+  return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`
+}
+
 export default async function CalendarPage() {
   const session = await getServerSession(authOptions)
   if (!session?.user?.email) return null
 
   /* -------- TIMETABLE -------- */
 
-  const tt = await prisma.timetable.findUnique({
-    where: { userEmail: session.user.email },
-  })
+  const tt = await getCachedTimetable(session.user.email)
 
   const selectedSections =
     (tt?.data as SelectedSections) ?? {}
@@ -84,23 +89,16 @@ export default async function CalendarPage() {
         .split("/")
         .reverse()
         .join("-")}`,
-      startTime: e.startTime,
-      endTime: e.endTime,
+      startTime: formatTime(e.startTime),
+      endTime: formatTime(e.endTime),
     }))
 
   /* -------- USER EXAMS -------- */
 
-  const userExamsRaw = await prisma.exam.findMany({
-    where: { userEmail: session.user.email },
-  })
+  const userExamsRaw = await getCachedExams(session.user.email)
 
   const user: Exam[] = userExamsRaw
-    .filter(e =>
-      selectedCourses.includes(
-        normalizeCourseCode(e.courseCode)
-      )
-    )
-    .map(e => ({
+    .map((e: any) => ({
       courseCode: normalizeCourseCode(e.courseCode),
       date: e.date.toISOString().slice(0, 10),
       startTime: e.startTime,

@@ -1,12 +1,12 @@
 export const dynamic = "force-dynamic"
 
 import Navbar from "@/app/components/Navbar"
-import { prisma } from "@/lib/prisma"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/app/lib/auth"
 
 import officialExams from "@/lib/data/exams_normalized.json"
 import academicCalendar from "@/lib/data/academic_calendar.json"
+import { getCachedTimetable, getCachedExams } from "@/lib/cachedData"
 
 import ExamsClient from "./ExamsClient"
 
@@ -57,9 +57,7 @@ export default async function ExamsPage() {
 
   /* ---------- TIMETABLE ---------- */
 
-  const tt = await prisma.timetable.findUnique({
-    where: { userEmail: email },
-  })
+  const tt = await getCachedTimetable(email)
 
   const ttCourses = tt
     ? Object.entries(tt.data as Record<string, any>)
@@ -74,16 +72,9 @@ export default async function ExamsPage() {
 
   /* ---------- USER EXAMS ---------- */
 
-  const userExamsRaw = await prisma.exam.findMany({
-    where: { userEmail: email },
-  })
+  const userExamsRaw = await getCachedExams(email)
 
   const userExams: ExamItem[] = userExamsRaw
-    .filter(e =>
-      ttCourses.includes(
-        normalizeCourseCode(e.courseCode)
-      )
-    )
     .map(e => ({
       id: e.id,
       courseCode: e.courseCode,

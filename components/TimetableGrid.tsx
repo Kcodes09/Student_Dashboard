@@ -31,7 +31,37 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
   const clashMap = useMemo(() => {
     const map = new Map<string, any[]>()
 
-    for (const s of sessions) {
+    // Sort sessions by day, course, type, and hour to find consecutive blocks
+    const sorted = [...sessions].sort((a,b) => {
+      if (a.day !== b.day) return a.day.localeCompare(b.day)
+      if (a.courseCode !== b.courseCode) return a.courseCode.localeCompare(b.courseCode)
+      if (a.type !== b.type) return (a.type || "").localeCompare(b.type || "")
+      return a.hour - b.hour
+    })
+
+    const processed: any[] = []
+    let currentBlock: any = null
+    
+    for (const s of sorted) {
+      if (
+        currentBlock &&
+        currentBlock.day === s.day &&
+        currentBlock.courseCode === s.courseCode &&
+        currentBlock.type === s.type &&
+        currentBlock.hour + (currentBlock.span || 1) === s.hour && 
+        currentBlock.section === s.section
+      ) {
+        currentBlock.span = (currentBlock.span || 1) + 1
+        currentBlock.endTime = s.endTime
+        s.skip = true
+      } else {
+        s.span = 1
+        currentBlock = s
+      }
+      processed.push(s)
+    }
+
+    for (const s of processed) {
       const key = `${s.day}-${s.hour}`
       const arr = map.get(key) ?? []
       arr.push(s)
@@ -128,14 +158,20 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
                   >
                     {/* 🚫 BLOCK CLASHED SESSIONS */}
                     {!isClash &&
-                      cell.map(s => (
+                      cell.filter(s => !s.skip).map(s => (
                         <div
                           key={`${s.courseCode}-${s.section}-${s.day}-${s.hour}`}
                           className={clsx(
                             "rounded-md p-1.5 text-[10px] shadow-sm transition-transform",
-                            "hover:scale-[1.03] hover:shadow-md hover:z-10 relative cursor-pointer",
+                            "hover:scale-[1.03] hover:shadow-md hover:z-10 cursor-pointer",
                             getCourseColor(s.courseCode)
                           )}
+                          style={{
+                            position: "absolute",
+                            top: 4, left: 4, right: 4,
+                            height: s.span ? (s.span * 56 - 9) : undefined,
+                            zIndex: s.span > 1 ? 10 : 1,
+                          }}
                         >
                           <div className="font-bold tracking-tight leading-none mb-0.5">
                             {s.courseCode} <span className="opacity-80 font-medium">{s.type === "LECTURE" ? "(L)" : s.type === "PRACTICAL" ? "(P)" : s.type === "TUTORIAL" ? "(T)" : ""}</span>

@@ -1,5 +1,4 @@
 import Navbar from "@/app/components/Navbar"
-import { prisma } from "@/lib/prisma"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/app/lib/auth"
 
@@ -8,9 +7,11 @@ import masterTT from "@/data/mastertt.json"
 
 import { generateStudentTT } from "@/app/lib/timetable/generateStudentTT"
 import type { Session, WeekDay } from "@/types/timetable"
+import { getCachedTimetable } from "@/lib/cachedData"
 
 import TodayClassesList from "./today-classes-list"
-import { stringify } from "querystring"
+
+export const revalidate = 30
 
 /* ---------------- HELPERS ---------------- */
 
@@ -51,9 +52,7 @@ export default async function ClassesPage() {
 
   const email = session.user.email
 
-  const tt = await prisma.timetable.findUnique({
-    where: { userEmail: email },
-  })
+  const tt = await getCachedTimetable(email)
 
   const selectedSections =
     (tt?.data as Record<string, any>) ?? {}
@@ -147,10 +146,12 @@ export default async function ClassesPage() {
                   No classes scheduled for today.
                 </p>
               ) : (
-                <TodayClassesList
-                  classes={todayClasses}
-                  dateISO={academicISO}
-                />
+                <div id="tour-timeline">
+                  <TodayClassesList
+                    classes={todayClasses}
+                    dateISO={academicISO}
+                  />
+                </div>
               )}
             </>
           )}

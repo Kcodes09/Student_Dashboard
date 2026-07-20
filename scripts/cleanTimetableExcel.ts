@@ -1,6 +1,6 @@
 import XLSX from "xlsx"
 
-const INPUT = "DRAFT TIMETABLE I SEM 2025 -26 (1).xlsx"
+const INPUT = "DRAFT TIMETABLE I SEM 2026 -27.xlsx"
 const OUTPUT = "DRAFT_TIMETABLE_CLEANED.xlsx"
 
 const workbook = XLSX.readFile(INPUT)

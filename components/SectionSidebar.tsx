@@ -2,6 +2,7 @@
 
 import clsx from "clsx"
 import { useEffect, useMemo, useState } from "react"
+import { checkSectionClash, ClashSession } from "@/app/lib/timetable/clashDetector"
 
 type SectionType = "LECTURE" | "TUTORIAL" | "PRACTICAL"
 
@@ -37,6 +38,7 @@ type Props = {
     section: string | undefined
   ) => void
   onBack?: () => void
+  currentSessions?: ClashSession[]
 }
 
 const TYPE_LABEL: Record<SectionType, string> = {
@@ -50,6 +52,7 @@ export default function SectionSidebar({
   selected = {},
   onSelect,
   onBack,
+  currentSessions = [],
 }: Props) {
   /* ---------- AVAILABLE TYPES ---------- */
   const availableTypes = useMemo<SectionType[]>(() => {
@@ -126,12 +129,13 @@ export default function SectionSidebar({
       </div>
 
       {/* ---------- SCROLLABLE SECTIONS ---------- */}
-      <div className="flex-1 min-h-0 overflow-y-auto px-4 py-5 space-y-2.5">
-
+      <div className="flex-1 min-h-0 overflow-y-auto px-4 py-5 space-y-2.5 scroll-smooth">
 
         {sections.map(section => {
           const isSelected =
             selected[activeType] === section.section
+
+          const clashInfo = !isSelected ? checkSectionClash(section.sessions, course.courseCode, section.type, currentSessions) : null;
 
           return (
             <button
@@ -146,16 +150,23 @@ export default function SectionSidebar({
                 "w-full rounded-xl border px-4 py-3 text-left transition-all duration-300 relative group overflow-hidden",
                 isSelected
                   ? "border-[var(--bg-accent)] bg-[var(--bg-selected)] shadow-[inset_0_0_0_1px_var(--bg-accent)]"
-                  : "border-[var(--border-subtle)] hover:border-[var(--bg-accent)] hover:bg-[var(--bg-surface)] hover:shadow-sm"
+                  : clashInfo
+                    ? "border-red-300 hover:border-red-400 bg-red-50 dark:bg-red-900/10 hover:bg-red-100 dark:hover:bg-red-900/20 shadow-sm"
+                    : "border-[var(--border-subtle)] hover:border-[var(--bg-accent)] hover:bg-[var(--bg-surface)] hover:shadow-sm"
               )}
             >
               <div className="flex justify-between items-center mb-1.5">
-                <span className={clsx("text-sm font-bold", isSelected ? "text-[var(--text-accent)]" : "text-[var(--text-primary)]")}>
+                <span className={clsx("text-sm font-bold", isSelected ? "text-[var(--text-accent)]" : clashInfo ? "text-red-700 dark:text-red-400" : "text-[var(--text-primary)]")}>
                   {section.section}
                 </span>
                 {isSelected && (
                   <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--bg-accent)] text-[10px] text-white shadow-sm">
                     ✓
+                  </span>
+                )}
+                {clashInfo && (
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] text-white shadow-sm" title={`Clashes with ${clashInfo.course2} ${clashInfo.section2}`}>
+                    !
                   </span>
                 )}
               </div>
@@ -178,12 +189,18 @@ export default function SectionSidebar({
                     <span className="rounded bg-[var(--bg-muted)] px-1.5 py-0.5 text-[10px] font-bold text-[var(--text-primary)]">
                       {days}
                     </span>
-                    <span className={clsx("text-xs font-mono font-medium", isSelected ? "text-[var(--text-accent)]" : "text-[var(--text-muted)]")}>
+                    <span className={clsx("text-xs font-mono font-medium", isSelected ? "text-[var(--text-accent)]" : clashInfo ? "text-red-600 dark:text-red-300" : "text-[var(--text-muted)]")}>
                       {fmt(startTime)} – {fmt(endTime)}
                     </span>
                   </div>
                 )
               })()}
+
+              {clashInfo && (
+                <div className="mt-2 text-[10px] font-semibold text-red-700 dark:text-red-400 bg-red-100 dark:bg-red-900/30 px-2 py-1 rounded">
+                  Clashes with {clashInfo.course2} {clashInfo.section2} ({clashInfo.day} {clashInfo.timeStr.split('/')[1].trim()})
+                </div>
+              )}
             </button>
           )
         })}

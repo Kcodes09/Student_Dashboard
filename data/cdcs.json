@@ -1,0 +1,1028 @@
+{
+  "year_1": {
+    "sem1": [
+      {
+        "code": "BIO F111",
+        "title": "General Biology"
+      },
+      {
+        "code": "BIO F110",
+        "title": "Biology Laboratory"
+      },
+      {
+        "code": "CHEM F111",
+        "title": "General Chemistry"
+      },
+      {
+        "code": "CHEM F110",
+        "title": "Chemistry Laboratory"
+      },
+      {
+        "code": "MATH F111",
+        "title": "Mathematics I"
+      },
+      {
+        "code": "PHY F111",
+        "title": "Mechanics, Oscillations and Waves"
+      },
+      {
+        "code": "PHY F110",
+        "title": "Physics Laboratory"
+      },
+      {
+        "code": "BITS F110",
+        "title": "Engineering Graphics"
+      }
+    ],
+    "sem2": [
+      {
+        "code": "MATH F112",
+        "title": "Mathematics II"
+      },
+      {
+        "code": "MATH F113",
+        "title": "Probability and Statistics"
+      },
+      {
+        "code": "CS F111",
+        "title": "Computer Programming"
+      },
+      {
+        "code": "EEE F111",
+        "title": "Electrical Sciences"
+      },
+      {
+        "code": "BITS F111",
+        "title": "Thermodynamics"
+      },
+      {
+        "code": "BITS F112",
+        "title": "Technical Report Writing"
+      },
+      {
+        "code": "ME F112",
+        "title": "Workshop Practice"
+      }
+    ]
+  },
+  "BE": {
+    "Computer Science": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "CS F214",
+          "title": "Logic in Computer Science"
+        },
+        {
+          "code": "CS F222",
+          "title": "Discrete Structures for Computer Science"
+        },
+        {
+          "code": "CS F211",
+          "title": "Data Structures & Algorithms"
+        },
+        {
+          "code": "CS F215",
+          "title": "Digital Design"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "CS F213",
+          "title": "Object Oriented Programming"
+        },
+        {
+          "code": "CS F241",
+          "title": "Microprocessors & Interfacing"
+        },
+        {
+          "code": "CS F212",
+          "title": "Database Systems"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "CS F351",
+          "title": "Theory of Computation"
+        },
+        {
+          "code": "CS F372",
+          "title": "Operating Systems"
+        },
+        {
+          "code": "CS F301",
+          "title": "Principles of Programming Languages"
+        },
+        {
+          "code": "CS F342",
+          "title": "Computer Architecture"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "CS F363",
+          "title": "Compiler Construction"
+        },
+        {
+          "code": "CS F364",
+          "title": "Design & Analysis of Algorithms"
+        },
+        {
+          "code": "CS F303",
+          "title": "Computer Networks"
+        }
+      ]
+    },
+    "Electrical & Electronics": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "EEE F211",
+          "title": "Electrical Machines"
+        },
+        {
+          "code": "EEE F212",
+          "title": "Electromagnetic Theory"
+        },
+        {
+          "code": "EEE F215",
+          "title": "Digital Design"
+        },
+        {
+          "code": "EEE F214",
+          "title": "Electronic Devices"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "EEE F241",
+          "title": "Microprocessors & Interfacing"
+        },
+        {
+          "code": "EEE F242",
+          "title": "Control Systems"
+        },
+        {
+          "code": "EEE F243",
+          "title": "Signals & Systems"
+        },
+        {
+          "code": "EEE F244",
+          "title": "Microelectronic Circuits"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "EEE F311",
+          "title": "Communication Systems"
+        },
+        {
+          "code": "MATH F212",
+          "title": "Optimization"
+        },
+        {
+          "code": "EEE F312",
+          "title": "Power Systems"
+        },
+        {
+          "code": "EEE F313",
+          "title": "Analog & Digital VLSI Design"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "EEE F341",
+          "title": "Analog Electronics"
+        },
+        {
+          "code": "EEE F342",
+          "title": "Power Electronics"
+        }
+      ]
+    },
+    "Electronics & Communication": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "ECE F211",
+          "title": "Electrical Machines"
+        },
+        {
+          "code": "ECE F212",
+          "title": "Electromagnetic Theory"
+        },
+        {
+          "code": "ECE F215",
+          "title": "Digital Design"
+        },
+        {
+          "code": "ECE F214",
+          "title": "Electronic Devices"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "ECE F241",
+          "title": "Microprocessors and Interfacing"
+        },
+        {
+          "code": "ECE F242",
+          "title": "Control Systems"
+        },
+        {
+          "code": "ECE F243",
+          "title": "Signals & Systems"
+        },
+        {
+          "code": "ECE F244",
+          "title": "Microelectronic Circuits"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "ECE F311",
+          "title": "Communication Systems"
+        },
+        {
+          "code": "ECE F314",
+          "title": "Electromagnetic Fields & Microwave Engineering"
+        },
+        {
+          "code": "ECE F434",
+          "title": "Digital Signal Processing"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "ECE F341",
+          "title": "Analog Electronics"
+        },
+        {
+          "code": "ECE F343",
+          "title": "Communication Networks"
+        },
+        {
+          "code": "ECE F344",
+          "title": "Information Theory & Coding"
+        }
+      ]
+    },
+    "Electronics & Instrumentation": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "INSTR F211",
+          "title": "Electrical Machines"
+        },
+        {
+          "code": "INSTR F212",
+          "title": "Electromagnetic Theory"
+        },
+        {
+          "code": "INSTR F215",
+          "title": "Digital Design"
+        },
+        {
+          "code": "INSTR F214",
+          "title": "Electronic Devices"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "INSTR F241",
+          "title": "Microprocessors & Interfacing"
+        },
+        {
+          "code": "INSTR F242",
+          "title": "Control Systems"
+        },
+        {
+          "code": "INSTR F243",
+          "title": "Signals & Systems"
+        },
+        {
+          "code": "INSTR F244",
+          "title": "Microelectronic Circuits"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "INSTR F311",
+          "title": "Electronic Instruments & Instrumentation Technology"
+        },
+        {
+          "code": "INSTR F312",
+          "title": "Transducers & Measurement Systems"
+        },
+        {
+          "code": "INSTR F313",
+          "title": "Analog & Digital VLSI Design"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "INSTR F341",
+          "title": "Analog Electronics"
+        },
+        {
+          "code": "INSTR F342",
+          "title": "Power Electronics"
+        },
+        {
+          "code": "INSTR F343",
+          "title": "Industrial Instrumentation & Control"
+        }
+      ]
+    },
+    "Mechanical": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "ME F211",
+          "title": "Mechanics of Solids"
+        },
+        {
+          "code": "ME F212",
+          "title": "Fluid Mechanics"
+        },
+        {
+          "code": "ME F216",
+          "title": "Materials Science & Engineering"
+        },
+        {
+          "code": "ME F217",
+          "title": "Applied Thermodynamics"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        },
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "ME F218",
+          "title": "Advanced Mechanics of Solids"
+        },
+        {
+          "code": "ME F219",
+          "title": "Manufacturing Processes"
+        },
+        {
+          "code": "ME F220",
+          "title": "Heat Transfer"
+        },
+        {
+          "code": "ME F221",
+          "title": "Mechanisms and Machines"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "ME F314",
+          "title": "Design of Machine Elements"
+        },
+        {
+          "code": "ME F315",
+          "title": "Advanced Manufacturing Processes"
+        },
+        {
+          "code": "ME F316",
+          "title": "Manufacturing Engineering"
+        },
+        {
+          "code": "ME F317",
+          "title": "Engines, Motors, and Mobility"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "ME F318",
+          "title": "Computer-Aided Design"
+        },
+        {
+          "code": "ME F319",
+          "title": "Vibrations & Control"
+        },
+        {
+          "code": "ME F320",
+          "title": "Management Optimization"
+        },
+        {
+          "code": "ME F341",
+          "title": "Prime Movers & Fluid Machines"
+        }
+      ]
+    },
+    "Chemical": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "CHE F211",
+          "title": "Chemical Process Calculations"
+        },
+        {
+          "code": "CHE F214",
+          "title": "Engineering Chemistry"
+        },
+        {
+          "code": "CHE F213",
+          "title": "Chemical Engineering Thermodynamics"
+        },
+        {
+          "code": "CHE F212",
+          "title": "Fluid Mechanics"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "CHE F241",
+          "title": "Heat Transfer"
+        },
+        {
+          "code": "CHE F242",
+          "title": "Numerical Methods for Chemical Engineers"
+        },
+        {
+          "code": "CHE F243",
+          "title": "Material Science & Engineering"
+        },
+        {
+          "code": "CHE F244",
+          "title": "Separation Processes I"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "CHE F312",
+          "title": "Chemical Engineering Laboratory I"
+        },
+        {
+          "code": "CHE F313",
+          "title": "Separation Processes II"
+        },
+        {
+          "code": "CHE F311",
+          "title": "Kinetics & Reactor Design"
+        },
+        {
+          "code": "CHE F314",
+          "title": "Process Design Principles I"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "CHE F341",
+          "title": "Chemical Engineering Laboratory II"
+        },
+        {
+          "code": "CHE F342",
+          "title": "Process Dynamics & Control"
+        },
+        {
+          "code": "CHE F343",
+          "title": "Process Design Principles II"
+        }
+      ]
+    },
+    "Civil": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "CE F211",
+          "title": "Mechanics of Solids"
+        },
+        {
+          "code": "CE F231",
+          "title": "Fluid Mechanics"
+        },
+        {
+          "code": "CE F213",
+          "title": "Surveying"
+        },
+        {
+          "code": "CE F230",
+          "title": "Civil Engineering Materials"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "CE F241",
+          "title": "Analysis of Structures"
+        },
+        {
+          "code": "CE F242",
+          "title": "Construction Planning & Technology"
+        },
+        {
+          "code": "CE F243",
+          "title": "Soil Mechanics"
+        },
+        {
+          "code": "CE F244",
+          "title": "Highway Engineering"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "CE F320",
+          "title": "Design of Reinforced Concrete Structures"
+        },
+        {
+          "code": "CE F312",
+          "title": "Hydraulic Engineering"
+        },
+        {
+          "code": "CE F313",
+          "title": "Foundation Engineering"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "CE F342",
+          "title": "Water & Waste Water Treatment"
+        },
+        {
+          "code": "CE F321",
+          "title": "Engineering Hydrology"
+        },
+        {
+          "code": "CE F343",
+          "title": "Design of Steel Structures"
+        }
+      ]
+    }
+  },
+  "MSc": {
+    "Mathematics": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "MATH F212",
+          "title": "Optimization"
+        },
+        {
+          "code": "MATH F213",
+          "title": "Discrete Mathematics"
+        },
+        {
+          "code": "MATH F214",
+          "title": "Elementary Real Analysis"
+        },
+        {
+          "code": "MATH F215",
+          "title": "Algebra I"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "MATH F241",
+          "title": "Mathematical Methods"
+        },
+        {
+          "code": "MATH F242",
+          "title": "Operations Research"
+        },
+        {
+          "code": "MATH F243",
+          "title": "Graphs & Networks"
+        },
+        {
+          "code": "MATH F244",
+          "title": "Measure & Integration"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "MATH F311",
+          "title": "Introduction to Topology"
+        },
+        {
+          "code": "MATH F312",
+          "title": "Ordinary Differential Equations"
+        },
+        {
+          "code": "MATH F313",
+          "title": "Numerical Analysis"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "MATH F341",
+          "title": "Introduction to Functional Analysis"
+        },
+        {
+          "code": "MATH F342",
+          "title": "Differential Geometry"
+        },
+        {
+          "code": "MATH F343",
+          "title": "Partial Differential Equations"
+        }
+      ]
+    },
+    "Physics": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "PHY F211",
+          "title": "Classical Mechanics"
+        },
+        {
+          "code": "PHY F212",
+          "title": "Electromagnetic Theory I"
+        },
+        {
+          "code": "PHY F213",
+          "title": "Optics"
+        },
+        {
+          "code": "PHY F214",
+          "title": "Electricity, Magnetism & Optics Laboratory"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "PHY F241",
+          "title": "Electromagnetic Theory II"
+        },
+        {
+          "code": "PHY F242",
+          "title": "Quantum Mechanics I"
+        },
+        {
+          "code": "PHY F243",
+          "title": "Mathematical Methods of Physics"
+        },
+        {
+          "code": "PHY F244",
+          "title": "Modern Physics Laboratory"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "PHY F311",
+          "title": "Quantum Mechanics II"
+        },
+        {
+          "code": "PHY F312",
+          "title": "Statistical Mechanics"
+        },
+        {
+          "code": "PHY F313",
+          "title": "Computational Physics"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "PHY F341",
+          "title": "Solid State Physics"
+        },
+        {
+          "code": "PHY F342",
+          "title": "Atomic & Molecular Physics"
+        },
+        {
+          "code": "PHY F343",
+          "title": "Nuclear & Particle Physics"
+        },
+        {
+          "code": "PHY F344",
+          "title": "Advanced Physics Laboratory"
+        }
+      ]
+    },
+    "Chemistry": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "CHEM F211",
+          "title": "Physical Chemistry I"
+        },
+        {
+          "code": "CHEM F212",
+          "title": "Organic Chemistry I"
+        },
+        {
+          "code": "CHEM F213",
+          "title": "Physical Chemistry II"
+        },
+        {
+          "code": "CHEM F214",
+          "title": "Inorganic Chemistry I"
+        },
+        {
+          "code": "PHY F212",
+          "title": "Electromagnetic Theory I"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "CHEM F241",
+          "title": "Inorganic Chemistry II"
+        },
+        {
+          "code": "CHEM F242",
+          "title": "Chemical Experimentation I"
+        },
+        {
+          "code": "CHEM F243",
+          "title": "Organic Chemistry II"
+        },
+        {
+          "code": "CHEM F244",
+          "title": "Physical Chemistry III"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "CHEM F313",
+          "title": "Instrumental Methods of Analysis"
+        },
+        {
+          "code": "CHEM F311",
+          "title": "Organic Chemistry III"
+        },
+        {
+          "code": "CHEM F312",
+          "title": "Physical Chemistry IV"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "CHEM F341",
+          "title": "Chemical Experimentation II"
+        },
+        {
+          "code": "CHEM F342",
+          "title": "Organic Chemistry IV"
+        },
+        {
+          "code": "CHEM F343",
+          "title": "Inorganic Chemistry III"
+        }
+      ]
+    },
+    "Biological Sciences": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "BIO F211",
+          "title": "Biological Chemistry"
+        },
+        {
+          "code": "BIO F213",
+          "title": "Cell Biology"
+        },
+        {
+          "code": "BIO F212",
+          "title": "Microbiology"
+        },
+        {
+          "code": "BIO F214",
+          "title": "Integrated Biology"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "BIO F241",
+          "title": "Ecology & Environmental Science"
+        },
+        {
+          "code": "BIO F242",
+          "title": "Introduction to Bioinformatics"
+        },
+        {
+          "code": "BIO F243",
+          "title": "Genetics"
+        },
+        {
+          "code": "BIO F244",
+          "title": "Instrumental Methods of Analysis"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "BIO F311",
+          "title": "Recombinant DNA Technology"
+        },
+        {
+          "code": "BIO F312",
+          "title": "Plant Physiology"
+        },
+        {
+          "code": "BIO F313",
+          "title": "Animal Physiology"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "BIO F341",
+          "title": "Developmental Biology"
+        },
+        {
+          "code": "BIO F342",
+          "title": "Immunology"
+        },
+        {
+          "code": "BIO F215",
+          "title": "Biophysics"
+        }
+      ]
+    },
+    "Economics": {
+      "year2_sem1": [
+        {
+          "code": "MATH F211",
+          "title": "Mathematics III"
+        },
+        {
+          "code": "ECON F211",
+          "title": "Principles of Economics"
+        },
+        {
+          "code": "ECON F212",
+          "title": "Fundamentals of Finance & Accounts"
+        },
+        {
+          "code": "ECON F213",
+          "title": "Mathematical & Statistical Methods"
+        },
+        {
+          "code": "ECON F214",
+          "title": "Economic Environment of Business"
+        },
+        {
+          "code": "BITS F225",
+          "title": "Environmental Studies"
+        }
+      ],
+      "year2_sem2": [
+        {
+          "code": "MGTS F211",
+          "title": "Principles of Management"
+        },
+        {
+          "code": "ECON F241",
+          "title": "Econometric Methods"
+        },
+        {
+          "code": "ECON F242",
+          "title": "Microeconomics"
+        },
+        {
+          "code": "ECON F243",
+          "title": "Macroeconomics"
+        },
+        {
+          "code": "ECON F244",
+          "title": "Economics of Growth & Development"
+        }
+      ],
+      "year3_sem1": [
+        {
+          "code": "ECON F311",
+          "title": "International Economics"
+        },
+        {
+          "code": "ECON F312",
+          "title": "Money Banking & Financial Markets"
+        },
+        {
+          "code": "ECON F313",
+          "title": "Issues in Economic Development"
+        }
+      ],
+      "year3_sem2": [
+        {
+          "code": "ECON F341",
+          "title": "Public Finance Theory & Policy"
+        },
+        {
+          "code": "ECON F342",
+          "title": "Applied Econometrics"
+        },
+        {
+          "code": "ECON F343",
+          "title": "Economic Analysis of Public Policy"
+        }
+      ]
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import XLSX from "xlsx"
 
 const INPUT = "DRAFT_TIMETABLE_CLEANED.xlsx"
-const OUTPUT = "DRAFT_TIMETABLE_FLAT.xlsx"
+const OUTPUT = "forward_filled_timetable.xlsx"
 
 const workbook = XLSX.readFile(INPUT)
 const sheet = workbook.Sheets[workbook.SheetNames[0]]

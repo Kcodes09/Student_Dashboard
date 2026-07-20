@@ -33,16 +33,22 @@ export function ProductTour() {
             {
               element: 'nav',
               popover: {
-                title: 'Welcome to your Dashboard!',
-                description: 'This is the main navigation. You can quickly switch between all modules here.',
+                title: 'Welcome back!',
+                description: 'We\'ve added some massive new features to your dashboard. Let\'s take a quick tour.',
                 side: "bottom",
                 align: 'start'
               }
             },
             {
               popover: {
-                title: 'Timetable',
-                description: 'Let\'s head over to the Timetable to build your schedule.',
+                title: 'Smart Widgets 🚀',
+                description: 'Right here on the main dashboard, you\'ll now see an "Up Next" widget that automatically shows your next upcoming class and alerts you of exams for today or tomorrow!',
+              }
+            },
+            {
+              popover: {
+                title: 'Multi-Timetable Manager',
+                description: 'Let\'s head over to the Timetable page to see the new Draft system.',
               },
               onHighlightStarted: () => {
                 if (window.location.pathname !== "/dashboard/timetable") {
@@ -51,51 +57,32 @@ export function ProductTour() {
               }
             },
             {
-              element: 'aside',
               popover: {
-                title: 'Course Selection',
-                description: 'Search and select your courses here. Your selections are automatically saved.',
-                side: "right",
-                align: 'start'
+                title: 'Drafts & Active Timetables',
+                description: 'You can now create multiple timetables! Experiment with different class combinations, and set your favorite one as Active.',
               }
             },
             {
               popover: {
-                title: 'Calendar',
-                description: 'Now, let\'s look at your Academic Calendar.',
+                title: 'Real-time Clash Detection 🚨',
+                description: 'While building your timetable, if you select overlapping classes, a global Clash Alert will instantly appear in your navbar to warn you.',
+              }
+            },
+            {
+              popover: {
+                title: 'Smart Profile',
+                description: 'Finally, let\'s check your Profile.',
               },
               onHighlightStarted: () => {
-                if (window.location.pathname !== "/dashboard/calendar") {
-                  router.push("/dashboard/calendar");
+                if (window.location.pathname !== "/dashboard/profile") {
+                  router.push("/dashboard/profile");
                 }
               }
             },
             {
               popover: {
-                title: 'Academic Events',
-                description: 'Here you can view holidays, exams, and important academic dates visually!',
-              },
-              onHighlightStarted: () => {
-                if (window.location.pathname !== "/dashboard/attendance") {
-                  router.push("/dashboard/attendance");
-                }
-              }
-            },
-            {
-              popover: {
-                title: 'Attendance',
-                description: 'Track your class attendance here. (Coming Soon)',
-              },
-              onHighlightStarted: () => {
-                if (window.location.pathname !== "/dashboard/exams") {
-                  router.push("/dashboard/exams");
-                }
-              }
-            },
-            {
-              popover: {
-                title: 'Exams',
-                description: 'Manage and view your upcoming exams and scores here.',
+                title: 'Auto-ID Extraction',
+                description: 'We now automatically extract your batch, campus, and ID directly from your student email to configure your degree properly. You can always override it here.',
               }
             }
           ],
@@ -115,5 +102,27 @@ export function ProductTour() {
     return () => clearTimeout(timer);
   }, [status, router]);
 
-  return null;
+  return (
+    <style dangerouslySetInnerHTML={{ __html: `
+      .driver-popover-next-btn {
+        background-color: var(--bg-accent) !important;
+        color: white !important;
+        font-weight: 800 !important;
+        border-radius: 6px !important;
+        padding: 6px 14px !important;
+        text-shadow: 0 0 4px rgba(255,255,255,0.4) !important;
+        box-shadow: 0 0 15px var(--bg-accent) !important;
+        animation: pulse-glow 1.5s infinite;
+        border: none !important;
+      }
+      .driver-popover-next-btn:hover {
+        transform: scale(1.05);
+      }
+      @keyframes pulse-glow {
+        0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+        70% { box-shadow: 0 0 0 8px rgba(59, 130, 246, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+      }
+    ` }} />
+  );
 }

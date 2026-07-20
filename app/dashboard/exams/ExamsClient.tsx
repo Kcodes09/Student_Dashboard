@@ -23,7 +23,8 @@ type ExamsClientProps = {
 
 function toDateTime(exam: ExamItem) {
   const [day, month] = exam.date.split("/").map(Number)
-  const [h, m] = exam.startTime.split(":").map(Number)
+  let [h, m] = exam.startTime.split(":").map(Number)
+  if (h < 8) h += 12
   return new Date(2026, month - 1, day, h, m).getTime()
 }
 

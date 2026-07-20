@@ -1,9 +1,7 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 import clsx from "clsx"
-import { createPortal } from "react-dom"
-import { createEvents } from "ics"
 
 import CourseSidebar from "@/components/CourseSidebar"
 import SectionSidebar from "@/components/SectionSidebar"
@@ -11,7 +9,12 @@ import TimetableGrid from "@/components/TimetableGrid"
 import MobileTimetable from "@/components/MobileTimetable"
 
 import { generateStudentTT } from "../../lib/timetable/generateStudentTT"
-import * as htmlToImage from "html-to-image"
+import { getCdcsForId } from "@/lib/cdcHelper"
+
+import { useRouter } from "next/navigation"
+
+const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect
+
 
 /* ---------- ICS CONSTANTS ---------- */
 
@@ -32,10 +35,15 @@ const SEM_END_UTC = "20261231T235959Z" // End of Dec
 const isMobile = () =>
   /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
 
-export default function TimetableClient({ master }: { master: any[] }) {
+export default function TimetableClient({ master, timetableId }: { master: any[], timetableId: string }) {
+  const router = useRouter()
   const [activeCourse, setActiveCourse] = useState<string | null>(null)
   const [courseSearch, setCourseSearch] = useState("")
   const [toast, setToast] = useState<string | null>(null)
+  const [cdcHighlights, setCdcHighlights] = useState<string[]>([])
+  
+  const [localTimetable, setLocalTimetable] = useState<any>(null)
+  const [isHydrated, setIsHydrated] = useState(false)
 
   const [mobileView, setMobileView] =
     useState<"TIMETABLE" | "COURSES" | "SECTIONS">("TIMETABLE")
@@ -48,6 +56,14 @@ export default function TimetableClient({ master }: { master: any[] }) {
     }
   }>({})
 
+  // History for Undo/Redo
+  const historyRef = useRef<{ list: any[], index: number }>({ list: [], index: -1 })
+  const [historyKey, setHistoryKey] = useState(0)
+
+  // Track what's actually been saved to the server
+  const savedSectionsRef = useRef<string>("{}")
+  const hasUnsavedChanges = JSON.stringify(selectedSections) !== savedSectionsRef.current
+
   /* ---------- EXPORT REF (DESKTOP GRID ALWAYS) ---------- */
   const desktopExportRef = useRef<HTMLDivElement>(null)
 
@@ -57,10 +73,39 @@ export default function TimetableClient({ master }: { master: any[] }) {
     setTimeout(() => setToast(null), 2000)
   }
 
+
   /* ---------- COURSE SELECT ---------- */
   const handleCourseSelect = (courseCode: string | null) => {
     setActiveCourse(courseCode)
     if (courseCode) setMobileView("SECTIONS")
+  }
+
+  /* ---------- HISTORY HELPERS ---------- */
+  const pushToHistory = (newSections: any) => {
+    setSelectedSections(newSections)
+    const { list, index } = historyRef.current
+    const nextList = list.slice(0, index + 1)
+    nextList.push(newSections)
+    historyRef.current = { list: nextList, index: nextList.length - 1 }
+    setHistoryKey(prev => prev + 1)
+  }
+
+  const handleUndo = () => {
+    const { list, index } = historyRef.current
+    if (index > 0) {
+      historyRef.current.index = index - 1
+      setSelectedSections(list[index - 1])
+      setHistoryKey(prev => prev + 1)
+    }
+  }
+
+  const handleRedo = () => {
+    const { list, index } = historyRef.current
+    if (index < list.length - 1) {
+      historyRef.current.index = index + 1
+      setSelectedSections(list[index + 1])
+      setHistoryKey(prev => prev + 1)
+    }
   }
 
   /* ---------- SECTION SELECT ---------- */
@@ -70,56 +115,153 @@ export default function TimetableClient({ master }: { master: any[] }) {
   ) => {
     if (!activeCourse) return
 
-    setSelectedSections(prev => ({
-      ...prev,
+    const newSections = {
+      ...selectedSections,
       [activeCourse]: {
-        ...prev[activeCourse],
+        ...(selectedSections[activeCourse] || {}),
         [type]: section,
       },
-    }))
+    }
+    pushToHistory(newSections)
   }
 
-  /* ---------- ENSURE COURSE BUCKET ---------- */
-  useEffect(() => {
-    if (!activeCourse) return
-    if (!selectedSections[activeCourse]) {
-      setSelectedSections(prev => ({
-        ...prev,
-        [activeCourse]: {},
-      }))
+  /* ---------- REMOVE COURSE ---------- */
+  const handleRemoveCourse = (courseCode: string) => {
+    const next = { ...selectedSections }
+    delete next[courseCode]
+    pushToHistory(next)
+    
+    if (activeCourse === courseCode) {
+      setActiveCourse(null)
+      setMobileView("COURSES")
     }
-  }, [activeCourse])
+  }
+
+  /* ---------- CLEAR ALL ---------- */
+  const handleClearAll = () => {
+    if (window.confirm("Are you sure you want to clear all selected courses?")) {
+      pushToHistory({})
+      setActiveCourse(null)
+      setMobileView("COURSES")
+    }
+  }
 
   /* ---------- SAVE TIMETABLE ---------- */
   const handleSave = async () => {
+    if (!localTimetable) return
+    
     try {
-      const res = await fetch("/api/timetable/save", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(selectedSections),
-      })
+      // 1. Save to local storage
+      const stored = localStorage.getItem("student_timetables")
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        const updated = parsed.map((t: any) => {
+          if (t.id === timetableId) {
+            return { ...t, sections: selectedSections, updatedAt: Date.now() }
+          }
+          return t
+        })
+        localStorage.setItem("student_timetables", JSON.stringify(updated))
+      }
 
-      if (!res.ok) throw new Error(await res.text())
-      showToast("Timetable saved")
+      // 2. Sync to server ONLY if active
+      if (localTimetable.isActive) {
+        const res = await fetch("/api/timetable/save", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(selectedSections),
+        })
+        if (!res.ok) throw new Error(await res.text())
+      }
+
+      savedSectionsRef.current = JSON.stringify(selectedSections)
+      showToast("Timetable saved ✓")
     } catch {
-      showToast("Failed to save timetable")
+      showToast("Failed to save timetable (server sync error)")
+    }
+  }
+
+  const handleSetActive = async () => {
+    if (!localTimetable) return
+    
+    try {
+      const stored = localStorage.getItem("student_timetables")
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        const updated = parsed.map((t: any) => ({
+          ...t,
+          isActive: t.id === timetableId,
+          sections: t.id === timetableId ? selectedSections : t.sections,
+          updatedAt: t.id === timetableId ? Date.now() : t.updatedAt
+        }))
+        localStorage.setItem("student_timetables", JSON.stringify(updated))
+        
+        // Sync the new active to server
+        const res = await fetch("/api/timetable/save", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(selectedSections),
+        })
+        if (!res.ok) throw new Error(await res.text())
+        
+        setLocalTimetable({ ...localTimetable, isActive: true })
+        savedSectionsRef.current = JSON.stringify(selectedSections)
+        showToast("Set as Active & Synced ✓")
+      }
+    } catch {
+      showToast("Failed to set active (server sync error)")
     }
   }
 
   /* ---------- LOAD SAVED TT ---------- */
-  useEffect(() => {
-    async function loadSavedTT() {
-      const res = await fetch("/api/timetable/load")
-      const saved = await res.json()
+  useIsomorphicLayoutEffect(() => {
+    function loadSavedTT() {
+      const stored = localStorage.getItem("student_timetables")
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        const current = parsed.find((t: any) => t.id === timetableId)
+        if (current) {
+          setLocalTimetable(current)
+          
+          if (current.bitsId) {
+             try {
+                const cdcs = getCdcsForId(current.bitsId)
+                setCdcHighlights(cdcs.map((c: any) => c.code))
+             } catch (err) {
+                console.error("Failed to load cdcs", err)
+             }
+          }
 
-      if (saved && Object.keys(saved).length > 0) {
-        setSelectedSections(saved)
-        setActiveCourse(Object.keys(saved)[0] ?? null)
+          if (current.sections && Object.keys(current.sections).length > 0) {
+            setSelectedSections(current.sections)
+            historyRef.current = { list: [current.sections], index: 0 }
+            setHistoryKey(prev => prev + 1)
+            
+            setActiveCourse(Object.keys(current.sections)[0] ?? null)
+            savedSectionsRef.current = JSON.stringify(current.sections)
+          } else {
+            historyRef.current = { list: [{}], index: 0 }
+            setHistoryKey(prev => prev + 1)
+          }
+        }
       }
+      setIsHydrated(true)
     }
 
     loadSavedTT()
-  }, [])
+  }, [timetableId])
+
+  /* ---------- BEFOREUNLOAD — warn on unsaved changes ---------- */
+  useEffect(() => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (JSON.stringify(selectedSections) !== savedSectionsRef.current) {
+        e.preventDefault()
+        e.returnValue = "You have unsaved timetable changes. Save before leaving?"
+      }
+    }
+    window.addEventListener("beforeunload", handleBeforeUnload)
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload)
+  }, [selectedSections])
 
   /* ---------- GENERATE SESSIONS ---------- */
   const sessions = generateStudentTT(master, selectedSections)
@@ -127,8 +269,32 @@ export default function TimetableClient({ master }: { master: any[] }) {
   useEffect(() => {
     if (typeof window !== "undefined" && sessions.length > 0) {
       localStorage.setItem("student_dashboard_sessions", JSON.stringify(sessions))
+      
+      // Dynamically load findClashes to avoid client-side circular issues
+      import("../../lib/timetable/clashDetector").then(({ findClashes }) => {
+        const clashes = findClashes(sessions as any)
+        
+        const stored = localStorage.getItem("student_timetables")
+        if (stored) {
+          try {
+            const parsed = JSON.parse(stored)
+            let updated = false
+            const newTimetables = parsed.map((t: any) => {
+              if (t.id === timetableId) {
+                updated = true
+                return { ...t, clashes }
+              }
+              return t
+            })
+            if (updated) {
+              localStorage.setItem("student_timetables", JSON.stringify(newTimetables))
+              window.dispatchEvent(new Event("timetable-clashes-updated"))
+            }
+          } catch (e) {}
+        }
+      })
     }
-  }, [sessions])
+  }, [sessions, timetableId])
 
   /* ---------- EXPORT PNG (MOBILE SAFE) ---------- */
   const exportPNG = async () => {
@@ -163,6 +329,9 @@ export default function TimetableClient({ master }: { master: any[] }) {
       // Small delay to allow browser to apply styles before capturing
       await new Promise(r => setTimeout(r, 100))
 
+      // Lazy-load html-to-image only when needed
+      const htmlToImage = await import("html-to-image")
+
       const blob = await htmlToImage.toBlob(
         target,
         {
@@ -170,6 +339,7 @@ export default function TimetableClient({ master }: { master: any[] }) {
           backgroundColor: getComputedStyle(
             document.documentElement
           ).getPropertyValue("--bg-surface") || "#ffffff",
+          fontEmbedCSS: '',
         }
       )
 
@@ -264,43 +434,45 @@ export default function TimetableClient({ master }: { master: any[] }) {
           return
       }
 
-      // Use synchronous call so that Safari doesn't block the download
-      const { error, value } = createEvents(events)
-      
-      if (error) {
-        showToast(`ICS Error: ${error.message || String(error)}`)
-        return
-      }
-      if (!value) {
-        showToast("ICS value is empty")
-        return
-      }
-
-      const blob = new Blob([value], {
-        type: "text/calendar;charset=utf-8",
-      })
-
-      // Try web share first on mobile
-      if (isMobile() && navigator.share && navigator.canShare) {
-        const file = new File([blob], "timetable.ics", { type: "text/calendar" })
-        if (navigator.canShare({ files: [file] })) {
-          navigator.share({
-            title: "Timetable Calendar",
-            files: [file]
-          }).then(() => {
-              showToast("ICS Shared")
-          }).catch((err) => {
-              if (err.name !== "AbortError") {
-                 showToast("Share failed, trying download...")
-                 downloadFile(blob, "timetable.ics")
-              }
-          })
+      // Lazy-load ics only when needed
+      import("ics").then(({ createEvents }) => {
+        const { error, value } = createEvents(events)
+        
+        if (error) {
+          showToast(`ICS Error: ${error.message || String(error)}`)
           return
         }
-      }
+        if (!value) {
+          showToast("ICS value is empty")
+          return
+        }
 
-      downloadFile(blob, "timetable.ics")
-      showToast("ICS exported")
+        const blob = new Blob([value], {
+          type: "text/calendar;charset=utf-8",
+        })
+
+        // Try web share first on mobile
+        if (isMobile() && navigator.share && navigator.canShare) {
+          const file = new File([blob], "timetable.ics", { type: "text/calendar" })
+          if (navigator.canShare({ files: [file] })) {
+            navigator.share({
+              title: "Timetable Calendar",
+              files: [file]
+            }).then(() => {
+                showToast("ICS Shared")
+            }).catch((err) => {
+                if (err.name !== "AbortError") {
+                   showToast("Share failed, trying download...")
+                   downloadFile(blob, "timetable.ics")
+                }
+            })
+            return
+          }
+        }
+
+        downloadFile(blob, "timetable.ics")
+        showToast("ICS exported")
+      }).catch((err: any) => showToast(`ICS Error: ${err.message || String(err)}`))
     } catch (err: any) {
       showToast(`ICS Try/Catch: ${err.message || String(err)}`)
     }
@@ -316,19 +488,121 @@ export default function TimetableClient({ master }: { master: any[] }) {
       setTimeout(() => URL.revokeObjectURL(link.href), 1000)
   }
 
-  /* ---------- PORTAL FOR NAVBAR ACTIONS ---------- */
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-  const portalNode = typeof document !== "undefined" ? document.getElementById("navbar-actions-portal") : null
+  /* Master course codes for CDC matching */
+  const masterCodes = new Set(master.map((c: any) => c.courseCode as string))
 
-  const actionButtons = (
-    <div className="flex items-center gap-2">
+  const actionButtonsDesktop = (
+    <div id="tour-action-buttons-desktop" className="hidden md:flex flex-wrap items-center justify-end gap-2">
+      {/* Undo/Redo */}
+      <div className="flex items-center rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] overflow-hidden shadow-sm mr-1">
+        <button
+          onClick={handleUndo}
+          disabled={historyRef.current.index <= 0}
+          className="px-3 py-1.5 transition-colors hover:bg-[var(--bg-surface-hover)] disabled:opacity-30 disabled:hover:bg-transparent"
+          title="Undo"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--text-primary)" }}>
+            <path d="M3 7v6h6" />
+            <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13" />
+          </svg>
+        </button>
+        <div className="w-px h-5 bg-[var(--border-subtle)]" />
+        <button
+          onClick={handleRedo}
+          disabled={historyRef.current.index >= historyRef.current.list.length - 1}
+          className="px-3 py-1.5 transition-colors hover:bg-[var(--bg-surface-hover)] disabled:opacity-30 disabled:hover:bg-transparent"
+          title="Redo"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transform: "scaleX(-1)", color: "var(--text-primary)" }}>
+            <path d="M3 7v6h6" />
+            <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13" />
+          </svg>
+        </button>
+      </div>
+
+      <button 
+        onClick={handleClearAll}
+        className="px-3 py-1.5 text-xs font-semibold rounded-lg transition-all text-red-600 border border-red-200 bg-red-50 hover:bg-red-100 dark:text-red-400 dark:border-red-900/50 dark:bg-red-900/20 dark:hover:bg-red-900/40 shadow-sm hover:shadow active:scale-95"
+      >
+        <span className="xl:hidden">Clear</span>
+        <span className="hidden xl:inline">Clear All</span>
+      </button>
+
       <button 
         onClick={handleSave}
-        className="px-4 py-1.5 text-xs font-bold rounded-lg transition-all text-white shadow-[0_0_15px_var(--bg-accent)] shadow-opacity-30 hover:scale-105 active:scale-95 hover:shadow-lg"
+        className="relative px-4 py-1.5 text-xs font-bold rounded-lg transition-all text-white shadow-[0_0_15px_var(--bg-accent)] shadow-opacity-30 hover:scale-105 active:scale-95 hover:shadow-lg"
         style={{ backgroundColor: "var(--bg-accent)" }}
       >
         Save
+        {/* Unsaved changes dot */}
+        {hasUnsavedChanges && (
+          <span className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-amber-400 border-2 border-white dark:border-gray-900 shadow-sm" />
+        )}
+      </button>
+      <button 
+        onClick={exportPNG}
+        className="px-3 py-1.5 text-xs font-semibold rounded-lg transition-all text-[var(--text-primary)] border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] shadow-sm hover:shadow active:scale-95"
+      >
+        <span className="xl:hidden">PNG</span>
+        <span className="hidden xl:inline">Export PNG</span>
+      </button>
+      <button 
+        onClick={exportICS}
+        className="px-3 py-1.5 text-xs font-semibold rounded-lg transition-all text-[var(--text-primary)] border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] shadow-sm hover:shadow active:scale-95"
+      >
+        <span className="xl:hidden">ICS</span>
+        <span className="hidden xl:inline">Export ICS</span>
+      </button>
+    </div>
+  )
+
+  const actionButtonsMobile = (
+    <div id="tour-action-buttons-mobile" className="flex flex-wrap items-center justify-end gap-2">
+      {/* Undo/Redo */}
+      <div className="flex items-center rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] overflow-hidden shadow-sm mr-1">
+        <button
+          onClick={handleUndo}
+          disabled={historyRef.current.index <= 0}
+          className="px-3 py-1.5 transition-colors hover:bg-[var(--bg-surface-hover)] disabled:opacity-30 disabled:hover:bg-transparent"
+          title="Undo"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--text-primary)" }}>
+            <path d="M3 7v6h6" />
+            <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13" />
+          </svg>
+        </button>
+        <div className="w-px h-5 bg-[var(--border-subtle)]" />
+        <button
+          onClick={handleRedo}
+          disabled={historyRef.current.index >= historyRef.current.list.length - 1}
+          className="px-3 py-1.5 transition-colors hover:bg-[var(--bg-surface-hover)] disabled:opacity-30 disabled:hover:bg-transparent"
+          title="Redo"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transform: "scaleX(-1)", color: "var(--text-primary)" }}>
+            <path d="M3 7v6h6" />
+            <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13" />
+          </svg>
+        </button>
+      </div>
+
+      <button 
+        onClick={handleClearAll}
+        className="px-3 py-1.5 text-xs font-semibold rounded-lg transition-all text-red-600 border border-red-200 bg-red-50 hover:bg-red-100 dark:text-red-400 dark:border-red-900/50 dark:bg-red-900/20 dark:hover:bg-red-900/40 shadow-sm hover:shadow active:scale-95"
+      >
+        <span className="md:hidden">Clear</span>
+        <span className="hidden md:inline">Clear All</span>
+      </button>
+
+      <button 
+        onClick={handleSave}
+        className="relative px-4 py-1.5 text-xs font-bold rounded-lg transition-all text-white shadow-[0_0_15px_var(--bg-accent)] shadow-opacity-30 hover:scale-105 active:scale-95 hover:shadow-lg"
+        style={{ backgroundColor: "var(--bg-accent)" }}
+      >
+        Save
+        {/* Unsaved changes dot */}
+        {hasUnsavedChanges && (
+          <span className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-amber-400 border-2 border-white dark:border-gray-900 shadow-sm" />
+        )}
       </button>
       <button 
         onClick={exportPNG}
@@ -348,10 +622,7 @@ export default function TimetableClient({ master }: { master: any[] }) {
   )
 
   return (
-    <div className="h-screen w-full overflow-hidden">
-      {/* RENDER ACTIONS TO NAVBAR */}
-      {mounted && portalNode && createPortal(actionButtons, portalNode)}
-
+    <div className="h-screen w-full overflow-hidden flex flex-col">
       {/* TOAST */}
       {toast && (
         <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-lg bg-[var(--bg-surface)] px-4 py-2 text-sm shadow">
@@ -387,9 +658,16 @@ export default function TimetableClient({ master }: { master: any[] }) {
           </button>
         </div>
 
-        <div className="flex-1 overflow-auto">
+        <div className="flex-1 min-h-0 overflow-y-auto">
           {mobileView === "TIMETABLE" && (
-            <MobileTimetable sessions={sessions} />
+            <div className="flex flex-col h-full">
+              <div className="p-2 border-b border-[var(--border-subtle)] flex justify-end">
+                {actionButtonsMobile}
+              </div>
+              <div id="tour-timetable-grid-mobile" className="flex-1 overflow-y-auto">
+                <MobileTimetable sessions={sessions} />
+              </div>
+            </div>
           )}
           {mobileView === "COURSES" && (
             <CourseSidebar
@@ -399,6 +677,10 @@ export default function TimetableClient({ master }: { master: any[] }) {
               search={courseSearch}
               setSearch={setCourseSearch}
               selectedSections={selectedSections}
+              cdcHighlights={cdcHighlights}
+              onClearCDC={() => setCdcHighlights([])}
+              currentSessions={sessions}
+              onRemoveCourse={handleRemoveCourse}
             />
           )}
           {mobileView === "SECTIONS" && activeCourse && (
@@ -407,13 +689,14 @@ export default function TimetableClient({ master }: { master: any[] }) {
               selected={selectedSections[activeCourse]}
               onSelect={handleSectionSelect}
               onBack={() => setMobileView("COURSES")}
+              currentSessions={sessions}
             />
           )}
         </div>
       </div>
 
       {/* ================= DESKTOP ================= */}
-      <div className="flex h-full max-md:fixed max-md:top-0 max-md:left-0 max-md:-z-50 max-md:w-[1200px] max-md:h-[800px] max-md:pointer-events-none max-md:overflow-hidden max-md:opacity-100">
+      <div className="flex h-full max-md:fixed max-md:-top-[9999px] max-md:-left-[9999px] max-md:-z-50 max-md:w-[1200px] max-md:h-[800px] max-md:pointer-events-none max-md:overflow-hidden max-md:opacity-100">
         <CourseSidebar
           courses={master}
           activeCourse={activeCourse}
@@ -421,6 +704,11 @@ export default function TimetableClient({ master }: { master: any[] }) {
           search={courseSearch}
           setSearch={setCourseSearch}
           selectedSections={selectedSections}
+          cdcHighlights={cdcHighlights}
+          onClearCDC={() => setCdcHighlights([])}
+          currentSessions={sessions}
+          onRemoveCourse={handleRemoveCourse}
+          isLoading={!isHydrated}
         />
 
         {activeCourse && (
@@ -428,11 +716,18 @@ export default function TimetableClient({ master }: { master: any[] }) {
             course={master.find(c => c.courseCode === activeCourse)}
             selected={selectedSections[activeCourse]}
             onSelect={handleSectionSelect}
+            currentSessions={sessions}
           />
         )}
 
-        <main className="flex-1 overflow-auto p-1.5 md:p-3">
-          <div ref={desktopExportRef} className="bg-[var(--bg-surface)] rounded-xl overflow-hidden shadow-sm border border-[var(--border-subtle)] w-full h-fit">
+        <main className="flex-1 overflow-y-auto p-1.5 md:p-3 flex flex-col gap-2 min-w-0">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between px-1 gap-2">
+            <h1 className="text-lg font-bold text-[var(--text-primary)] shrink-0">My Timetable</h1>
+            <div className="flex-1 flex justify-start lg:justify-end overflow-x-auto pb-1">
+              {actionButtonsDesktop}
+            </div>
+          </div>
+          <div id="tour-timetable-grid-desktop" ref={desktopExportRef} className="bg-[var(--bg-surface)] rounded-xl overflow-hidden shadow-sm border border-[var(--border-subtle)] w-full h-fit">
             <TimetableGrid sessions={sessions} />
           </div>
         </main>

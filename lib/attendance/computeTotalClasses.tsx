@@ -6,7 +6,7 @@ type CalendarDay = {
   holiday?: boolean
 }
 
-function getWeekDayFromDate(date: Date): WeekDay | null {
+export function getWeekDayFromDate(date: Date): WeekDay | null {
   const map: Record<number, WeekDay> = {
     1: "M",
     2: "T",
@@ -46,9 +46,9 @@ export function computeTotalClassesForCourse({
     "compre"
   )
 
-  if (!startDate || !endDate) return 0
+  if (!startDate || !endDate) return { totalL: 0, totalT: 0, totalP: 0, overall: 0 }
 
-  let count = 0
+  let totalL = 0, totalT = 0, totalP = 0
 
   for (
     let d = new Date(startDate);
@@ -71,13 +71,16 @@ export function computeTotalClassesForCourse({
     const weekday = getWeekDayFromDate(d)
     if (!weekday) continue
 
-    // ✅ Count sessions for this course on this weekday
-    count += sessions.filter(
-      s =>
-        s.courseCode === courseCode &&
-        s.day === weekday
-    ).length
+    // ✅ Find all sessions for this course on this weekday
+    const daySessions = sessions.filter(
+      s => s.courseCode === courseCode && s.day === weekday
+    )
+
+    const typesOnDay = new Set(daySessions.map(s => s.type?.toUpperCase()))
+    if (typesOnDay.has("LECTURE")) totalL++
+    if (typesOnDay.has("TUTORIAL")) totalT++
+    if (typesOnDay.has("PRACTICAL")) totalP++
   }
 
-  return count
+  return { totalL, totalT, totalP, overall: totalL + totalT + totalP }
 }
