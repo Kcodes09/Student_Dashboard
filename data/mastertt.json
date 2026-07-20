@@ -11019,14 +11019,14 @@
             "room": "I113"
           },
           {
-            "day": "F",
-            "hour": 3,
-            "startTime": "10:00",
-            "endTime": "10:50",
-            "room": "I113"
+            "day": "M",
+            "hour": 8,
+            "startTime": "15:00",
+            "endTime": "15:50",
+            "room": "K125"
           },
           {
-            "day": "Th",
+            "day": "M",
             "hour": 9,
             "startTime": "16:00",
             "endTime": "16:50",
