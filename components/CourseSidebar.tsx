@@ -31,6 +31,11 @@ type Props = {
   currentSessions?: ClashSession[]
   onRemoveCourse?: (courseCode: string) => void
   isLoading?: boolean
+  
+  // Year 1 Group toggle props
+  year1Group?: "group1" | "group2" | null
+  setYear1Group?: (g: "group1" | "group2" | null) => void
+  isYear1?: boolean
 }
 
 type SortType = "CODE_ASC" | "CODE_DESC" | "NAME" | "CREDITS"
@@ -47,6 +52,9 @@ export default function CourseSidebar({
   currentSessions = [],
   onRemoveCourse,
   isLoading = false,
+  year1Group,
+  setYear1Group,
+  isYear1,
 }: Props) {
   
   const [sortBy, setSortBy] = useState<SortType>("CODE_ASC")
@@ -114,7 +122,7 @@ export default function CourseSidebar({
     if (!selectedSections) return false
     const bucket = selectedSections[courseCode]
     if (!bucket) return false
-    return Object.values(bucket).some(v => !!v)
+    return Object.values(bucket).some(v => v !== undefined && v !== null)
   }
 
   /* ---------- SPLIT SELECTED vs AVAILABLE ---------- */
@@ -149,7 +157,7 @@ export default function CourseSidebar({
     // What has the user actually chosen (with a real value)?
     const selectedTypes = new Set<string>()
     Object.entries(bucket).forEach(([key, val]) => {
-      if (val) selectedTypes.add(key.toUpperCase())
+      if (val !== undefined && val !== null) selectedTypes.add(key.toUpperCase())
     })
 
     // If NOTHING is chosen at all — not an error, just not started
@@ -483,22 +491,41 @@ export default function CourseSidebar({
             {/* CDC HIGHLIGHT SECTION — pinned at top when Smart Fill is active */}
             {cdcHighlights.length > 0 && viewMode === "CDC" && (() => {
               const cdcCourses = courses.filter(c => cdcHighlights.includes(c.courseCode))
-          if (cdcCourses.length === 0) return null
-          return (
-            <div className="mb-5">
-              <div
-                className="flex items-center gap-2 px-2 py-2 rounded-xl mb-2"
-                style={{ background: "linear-gradient(135deg, rgba(99,102,241,0.1), rgba(129,140,248,0.05))", borderLeft: "3px solid rgb(99,102,241)" }}
-              >
-                <span className="text-sm">🎓</span>
-                <div>
-                  <h3 className="text-xs font-bold" style={{ color: "rgb(99,102,241)" }}>Your CDCs</h3>
-                  <p className="text-[10px]" style={{ color: "var(--text-muted)" }}>{cdcCourses.length} compulsory courses</p>
+              if (cdcCourses.length === 0) return null
+              return (
+                <div className="mb-5">
+                  <div
+                    className="flex items-center gap-2 px-2 py-2 rounded-xl mb-2"
+                    style={{ background: "linear-gradient(135deg, rgba(99,102,241,0.1), rgba(129,140,248,0.05))", borderLeft: "3px solid rgb(99,102,241)" }}
+                  >
+                    <span className="text-sm">🎓</span>
+                    <div className="flex-1">
+                      <h3 className="text-xs font-bold" style={{ color: "rgb(99,102,241)" }}>Your CDCs</h3>
+                      <p className="text-[10px]" style={{ color: "var(--text-muted)" }}>{cdcCourses.length} compulsory courses</p>
+                    </div>
+                  </div>
+                  
+                  {/* Year 1 Group Toggle */}
+                  {isYear1 && setYear1Group && (
+                    <div className="flex items-center bg-[var(--bg-surface-hover)] p-1 rounded-lg border border-[var(--border-subtle)] mb-3 mt-1">
+                      {(["group1", "group2"] as const).map(g => (
+                        <button
+                          key={g}
+                          onClick={() => setYear1Group(g)}
+                          className="flex-1 py-1.5 text-xs font-bold rounded-md transition-all"
+                          style={{
+                            backgroundColor: year1Group === g ? "rgba(99,102,241,0.15)" : "transparent",
+                            color: year1Group === g ? "rgb(99,102,241)" : "var(--text-muted)",
+                          }}
+                        >
+                          {g === "group1" ? "Group 1" : "Group 2"}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </div>
-            </div>
-          )
-        })()}
+              )
+            })()}
 
         {/* SELECTED COURSES SECTION */}
         {selectedList.length > 0 && (

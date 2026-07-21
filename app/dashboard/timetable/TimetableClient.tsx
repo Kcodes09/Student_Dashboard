@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { useEffect, useLayoutEffect, useRef, useState, useMemo } from "react"
 import clsx from "clsx"
 
 import CourseSidebar from "@/components/CourseSidebar"
@@ -9,7 +9,7 @@ import TimetableGrid from "@/components/TimetableGrid"
 import MobileTimetable from "@/components/MobileTimetable"
 
 import { generateStudentTT } from "../../lib/timetable/generateStudentTT"
-import { getCdcsForId } from "@/lib/cdcHelper"
+import { getCdcsForId, isYear1Batch, getYear1Cdcs, parseBitsId } from "@/lib/cdcHelper"
 
 import { useRouter } from "next/navigation"
 
@@ -41,9 +41,30 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
   const [courseSearch, setCourseSearch] = useState("")
   const [toast, setToast] = useState<string | null>(null)
   const [cdcHighlights, setCdcHighlights] = useState<string[]>([])
+  const [year1Group, setYear1Group] = useState<"group1" | "group2" | null>(null)
   
   const [localTimetable, setLocalTimetable] = useState<any>(null)
   const [isHydrated, setIsHydrated] = useState(false)
+
+  const isYear1 = useMemo(() => isYear1Batch(localTimetable?.bitsId || ""), [localTimetable?.bitsId])
+  const isBPharm = useMemo(() => {
+     const parsed = parseBitsId(localTimetable?.bitsId || "")
+     return parsed?.branches.some(b => b.branch === "Pharmacy") ?? false
+  }, [localTimetable?.bitsId])
+
+  useEffect(() => {
+    if (localTimetable?.bitsId) {
+      if (isYear1) {
+        const masterCodes = new Set(master.map((c: any) => c.courseCode as string))
+        setCdcHighlights(getYear1Cdcs(localTimetable.bitsId, masterCodes, year1Group ?? undefined))
+      } else {
+        const cdcs = getCdcsForId(localTimetable.bitsId)
+        setCdcHighlights(cdcs.map((c: any) => c.code))
+      }
+    } else {
+      setCdcHighlights([])
+    }
+  }, [localTimetable?.bitsId, isYear1, isBPharm, year1Group, master])
 
   const [mobileView, setMobileView] =
     useState<"TIMETABLE" | "COURSES" | "SECTIONS">("TIMETABLE")
@@ -60,7 +81,40 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
   const historyRef = useRef<{ list: any[], index: number }>({ list: [], index: -1 })
   const [historyKey, setHistoryKey] = useState(0)
 
-  // Track what's actually been saved to the server
+  // Credit limits tracking
+  const activeSelectedCourses = Object.keys(selectedSections).filter(courseCode => {
+    const bucket = selectedSections[courseCode]
+    return bucket && Object.values(bucket).some(val => val !== undefined && val !== null)
+  })
+
+  const addedCoursesCount = activeSelectedCourses.length
+  const totalCredits = useMemo(() => {
+    return activeSelectedCourses.reduce((sum, courseCode) => {
+      const course = master.find(c => c.courseCode === courseCode)
+      const credits = parseInt(course?.credits || "0", 10)
+      return sum + (isNaN(credits) ? 0 : credits)
+    }, 0)
+  }, [activeSelectedCourses, master])
+
+  const showLimitWarning = !isYear1 && (addedCoursesCount > 8 || totalCredits > 25)
+
+  const creditBadge = addedCoursesCount > 0 && (
+    <div className={clsx(
+      "flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-[10px] font-bold border transition-colors min-w-max w-fit",
+      showLimitWarning 
+        ? "bg-red-50 text-red-600 border-red-200 dark:bg-red-900/20 dark:border-red-900/50 dark:text-red-400 shadow-sm"
+        : "bg-[var(--bg-surface-hover)] text-[var(--text-muted)] border-[var(--border-subtle)]"
+    )}>
+      <span>{addedCoursesCount} {addedCoursesCount === 1 ? "Course" : "Courses"}</span>
+      <span className="w-1 h-1 shrink-0 rounded-full bg-current opacity-50" />
+      <span>{totalCredits} {totalCredits === 1 ? "Credit" : "Credits"}</span>
+      {showLimitWarning && (
+         <span className="ml-1 shrink-0" title="Max 8 courses and 25 credits allowed">⚠️ Over Limit</span>
+      )}
+    </div>
+  )
+
+  /* ---------- CONFLICT CHECKING ---------- */
   const savedSectionsRef = useRef<string>("{}")
   const hasUnsavedChanges = JSON.stringify(selectedSections) !== savedSectionsRef.current
 
@@ -238,12 +292,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
           setLocalTimetable(current)
           
           if (current.bitsId) {
-             try {
-                const cdcs = getCdcsForId(current.bitsId)
-                setCdcHighlights(cdcs.map((c: any) => c.code))
-             } catch (err) {
-                console.error("Failed to load cdcs", err)
-             }
+             // CDCs are now handled by the useEffect above
           }
 
           if (current.sections && Object.keys(current.sections).length > 0) {
@@ -571,7 +620,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
   )
 
   const actionButtonsMobile = (
-    <div id="tour-action-buttons-mobile" className="flex flex-wrap items-center justify-end gap-2">
+    <div id="tour-action-buttons-mobile" className="flex items-center gap-2 min-w-max">
       {/* Undo/Redo */}
       <div className="flex items-center rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] overflow-hidden shadow-sm mr-1">
         <button
@@ -675,8 +724,13 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
         <div className="flex-1 min-h-0 overflow-y-auto">
           {mobileView === "TIMETABLE" && (
             <div className="flex flex-col h-full">
-              <div className="p-2 border-b border-[var(--border-subtle)] flex justify-end">
-                {actionButtonsMobile}
+              <div className="p-2 border-b border-[var(--border-subtle)] flex flex-col gap-2">
+                <div className="w-full overflow-x-auto pb-1 scrollbar-hide">
+                  {creditBadge}
+                </div>
+                <div className="w-full overflow-x-auto pb-1 scrollbar-hide">
+                  {actionButtonsMobile}
+                </div>
               </div>
               <div id="tour-timetable-grid-mobile" className="flex-1 overflow-y-auto">
                 <MobileTimetable sessions={sessions} />
@@ -695,6 +749,9 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
               onClearCDC={() => setCdcHighlights([])}
               currentSessions={sessions}
               onRemoveCourse={handleRemoveCourse}
+              year1Group={year1Group}
+              setYear1Group={setYear1Group}
+              isYear1={isYear1 && !isBPharm}
             />
           )}
           {mobileView === "SECTIONS" && activeCourse && (
@@ -723,6 +780,9 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
           currentSessions={sessions}
           onRemoveCourse={handleRemoveCourse}
           isLoading={!isHydrated}
+          year1Group={year1Group}
+          setYear1Group={setYear1Group}
+          isYear1={isYear1 && !isBPharm}
         />
 
         {activeCourse && (
@@ -736,7 +796,10 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
 
         <main className="flex-1 overflow-y-auto p-1.5 md:p-3 flex flex-col gap-2 min-w-0">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between px-1 gap-2">
-            <h1 className="text-lg font-bold text-[var(--text-primary)] shrink-0">My Timetable</h1>
+            <div className="flex items-center gap-3 shrink-0">
+              <h1 className="text-lg font-bold text-[var(--text-primary)]">My Timetable</h1>
+              {creditBadge}
+            </div>
             <div className="flex-1 flex justify-start lg:justify-end overflow-x-auto pb-1">
               {actionButtonsDesktop}
             </div>

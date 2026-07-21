@@ -119,12 +119,11 @@ function parseHours(
 
 export function normalizeMasterTT(rows: RawRow[]): MasterCourse[] {
   const courseMap = new Map<string, MasterCourse>()
-
   for (const row of rows) {
     const rawHours = row["HOUR S"]
 
-    if (!row.DAYS || rawHours == null) continue
-
+    if (!row["COURSE NO."]) continue
+    
     if (!courseMap.has(row["COURSE NO."])) {
       courseMap.set(row["COURSE NO."], {
         courseCode: row["COURSE NO."],
@@ -156,6 +155,8 @@ export function normalizeMasterTT(rows: RawRow[]): MasterCourse[] {
     }
 
     /* ---- sessions ---- */
+    if (!row.DAYS || rawHours == null || String(row.DAYS).trim() === "TBA" || String(rawHours).trim() === "TBA") continue
+    
     const days = parseDays(row.DAYS)
     const hours = parseHours(rawHours, section.type)
 

@@ -49,6 +49,83 @@ export function parseBitsId(idNumber: string) {
   return { year, isYear1, branches }
 }
 
+/** Regex that matches Year-1 (UXXX) course codes like "CS U111", "MATH U101". */
+export const YEAR1_UXXX_PATTERN = /^[A-Z]+ U\d{3}$/
+
+/**
+ * UXXX courses that are CDCs **only** for B.Pharm (branch code A5).
+ */
+export const BPHARM_ONLY_UXXX = new Set(["PHY U102", "MATH U110"])
+
+/**
+ * Group-based CDC lists for 2026 batch (non-B.Pharm).
+ *
+ * Sem 1 —
+ *   Group 1: MATH U101, MATH U113, PHY U101, PHY U110, EEE U111, BITS U103  (17 Cr)
+ *   Group 2: MATH U101, MATH U113, CHEM U101, CHEM U110, BIO U101, CS U111  (17 Cr)
+ *
+ * Sem 2 — (vice versa)
+ *   Group 1: MATH U102, CHEM U101, CHEM U110, BIO U101, CS U111
+ *   Group 2: MATH U102, PHY U101, PHY U110, EEE U111, BITS U103
+ */
+export const YEAR1_GROUPS: Record<"group1" | "group2", { sem1: string[]; sem2: string[] }> = {
+  group1: {
+    sem1: ["MATH U101", "MATH U113", "PHY U101", "PHY U110", "EEE U111", "BITS U103"],
+    sem2: ["MATH U102", "CHEM U101", "CHEM U110", "BIO U101", "CS U111"],
+  },
+  group2: {
+    sem1: ["MATH U101", "MATH U113", "CHEM U101", "CHEM U110", "BIO U101", "CS U111"],
+    sem2: ["MATH U102", "PHY U101", "PHY U110", "EEE U111", "BITS U103"],
+  },
+}
+
+/**
+ * Returns true when the bitsId belongs to the 2026 batch (Year 1).
+ */
+export function isYear1Batch(idNumber: string): boolean {
+  const parsed = parseBitsId(idNumber)
+  return !!parsed?.isYear1
+}
+
+/**
+ * Returns CDC course codes for a 2026-batch student.
+ * - B.Pharm: all UXXX courses
+ * - Others with a group selected: courses for that group's sem1 (or sem2)
+ * - Others with no group: only the shared courses (MATH U101 + MATH U113)
+ */
+export function getYear1Cdcs(
+  idNumber: string,
+  availableCodes: Set<string>,
+  group?: "group1" | "group2",
+  sem: "sem1" | "sem2" = "sem1"
+): string[] {
+  const parsed = parseBitsId(idNumber)
+  if (!parsed?.isYear1) return []
+
+  const isBPharm = parsed.branches.some(b => b.branch === "Pharmacy")
+
+  if (isBPharm) {
+    // B.Pharm gets all UXXX courses
+    return Array.from(availableCodes)
+      .filter(code => YEAR1_UXXX_PATTERN.test(code))
+      .sort()
+  }
+
+  if (!group) {
+    // No group chosen yet — return only the courses common to both groups
+    const shared = new Set([
+      ...YEAR1_GROUPS.group1[sem],
+      ...YEAR1_GROUPS.group2[sem],
+    ].filter(c =>
+      YEAR1_GROUPS.group1[sem].includes(c) &&
+      YEAR1_GROUPS.group2[sem].includes(c)
+    ))
+    return Array.from(shared).filter(c => availableCodes.has(c)).sort()
+  }
+
+  return (YEAR1_GROUPS[group][sem] ?? []).filter(c => availableCodes.has(c))
+}
+
 export function inferSemesterKey(parsed: ReturnType<typeof parseBitsId>) {
   if (!parsed) return "year2_sem1"
 
@@ -71,9 +148,6 @@ export function inferSemesterKey(parsed: ReturnType<typeof parseBitsId>) {
 export function getCdcsForId(idNumber: string, manualSemKey?: string): CDC[] {
   const parsed = parseBitsId(idNumber)
   if (!parsed) return []
-
-  // Auto CDC constraint: only for batch <= 2024
-  if (parsed.year > 2024) return []
 
   const isDual =
     parsed.branches.some((b) => b.type === "MSc") &&

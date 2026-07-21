@@ -2,68 +2,55 @@
   "year_1": {
     "sem1": [
       {
-        "code": "BIO F111",
-        "title": "General Biology"
+        "code": "BIO U101",
+        "title": "Introduction to Biological Science"
       },
       {
-        "code": "BIO F110",
-        "title": "Biology Laboratory"
+        "code": "BITS U103",
+        "title": "Engineering Design and Prototyping"
       },
       {
-        "code": "CHEM F111",
-        "title": "General Chemistry"
+        "code": "CHEM U101",
+        "title": "Atomic Structures, Bonding, and Spectroscopy"
       },
       {
-        "code": "CHEM F110",
+        "code": "CHEM U110",
         "title": "Chemistry Laboratory"
       },
       {
-        "code": "MATH F111",
-        "title": "Mathematics I"
+        "code": "CS U111",
+        "title": "Computational Thinking and Programming"
       },
       {
-        "code": "PHY F111",
-        "title": "Mechanics, Oscillations and Waves"
-      },
-      {
-        "code": "PHY F110",
-        "title": "Physics Laboratory"
-      },
-      {
-        "code": "BITS F110",
-        "title": "Engineering Graphics"
-      }
-    ],
-    "sem2": [
-      {
-        "code": "MATH F112",
-        "title": "Mathematics II"
-      },
-      {
-        "code": "MATH F113",
-        "title": "Probability and Statistics"
-      },
-      {
-        "code": "CS F111",
-        "title": "Computer Programming"
-      },
-      {
-        "code": "EEE F111",
+        "code": "EEE U111",
         "title": "Electrical Sciences"
       },
       {
-        "code": "BITS F111",
-        "title": "Thermodynamics"
+        "code": "MATH U101",
+        "title": "Multivariable Calculus"
       },
       {
-        "code": "BITS F112",
-        "title": "Technical Report Writing"
+        "code": "MATH U110",
+        "title": "Essential Precalculus and Calculus (B.Pharm only)"
       },
       {
-        "code": "ME F112",
-        "title": "Workshop Practice"
+        "code": "MATH U113",
+        "title": "Probability and Statistics"
+      },
+      {
+        "code": "PHY U101",
+        "title": "Classical and Quantum Waves"
+      },
+      {
+        "code": "PHY U102",
+        "title": "Introduction to Classical and Quantum Waves (B.Pharm only)"
+      },
+      {
+        "code": "PHY U110",
+        "title": "Physics Laboratory"
       }
-    ]
+    ],
+    "sem2": []
   },
   "BE": {
     "Computer Science": {

@@ -538,7 +538,9 @@ export default function CalendarGrid({
                   Exams
                 </h3>
                 <ul className="mb-4 space-y-2">
-                  {getDayExams(selectedDate).map((e, i) => (
+                  {[...getDayExams(selectedDate)]
+                    .sort((a, b) => a.startTime.localeCompare(b.startTime))
+                    .map((e, i) => (
                     <li
                       key={i}
                       className="rounded-xl px-3 py-2.5 border"
@@ -569,7 +571,9 @@ export default function CalendarGrid({
               </p>
             ) : (
               <ul className="space-y-2">
-                {getDayClasses(selectedDate).map((c, i) => (
+                {[...getDayClasses(selectedDate)]
+                  .sort((a, b) => a.startTime.localeCompare(b.startTime))
+                  .map((c, i) => (
                   <li
                     key={i}
                     className="rounded-xl px-3 py-2.5 border"

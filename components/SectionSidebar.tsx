@@ -155,25 +155,27 @@ export default function SectionSidebar({
                     : "border-[var(--border-subtle)] hover:border-[var(--bg-accent)] hover:bg-[var(--bg-surface)] hover:shadow-sm"
               )}
             >
-              <div className="flex justify-between items-center mb-1.5">
-                <span className={clsx("text-sm font-bold", isSelected ? "text-[var(--text-accent)]" : clashInfo ? "text-red-700 dark:text-red-400" : "text-[var(--text-primary)]")}>
-                  {section.section}
+              <div className="flex justify-between items-start mb-1.5 gap-2">
+                <span className={clsx("text-sm font-bold leading-tight", isSelected ? "text-[var(--text-accent)]" : clashInfo ? "text-red-700 dark:text-red-400" : "text-[var(--text-primary)]")}>
+                  {section.section || section.instructors.join(", ")}
                 </span>
                 {isSelected && (
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--bg-accent)] text-[10px] text-white shadow-sm">
+                  <span className="flex shrink-0 h-5 w-5 items-center justify-center rounded-full bg-[var(--bg-accent)] text-[10px] text-white shadow-sm mt-0.5">
                     ✓
                   </span>
                 )}
                 {clashInfo && (
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] text-white shadow-sm" title={`Clashes with ${clashInfo.course2} ${clashInfo.section2}`}>
+                  <span className="flex shrink-0 h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] text-white shadow-sm mt-0.5" title={`Clashes with ${clashInfo.course2} ${clashInfo.section2}`}>
                     !
                   </span>
                 )}
               </div>
 
-              <div className="text-xs font-medium text-[var(--text-muted)] mb-2">
-                {section.instructors.join(", ")}
-              </div>
+              {section.section && (
+                <div className="text-xs font-medium text-[var(--text-muted)] mb-2">
+                  {section.instructors.join(", ")}
+                </div>
+              )}
 
               {section.sessions && section.sessions.length > 0 && (() => {
                 // Get unique time slot (all sessions usually same time)

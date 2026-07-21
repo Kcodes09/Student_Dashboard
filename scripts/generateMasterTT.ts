@@ -44,6 +44,14 @@ let last: any = {}
 for (const row of cleanedRows) {
   const filled = { ...row }
 
+  // If this is a NEW course, don't inherit schedule/section from the previous course
+  if (row["COURSE NO."] && String(row["COURSE NO."]).trim() !== "") {
+    last["SEC"] = ""
+    last["DAYS"] = ""
+    last["HOUR S"] = ""
+    last["ROOM"] = ""
+  }
+
   for (const key of Object.keys(row)) {
     if (row[key] === "") {
       filled[key] = last[key]

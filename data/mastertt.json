@@ -28178,5 +28178,1445 @@
         ]
       }
     ]
+  },
+  {
+    "courseCode": "BIO F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "KIRTIMAAN SYAL"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BIO F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "KIRTIMAAN SYAL"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BIO F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "KIRTIMAAN SYAL"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BIO F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "KIRTIMAAN SYAL"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BIO F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "KIRTIMAAN SYAL"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS C790T",
+    "courseTitle": "INDEPENDENT STUDY",
+    "credits": "1",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS C791T",
+    "courseTitle": "TEACHING PRACTICE I",
+    "credits": "1",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS C797T",
+    "courseTitle": "PHD SEMINAR",
+    "credits": "1",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS C799T",
+    "courseTitle": "PHD THESIS",
+    "credits": "10",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS E593",
+    "courseTitle": "READING COURSE I",
+    "credits": "5",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS E594",
+    "courseTitle": "READING COURSE II",
+    "credits": "5",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS E793T",
+    "courseTitle": "PRACTICE LECT SERIES I",
+    "credits": "1",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G513",
+    "courseTitle": "STUDY IN ADVANCED TOPICS",
+    "credits": "5",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G529",
+    "courseTitle": "RESEARCH PROJECT I",
+    "credits": "6",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G539",
+    "courseTitle": "RESEARCH PROJECT II",
+    "credits": "6",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G540",
+    "courseTitle": "RESEARCH PRACTICE",
+    "credits": "4",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G562T",
+    "courseTitle": "DISSERTATION",
+    "credits": "16",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G563T",
+    "courseTitle": "DISSERTATION",
+    "credits": "16",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G564T",
+    "courseTitle": "DISSERTATION",
+    "credits": "9",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G629T",
+    "courseTitle": "DISSERTATION",
+    "credits": "16",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G649",
+    "courseTitle": "READING COURSE",
+    "credits": "5",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ALIVELU MANGA PARIMI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "BITS G652",
+    "courseTitle": "Industry based\nCapstone Project",
+    "credits": "9",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "MRINAL KETAN JAGIRDAR"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CE F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHRADEEP MAJUMDER"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CE F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SESHA SAI RAGHURAM\nAMMAVAJJALA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CE F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SESHA SAI RAGHURAM\nAMMAVAJJALA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CE F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "MOHAMMAD ADIL DAR"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CE F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "MOHAMMAD ADIL DAR"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CE F491",
+    "courseTitle": "SPECIAL PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ISHANT SHARMA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHE F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "IYMAN ABRAR"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHE F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "DEBIRUPA MITRA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHE F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "DEBIRUPA MITRA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHE F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "RAMENDRA KISHOR PAL"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHE F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "RAMENDRA KISHOR PAL"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHEM F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "N RAJESH"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHEM F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ANUPAM BHATTACHARYA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHEM F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ANUPAM BHATTACHARYA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHEM F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SURYODAY PRODHAN"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "CHEM F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SURYODAY PRODHAN"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECE F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SUMIT KUMAR CHATTERJEE"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECE F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "MEERA KUMARI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECE F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "MEERA KUMARI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECE F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SOURAV NANDI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECE F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SOURAV NANDI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECE F491",
+    "courseTitle": "SPECIAL PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SYED ERSHAD AHMED"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECON F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "VENKATA SUBRAHMANYAM APPAKAYALA CHENCHU"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECON F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "VENKATA SUBRAHMANYAM APPAKAYALA CHENCHU"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECON F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "VENKATA SUBRAHMANYAM APPAKAYALA CHENCHU"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECON F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "VENKATA SUBRAHMANYAM APPAKAYALA CHENCHU"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECON F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "VENKATA SUBRAHMANYAM APPAKAYALA CHENCHU"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ECON F491",
+    "courseTitle": "SPECIAL PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "VENKATA SUBRAHMANYAM APPAKAYALA CHENCHU"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "EEE F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SUMIT KUMAR CHATTERJEE"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "EEE F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "MEERA KUMARI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "EEE F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "MEERA KUMARI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "EEE F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SOURAV NANDI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "EEE F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SOURAV NANDI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "EEE F491",
+    "courseTitle": "SPECIAL PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SYED ERSHAD AHMED"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "INSTR F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SUMIT KUMAR CHATTERJEE"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "INSTR F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "MEERA KUMARI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "INSTR F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "MEERA KUMARI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "INSTR F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SOURAV NANDI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "INSTR F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SOURAV NANDI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "INSTR F491",
+    "courseTitle": "SPECIAL PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SYED ERSHAD AHMED"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MAC F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "PRAVEEN KUMAR P T V"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MAC F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SWATI RANI HAIT"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MAC F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SWATI RANI HAIT"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MAC F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SAYAN GHOSH"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MAC F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SAYAN GHOSH"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MAC F491",
+    "courseTitle": "SPECIAL PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SANTANU KOLEY"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MATH F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "PRAVEEN KUMAR P T V"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MATH F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SWATI RANI HAIT"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MATH F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SWATI RANI HAIT"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MATH F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SAYAN GHOSH"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MATH F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SAYAN GHOSH"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MATH F491",
+    "courseTitle": "SPECIAL PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SANTANU KOLEY"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ME F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SAYAN DAS"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ME F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHISHEK SARKAR"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ME F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHISHEK SARKAR"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ME F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "NAVEEN KUMAR\nSHRIVASTAVA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "ME F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "NAVEEN KUMAR\nSHRIVASTAVA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MF F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SAYAN DAS"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MF F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHISHEK SARKAR"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MF F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHISHEK SARKAR"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MF F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SAYAN DAS"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "MF F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SAYAN DAS"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHA F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHIJEET RAJENDRA JOSHI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHA F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHIJEET RAJENDRA JOSHI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHA F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHIJEET RAJENDRA JOSHI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHA F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHIJEET RAJENDRA JOSHI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHA F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHIJEET RAJENDRA JOSHI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHA F491",
+    "courseTitle": "SPECIAL PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "ABHIJEET RAJENDRA JOSHI"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHY F266",
+    "courseTitle": "STUDY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "VENKATA SESHA SHIV\nCHAITANYA KAMARAJUGADDA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHY F366",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "KANNAN RAMASWAMY"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHY F367",
+    "courseTitle": "LABORATORY PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "KANNAN RAMASWAMY"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHY F376",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SWASTIK BHATTACHARYA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHY F377",
+    "courseTitle": "DESIGN PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SWASTIK BHATTACHARYA"
+        ],
+        "sessions": []
+      }
+    ]
+  },
+  {
+    "courseCode": "PHY F491",
+    "courseTitle": "SPECIAL PROJECT",
+    "credits": "3",
+    "sections": [
+      {
+        "section": "",
+        "type": "LECTURE",
+        "instructors": [
+          "SUBHADEEP ROY"
+        ],
+        "sessions": []
+      }
+    ]
   }
 ]

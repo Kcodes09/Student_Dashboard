@@ -54,6 +54,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
   const [primary, setPrimary] = useState("")
   const [dual, setDual] = useState("")
   const [studentId4, setStudentId4] = useState("0000")
+  const [modalBatchYear, setModalBatchYear] = useState("2026")
 
   useEffect(() => {
     async function init() {
@@ -221,13 +222,15 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
       setDual("")
     }
 
-    // Extract 4-digit ID from email if possible, else from globalId
-    const emailMatch = userEmail?.match(/f(\d{4})(\d{4})/i)
+    // Extract year & 4-digit ID from email if possible, else from globalId
+    const emailMatch = userEmail?.match(/f(20\d{2})(\d{4})/i)
     if (emailMatch) {
+      setModalBatchYear(emailMatch[1])
       setStudentId4(emailMatch[2])
     } else {
-      // 2024 B2 AA 0456 H (length 13)
-      // 2024 A7 PS 0456 H (length 13)
+      // Fall back to globalId: 2024 A7 PS 0456 H (length 13)
+      const yearFromId = globalId.substring(0, 4)
+      if (/^20\d{2}$/.test(yearFromId)) setModalBatchYear(yearFromId)
       if (globalId.length >= 12) {
          setStudentId4(globalId.substring(8, 12))
       }
@@ -238,9 +241,8 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
   }
 
   const handleCreate = async () => {
-    // Extract year from email if possible, else 2024
-    const match = userEmail?.match(/f(20\d{2})/i)
-    const batchYear = match ? match[1] : "2024"
+    // Use the year from the modal (user-editable)
+    const batchYear = modalBatchYear || "2026"
 
     let campusCode = "P"
     const lowerEmail = userEmail?.toLowerCase() || ""
@@ -427,13 +429,39 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
               </p>
 
               <div className="space-y-4 mb-6">
-                <div>
-                  <label className="text-xs font-semibold uppercase tracking-wide mb-1.5 block" style={{ color: "var(--text-muted)" }}>Name</label>
-                  <input
-                    value={newName}
-                    onChange={e => setNewName(e.target.value)}
-                    className="w-full rounded-xl border-2 px-3 py-2.5 text-sm font-bold outline-none transition-all focus:border-[var(--bg-accent)] bg-[var(--bg-surface-hover)] border-[var(--border-subtle)] text-[var(--text-primary)]"
-                  />
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="col-span-2">
+                    <label className="text-xs font-semibold uppercase tracking-wide mb-1.5 block" style={{ color: "var(--text-muted)" }}>Name</label>
+                    <input
+                      value={newName}
+                      onChange={e => setNewName(e.target.value)}
+                      className="w-full rounded-xl border-2 px-3 py-2.5 text-sm font-bold outline-none transition-all focus:border-[var(--bg-accent)] bg-[var(--bg-surface-hover)] border-[var(--border-subtle)] text-[var(--text-primary)]"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-semibold uppercase tracking-wide mb-1.5 block" style={{ color: "var(--text-muted)" }}>Batch Year</label>
+                    <input
+                      id="tour-modal-year"
+                      type="text"
+                      value={modalBatchYear}
+                      onChange={e => setModalBatchYear(e.target.value.replace(/\D/g, '').slice(0, 4))}
+                      placeholder="2026"
+                      className="w-full rounded-xl border-2 px-3 py-2.5 text-sm font-bold outline-none transition-all focus:border-[var(--bg-accent)] bg-[var(--bg-surface-hover)] border-[var(--border-subtle)] text-[var(--text-primary)] font-mono"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-semibold uppercase tracking-wide mb-1.5 block" style={{ color: "var(--text-muted)" }}>4-Digit ID</label>
+                    <input
+                      id="tour-modal-id"
+                      type="text"
+                      value={studentId4}
+                      onChange={e => setStudentId4(e.target.value.replace(/\D/g, '').slice(0, 4))}
+                      placeholder="0000"
+                      className="w-full rounded-xl border-2 px-3 py-2.5 text-sm font-bold outline-none transition-all focus:border-[var(--bg-accent)] bg-[var(--bg-surface-hover)] border-[var(--border-subtle)] text-[var(--text-primary)] font-mono"
+                    />
+                  </div>
                 </div>
 
                 <div>
@@ -479,24 +507,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
                   </div>
                 )}
                 
-                <div>
-                  <label className="text-xs font-semibold uppercase tracking-wide mb-1.5 block" style={{ color: "var(--text-muted)" }}>
-                    4-Digit ID
-                  </label>
-                  <input
-                    id="tour-modal-id"
-                    type="text"
-                    value={studentId4}
-                    onChange={e => setStudentId4(e.target.value.replace(/\D/g, '').slice(0, 4))}
-                    placeholder="0000"
-                    className="w-full px-3 py-2.5 rounded-xl border focus:outline-none focus:ring-2 appearance-none transition-all font-mono"
-                    style={{
-                      backgroundColor: "var(--bg-surface)",
-                      borderColor: "var(--border-subtle)",
-                      color: "var(--text-primary)",
-                    }}
-                  />
-                </div>
+
               </div>
 
               <button

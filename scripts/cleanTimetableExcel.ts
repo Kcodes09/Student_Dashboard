@@ -27,6 +27,7 @@ const findCol = (keyword: string) =>
 const INSTRUCTOR_COL = findCol("INSTRUCTOR")
 const DAYS_COL = findCol("DAY")
 const HOURS_COL = findCol("HOUR")
+const COURSE_NO_COL = findCol("COURSE NO")
 
 if (INSTRUCTOR_COL === -1 || DAYS_COL === -1 || HOURS_COL === -1) {
   console.error("Detected headers:", headerRow)
@@ -45,7 +46,8 @@ for (const row of dataRows) {
     instructor &&
     String(instructor).trim() !== "" &&
     String(days).trim() === "" &&
-    String(hours).trim() === ""
+    String(hours).trim() === "" &&
+    (!row[COURSE_NO_COL] || String(row[COURSE_NO_COL]).trim() === "")
 
   if (isInstructorOnly && lastTeachingRow) {
     continue // ignore extra instructors

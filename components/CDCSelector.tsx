@@ -1,7 +1,14 @@
 "use client"
 
 import { useMemo, useState, useEffect } from "react"
-import { parseBitsId, inferSemesterKey, getCdcsForId, type CDC } from "../lib/cdcHelper"
+import {
+  parseBitsId,
+  inferSemesterKey,
+  getCdcsForId,
+  getYear1Cdcs,
+  YEAR1_GROUPS,
+  type CDC,
+} from "../lib/cdcHelper"
 
 type Props = {
   /** All course codes present in the master timetable this semester */
@@ -9,8 +16,6 @@ type Props = {
   onApply: (codes: string[]) => void
   onClose: () => void
 }
-
-
 
 const YEAR_SEM_OPTIONS_SINGLE = [
   { label: "Year 2 — Semester 1", key: "year2_sem1" },
@@ -25,37 +30,57 @@ const YEAR_SEM_OPTIONS_DUAL = [
   { label: "Year 4 — Semester 2", key: "year4_sem2" },
 ]
 
-const YEAR1_SEM_OPTIONS = [
-  { label: "Year 1 — Semester 1", key: "sem1" },
-  { label: "Year 1 — Semester 2", key: "sem2" },
-]
-
 export default function CDCSelector({ availableCodes, onApply, onClose }: Props) {
   const [idNumber, setIdNumber] = useState("")
   const [selectedSemKey, setSelectedSemKey] = useState<string>("year2_sem1")
   const [manualSemSelect, setManualSemSelect] = useState(false)
 
-  /* Parse ID to extract joining year and branches */
+  // Year-1 group state
+  const [year1Group, setYear1Group] = useState<"group1" | "group2" | null>(null)
+  const [year1Sem, setYear1Sem] = useState<"sem1" | "sem2">("sem1")
+
+  /* Parse ID */
   const parsed = useMemo(() => parseBitsId(idNumber), [idNumber])
 
-  const isDual = useMemo(() => {
-    return parsed?.branches.some(b => b.type === "MSc") && parsed?.branches.some(b => b.type === "BE")
-  }, [parsed])
+  const isDual = useMemo(() =>
+    parsed?.branches.some(b => b.type === "MSc") && parsed?.branches.some(b => b.type === "BE"),
+    [parsed]
+  )
 
-  /* Auto-select semester based on joining year */
+  const isBPharm = useMemo(() =>
+    parsed?.branches.some(b => b.branch === "Pharmacy") ?? false,
+    [parsed]
+  )
+
+  /* Reset group when ID changes */
+  useEffect(() => { setYear1Group(null) }, [idNumber])
+
+  /* Auto-select semester for older batches */
   useEffect(() => {
-    if (parsed && !manualSemSelect) {
+    if (parsed && !manualSemSelect && !parsed.isYear1) {
       setSelectedSemKey(inferSemesterKey(parsed))
     }
   }, [parsed, manualSemSelect])
 
-  /* Compute CDC list for selection */
-  const cdcList = useMemo(() => {
-    if (!idNumber) return []
-    return getCdcsForId(idNumber, selectedSemKey)
-  }, [idNumber, selectedSemKey])
+  /* Compute CDC list */
+  const cdcList = useMemo<CDC[]>(() => {
+    if (!parsed) return []
 
-  /* Split into available (in master TT) vs not offered this semester */
+    if (parsed.isYear1) {
+      // B.Pharm — all UXXX, no group needed
+      if (isBPharm) {
+        const codes = getYear1Cdcs(idNumber, availableCodes, undefined, year1Sem)
+        return codes.map(code => ({ code, title: "Year 1 CDC" }))
+      }
+      // Non-B.Pharm — filter by selected group (or shared only if none chosen)
+      const codes = getYear1Cdcs(idNumber, availableCodes, year1Group ?? undefined, year1Sem)
+      return codes.map(code => ({ code, title: "Year 1 CDC" }))
+    }
+
+    return getCdcsForId(idNumber, selectedSemKey)
+  }, [parsed, isBPharm, idNumber, availableCodes, year1Group, year1Sem, selectedSemKey])
+
+  /* Split available vs not offered */
   const inMaster = cdcList.filter(c => availableCodes.has(c.code))
   const notInMaster = cdcList.filter(c => !availableCodes.has(c.code))
 
@@ -64,10 +89,13 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
     onClose()
   }
 
-  const semOptions = parsed?.isYear1 ? YEAR1_SEM_OPTIONS : (isDual ? YEAR_SEM_OPTIONS_DUAL : YEAR_SEM_OPTIONS_SINGLE)
+  const semOptions = isDual ? YEAR_SEM_OPTIONS_DUAL : YEAR_SEM_OPTIONS_SINGLE
+
+  // Courses preview per group for the picker cards
+  const group1Preview = YEAR1_GROUPS.group1[year1Sem].filter(c => availableCodes.has(c))
+  const group2Preview = YEAR1_GROUPS.group2[year1Sem].filter(c => availableCodes.has(c))
 
   return (
-    /* Backdrop */
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       style={{ backgroundColor: "rgba(0,0,0,0.45)", backdropFilter: "blur(4px)" }}
@@ -75,10 +103,7 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
     >
       <div
         className="w-full max-w-lg rounded-2xl shadow-2xl flex flex-col max-h-[90vh] border"
-        style={{
-          backgroundColor: "var(--bg-surface)",
-          borderColor: "var(--border-subtle)",
-        }}
+        style={{ backgroundColor: "var(--bg-surface)", borderColor: "var(--border-subtle)" }}
       >
         {/* Header */}
         <div
@@ -104,6 +129,7 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
 
         {/* Inputs */}
         <div className="px-6 py-5 space-y-5 shrink-0 border-b" style={{ borderColor: "var(--border-subtle)" }}>
+
           {/* ID Input */}
           <div>
             <label className="text-xs font-semibold uppercase tracking-wide mb-1.5 block" style={{ color: "var(--text-muted)" }}>
@@ -113,7 +139,7 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
               type="text"
               value={idNumber}
               onChange={e => setIdNumber(e.target.value.toUpperCase())}
-              placeholder="e.g. 2024A7PS1234H or 2023B3A70123H"
+              placeholder="e.g. 2026A7PS1234H or 2024B3A70123H"
               className="w-full rounded-xl border-2 px-4 py-3 text-sm font-bold outline-none transition-all focus:border-[var(--bg-accent)]"
               style={{
                 backgroundColor: "var(--bg-surface-hover)",
@@ -136,8 +162,97 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
             )}
           </div>
 
-          {/* Semester Selection */}
-          {parsed && (
+          {/* ── YEAR 1 BATCH UI ── */}
+          {parsed?.isYear1 && (
+            <>
+              {/* Sem toggle — Sem 1 / Sem 2 */}
+              <div>
+                <label className="text-xs font-semibold uppercase tracking-wide mb-1.5 block" style={{ color: "var(--text-muted)" }}>
+                  Semester
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  {(["sem1", "sem2"] as const).map(s => (
+                    <button
+                      key={s}
+                      onClick={() => { setYear1Sem(s); setYear1Group(null) }}
+                      className="rounded-lg px-3 py-2 text-xs font-semibold transition-all border text-left"
+                      style={{
+                        backgroundColor: year1Sem === s ? "var(--bg-selected)" : "var(--bg-surface-hover)",
+                        borderColor: year1Sem === s ? "var(--bg-accent)" : "var(--border-subtle)",
+                        color: year1Sem === s ? "var(--text-accent)" : "var(--text-primary)",
+                      }}
+                    >
+                      {s === "sem1" ? "Semester 1" : "Semester 2"}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* B.Pharm — no group picker needed */}
+              {isBPharm ? (
+                <div
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl border text-xs font-semibold"
+                  style={{ backgroundColor: "rgba(99,102,241,0.08)", borderColor: "rgba(99,102,241,0.25)", color: "rgb(99,102,241)" }}
+                >
+                  <span>💊</span>
+                  <span>B.Pharm — all Year 1 courses are your CDCs</span>
+                </div>
+              ) : (
+                /* Group Picker */
+                <div>
+                  <label className="text-xs font-semibold uppercase tracking-wide mb-2 block" style={{ color: "var(--text-muted)" }}>
+                    Which group are you in?
+                  </label>
+                  <div className="grid grid-cols-2 gap-3">
+                    {(["group1", "group2"] as const).map((g, gi) => {
+                      const preview = gi === 0 ? group1Preview : group2Preview
+                      const isSelected = year1Group === g
+                      return (
+                        <button
+                          key={g}
+                          onClick={() => setYear1Group(g)}
+                          className="rounded-xl p-3 text-left border-2 transition-all"
+                          style={{
+                            backgroundColor: isSelected ? "rgba(99,102,241,0.08)" : "var(--bg-surface-hover)",
+                            borderColor: isSelected ? "rgb(99,102,241)" : "var(--border-subtle)",
+                          }}
+                        >
+                          <p
+                            className="text-xs font-bold mb-1.5"
+                            style={{ color: isSelected ? "rgb(99,102,241)" : "var(--text-primary)" }}
+                          >
+                            Group {gi + 1}
+                          </p>
+                          <div className="flex flex-wrap gap-1">
+                            {preview.map(code => (
+                              <span
+                                key={code}
+                                className="text-[9px] font-black px-1 py-0.5 rounded"
+                                style={{
+                                  backgroundColor: isSelected ? "rgba(99,102,241,0.15)" : "var(--bg-muted)",
+                                  color: isSelected ? "rgb(79,70,229)" : "var(--text-muted)",
+                                }}
+                              >
+                                {code}
+                              </span>
+                            ))}
+                          </div>
+                        </button>
+                      )
+                    })}
+                  </div>
+                  {!year1Group && (
+                    <p className="text-[10px] mt-1.5 text-center" style={{ color: "var(--text-muted)" }}>
+                      Select your group to see exact CDCs
+                    </p>
+                  )}
+                </div>
+              )}
+            </>
+          )}
+
+          {/* ── OLDER BATCH — Semester picker ── */}
+          {parsed && !parsed.isYear1 && (
             <div>
               <label className="text-xs font-semibold uppercase tracking-wide mb-1.5 block" style={{ color: "var(--text-muted)" }}>
                 Target Semester
@@ -146,10 +261,7 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
                 {semOptions.map(opt => (
                   <button
                     key={opt.key}
-                    onClick={() => {
-                      setSelectedSemKey(opt.key)
-                      setManualSemSelect(true)
-                    }}
+                    onClick={() => { setSelectedSemKey(opt.key); setManualSemSelect(true) }}
                     className="rounded-lg px-3 py-2 text-xs font-semibold transition-all border text-left"
                     style={{
                       backgroundColor: selectedSemKey === opt.key ? "var(--bg-selected)" : "var(--bg-surface-hover)",
@@ -168,12 +280,19 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
         {/* CDC List */}
         <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
           {!parsed ? (
-             <div className="flex flex-col items-center justify-center py-8 opacity-60">
-               <span className="text-4xl mb-3">🪪</span>
-               <p className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>
-                 Enter your ID to see CDCs
-               </p>
-             </div>
+            <div className="flex flex-col items-center justify-center py-8 opacity-60">
+              <span className="text-4xl mb-3">🪪</span>
+              <p className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>
+                Enter your ID to see CDCs
+              </p>
+            </div>
+          ) : parsed.isYear1 && !isBPharm && !year1Group ? (
+            <div className="flex flex-col items-center justify-center py-8 opacity-60">
+              <span className="text-4xl mb-3">👆</span>
+              <p className="text-sm font-medium text-center" style={{ color: "var(--text-primary)" }}>
+                Select your group above to see your CDCs
+              </p>
+            </div>
           ) : cdcList.length === 0 ? (
             <p className="text-sm text-center py-6" style={{ color: "var(--text-muted)" }}>
               No CDCs found for this selection
@@ -191,17 +310,11 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
                       <div
                         key={c.code}
                         className="flex items-center gap-3 rounded-xl px-3 py-2.5 border"
-                        style={{
-                          backgroundColor: "rgba(16,185,129,0.06)",
-                          borderColor: "rgba(16,185,129,0.25)",
-                        }}
+                        style={{ backgroundColor: "rgba(16,185,129,0.06)", borderColor: "rgba(16,185,129,0.25)" }}
                       >
                         <span
                           className="shrink-0 text-[11px] font-black px-1.5 py-0.5 rounded-md tracking-wide"
-                          style={{
-                            backgroundColor: "rgba(16,185,129,0.15)",
-                            color: "rgb(5,150,105)",
-                          }}
+                          style={{ backgroundColor: "rgba(16,185,129,0.15)", color: "rgb(5,150,105)" }}
                         >
                           {c.code}
                         </span>
@@ -225,17 +338,11 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
                       <div
                         key={c.code}
                         className="flex items-center gap-3 rounded-xl px-3 py-2.5 border opacity-50"
-                        style={{
-                          backgroundColor: "var(--bg-surface-hover)",
-                          borderColor: "var(--border-subtle)",
-                        }}
+                        style={{ backgroundColor: "var(--bg-surface-hover)", borderColor: "var(--border-subtle)" }}
                       >
                         <span
                           className="shrink-0 text-[11px] font-black px-1.5 py-0.5 rounded-md"
-                          style={{
-                            backgroundColor: "var(--bg-muted)",
-                            color: "var(--text-muted)",
-                          }}
+                          style={{ backgroundColor: "var(--bg-muted)", color: "var(--text-muted)" }}
                         >
                           {c.code}
                         </span>
@@ -265,17 +372,13 @@ export default function CDCSelector({ availableCodes, onApply, onClose }: Props)
             <button
               onClick={onClose}
               className="px-4 py-2 rounded-lg text-xs font-semibold border transition-all hover:bg-[var(--bg-surface-hover)]"
-              style={{
-                borderColor: "var(--border-subtle)",
-                color: "var(--text-muted)",
-                backgroundColor: "transparent",
-              }}
+              style={{ borderColor: "var(--border-subtle)", color: "var(--text-muted)", backgroundColor: "transparent" }}
             >
               Cancel
             </button>
             <button
               onClick={handleApply}
-              disabled={inMaster.length === 0}
+              disabled={inMaster.length === 0 || (!!parsed?.isYear1 && !isBPharm && !year1Group)}
               className="px-5 py-2 rounded-lg text-xs font-bold text-white transition-all shadow-[0_0_15px_var(--bg-accent)] shadow-opacity-30 hover:scale-105 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none"
               style={{ backgroundColor: "var(--bg-accent)" }}
             >
