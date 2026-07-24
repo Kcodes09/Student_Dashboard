@@ -35,7 +35,7 @@ function toDate(exam: ExamItem) {
 
 function getFirstMidsemDate() {
   const midsemDays = academicCalendar.days.filter(
-    d => d.label === "MIDSEM"
+    d => d.label.toLowerCase().includes("mid-semester")
   )
 
   if (midsemDays.length === 0) return null
@@ -45,6 +45,33 @@ function getFirstMidsemDate() {
       ...midsemDays.map(d => new Date(d.date).getTime())
     )
   )
+}
+
+function getCalendarDates() {
+  const midsemDays = academicCalendar.days.filter(
+    d => d.label.toLowerCase().includes("mid-semester examinations") && d.date.startsWith("2026")
+  ).map(d => {
+    const [y, m, day] = d.date.split("-")
+    return `${day}/${m}`
+  })
+
+  // Compre ranges from begin to end
+  const compreBegin = academicCalendar.days.find(d => d.label.toLowerCase().includes("comprehensive examinations begin") && d.date.startsWith("2026"))
+  const compreEnd = academicCalendar.days.find(d => d.label.toLowerCase().includes("comprehensive examinations end") && d.date.startsWith("2026"))
+  
+  const compreDays: string[] = []
+  if (compreBegin && compreEnd) {
+    let current = new Date(compreBegin.date)
+    const end = new Date(compreEnd.date)
+    while (current <= end) {
+      const day = current.getDate().toString().padStart(2, "0")
+      const month = (current.getMonth() + 1).toString().padStart(2, "0")
+      compreDays.push(`${day}/${month}`)
+      current.setDate(current.getDate() + 1)
+    }
+  }
+
+  return { midsemDays, compreDays }
 }
 
 /* ---------------- PAGE ---------------- */
@@ -134,6 +161,8 @@ export default async function ExamsPage() {
       : false
   )
 
+  const { midsemDays: midsemCalendarDates, compreDays: compreCalendarDates } = getCalendarDates()
+
   return (
     <>
       <Navbar user={session.user} />
@@ -149,6 +178,8 @@ export default async function ExamsPage() {
           midsems={midsems}
           afterMidsem={afterMidsem}
           endsems={endsems}
+          midsemCalendarDates={midsemCalendarDates}
+          compreCalendarDates={compreCalendarDates}
         />
       </main>
     </>
