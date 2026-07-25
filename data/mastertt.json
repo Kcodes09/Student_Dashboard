@@ -20650,7 +20650,14 @@
         "instructors": [
           "Sayan Ghosh"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "G105"
+          }
+        ]
       },
       {
         "section": "T2",
@@ -20658,7 +20665,14 @@
         "instructors": [
           "Farida Parvez Barbhuiya"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "G102"
+          }
+        ]
       },
       {
         "section": "T3",
@@ -20666,7 +20680,14 @@
         "instructors": [
           "Praveen Kumar P T V"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "G103"
+          }
+        ]
       },
       {
         "section": "T4",
@@ -20674,7 +20695,14 @@
         "instructors": [
           "Sabyasachi Dey"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "G202"
+          }
+        ]
       },
       {
         "section": "T5",
@@ -20682,7 +20710,14 @@
         "instructors": [
           "Swati Rani Hait"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "G203"
+          }
+        ]
       },
       {
         "section": "T6",
@@ -20690,7 +20725,14 @@
         "instructors": [
           "Harsha K V"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "G205"
+          }
+        ]
       },
       {
         "section": "T7",
@@ -20698,7 +20740,14 @@
         "instructors": [
           "Nirman Ganguly"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "G204"
+          }
+        ]
       },
       {
         "section": "T8",
@@ -20706,7 +20755,14 @@
         "instructors": [
           "Devulapalli Harsha Vardhan\nReddy"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "G207"
+          }
+        ]
       },
       {
         "section": "T9",
@@ -20714,7 +20770,14 @@
         "instructors": [
           "Debasmita Mohanty"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "G206"
+          }
+        ]
       },
       {
         "section": "T10",
@@ -20722,7 +20785,14 @@
         "instructors": [
           "Shayon Bhadra"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "F204"
+          }
+        ]
       },
       {
         "section": "T11",
@@ -20730,7 +20800,14 @@
         "instructors": [
           "Naorem Priyobarta Singh"
         ],
-        "sessions": []
+        "sessions": [
+          {
+            "day": "W",
+            "startTime": "16:00",
+            "endTime": "17:50",
+            "room": "F203"
+          }
+        ]
       }
     ]
   },
