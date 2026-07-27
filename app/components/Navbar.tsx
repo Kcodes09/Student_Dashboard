@@ -165,11 +165,12 @@ export default function Navbar({ user }: NavbarProps) {
               <img
                 src={user.image}
                 alt="Profile"
-                className="h-8 w-8 rounded-full object-cover ring-2 ring-gray-200 dark:ring-slate-700"
+                referrerPolicy="no-referrer"
+                className="h-8 w-8 rounded-full object-cover ring-2 ring-gray-200 dark:ring-slate-700 shrink-0"
               />
             ) : (
-              <div className="h-8 w-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm">
-                {user.email?.charAt(0).toUpperCase()}
+              <div className="h-8 w-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm shrink-0">
+                {user.email?.charAt(0).toUpperCase() || "U"}
               </div>
             )}
             <span
@@ -262,12 +263,17 @@ export default function Navbar({ user }: NavbarProps) {
                 className="px-4 py-3 flex items-center gap-3 border-b"
                 style={{ borderColor: "var(--border-subtle)" }}
               >
-                {user.image && (
+                {user.image ? (
                   <img
                     src={user.image}
                     alt="Profile"
-                    className="h-9 w-9 rounded-full object-cover ring-2 ring-gray-200 dark:ring-slate-700"
+                    referrerPolicy="no-referrer"
+                    className="h-9 w-9 rounded-full object-cover ring-2 ring-gray-200 dark:ring-slate-700 shrink-0"
                   />
+                ) : (
+                  <div className="h-9 w-9 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-sm shrink-0">
+                    {user.email?.charAt(0).toUpperCase() || "U"}
+                  </div>
                 )}
                 <div className="flex flex-col min-w-0">
                   {user.name && (

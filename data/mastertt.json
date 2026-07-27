@@ -45,7 +45,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "Ruchi Jain Dey"
+          "Ruchi Jain Dey",
+          "Pragya Komal"
         ],
         "sessions": [
           {
@@ -68,7 +69,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "Naga Mohan Kommu"
+          "Naga Mohan Kommu",
+          "Sourav Chowdhury"
         ],
         "sessions": [
           {
@@ -91,7 +93,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "SUPRATIM GHOSH"
+          "SUPRATIM GHOSH",
+          "Vadla Pallavi"
         ],
         "sessions": [
           {
@@ -114,7 +117,8 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Supratim Ghosh"
+          "Supratim Ghosh",
+          "Harikrishnan P"
         ],
         "sessions": [
           {
@@ -137,7 +141,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Jayati Ray Dutta"
+          "Jayati Ray Dutta",
+          "Risa Natarajan"
         ],
         "sessions": [
           {
@@ -160,7 +165,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Naga Mohan Kommu"
+          "Naga Mohan Kommu",
+          "Koyena Das"
         ],
         "sessions": [
           {
@@ -183,7 +189,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Sridev Mohapatra"
+          "Sridev Mohapatra",
+          "Adarsh M. V."
         ],
         "sessions": [
           {
@@ -206,7 +213,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Krishanu Ray"
+          "Krishanu Ray",
+          "Omalur Eshwari"
         ],
         "sessions": [
           {
@@ -229,7 +237,8 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Ruchi Jain Dey"
+          "Ruchi Jain Dey",
+          "Vaibhav Jain"
         ],
         "sessions": [
           {
@@ -252,7 +261,8 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Gireesha Thipperudrappa\nMohannath"
+          "Gireesha Thipperudrappa\nMohannath",
+          "Tammineni Ramya"
         ],
         "sessions": [
           {
@@ -275,7 +285,8 @@
         "section": "P9",
         "type": "PRACTICAL",
         "instructors": [
-          "Jamma Trinath"
+          "Jamma Trinath",
+          "Manali Chindarkar"
         ],
         "sessions": [
           {
@@ -298,7 +309,8 @@
         "section": "P10",
         "type": "PRACTICAL",
         "instructors": [
-          "Sourav Chowdhury"
+          "Sourav Chowdhury",
+          "Moli Rani"
         ],
         "sessions": [
           {
@@ -321,7 +333,8 @@
         "section": "P11",
         "type": "PRACTICAL",
         "instructors": [
-          "Bibhas Roy"
+          "Bibhas Roy",
+          "Shreya Gupta"
         ],
         "sessions": [
           {
@@ -405,7 +418,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "RUCHI JAIN DEY"
+          "RUCHI JAIN DEY",
+          "Soumyananda Chakraborti"
         ],
         "sessions": [
           {
@@ -435,7 +449,12 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Ruchi Jain Dey"
+          "Ruchi Jain Dey",
+          "Harshada Deshpande",
+          "Harshada Vinayak Thawari",
+          "Puja Bhardwaj",
+          "Sian Maria Dorothy D'silva",
+          "Soumyananda Chakraborti"
         ],
         "sessions": [
           {
@@ -465,7 +484,12 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Ruchi Jain Dey"
+          "Ruchi Jain Dey",
+          "Harshada Deshpande",
+          "Harshada Vinayak Thawari",
+          "Puja Bhardwaj",
+          "Sian Maria Dorothy D'silva",
+          "Soumyananda Chakraborti"
         ],
         "sessions": [
           {
@@ -502,7 +526,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "SHUVADEEP MAITY"
+          "SHUVADEEP MAITY",
+          "Bibhas Roy"
         ],
         "sessions": [
           {
@@ -532,7 +557,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Shuvadeep Maity"
+          "Shuvadeep Maity",
+          "Bibhas Roy"
         ],
         "sessions": [
           {
@@ -556,6 +582,7 @@
         "type": "LECTURE",
         "instructors": [
           "JAYATI RAY DUTTA",
+          "Krishanu Ray",
           "Jayati Ray Dutta"
         ],
         "sessions": [
@@ -586,7 +613,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Jayati Ray Dutta"
+          "Jayati Ray Dutta",
+          "Krishanu Ray"
         ],
         "sessions": [
           {
@@ -709,6 +737,7 @@
         "type": "LECTURE",
         "instructors": [
           "SRIDEV MOHAPATRA",
+          "Gireesha Thipperudrappa\nMohannath",
           "Sridev Mohapatra"
         ],
         "sessions": [
@@ -739,7 +768,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sridev Mohapatra"
+          "Sridev Mohapatra",
+          "Gireesha Thipperudrappa\nMohannath"
         ],
         "sessions": [
           {
@@ -1031,7 +1061,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Amartya Sanyal"
+          "Amartya Sanyal",
+          "Brahmandam N S A L Gayatri",
+          "Lavanya B",
+          "Satarupa Das"
         ],
         "sessions": [
           {
@@ -1075,7 +1108,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "VIVEK SHARMA"
+          "VIVEK SHARMA",
+          "Naga Mohan Kommu"
         ],
         "sessions": [
           {
@@ -1105,7 +1139,11 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Vivek Sharma"
+          "Vivek Sharma",
+          "Kottam Geetha Lakshmi",
+          "Naga Mohan Kommu",
+          "Sohini Mukhopadhyay",
+          "Vandana Joshi"
         ],
         "sessions": [
           {
@@ -1179,7 +1217,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Ashna Fathima"
+          "Ashna Fathima",
+          "Gayatri Reghu",
+          "Gopu Chamundeshwari Devi",
+          "Jamma Trinath"
         ],
         "sessions": [
           {
@@ -1224,6 +1265,7 @@
         "type": "LECTURE",
         "instructors": [
           "PIYUSH KHANDELIA",
+          "Kumar Pranav Narayan",
           "Piyush Khandelia"
         ],
         "sessions": [
@@ -1254,7 +1296,11 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Piyush Khandelia"
+          "Piyush Khandelia",
+          "Kumar Pranav Narayan",
+          "Pragati Karemore",
+          "Sridhanya V M",
+          "Srija Bhattacharya"
         ],
         "sessions": [
           {
@@ -1328,7 +1374,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Sankar Ganesh P"
+          "Sankar Ganesh P",
+          "Dimple K",
+          "Keitumetse Ngaka",
+          "Kulal Ravindra Dnyanaba"
         ],
         "sessions": [
           {
@@ -1372,7 +1421,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "SOUMYANANDA CHAKRABORTI"
+          "SOUMYANANDA CHAKRABORTI",
+          "Nishith Gupta"
         ],
         "sessions": [
           {
@@ -1402,7 +1452,11 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Soumyananda Chakraborti"
+          "Soumyananda Chakraborti",
+          "Amit Lalwani",
+          "Ankita Paul",
+          "Devika P",
+          "Nishith Gupta"
         ],
         "sessions": [
           {
@@ -1446,7 +1500,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "KIRTIMAAN SYAL"
+          "KIRTIMAAN SYAL",
+          "Sourav Chowdhury"
         ],
         "sessions": [
           {
@@ -1476,7 +1531,11 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Kirtimaan Syal"
+          "Kirtimaan Syal",
+          "Deeptanshu Pandey",
+          "Raghav Worah",
+          "Shubham Kumar Sinha",
+          "Sourav Chowdhury"
         ],
         "sessions": [
           {
@@ -1520,7 +1579,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "Vivek Sharma"
+          "Vivek Sharma",
+          "PIYUSH KHANDELIA"
         ],
         "sessions": [
           {
@@ -1558,6 +1618,7 @@
         "type": "LECTURE",
         "instructors": [
           "MOHAN RAO CHINTALAGIRI",
+          "Sudipta Maiti",
           "Mohan Rao Chintalagiri"
         ],
         "sessions": [
@@ -1733,7 +1794,9 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "SRINIVASA PRAKASH REGALLA"
+          "SRINIVASA PRAKASH REGALLA",
+          "Chanchal Chakraborty",
+          "Harsh Mittal"
         ],
         "sessions": [
           {
@@ -1853,7 +1916,11 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Reddybathini Narendra"
+          "Reddybathini Narendra",
+          "Dharmveer Agarwal",
+          "Kaivalya Avinash Bhandwalkar",
+          "Kiran Somisetti",
+          "Rahul Kumar"
         ],
         "sessions": [
           {
@@ -1890,7 +1957,11 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Supradeepan K"
+          "Supradeepan K",
+          "Dipendu Pal",
+          "Fathima Fakiha Imam Khan",
+          "Hanamkonda Sai SharanyaÂ",
+          "Valmiki Ashwith Kumar"
         ],
         "sessions": [
           {
@@ -1927,7 +1998,11 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Jella Sowjanya"
+          "Jella Sowjanya",
+          "Abhishek Sarkar",
+          "Joshua Kumar Saladi",
+          "K Suhasini",
+          "N Pooja"
         ],
         "sessions": [
           {
@@ -1964,7 +2039,11 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Sankalp Jain"
+          "Sankalp Jain",
+          "Arshad Javed",
+          "Batta Giri",
+          "Dawit Midagsa Abdi",
+          "Renuka Roy"
         ],
         "sessions": [
           {
@@ -2001,7 +2080,11 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "PRABAKARAN SARAVANAN"
+          "PRABAKARAN SARAVANAN",
+          "Ansab Shafi Mir",
+          "Badar Ali",
+          "Kushagra Pandey",
+          "M Abhinav"
         ],
         "sessions": [
           {
@@ -2038,7 +2121,11 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Mohd Firasath Ali"
+          "Mohd Firasath Ali",
+          "Bathini Divya Jyothi",
+          "Dharmveer Agarwal",
+          "Sabhnam Gurung",
+          "Shine Jude Hamilton A"
         ],
         "sessions": [
           {
@@ -2075,7 +2162,11 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Nistala Likhita"
+          "Nistala Likhita",
+          "Kshirasagar Sai Raj Kiran",
+          "Nikita Suresh Yadav",
+          "VijayÂ  Angadi",
+          "Vishista Kaushik"
         ],
         "sessions": [
           {
@@ -2112,7 +2203,11 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Jinka Chaitanya"
+          "Jinka Chaitanya",
+          "Balagani Keerthi",
+          "Banoth Rajesh",
+          "Safa Khader",
+          "Tba-mech"
         ],
         "sessions": [
           {
@@ -2149,7 +2244,11 @@
         "section": "P9",
         "type": "PRACTICAL",
         "instructors": [
-          "Abishek Uma Shankar"
+          "Abishek Uma Shankar",
+          "Nakka Muralikrishna",
+          "Priyadharshini Govindan",
+          "Sourabh Soni",
+          "Tba-mech"
         ],
         "sessions": [
           {
@@ -2186,7 +2285,12 @@
         "section": "P10",
         "type": "PRACTICAL",
         "instructors": [
-          "Badugu Lakshmi Prasanna"
+          "Badugu Lakshmi Prasanna",
+          "Ambili P",
+          "Avinash S Nair",
+          "Gunashekar G",
+          "Naveen Kumar Shrivastava",
+          "Pawar Prafulla Bhaskar"
         ],
         "sessions": [
           {
@@ -2389,7 +2493,14 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "Shuvadeep Maity"
+          "Shuvadeep Maity",
+          "Deepjyoti Deb",
+          "Kunja Chaitanya",
+          "Nilanjan Dey",
+          "Shreya N B",
+          "Vallala Maheshwar",
+          "MURARI RAJA RAJA VARMA",
+          "Murari Raja Raja Varma"
         ],
         "sessions": [
           {
@@ -2663,7 +2774,8 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Ramendra Kishor Pal"
+          "Ramendra Kishor Pal",
+          "Sohini Das"
         ],
         "sessions": [
           {
@@ -2888,6 +3000,7 @@
         "type": "LECTURE",
         "instructors": [
           "SATYA NARAYANA MURTHY\nVEMULAPATI",
+          "B. Harihara Venkataraman",
           "Satya Narayana Murthy\nVemulapati"
         ],
         "sessions": [
@@ -3061,6 +3174,7 @@
         "type": "LECTURE",
         "instructors": [
           "MADHUSHREE CHAKRABARTY",
+          "Aruna Lolla",
           "Madhushree Chakrabarty"
         ],
         "sessions": [
@@ -3672,7 +3786,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Chandu Parimi"
+          "Chandu Parimi",
+          "Challa Sandeep Reddy"
         ],
         "sessions": [
           {
@@ -3742,7 +3857,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "K Rajitha"
+          "K Rajitha",
+          "Anuradha Tiwari"
         ],
         "sessions": [
           {
@@ -3818,7 +3934,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "V Vinayaka Ram"
+          "V Vinayaka Ram",
+          "Siddartha Keisham"
         ],
         "sessions": [
           {
@@ -3971,7 +4088,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Jagadeesh Anmala"
+          "Jagadeesh Anmala",
+          "Jenisha Ma",
+          "Lavanya B"
         ],
         "sessions": [
           {
@@ -4032,7 +4151,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Anasua Guharay"
+          "Anasua Guharay",
+          "Meenu Krishnan"
         ],
         "sessions": [
           {
@@ -4086,7 +4206,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Arkamitra Kar"
+          "Arkamitra Kar",
+          "Sk Abdul Kaium"
         ],
         "sessions": [
           {
@@ -4472,7 +4593,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Akshay Gundla"
+          "Akshay Gundla",
+          "Muddasani Rajkumar"
         ],
         "sessions": [
           {
@@ -4532,7 +4654,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mohan S C"
+          "Mohan S C",
+          "Shibajee Sutar"
         ],
         "sessions": [
           {
@@ -4592,7 +4715,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Chandu Parimi"
+          "Chandu Parimi",
+          "Boyina Kalyan"
         ],
         "sessions": [
           {
@@ -4652,7 +4776,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Prasanta Kumar Sahu"
+          "Prasanta Kumar Sahu",
+          "Dilawaiz Ali"
         ],
         "sessions": [
           {
@@ -4713,7 +4838,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Bandhan Bandhu Majumdar"
+          "Bandhan Bandhu Majumdar",
+          "Taiyib Ahmad"
         ],
         "sessions": [
           {
@@ -4774,7 +4900,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Ishant Sharma"
+          "Ishant Sharma",
+          "Subhashree Panda"
         ],
         "sessions": [
           {
@@ -4834,7 +4961,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Sridhar R"
+          "Sridhar R",
+          "Neha Sethy"
         ],
         "sessions": [
           {
@@ -4894,7 +5022,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mohammad Adil Dar"
+          "Mohammad Adil Dar",
+          "P Madhiyarasu"
         ],
         "sessions": [
           {
@@ -4954,7 +5083,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Bahurudeen A"
+          "Bahurudeen A",
+          "Hanan H"
         ],
         "sessions": [
           {
@@ -5015,7 +5145,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Bahurudeen A"
+          "Bahurudeen A",
+          "Vijay T"
         ],
         "sessions": [
           {
@@ -5076,7 +5207,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "P Raghu"
+          "P Raghu",
+          "Tba-ce"
         ],
         "sessions": [
           {
@@ -5137,7 +5269,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Sesha Sai Raghuram\nAmmavajjala"
+          "Sesha Sai Raghuram\nAmmavajjala",
+          "Manney Bharath Chandra"
         ],
         "sessions": [
           {
@@ -5168,6 +5301,7 @@
         "type": "LECTURE",
         "instructors": [
           "AMARTHALURI SATYAPAUL\nSINGH",
+          "Tba-che",
           "Amarthaluri Satyapaul Singh"
         ],
         "sessions": [
@@ -5198,7 +5332,9 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Amarthaluri Satyapaul Singh"
+          "Amarthaluri Satyapaul Singh",
+          "Shelatkar Uttara Sushant\nArchana",
+          "Sri Himaja Pamu"
         ],
         "sessions": [
           {
@@ -5251,7 +5387,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "I Sreedhar"
+          "I Sreedhar",
+          "Neha Mohiuddin"
         ],
         "sessions": [
           {
@@ -5305,7 +5442,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Vikranth Kumar Surasani"
+          "Vikranth Kumar Surasani",
+          "Saikumar Bandari"
         ],
         "sessions": [
           {
@@ -5435,7 +5573,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "D Purnima"
+          "D Purnima",
+          "Prachi Bulbul"
         ],
         "sessions": [
           {
@@ -5458,7 +5597,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "DEBIRUPA MITRA"
+          "DEBIRUPA MITRA",
+          "Chitturi Huldah Suharika",
+          "Mohare Saloni Sharad\nShubhangi",
+          "Shreeti Chakravorty"
         ],
         "sessions": [
           {
@@ -5509,7 +5651,10 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "B Nandini"
+          "B Nandini",
+          "Chitturi Huldah Suharika",
+          "Mohare Saloni Sharad\nShubhangi",
+          "Sanchita Roy"
         ],
         "sessions": [
           {
@@ -5568,6 +5713,7 @@
         "type": "LECTURE",
         "instructors": [
           "AFKHAM MIR",
+          "Balaji Krishnamurthy",
           "Afkham Mir"
         ],
         "sessions": [
@@ -5598,7 +5744,9 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Afkham Mir"
+          "Afkham Mir",
+          "Archana V P",
+          "Balaji Krishnamurthy"
         ],
         "sessions": [
           {
@@ -5652,7 +5800,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Arnab Dutta"
+          "Arnab Dutta",
+          "Sathish Kumar G"
         ],
         "sessions": [
           {
@@ -5767,7 +5916,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "SRIKANTA DINDA"
+          "SRIKANTA DINDA",
+          "Mamilla Shree Veena"
         ],
         "sessions": [
           {
@@ -5842,7 +5992,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "B NANDINI"
+          "B NANDINI",
+          "Mattupalli Sai Soumya Sri"
         ],
         "sessions": [
           {
@@ -5909,7 +6060,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Amarthaluri Satyapaul Singh"
+          "Amarthaluri Satyapaul Singh",
+          "Atmaja Tukaram Shinde",
+          "Y Lavanya"
         ],
         "sessions": [
           {
@@ -5939,7 +6092,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "BALAJI GOPALAN"
+          "BALAJI GOPALAN",
+          "Satya Narayan Guin"
         ],
         "sessions": [
           {
@@ -5962,7 +6116,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "Pralok Kumar Samanta"
+          "Pralok Kumar Samanta",
+          "Tanmay Chatterjee"
         ],
         "sessions": [
           {
@@ -6152,7 +6307,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Balaji Gopalan"
+          "Balaji Gopalan",
+          "Rachel  Anjous",
+          "Sweta Agarwala"
         ],
         "sessions": [
           {
@@ -6175,7 +6332,9 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "J. Joel Kingston"
+          "J. Joel Kingston",
+          "K V G Chandra Sekhar",
+          "Moharir Shreyash Rajendra"
         ],
         "sessions": [
           {
@@ -6198,7 +6357,9 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Jenifa Mehjebin"
+          "Jenifa Mehjebin",
+          "PRALOK KUMAR SAMANTA",
+          "Syed Noushin"
         ],
         "sessions": [
           {
@@ -6221,7 +6382,9 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Anil Kumar B M"
+          "Anil Kumar B M",
+          "Rittika Dhar",
+          "Satya Narayan Guin"
         ],
         "sessions": [
           {
@@ -6244,7 +6407,9 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Pallavi Sandal"
+          "Pallavi Sandal",
+          "Parvathi R",
+          "Tanmay Chatterjee"
         ],
         "sessions": [
           {
@@ -6267,7 +6432,9 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Arya A"
+          "Arya A",
+          "Hibakhadeeja.m P",
+          "Himanshu Aggarwal"
         ],
         "sessions": [
           {
@@ -6290,7 +6457,9 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Arpan Ghosh"
+          "Arpan Ghosh",
+          "Avanigadda Madhu Niharika",
+          "Manab Chakravarty"
         ],
         "sessions": [
           {
@@ -6313,7 +6482,9 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Animesh Pal"
+          "Animesh Pal",
+          "Barkale Harshal Vasant",
+          "Nilanjan Dey"
         ],
         "sessions": [
           {
@@ -6336,7 +6507,9 @@
         "section": "P9",
         "type": "PRACTICAL",
         "instructors": [
-          "Gade Kirth Reddy"
+          "Gade Kirth Reddy",
+          "Sneha Lata",
+          "Subbalakshmi Jayanty"
         ],
         "sessions": [
           {
@@ -6359,7 +6532,11 @@
         "section": "P10",
         "type": "PRACTICAL",
         "instructors": [
-          "Ankur Chanda"
+          "Ankur Chanda",
+          "Debashish Halder",
+          "Pritam Mandal",
+          "Subbalakshmi Jayanty",
+          "Urmila Mandal"
         ],
         "sessions": [
           {
@@ -6680,7 +6857,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "AMIT NAG"
+          "AMIT NAG",
+          "Durba Roy"
         ],
         "sessions": [
           {
@@ -6710,7 +6888,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Amit Nag"
+          "Amit Nag",
+          "Durba Roy"
         ],
         "sessions": [
           {
@@ -6734,6 +6913,7 @@
         "type": "LECTURE",
         "instructors": [
           "KRISHNAN RANGAN",
+          "Manab Chakravarty",
           "Krishnan Rangan"
         ],
         "sessions": [
@@ -6764,7 +6944,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Krishnan Rangan"
+          "Krishnan Rangan",
+          "Manab Chakravarty"
         ],
         "sessions": [
           {
@@ -6780,7 +6961,22 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Amit Nag"
+          "Amit Nag",
+          "A Anjana Krishnan",
+          "Anagha H Nair",
+          "Anirban Biswas",
+          "Arindam Nandy",
+          "Arpan Ghosh",
+          "Chanchal Chakraborty",
+          "Himanshu Aggarwal",
+          "Krishna Priyanka K",
+          "Krishnan Rangan",
+          "Mahipal Reddy Benjaram",
+          "Manab Chakravarty",
+          "Pallabi Layek",
+          "Rojalin Behera",
+          "Sankho Subhra Samanta",
+          "Soumen Khan"
         ],
         "sessions": [
           {
@@ -6855,7 +7051,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "CHANCHAL CHAKRABORTY"
+          "CHANCHAL CHAKRABORTY",
+          "Subbalakshmi Jayanty"
         ],
         "sessions": [
           {
@@ -7152,6 +7349,7 @@
         "type": "LECTURE",
         "instructors": [
           "NILANJAN DEY",
+          "Chanchal Chakraborty",
           "Nilanjan Dey"
         ],
         "sessions": [
@@ -8152,7 +8350,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mutyala Bavana Harshitha"
+          "Mutyala Bavana Harshitha",
+          "Abbidi Shivani Reddy"
         ],
         "sessions": [
           {
@@ -8175,7 +8374,8 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Mutyala Bavana Harshitha"
+          "Mutyala Bavana Harshitha",
+          "Sagnik Kundu"
         ],
         "sessions": [
           {
@@ -8198,7 +8398,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Soppari Nithesh"
+          "Soppari Nithesh",
+          "Avaneesh Ketan Chitta"
         ],
         "sessions": [
           {
@@ -8221,7 +8422,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Soppari Nithesh"
+          "Soppari Nithesh",
+          "Surakanti Jyothi"
         ],
         "sessions": [
           {
@@ -8244,7 +8446,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Surakanti Jyothi"
+          "Surakanti Jyothi",
+          "O V Vishnu Vardhan\nKoundinya"
         ],
         "sessions": [
           {
@@ -8267,7 +8470,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Yuvraj Maphrio Mao"
+          "Yuvraj Maphrio Mao",
+          "Bishal Kumar Keshari"
         ],
         "sessions": [
           {
@@ -8290,7 +8494,8 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Aalelai Vendhan M"
+          "Aalelai Vendhan M",
+          "Dalia Sett"
         ],
         "sessions": [
           {
@@ -8313,7 +8518,8 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Aalelai Vendhan M"
+          "Aalelai Vendhan M",
+          "Yuvraj Maphrio Mao"
         ],
         "sessions": [
           {
@@ -8336,7 +8542,8 @@
         "section": "P9",
         "type": "PRACTICAL",
         "instructors": [
-          "Omkar Kulkarni"
+          "Omkar Kulkarni",
+          "Bishal Kumar Keshari"
         ],
         "sessions": [
           {
@@ -8359,7 +8566,8 @@
         "section": "P10",
         "type": "PRACTICAL",
         "instructors": [
-          "Rohini Paul Joseph"
+          "Rohini Paul Joseph",
+          "Omkar Kulkarni"
         ],
         "sessions": [
           {
@@ -8382,7 +8590,8 @@
         "section": "P11",
         "type": "PRACTICAL",
         "instructors": [
-          "Dalia Sett"
+          "Dalia Sett",
+          "Himanshu Singh"
         ],
         "sessions": [
           {
@@ -8405,7 +8614,8 @@
         "section": "P12",
         "type": "PRACTICAL",
         "instructors": [
-          "Pritam Paul"
+          "Pritam Paul",
+          "O V Vishnu Vardhan\nKoundinya"
         ],
         "sessions": [
           {
@@ -8428,7 +8638,8 @@
         "section": "P13",
         "type": "PRACTICAL",
         "instructors": [
-          "Himanshu Singh"
+          "Himanshu Singh",
+          "Pritam Paul"
         ],
         "sessions": [
           {
@@ -8451,7 +8662,8 @@
         "section": "P14",
         "type": "PRACTICAL",
         "instructors": [
-          "Avaneesh Ketan Chitta"
+          "Avaneesh Ketan Chitta",
+          "Rohini Paul Joseph"
         ],
         "sessions": [
           {
@@ -8474,7 +8686,8 @@
         "section": "P15",
         "type": "PRACTICAL",
         "instructors": [
-          "Nandhana Chishor"
+          "Nandhana Chishor",
+          "Sagnik Kundu"
         ],
         "sessions": [
           {
@@ -8497,7 +8710,8 @@
         "section": "P16",
         "type": "PRACTICAL",
         "instructors": [
-          "Nandhana Chishor"
+          "Nandhana Chishor",
+          "Abbidi Shivani Reddy"
         ],
         "sessions": [
           {
@@ -9680,7 +9894,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Chetan Kumar Vudadha"
+          "Chetan Kumar Vudadha",
+          "Nadigoti Manasa"
         ],
         "sessions": [
           {
@@ -10038,7 +10253,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Himanshu Shukla"
+          "Himanshu Shukla",
+          "Sabareesh Geetha\nRajasekharan"
         ],
         "sessions": [
           {
@@ -10332,7 +10548,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mithun Mondal"
+          "Mithun Mondal",
+          "Ayan Das Sarkar",
+          "P Swati Patro"
         ],
         "sessions": [
           {
@@ -10355,7 +10573,9 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Arup Ratan Paul"
+          "Arup Ratan Paul",
+          "Gavvala Rajasekhar",
+          "P Swati Patro"
         ],
         "sessions": [
           {
@@ -10378,7 +10598,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Mohammad Shaban"
+          "Mohammad Shaban",
+          "Aabid Chandbasha Mulla"
         ],
         "sessions": [
           {
@@ -10401,7 +10622,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Ayan Das Sarkar"
+          "Ayan Das Sarkar",
+          "Durga K Prasad Gudavalli"
         ],
         "sessions": [
           {
@@ -10424,7 +10646,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Gavvala Rajasekhar"
+          "Gavvala Rajasekhar",
+          "Mulla Gouse Basha"
         ],
         "sessions": [
           {
@@ -10447,7 +10670,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Mulla Gouse Basha"
+          "Mulla Gouse Basha",
+          "Mohammad Shaban"
         ],
         "sessions": [
           {
@@ -10470,7 +10694,8 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Sayantani Biswas"
+          "Sayantani Biswas",
+          "Durga K Prasad Gudavalli"
         ],
         "sessions": [
           {
@@ -10493,7 +10718,8 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Sayantani Biswas"
+          "Sayantani Biswas",
+          "Aabid Chandbasha Mulla"
         ],
         "sessions": [
           {
@@ -10873,7 +11099,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sayan Kanungo"
+          "Sayan Kanungo",
+          "Varun DarapureddyÂ"
         ],
         "sessions": [
           {
@@ -10889,7 +11116,8 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Bhaswati Chakraborty"
+          "Bhaswati Chakraborty",
+          "Khumbar Debbarma"
         ],
         "sessions": [
           {
@@ -11323,7 +11551,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mutyala Bavana Harshitha"
+          "Mutyala Bavana Harshitha",
+          "Abbidi Shivani Reddy"
         ],
         "sessions": [
           {
@@ -11346,7 +11575,8 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Mutyala Bavana Harshitha"
+          "Mutyala Bavana Harshitha",
+          "Sagnik Kundu"
         ],
         "sessions": [
           {
@@ -11369,7 +11599,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Soppari Nithesh"
+          "Soppari Nithesh",
+          "Avaneesh Ketan Chitta"
         ],
         "sessions": [
           {
@@ -11392,7 +11623,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Soppari Nithesh"
+          "Soppari Nithesh",
+          "Surakanti Jyothi"
         ],
         "sessions": [
           {
@@ -11415,7 +11647,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Surakanti Jyothi"
+          "Surakanti Jyothi",
+          "O V Vishnu Vardhan\nKoundinya"
         ],
         "sessions": [
           {
@@ -11438,7 +11671,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Yuvraj Maphrio Mao"
+          "Yuvraj Maphrio Mao",
+          "Bishal Kumar Keshari"
         ],
         "sessions": [
           {
@@ -11461,7 +11695,8 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Aalelai Vendhan M"
+          "Aalelai Vendhan M",
+          "Dalia Sett"
         ],
         "sessions": [
           {
@@ -11484,7 +11719,8 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Aalelai Vendhan M"
+          "Aalelai Vendhan M",
+          "Yuvraj Maphrio Mao"
         ],
         "sessions": [
           {
@@ -11507,7 +11743,8 @@
         "section": "P9",
         "type": "PRACTICAL",
         "instructors": [
-          "Omkar Kulkarni"
+          "Omkar Kulkarni",
+          "Bishal Kumar Keshari"
         ],
         "sessions": [
           {
@@ -11530,7 +11767,8 @@
         "section": "P10",
         "type": "PRACTICAL",
         "instructors": [
-          "Rohini Paul Joseph"
+          "Rohini Paul Joseph",
+          "Omkar Kulkarni"
         ],
         "sessions": [
           {
@@ -11553,7 +11791,8 @@
         "section": "P11",
         "type": "PRACTICAL",
         "instructors": [
-          "Dalia Sett"
+          "Dalia Sett",
+          "Himanshu Singh"
         ],
         "sessions": [
           {
@@ -11576,7 +11815,8 @@
         "section": "P12",
         "type": "PRACTICAL",
         "instructors": [
-          "Pritam Paul"
+          "Pritam Paul",
+          "O V Vishnu Vardhan\nKoundinya"
         ],
         "sessions": [
           {
@@ -11599,7 +11839,8 @@
         "section": "P13",
         "type": "PRACTICAL",
         "instructors": [
-          "Himanshu Singh"
+          "Himanshu Singh",
+          "Pritam Paul"
         ],
         "sessions": [
           {
@@ -11622,7 +11863,8 @@
         "section": "P14",
         "type": "PRACTICAL",
         "instructors": [
-          "Avaneesh Ketan Chitta"
+          "Avaneesh Ketan Chitta",
+          "Rohini Paul Joseph"
         ],
         "sessions": [
           {
@@ -11645,7 +11887,8 @@
         "section": "P15",
         "type": "PRACTICAL",
         "instructors": [
-          "Nandhana Chishor"
+          "Nandhana Chishor",
+          "Sagnik Kundu"
         ],
         "sessions": [
           {
@@ -11668,7 +11911,8 @@
         "section": "P16",
         "type": "PRACTICAL",
         "instructors": [
-          "Nandhana Chishor"
+          "Nandhana Chishor",
+          "Abbidi Shivani Reddy"
         ],
         "sessions": [
           {
@@ -11698,7 +11942,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Sk Masum Nawaz"
+          "Sk Masum Nawaz",
+          "Ramsha Tuba"
         ],
         "sessions": [
           {
@@ -11943,7 +12188,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Prasant Kumar Pattnaik"
+          "Prasant Kumar Pattnaik",
+          "Kudidhi Upendra",
+          "Nikhilamol Simon"
         ],
         "sessions": [
           {
@@ -11966,7 +12213,8 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Dasari Bujji Babu"
+          "Dasari Bujji Babu",
+          "Nitish Kumar Gupta"
         ],
         "sessions": [
           {
@@ -11989,7 +12237,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Pranay Agarwal"
+          "Pranay Agarwal",
+          "Dasari Bujji Babu"
         ],
         "sessions": [
           {
@@ -12058,7 +12307,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Chinthapalli Amulya"
+          "Chinthapalli Amulya",
+          "Nikhilamol Simon"
         ],
         "sessions": [
           {
@@ -12119,7 +12369,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Mendhe Mrunali Vijay"
+          "Mendhe Mrunali Vijay",
+          "Sourav Nandi"
         ],
         "sessions": [
           {
@@ -12135,7 +12386,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Sourav Nandi"
+          "Sourav Nandi",
+          "Mendhe Mrunali Vijay"
         ],
         "sessions": [
           {
@@ -12158,7 +12410,8 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Karri Y K G R Srinivasu"
+          "Karri Y K G R Srinivasu",
+          "K Madhavi"
         ],
         "sessions": [
           {
@@ -12181,7 +12434,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Karri Y K G R Srinivasu"
+          "Karri Y K G R Srinivasu",
+          "Shaik Sultan"
         ],
         "sessions": [
           {
@@ -12204,7 +12458,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Avula Brahma Tejaswini"
+          "Avula Brahma Tejaswini",
+          "Shaik Sultan"
         ],
         "sessions": [
           {
@@ -12227,7 +12482,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Avula Brahma Tejaswini"
+          "Avula Brahma Tejaswini",
+          "K Madhavi"
         ],
         "sessions": [
           {
@@ -12408,7 +12664,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Bvvsn Prabhakar Rao"
+          "Bvvsn Prabhakar Rao",
+          "Nancy Varshney"
         ],
         "sessions": [
           {
@@ -12424,7 +12681,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Bvvsn Prabhakar Rao"
+          "Bvvsn Prabhakar Rao",
+          "Sajith Pm"
         ],
         "sessions": [
           {
@@ -12470,7 +12728,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Nancy Varshney"
+          "Nancy Varshney",
+          "Krishnapriya G B"
         ],
         "sessions": [
           {
@@ -12493,7 +12752,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Nancy Varshney"
+          "Nancy Varshney",
+          "Sajith Pm"
         ],
         "sessions": [
           {
@@ -12621,6 +12881,7 @@
         "type": "LECTURE",
         "instructors": [
           "BHEEMESHWAR REDDY A",
+          "Thota Nagaraju",
           "Bheemeshwar Reddy A"
         ],
         "sessions": [
@@ -12651,7 +12912,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "Bheemeshwar Reddy A"
+          "Bheemeshwar Reddy A",
+          "Thota Nagaraju"
         ],
         "sessions": [
           {
@@ -12681,7 +12943,8 @@
         "section": "L3",
         "type": "LECTURE",
         "instructors": [
-          "Rishi Kumar"
+          "Rishi Kumar",
+          "Mini Thomas P"
         ],
         "sessions": [
           {
@@ -12711,7 +12974,8 @@
         "section": "L4",
         "type": "LECTURE",
         "instructors": [
-          "Rishi Kumar"
+          "Rishi Kumar",
+          "Mini Thomas P"
         ],
         "sessions": [
           {
@@ -12748,7 +13012,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "UTKARSH KUMAR"
+          "UTKARSH KUMAR",
+          "Shobhana Sikhawal"
         ],
         "sessions": [
           {
@@ -12778,7 +13043,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "Utkarsh Kumar"
+          "Utkarsh Kumar",
+          "Shobhana Sikhawal"
         ],
         "sessions": [
           {
@@ -13007,7 +13273,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sunurani Panda"
+          "Sunurani Panda",
+          "Anandita Mitro"
         ],
         "sessions": [
           {
@@ -13060,7 +13327,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sunny Kumar Singh"
+          "Sunny Kumar Singh",
+          "Nikhil Varghese Kurian"
         ],
         "sessions": [
           {
@@ -13114,7 +13382,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sunurani Panda"
+          "Sunurani Panda",
+          "Anandita Mitro"
         ],
         "sessions": [
           {
@@ -13138,6 +13407,7 @@
         "type": "LECTURE",
         "instructors": [
           "SRAVANI BHARANDEV",
+          "Shreya Biswas",
           "Sravani Bharandev"
         ],
         "sessions": [
@@ -13168,7 +13438,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "Shreya Biswas"
+          "Shreya Biswas",
+          "Sravani Bharandev"
         ],
         "sessions": [
           {
@@ -13280,6 +13551,7 @@
         "type": "LECTURE",
         "instructors": [
           "NIVEDITA SINHA",
+          "Sukanya Wadhwa",
           "Nivedita Sinha"
         ],
         "sessions": [
@@ -13310,7 +13582,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "Nivedita Sinha"
+          "Nivedita Sinha",
+          "Sukanya Wadhwa"
         ],
         "sessions": [
           {
@@ -13496,6 +13769,7 @@
         "type": "LECTURE",
         "instructors": [
           "CHINA HUSSAIN YAGANTI",
+          "Shreya Biswas",
           "China Hussain Yaganti"
         ],
         "sessions": [
@@ -13526,7 +13800,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "China Hussain Yaganti"
+          "China Hussain Yaganti",
+          "Shreya Biswas"
         ],
         "sessions": [
           {
@@ -13736,7 +14011,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Balasubramanian Malayappan"
+          "Balasubramanian Malayappan",
+          "Krishna Tejus E M"
         ],
         "sessions": [
           {
@@ -13752,7 +14028,8 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Sudha Radhika"
+          "Sudha Radhika",
+          "Ramsha Tuba"
         ],
         "sessions": [
           {
@@ -13768,7 +14045,8 @@
         "section": "T3",
         "type": "TUTORIAL",
         "instructors": [
-          "Sudha Radhika"
+          "Sudha Radhika",
+          "Gorityala Aishvaria"
         ],
         "sessions": [
           {
@@ -13784,7 +14062,8 @@
         "section": "T4",
         "type": "TUTORIAL",
         "instructors": [
-          "Balasubramanian Malayappan"
+          "Balasubramanian Malayappan",
+          "Palavai Sowmya Sree"
         ],
         "sessions": [
           {
@@ -13800,7 +14079,8 @@
         "section": "T5",
         "type": "TUTORIAL",
         "instructors": [
-          "Pratyush Chakraborty"
+          "Pratyush Chakraborty",
+          "Mou Sarkar"
         ],
         "sessions": [
           {
@@ -13816,7 +14096,8 @@
         "section": "T6",
         "type": "TUTORIAL",
         "instructors": [
-          "Pratyush Chakraborty"
+          "Pratyush Chakraborty",
+          "Yadav Shubham Deepak"
         ],
         "sessions": [
           {
@@ -13832,7 +14113,8 @@
         "section": "T7",
         "type": "TUTORIAL",
         "instructors": [
-          "Joyjit Mukherjee"
+          "Joyjit Mukherjee",
+          "Hari Krishna G"
         ],
         "sessions": [
           {
@@ -13848,7 +14130,8 @@
         "section": "T8",
         "type": "TUTORIAL",
         "instructors": [
-          "Joyjit Mukherjee"
+          "Joyjit Mukherjee",
+          "Danwada Sharanya"
         ],
         "sessions": [
           {
@@ -13864,7 +14147,8 @@
         "section": "T9",
         "type": "TUTORIAL",
         "instructors": [
-          "P K Thiruvikraman"
+          "P K Thiruvikraman",
+          "N Praneeth"
         ],
         "sessions": [
           {
@@ -13880,7 +14164,8 @@
         "section": "T10",
         "type": "TUTORIAL",
         "instructors": [
-          "P K Thiruvikraman"
+          "P K Thiruvikraman",
+          "Abdul Qavi"
         ],
         "sessions": [
           {
@@ -13896,7 +14181,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Balasubramanian Malayappan"
+          "Balasubramanian Malayappan",
+          "Abdul Qavi",
+          "Krishna Tejus E M"
         ],
         "sessions": [
           {
@@ -13919,7 +14206,9 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Balasubramanian Malayappan"
+          "Balasubramanian Malayappan",
+          "Neerati Praneeth",
+          "Reshma P A"
         ],
         "sessions": [
           {
@@ -13942,7 +14231,9 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Sudha Radhika"
+          "Sudha Radhika",
+          "Danwada Sharanya",
+          "Gorityala Aishvaria"
         ],
         "sessions": [
           {
@@ -13965,7 +14256,9 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Sudha Radhika"
+          "Sudha Radhika",
+          "Hari Krishna G",
+          "Palavai Sowmya Sree"
         ],
         "sessions": [
           {
@@ -13988,7 +14281,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Mou Sarkar"
+          "Mou Sarkar",
+          "Yadav Shubham Deepak"
         ],
         "sessions": [
           {
@@ -14011,7 +14305,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Krishna Tejus E M"
+          "Krishna Tejus E M",
+          "Yadav Shubham Deepak"
         ],
         "sessions": [
           {
@@ -14034,7 +14329,8 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Reshma P A"
+          "Reshma P A",
+          "Hari Krishna G"
         ],
         "sessions": [
           {
@@ -14057,7 +14353,8 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Gorityala Aishvaria"
+          "Gorityala Aishvaria",
+          "Danwada Sharanya"
         ],
         "sessions": [
           {
@@ -14080,7 +14377,8 @@
         "section": "P9",
         "type": "PRACTICAL",
         "instructors": [
-          "Palavai Sowmya Sree"
+          "Palavai Sowmya Sree",
+          "Neerati Praneeth"
         ],
         "sessions": [
           {
@@ -14103,7 +14401,8 @@
         "section": "P10",
         "type": "PRACTICAL",
         "instructors": [
-          "Mou Sarkar"
+          "Mou Sarkar",
+          "Abdul Qavi"
         ],
         "sessions": [
           {
@@ -14322,7 +14621,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mithun Mondal"
+          "Mithun Mondal",
+          "Ayan Das Sarkar",
+          "P Swati Patro"
         ],
         "sessions": [
           {
@@ -14345,7 +14646,9 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Arup Ratan Paul"
+          "Arup Ratan Paul",
+          "Gavvala Rajasekhar",
+          "P Swati Patro"
         ],
         "sessions": [
           {
@@ -14368,7 +14671,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Mohammad Shaban"
+          "Mohammad Shaban",
+          "Aabid Chandbasha Mulla"
         ],
         "sessions": [
           {
@@ -14391,7 +14695,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Ayan Das Sarkar"
+          "Ayan Das Sarkar",
+          "Durga K Prasad Gudavalli"
         ],
         "sessions": [
           {
@@ -14414,7 +14719,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Gavvala Rajasekhar"
+          "Gavvala Rajasekhar",
+          "Mulla Gouse Basha"
         ],
         "sessions": [
           {
@@ -14437,7 +14743,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Mulla Gouse Basha"
+          "Mulla Gouse Basha",
+          "Mohammad Shaban"
         ],
         "sessions": [
           {
@@ -14460,7 +14767,8 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Sayantani Biswas"
+          "Sayantani Biswas",
+          "Durga K Prasad Gudavalli"
         ],
         "sessions": [
           {
@@ -14483,7 +14791,8 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Sayantani Biswas"
+          "Sayantani Biswas",
+          "Aabid Chandbasha Mulla"
         ],
         "sessions": [
           {
@@ -14863,7 +15172,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sayan Kanungo"
+          "Sayan Kanungo",
+          "Varun DarapureddyÂ"
         ],
         "sessions": [
           {
@@ -14879,7 +15189,8 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Bhaswati Chakraborty"
+          "Bhaswati Chakraborty",
+          "Khumbar Debbarma"
         ],
         "sessions": [
           {
@@ -15313,7 +15624,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mutyala Bavana Harshitha"
+          "Mutyala Bavana Harshitha",
+          "Abbidi Shivani Reddy"
         ],
         "sessions": [
           {
@@ -15336,7 +15648,8 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Mutyala Bavana Harshitha"
+          "Mutyala Bavana Harshitha",
+          "Sagnik Kundu"
         ],
         "sessions": [
           {
@@ -15359,7 +15672,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Soppari Nithesh"
+          "Soppari Nithesh",
+          "Avaneesh Ketan Chitta"
         ],
         "sessions": [
           {
@@ -15382,7 +15696,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Soppari Nithesh"
+          "Soppari Nithesh",
+          "Surakanti Jyothi"
         ],
         "sessions": [
           {
@@ -15405,7 +15720,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Surakanti Jyothi"
+          "Surakanti Jyothi",
+          "O V Vishnu Vardhan\nKoundinya"
         ],
         "sessions": [
           {
@@ -15428,7 +15744,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Yuvraj Maphrio Mao"
+          "Yuvraj Maphrio Mao",
+          "Bishal Kumar Keshari"
         ],
         "sessions": [
           {
@@ -15451,7 +15768,8 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Aalelai Vendhan M"
+          "Aalelai Vendhan M",
+          "Dalia Sett"
         ],
         "sessions": [
           {
@@ -15474,7 +15792,8 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Aalelai Vendhan M"
+          "Aalelai Vendhan M",
+          "Yuvraj Maphrio Mao"
         ],
         "sessions": [
           {
@@ -15497,7 +15816,8 @@
         "section": "P9",
         "type": "PRACTICAL",
         "instructors": [
-          "Omkar Kulkarni"
+          "Omkar Kulkarni",
+          "Bishal Kumar Keshari"
         ],
         "sessions": [
           {
@@ -15520,7 +15840,8 @@
         "section": "P10",
         "type": "PRACTICAL",
         "instructors": [
-          "Rohini Paul Joseph"
+          "Rohini Paul Joseph",
+          "Omkar Kulkarni"
         ],
         "sessions": [
           {
@@ -15543,7 +15864,8 @@
         "section": "P11",
         "type": "PRACTICAL",
         "instructors": [
-          "Dalia Sett"
+          "Dalia Sett",
+          "Himanshu Singh"
         ],
         "sessions": [
           {
@@ -15566,7 +15888,8 @@
         "section": "P12",
         "type": "PRACTICAL",
         "instructors": [
-          "Pritam Paul"
+          "Pritam Paul",
+          "O V Vishnu Vardhan\nKoundinya"
         ],
         "sessions": [
           {
@@ -15589,7 +15912,8 @@
         "section": "P13",
         "type": "PRACTICAL",
         "instructors": [
-          "Himanshu Singh"
+          "Himanshu Singh",
+          "Pritam Paul"
         ],
         "sessions": [
           {
@@ -15612,7 +15936,8 @@
         "section": "P14",
         "type": "PRACTICAL",
         "instructors": [
-          "Avaneesh Ketan Chitta"
+          "Avaneesh Ketan Chitta",
+          "Rohini Paul Joseph"
         ],
         "sessions": [
           {
@@ -15635,7 +15960,8 @@
         "section": "P15",
         "type": "PRACTICAL",
         "instructors": [
-          "Nandhana Chishor"
+          "Nandhana Chishor",
+          "Sagnik Kundu"
         ],
         "sessions": [
           {
@@ -15658,7 +15984,8 @@
         "section": "P16",
         "type": "PRACTICAL",
         "instructors": [
-          "Nandhana Chishor"
+          "Nandhana Chishor",
+          "Abbidi Shivani Reddy"
         ],
         "sessions": [
           {
@@ -15688,7 +16015,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Sk Masum Nawaz"
+          "Sk Masum Nawaz",
+          "Ramsha Tuba"
         ],
         "sessions": [
           {
@@ -15933,7 +16261,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Prasant Kumar Pattnaik"
+          "Prasant Kumar Pattnaik",
+          "Kudidhi Upendra",
+          "Nikhilamol Simon"
         ],
         "sessions": [
           {
@@ -15956,7 +16286,8 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Dasari Bujji Babu"
+          "Dasari Bujji Babu",
+          "Nitish Kumar Gupta"
         ],
         "sessions": [
           {
@@ -15979,7 +16310,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Pranay Agarwal"
+          "Pranay Agarwal",
+          "Dasari Bujji Babu"
         ],
         "sessions": [
           {
@@ -16048,7 +16380,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Chinthapalli Amulya"
+          "Chinthapalli Amulya",
+          "Nikhilamol Simon"
         ],
         "sessions": [
           {
@@ -16196,7 +16529,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Nongthombam Joychandra\nSingh"
+          "Nongthombam Joychandra\nSingh",
+          "Amit Kumar Srivastava",
+          "Kanika"
         ],
         "sessions": [
           {
@@ -16233,7 +16568,8 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Amit Kumar Panda"
+          "Amit Kumar Panda",
+          "Nadella Chenchu Chandu\nPrasanth"
         ],
         "sessions": [
           {
@@ -16483,7 +16819,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Ravikiran Yeleswarapu"
+          "Ravikiran Yeleswarapu",
+          "Sen Granthana"
         ],
         "sessions": [
           {
@@ -16605,7 +16942,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Bvvsn Prabhakar Rao"
+          "Bvvsn Prabhakar Rao",
+          "Nancy Varshney"
         ],
         "sessions": [
           {
@@ -16621,7 +16959,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Bvvsn Prabhakar Rao"
+          "Bvvsn Prabhakar Rao",
+          "Sajith Pm"
         ],
         "sessions": [
           {
@@ -16667,7 +17006,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Nancy Varshney"
+          "Nancy Varshney",
+          "Krishnapriya G B"
         ],
         "sessions": [
           {
@@ -16690,7 +17030,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Nancy Varshney"
+          "Nancy Varshney",
+          "Sajith Pm"
         ],
         "sessions": [
           {
@@ -17034,7 +17375,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Syed Ershad Ahmed"
+          "Syed Ershad Ahmed",
+          "Thalla Narasimha Swetha"
         ],
         "sessions": [
           {
@@ -17117,7 +17459,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Venkateswaran Rajagopalan"
+          "Venkateswaran Rajagopalan",
+          "Sreejith V"
         ],
         "sessions": [
           {
@@ -17192,7 +17535,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Soumya J"
+          "Soumya J",
+          "Mekala Bindu Bhargavi"
         ],
         "sessions": [
           {
@@ -17340,7 +17684,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Stp Srinivas"
+          "Stp Srinivas",
+          "D Ramachandra Rao"
         ],
         "sessions": [
           {
@@ -17451,7 +17796,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Neha Tak"
+          "Neha Tak",
+          "Gannavarapu Phani Srinath"
         ],
         "sessions": [
           {
@@ -17526,7 +17872,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Alivelu Manga Parimi"
+          "Alivelu Manga Parimi",
+          "Muzaffar Naveed"
         ],
         "sessions": [
           {
@@ -17600,7 +17947,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Ankur Bhattacharjee"
+          "Ankur Bhattacharjee",
+          "Pragada Dheeraj Abhinav"
         ],
         "sessions": [
           {
@@ -17748,7 +18096,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Nitish Kumar Gupta"
+          "Nitish Kumar Gupta",
+          "Ardra Muriyakandathil"
         ],
         "sessions": [
           {
@@ -17882,7 +18231,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Srikanta Dinda"
+          "Srikanta Dinda",
+          "Chennupati Ravi Teja"
         ],
         "sessions": [
           {
@@ -17935,7 +18285,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Ramesh Adusumalli"
+          "Ramesh Adusumalli",
+          "Sharon Shaju"
         ],
         "sessions": [
           {
@@ -17996,6 +18347,7 @@
         "type": "LECTURE",
         "instructors": [
           "CHINA HUSSAIN YAGANTI",
+          "Shreya Biswas",
           "China Hussain Yaganti"
         ],
         "sessions": [
@@ -18026,7 +18378,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "China Hussain Yaganti"
+          "China Hussain Yaganti",
+          "Shreya Biswas"
         ],
         "sessions": [
           {
@@ -18064,6 +18417,7 @@
         "type": "LECTURE",
         "instructors": [
           "SRAVANI BHARANDEV",
+          "Shreya Biswas",
           "Sravani Bharandev"
         ],
         "sessions": [
@@ -18094,7 +18448,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "Shreya Biswas"
+          "Shreya Biswas",
+          "Sravani Bharandev"
         ],
         "sessions": [
           {
@@ -19402,7 +19757,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mithun Mondal"
+          "Mithun Mondal",
+          "Ayan Das Sarkar",
+          "P Swati Patro"
         ],
         "sessions": [
           {
@@ -19425,7 +19782,9 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Arup Ratan Paul"
+          "Arup Ratan Paul",
+          "Gavvala Rajasekhar",
+          "P Swati Patro"
         ],
         "sessions": [
           {
@@ -19448,7 +19807,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Mohammad Shaban"
+          "Mohammad Shaban",
+          "Aabid Chandbasha Mulla"
         ],
         "sessions": [
           {
@@ -19471,7 +19831,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Ayan Das Sarkar"
+          "Ayan Das Sarkar",
+          "Durga K Prasad Gudavalli"
         ],
         "sessions": [
           {
@@ -19494,7 +19855,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Gavvala Rajasekhar"
+          "Gavvala Rajasekhar",
+          "Mulla Gouse Basha"
         ],
         "sessions": [
           {
@@ -19517,7 +19879,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Mulla Gouse Basha"
+          "Mulla Gouse Basha",
+          "Mohammad Shaban"
         ],
         "sessions": [
           {
@@ -19540,7 +19903,8 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Sayantani Biswas"
+          "Sayantani Biswas",
+          "Durga K Prasad Gudavalli"
         ],
         "sessions": [
           {
@@ -19563,7 +19927,8 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Sayantani Biswas"
+          "Sayantani Biswas",
+          "Aabid Chandbasha Mulla"
         ],
         "sessions": [
           {
@@ -19943,7 +20308,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sayan Kanungo"
+          "Sayan Kanungo",
+          "Varun DarapureddyÂ"
         ],
         "sessions": [
           {
@@ -19959,7 +20325,8 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Bhaswati Chakraborty"
+          "Bhaswati Chakraborty",
+          "Khumbar Debbarma"
         ],
         "sessions": [
           {
@@ -20393,7 +20760,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mutyala Bavana Harshitha"
+          "Mutyala Bavana Harshitha",
+          "Abbidi Shivani Reddy"
         ],
         "sessions": [
           {
@@ -20416,7 +20784,8 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Mutyala Bavana Harshitha"
+          "Mutyala Bavana Harshitha",
+          "Sagnik Kundu"
         ],
         "sessions": [
           {
@@ -20439,7 +20808,8 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Soppari Nithesh"
+          "Soppari Nithesh",
+          "Avaneesh Ketan Chitta"
         ],
         "sessions": [
           {
@@ -20462,7 +20832,8 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Soppari Nithesh"
+          "Soppari Nithesh",
+          "Surakanti Jyothi"
         ],
         "sessions": [
           {
@@ -20485,7 +20856,8 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Surakanti Jyothi"
+          "Surakanti Jyothi",
+          "O V Vishnu Vardhan\nKoundinya"
         ],
         "sessions": [
           {
@@ -20508,7 +20880,8 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Yuvraj Maphrio Mao"
+          "Yuvraj Maphrio Mao",
+          "Bishal Kumar Keshari"
         ],
         "sessions": [
           {
@@ -20531,7 +20904,8 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Aalelai Vendhan M"
+          "Aalelai Vendhan M",
+          "Dalia Sett"
         ],
         "sessions": [
           {
@@ -20554,7 +20928,8 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Aalelai Vendhan M"
+          "Aalelai Vendhan M",
+          "Yuvraj Maphrio Mao"
         ],
         "sessions": [
           {
@@ -20577,7 +20952,8 @@
         "section": "P9",
         "type": "PRACTICAL",
         "instructors": [
-          "Omkar Kulkarni"
+          "Omkar Kulkarni",
+          "Bishal Kumar Keshari"
         ],
         "sessions": [
           {
@@ -20600,7 +20976,8 @@
         "section": "P10",
         "type": "PRACTICAL",
         "instructors": [
-          "Rohini Paul Joseph"
+          "Rohini Paul Joseph",
+          "Omkar Kulkarni"
         ],
         "sessions": [
           {
@@ -20623,7 +21000,8 @@
         "section": "P11",
         "type": "PRACTICAL",
         "instructors": [
-          "Dalia Sett"
+          "Dalia Sett",
+          "Himanshu Singh"
         ],
         "sessions": [
           {
@@ -20646,7 +21024,8 @@
         "section": "P12",
         "type": "PRACTICAL",
         "instructors": [
-          "Pritam Paul"
+          "Pritam Paul",
+          "O V Vishnu Vardhan\nKoundinya"
         ],
         "sessions": [
           {
@@ -20669,7 +21048,8 @@
         "section": "P13",
         "type": "PRACTICAL",
         "instructors": [
-          "Himanshu Singh"
+          "Himanshu Singh",
+          "Pritam Paul"
         ],
         "sessions": [
           {
@@ -20692,7 +21072,8 @@
         "section": "P14",
         "type": "PRACTICAL",
         "instructors": [
-          "Avaneesh Ketan Chitta"
+          "Avaneesh Ketan Chitta",
+          "Rohini Paul Joseph"
         ],
         "sessions": [
           {
@@ -20715,7 +21096,8 @@
         "section": "P15",
         "type": "PRACTICAL",
         "instructors": [
-          "Nandhana Chishor"
+          "Nandhana Chishor",
+          "Sagnik Kundu"
         ],
         "sessions": [
           {
@@ -20738,7 +21120,8 @@
         "section": "P16",
         "type": "PRACTICAL",
         "instructors": [
-          "Nandhana Chishor"
+          "Nandhana Chishor",
+          "Abbidi Shivani Reddy"
         ],
         "sessions": [
           {
@@ -20768,7 +21151,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Sk Masum Nawaz"
+          "Sk Masum Nawaz",
+          "Ramsha Tuba"
         ],
         "sessions": [
           {
@@ -22605,7 +22989,8 @@
         "section": "T10",
         "type": "TUTORIAL",
         "instructors": [
-          "Amya Ranjan Ray"
+          "Amya Ranjan Ray",
+          "Rajdip Dey"
         ],
         "sessions": [
           {
@@ -22690,7 +23075,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Jaganmohan Jonnalagadda"
+          "Jaganmohan Jonnalagadda",
+          "Pankaj Patel"
         ],
         "sessions": [
           {
@@ -24632,7 +25018,9 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Amit Kumar Gupta"
+          "Amit Kumar Gupta",
+          "Akashjyoti Barman",
+          "Huzef Ur Rahman"
         ],
         "sessions": [
           {
@@ -24648,7 +25036,9 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Vuppuluri Amol"
+          "Vuppuluri Amol",
+          "Alle Pawan Kumar Reddy",
+          "Gourav P B"
         ],
         "sessions": [
           {
@@ -24731,7 +25121,9 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sayan Das"
+          "Sayan Das",
+          "Santhosh Babu S",
+          "Suhas Shreekrishna"
         ],
         "sessions": [
           {
@@ -24747,7 +25139,9 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Arnab Guha"
+          "Arnab Guha",
+          "Nakka Muralikrishna",
+          "Sibin V Mathew"
         ],
         "sessions": [
           {
@@ -24816,7 +25210,9 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sujith R"
+          "Sujith R",
+          "Pichika S V V Srihari",
+          "Vankar Durgesh"
         ],
         "sessions": [
           {
@@ -24832,7 +25228,9 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Prabakaran Saravanan"
+          "Prabakaran Saravanan",
+          "Madhu Sruthi Emani",
+          "S Nagarani"
         ],
         "sessions": [
           {
@@ -24848,7 +25246,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Danavath Balu"
+          "Danavath Balu",
+          "Chindam Jayanth Saikrishna",
+          "Pichika S V V Srihari"
         ],
         "sessions": [
           {
@@ -24871,7 +25271,9 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "S Nagarani"
+          "S Nagarani",
+          "Chindam Jayanth Saikrishna",
+          "Tertaraw Mucheye Baye"
         ],
         "sessions": [
           {
@@ -24894,7 +25296,9 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Vankar Durgesh"
+          "Vankar Durgesh",
+          "Nandipati Veera Manikanta",
+          "Tertaraw Mucheye Baye"
         ],
         "sessions": [
           {
@@ -24917,7 +25321,9 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Alle Pawan Kumar Reddy"
+          "Alle Pawan Kumar Reddy",
+          "Harsha Reddy Joolakanti",
+          "Nandipati Veera Manikanta"
         ],
         "sessions": [
           {
@@ -25008,7 +25414,9 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Jayaprakash K S"
+          "Jayaprakash K S",
+          "Devika C R",
+          "Nikhil Sureshrao Shrikhande"
         ],
         "sessions": [
           {
@@ -25024,7 +25432,9 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Mrinal Ketan Jagirdar"
+          "Mrinal Ketan Jagirdar",
+          "Dhoni Nagaraj",
+          "Muneshu Babu Nitta"
         ],
         "sessions": [
           {
@@ -25040,7 +25450,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Mrinal Ketan Jagirdar"
+          "Mrinal Ketan Jagirdar",
+          "A.c.raghu Kishore Yadav",
+          "Kolanu Sai Sandeep"
         ],
         "sessions": [
           {
@@ -25063,7 +25475,9 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Naveen Kumar Shrivastava"
+          "Naveen Kumar Shrivastava",
+          "Dhoni Nagaraj",
+          "Kiran Somisetti"
         ],
         "sessions": [
           {
@@ -25086,7 +25500,9 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Devika C R"
+          "Devika C R",
+          "Santhosh Babu S",
+          "Suhas Shreekrishna"
         ],
         "sessions": [
           {
@@ -25109,7 +25525,9 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Muneshu Babu Nitta"
+          "Muneshu Babu Nitta",
+          "Naveen Kumar Shrivastava",
+          "Sibin V Mathew"
         ],
         "sessions": [
           {
@@ -25306,7 +25724,9 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Nitin Rameshrao Kotkunde"
+          "Nitin Rameshrao Kotkunde",
+          "Tba-mech",
+          "Vicky Lad"
         ],
         "sessions": [
           {
@@ -25322,7 +25742,9 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Pavan Kumar Penumakala"
+          "Pavan Kumar Penumakala",
+          "Dipendu Pal",
+          "Vankar Durgesh"
         ],
         "sessions": [
           {
@@ -25391,7 +25813,9 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Narala Suresh Kumar Reddy"
+          "Narala Suresh Kumar Reddy",
+          "Mrinmoy Saha",
+          "Pandi Jyothish"
         ],
         "sessions": [
           {
@@ -25407,7 +25831,9 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Kundan Kumar Singh"
+          "Kundan Kumar Singh",
+          "Alok Kumar",
+          "Anka Datta"
         ],
         "sessions": [
           {
@@ -25423,7 +25849,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Pandi Jyothish"
+          "Pandi Jyothish",
+          "Gopi P",
+          "Gourav P B"
         ],
         "sessions": [
           {
@@ -25446,7 +25874,9 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Souvik Das"
+          "Souvik Das",
+          "Alok Kumar",
+          "Kaleru Sai Kiran"
         ],
         "sessions": [
           {
@@ -25469,7 +25899,33 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Anka Datta"
+          "Anka Datta",
+          "Mrinmoy Saha",
+          "Narala Suresh Kumar Reddy",
+          "Pabbala Siva Prasad"
+        ],
+        "sessions": [
+          {
+            "day": "W",
+            "hour": 9,
+            "startTime": "16:00",
+            "endTime": "16:50",
+            "room": "WS"
+          },
+          {
+            "day": "W",
+            "hour": 10,
+            "startTime": "17:00",
+            "endTime": "17:50",
+            "room": "WS"
+          }
+        ]
+      },
+      {
+        "section": "P4",
+        "type": "PRACTICAL",
+        "instructors": [
+          "Narala Suresh Kumar Reddy"
         ],
         "sessions": [
           {
@@ -25522,7 +25978,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Pabbala Siva Prasad"
+          "Pabbala Siva Prasad",
+          "Amrita Priyadarshini"
         ],
         "sessions": [
           {
@@ -25623,7 +26080,9 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Naveen Kumar Shrivastava"
+          "Naveen Kumar Shrivastava",
+          "Safa Khader",
+          "Tba-mech"
         ],
         "sessions": [
           {
@@ -25639,7 +26098,9 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Nandanavanam Jalaiah"
+          "Nandanavanam Jalaiah",
+          "A.c.raghu Kishore Yadav",
+          "Avinash S Nair"
         ],
         "sessions": [
           {
@@ -25685,7 +26146,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Ram Chandra Murthy Kalluri"
+          "Ram Chandra Murthy Kalluri",
+          "Huzef Ur Rahman"
         ],
         "sessions": [
           {
@@ -25868,6 +26330,7 @@
         "type": "LECTURE",
         "instructors": [
           "R PARAMESHWARAN",
+          "Sandip Shridharrao Deshmukh",
           "R Parameshwaran"
         ],
         "sessions": [
@@ -25898,7 +26361,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "R Parameshwaran"
+          "R Parameshwaran",
+          "Kolanu Sai Sandeep",
+          "Sandip Shridharrao Deshmukh"
         ],
         "sessions": [
           {
@@ -26107,7 +26572,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Jeevan Jaidi"
+          "Jeevan Jaidi",
+          "Nikhil Sureshrao Shrikhande"
         ],
         "sessions": [
           {
@@ -26421,7 +26887,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Vishista Kaushik"
+          "Vishista Kaushik",
+          "Srinivasa Prakash Regalla"
         ],
         "sessions": [
           {
@@ -26555,7 +27022,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Santanu Prasad Datta"
+          "Santanu Prasad Datta",
+          "Madhu Sruthi Emani"
         ],
         "sessions": [
           {
@@ -26673,7 +27141,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "S Gurunarayanan"
+          "S Gurunarayanan",
+          "KANIKA"
         ],
         "sessions": [
           {
@@ -26703,7 +27172,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Kanika"
+          "Kanika",
+          "Diya Chakraborty"
         ],
         "sessions": [
           {
@@ -26815,7 +27285,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Sanket Goel"
+          "Sanket Goel",
+          "Suhaib Imtiyaz"
         ],
         "sessions": [
           {
@@ -26889,7 +27360,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Parikshit Parshuram Sahatiya"
+          "Parikshit Parshuram Sahatiya",
+          "Naresh Bahadursha"
         ],
         "sessions": [
           {
@@ -27653,7 +28125,11 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Balaram Ghosh"
+          "Balaram Ghosh",
+          "Regula Sanjeev",
+          "Shivani Rathour",
+          "Sripathi Nikhitha",
+          "Vanashree Vinod Thakur"
         ],
         "sessions": [
           {
@@ -27676,7 +28152,11 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Balaram Ghosh"
+          "Balaram Ghosh",
+          "Ankan Das",
+          "Denishkumar Jayvadanbhai\nPrajapati",
+          "Tarwani Ritesh Suresh",
+          "Tonmoy Banerjee"
         ],
         "sessions": [
           {
@@ -27706,7 +28186,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "KETAKI DEEPAK BELSARE"
+          "KETAKI DEEPAK BELSARE",
+          "Arti Dhar"
         ],
         "sessions": [
           {
@@ -27729,7 +28210,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Ketaki Deepak Belsare"
+          "Ketaki Deepak Belsare",
+          "Arti Dhar"
         ],
         "sessions": [
           {
@@ -27745,7 +28227,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Arti Dhar"
+          "Arti Dhar",
+          "Choudhary Heena Bholaram",
+          "Prachi Suman",
+          "Vesmaker Kushal Nalin"
         ],
         "sessions": [
           {
@@ -27768,7 +28253,10 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Arti Dhar"
+          "Arti Dhar",
+          "Karnik Aaditi Sameer",
+          "Mansi Satish Kale",
+          "Siddharth Raj"
         ],
         "sessions": [
           {
@@ -27837,7 +28325,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Ketaki Deepak Belsare"
+          "Ketaki Deepak Belsare",
+          "Anjana P K",
+          "Kendre Sandhya Rani",
+          "Prajwal Sanjay Bhamare"
         ],
         "sessions": [
           {
@@ -27860,7 +28351,10 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Ketaki Deepak Belsare"
+          "Ketaki Deepak Belsare",
+          "Aditya Sudam More",
+          "Jegadheeswari V",
+          "Rudy Najiar"
         ],
         "sessions": [
           {
@@ -27929,7 +28423,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Venkata Vamsi Krishna\nVenuganti"
+          "Venkata Vamsi Krishna\nVenuganti",
+          "Anima Maity",
+          "Arawindh R",
+          "Suryawanshi Rupali Sunil"
         ],
         "sessions": [
           {
@@ -27952,7 +28449,10 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Venkata Vamsi Krishna\nVenuganti"
+          "Venkata Vamsi Krishna\nVenuganti",
+          "Aditi Pradhan",
+          "Harshala Ramesh Patil",
+          "Sonali Singh"
         ],
         "sessions": [
           {
@@ -28051,7 +28551,11 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Shrikant Ramesh Mulay"
+          "Shrikant Ramesh Mulay",
+          "Abhipshit Kalita",
+          "Kartik Tyagi",
+          "Revati Vijayrao Thakare",
+          "Vipparthi Pravinkumar Ganesh"
         ],
         "sessions": [
           {
@@ -28074,7 +28578,10 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Shrikant Ramesh Mulay"
+          "Shrikant Ramesh Mulay",
+          "Manish Chander Joshi",
+          "Mansi Shripat Jha",
+          "More Sagar Anil"
         ],
         "sessions": [
           {
@@ -28104,7 +28611,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "P Yogeeswari"
+          "P Yogeeswari",
+          "VIJAY KUMAR NIMBARTE"
         ],
         "sessions": [
           {
@@ -28127,7 +28635,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "P Yogeeswari"
+          "P Yogeeswari",
+          "Vijay Kumar Nimbarte"
         ],
         "sessions": [
           {
@@ -28143,7 +28652,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "P Yogeeswari"
+          "P Yogeeswari",
+          "Darakhshan Begum",
+          "Deepu Raveend",
+          "Vijay Kumar Nimbarte"
         ],
         "sessions": [
           {
@@ -28166,7 +28678,11 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "P Yogeeswari"
+          "P Yogeeswari",
+          "Nirlipta Mohapatra",
+          "Prajwal Dhokne",
+          "Shreya Shrikant Sonak",
+          "Vijay Kumar Nimbarte"
         ],
         "sessions": [
           {
@@ -28235,7 +28751,11 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Nirmal Jayabalan"
+          "Nirmal Jayabalan",
+          "Manthan S Hiremath",
+          "Mujawar Mohd Faizan\nAbubakar",
+          "Nitin Khandagale",
+          "Savla Raj"
         ],
         "sessions": [
           {
@@ -28258,7 +28778,11 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Nirmal Jayabalan"
+          "Nirmal Jayabalan",
+          "Manasa\n<p20250095@hyderabad.bits-pilani.ac.in>",
+          "Mhamane Shruti\nRajendranath",
+          "Oindrilla Dasgupta",
+          "Susmit Prashant Nikam"
         ],
         "sessions": [
           {
@@ -28468,7 +28992,12 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Swati Biswas"
+          "Swati Biswas",
+          "Are Varshini",
+          "Prafful Pradeep Kothari",
+          "Saptami Goswami",
+          "Sourav Paul",
+          "Zinataman Sarkar"
         ],
         "sessions": [
           {
@@ -28529,6 +29058,7 @@
         "type": "LECTURE",
         "instructors": [
           "ABHIJEET RAJENDRA JOSHI",
+          "Onkar P Kulkarni",
           "Abhijeet Rajendra Joshi"
         ],
         "sessions": [
@@ -28566,7 +29096,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "NIRMAL JAYABALAN"
+          "NIRMAL JAYABALAN",
+          "Satyanarayana\nSubrahmanyam"
         ],
         "sessions": [
           {
@@ -28708,7 +29239,15 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "A Sajeli Begum"
+          "A Sajeli Begum",
+          "Erram Venkatesh",
+          "Gouthami Chakka",
+          "Hruta Sundar Swain",
+          "Mogapothula Surya Teja",
+          "Paulkar Suraj Shrihari",
+          "Pillai Yadu Kamesh Usha",
+          "Siddhant Padhi",
+          "Tamizhmathy M"
         ],
         "sessions": [
           {
@@ -28783,7 +29322,11 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Venkata Vamsi Krishna\nVenuganti"
+          "Venkata Vamsi Krishna\nVenuganti",
+          "Anirban Pal",
+          "Naik Sharayu Sunil Jyoti",
+          "Shishira P S",
+          "Yeolekar Sanskruti Sarang"
         ],
         "sessions": [
           {
@@ -28864,7 +29407,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "P YOGEESWARI"
+          "P YOGEESWARI",
+          "Satyanarayana\nSubrahmanyam"
         ],
         "sessions": [
           {
@@ -28969,7 +29513,8 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Punna Rao Ravi"
+          "Punna Rao Ravi",
+          "S R Rashmi"
         ],
         "sessions": [
           {
@@ -29044,7 +29589,12 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "K Srinivasa Prasad"
+          "K Srinivasa Prasad",
+          "Makkapati Manasa",
+          "Shivani",
+          "Shreesha Hegde",
+          "Talagadadeevi Nirupamteja",
+          "Wadkar Avinash Rudrappa\n(sangita)"
         ],
         "sessions": [
           {
@@ -29192,7 +29742,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Punna Rao Ravi"
+          "Punna Rao Ravi",
+          "Gatade Ketki Umesh",
+          "Girish Sh",
+          "Swapnil Subhash Gore"
         ],
         "sessions": [
           {
@@ -29236,7 +29789,8 @@
         "section": "L1",
         "type": "LECTURE",
         "instructors": [
-          "Sashideep Gutti"
+          "Sashideep Gutti",
+          "Kannan Ramaswamy"
         ],
         "sessions": [
           {
@@ -29259,7 +29813,8 @@
         "section": "L2",
         "type": "LECTURE",
         "instructors": [
-          "Sashideep Gutti"
+          "Sashideep Gutti",
+          "Kannan Ramaswamy"
         ],
         "sessions": [
           {
@@ -29449,7 +30004,9 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "Asrarul Haque"
+          "Asrarul Haque",
+          "Binita Malik",
+          "Chandu Pavanmayi"
         ],
         "sessions": [
           {
@@ -29472,7 +30029,9 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "Ubaid Naseer"
+          "Ubaid Naseer",
+          "Aswathy K R",
+          "VENKATA SESHA SHIV CHAITANYA\nKAMARAJUGADDA"
         ],
         "sessions": [
           {
@@ -29495,7 +30054,9 @@
         "section": "P3",
         "type": "PRACTICAL",
         "instructors": [
-          "Manabendra Kuiri"
+          "Manabendra Kuiri",
+          "John Paul J",
+          "Tamali Mukherjee"
         ],
         "sessions": [
           {
@@ -29518,7 +30079,9 @@
         "section": "P4",
         "type": "PRACTICAL",
         "instructors": [
-          "Sutapa Roy"
+          "Sutapa Roy",
+          "Lakshmi Priya K",
+          "Ria Kataria"
         ],
         "sessions": [
           {
@@ -29541,7 +30104,9 @@
         "section": "P5",
         "type": "PRACTICAL",
         "instructors": [
-          "Venkata Sesha Shiv Chaitanya\nKamarajugadda"
+          "Venkata Sesha Shiv Chaitanya\nKamarajugadda",
+          "Abhija D S",
+          "Gourab Kumar Das"
         ],
         "sessions": [
           {
@@ -29564,7 +30129,9 @@
         "section": "P6",
         "type": "PRACTICAL",
         "instructors": [
-          "Swastik Bhattacharya"
+          "Swastik Bhattacharya",
+          "Chintalapudi Sree Devi",
+          "Sai Ruthvik Svs"
         ],
         "sessions": [
           {
@@ -29587,7 +30154,9 @@
         "section": "P7",
         "type": "PRACTICAL",
         "instructors": [
-          "Aranya Bhuti Bhattacharjee"
+          "Aranya Bhuti Bhattacharjee",
+          "Pritam Roy",
+          "Tba-phy"
         ],
         "sessions": [
           {
@@ -29610,7 +30179,9 @@
         "section": "P8",
         "type": "PRACTICAL",
         "instructors": [
-          "Aranya Bhuti Bhattacharjee"
+          "Aranya Bhuti Bhattacharjee",
+          "Rakesh Kumar Jha",
+          "Viswakannan R K"
         ],
         "sessions": [
           {
@@ -29633,7 +30204,9 @@
         "section": "P9",
         "type": "PRACTICAL",
         "instructors": [
-          "Aprajita Shrivastava"
+          "Aprajita Shrivastava",
+          "Aranya Bhuti Bhattacharjee",
+          "Balusa Niveditha"
         ],
         "sessions": [
           {
@@ -29656,7 +30229,9 @@
         "section": "P10",
         "type": "PRACTICAL",
         "instructors": [
-          "Subrahmanya Bhima Sankar\nDavuluri"
+          "Subrahmanya Bhima Sankar\nDavuluri",
+          "Shyamapada Pal",
+          "Sneha Krishnan"
         ],
         "sessions": [
           {
@@ -29679,7 +30254,9 @@
         "section": "P11",
         "type": "PRACTICAL",
         "instructors": [
-          "Subrahmanya Bhima Sankar\nDavuluri"
+          "Subrahmanya Bhima Sankar\nDavuluri",
+          "Tba-phy",
+          "Vishnu Prasad C V"
         ],
         "sessions": [
           {
@@ -30099,6 +30676,7 @@
         "type": "LECTURE",
         "instructors": [
           "MEENAKSHI V",
+          "Debanjan Polley",
           "Meenakshi V"
         ],
         "sessions": [
@@ -30129,7 +30707,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Meenakshi V"
+          "Meenakshi V",
+          "Debanjan Polley"
         ],
         "sessions": [
           {
@@ -30152,7 +30731,10 @@
         "section": "P1",
         "type": "PRACTICAL",
         "instructors": [
-          "MANABENDRA KUIRI"
+          "MANABENDRA KUIRI",
+          "Debanjan Polley",
+          "Srabani Tungabidya",
+          "Sudev Krishnan K"
         ],
         "sessions": [
           {
@@ -30189,7 +30771,10 @@
         "section": "P2",
         "type": "PRACTICAL",
         "instructors": [
-          "B. Harihara Venkataraman"
+          "B. Harihara Venkataraman",
+          "Abhinav K P",
+          "Kannan Ramaswamy",
+          "Sneha Ramesh Parlawar"
         ],
         "sessions": [
           {
@@ -31044,7 +31629,8 @@
         "section": "T1",
         "type": "TUTORIAL",
         "instructors": [
-          "Sayan Kanungo"
+          "Sayan Kanungo",
+          "Varun DarapureddyÂ"
         ],
         "sessions": [
           {
@@ -31060,7 +31646,8 @@
         "section": "T2",
         "type": "TUTORIAL",
         "instructors": [
-          "Bhaswati Chakraborty"
+          "Bhaswati Chakraborty",
+          "Khumbar Debbarma"
         ],
         "sessions": [
           {
@@ -31212,6 +31799,7 @@
         "type": "LECTURE",
         "instructors": [
           "SATYA NARAYANA MURTHY VEMULAPATI",
+          "B. Harihara Venkataraman",
           "Satya Narayana Murthy\nVemulapati"
         ],
         "sessions": [

@@ -80,6 +80,7 @@ model TimetableDraft {
   name      String
   bitsId    String
   isActive  Boolean  @default(false)
+  shareCode String?  @unique
   sections  Json
   updatedAt DateTime @updatedAt
 

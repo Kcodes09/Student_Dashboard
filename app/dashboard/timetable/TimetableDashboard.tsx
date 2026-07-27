@@ -10,6 +10,7 @@ export interface LocalTimetable {
   name: string
   bitsId: string // Used to determine branches for CDCs
   isActive: boolean
+  shareCode?: string
   sections: any // The selected sections object
   updatedAt: number
 }
@@ -55,6 +56,10 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
   const [dual, setDual] = useState("")
   const [studentId4, setStudentId4] = useState("0000")
   const [modalBatchYear, setModalBatchYear] = useState("2026")
+  
+  // Import State
+  const [importCode, setImportCode] = useState("")
+  const [isImporting, setIsImporting] = useState(false)
 
   useEffect(() => {
     async function init() {
@@ -83,6 +88,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
               name: d.name,
               bitsId: d.bitsId,
               isActive: d.isActive,
+              shareCode: d.shareCode,
               sections: d.sections,
               updatedAt: new Date(d.updatedAt).getTime(),
             } as LocalTimetable]))
@@ -314,6 +320,53 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
 
   const isMscPrimary = MSC_BRANCHES.some(b => b.code === primary)
 
+  const handleImport = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (importCode.length !== 4) {
+      alert("Code must be exactly 4 characters")
+      return
+    }
+    
+    setIsImporting(true)
+    try {
+      const res = await fetch(`/api/timetable/share/${importCode}`)
+      if (!res.ok) throw new Error("Timetable not found")
+      
+      const sharedDraft = await res.json()
+      
+      const newId = Date.now().toString()
+      const newDraft: LocalTimetable = {
+        id: newId,
+        name: `Imported: ${sharedDraft.name}`,
+        bitsId: sharedDraft.bitsId,
+        isActive: false,
+        shareCode: "", // Let it generate a new one
+        sections: sharedDraft.sections,
+        updatedAt: Date.now()
+      }
+      
+      const stored = localStorage.getItem("student_timetables")
+      const parsed = stored ? JSON.parse(stored) : []
+      const updated = [...parsed, newDraft]
+      localStorage.setItem("student_timetables", JSON.stringify(updated))
+      setTimetables(updated)
+      setImportCode("")
+      
+      // Sync it to server
+      await fetch("/api/timetable/drafts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newDraft)
+      })
+      
+      alert("Timetable imported successfully!")
+    } catch(err) {
+      alert("Failed to import. Please check the code and try again.")
+    } finally {
+      setIsImporting(false)
+    }
+  }
+
   return (
     <div className="flex-1 overflow-y-auto bg-[var(--bg-main)] p-4 md:p-8 h-[calc(100vh-60px)]">
       <div className="max-w-5xl mx-auto pb-20">
@@ -344,7 +397,24 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
                 </span>
               )}
             </div>
-            <p className="text-white/80 text-sm font-medium">Create multiple drafts, test branch changes, and set your active schedule.</p>
+            <p className="text-white/80 text-sm font-medium mb-4">Create multiple drafts, test branch changes, and set your active schedule.</p>
+            <form onSubmit={handleImport} className="flex flex-wrap items-center gap-2 max-w-sm mt-4">
+              <input
+                type="text"
+                placeholder="Import Code (e.g. A1B2)"
+                value={importCode}
+                onChange={e => setImportCode(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 4))}
+                className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-sm font-bold text-white placeholder-white/50 outline-none focus:border-white/50 transition-all uppercase"
+                disabled={isImporting}
+              />
+              <button
+                type="submit"
+                disabled={isImporting || importCode.length !== 4}
+                className="bg-white text-[var(--bg-accent)] px-4 py-2 rounded-xl text-sm font-bold shadow hover:bg-white/90 disabled:opacity-50 transition-all"
+              >
+                {isImporting ? "Importing..." : "Import"}
+              </button>
+            </form>
           </div>
         </div>
 
@@ -381,9 +451,24 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
               
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1 truncate pr-16" style={{ color: "var(--text-primary)" }}>{tt.name}</h3>
-                <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: "var(--text-muted)" }}>
-                  {tt.bitsId}
-                </p>
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <p className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
+                    {tt.bitsId}
+                  </p>
+                  {tt.shareCode && (
+                    <span 
+                      className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 cursor-copy"
+                      title="Copy Share Code"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        navigator.clipboard.writeText(tt.shareCode!)
+                        alert("Share code copied to clipboard!")
+                      }}
+                    >
+                      {tt.shareCode}
+                    </span>
+                  )}
+                </div>
                 
                 <div className="flex items-center gap-2 mt-4 text-xs font-medium text-[var(--text-muted)]">
                   <span>📚 {Object.entries(tt.sections || {}).filter(([courseCode, courseSections]: [string, any]) => {

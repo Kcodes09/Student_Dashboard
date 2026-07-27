@@ -46,9 +46,33 @@ export async function POST(req: Request) {
       })
     }
 
+    // Helper to generate a 4-char alphanumeric code
+    const generateCode = () => {
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      let result = ""
+      for (let i = 0; i < 4; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length))
+      }
+      return result
+    }
+
+    // Check if draft exists to avoid regenerating code
+    const existing = await prisma.timetableDraft.findUnique({ where: { id } })
+    let finalShareCode = existing?.shareCode
+
+    if (!finalShareCode) {
+      // Find a unique code
+      let isUnique = false
+      while (!isUnique) {
+        finalShareCode = generateCode()
+        const collision = await prisma.timetableDraft.findUnique({ where: { shareCode: finalShareCode } })
+        if (!collision) isUnique = true
+      }
+    }
+
     const draft = await prisma.timetableDraft.upsert({
       where: { id },
-      update: { name, bitsId, isActive: isActive ?? false, sections: sections ?? {} },
+      update: { name, bitsId, isActive: isActive ?? false, sections: sections ?? {}, shareCode: finalShareCode },
       create: {
         id,
         name,
@@ -56,6 +80,7 @@ export async function POST(req: Request) {
         isActive: isActive ?? false,
         sections: sections ?? {},
         userEmail: session.user.email,
+        shareCode: finalShareCode,
       },
     })
 

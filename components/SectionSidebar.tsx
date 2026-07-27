@@ -185,7 +185,7 @@ export default function SectionSidebar({
                   const ampm = h >= 12 ? "PM" : "AM"
                   return `${h % 12 || 12}:${String(m).padStart(2, "0")} ${ampm}`
                 }
-                const days = section.sessions.map(s => s.day).join(" ")
+                const days = Array.from(new Set(section.sessions.map(s => s.day))).join(" ")
                 return (
                   <div className="flex items-center gap-2 mt-2">
                     <span className="rounded bg-[var(--bg-muted)] px-1.5 py-0.5 text-[10px] font-bold text-[var(--text-primary)]">

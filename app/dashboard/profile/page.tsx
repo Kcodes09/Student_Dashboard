@@ -44,14 +44,19 @@ export default async function ProfilePage() {
               {session.user.email}
             </p>
           </div>
-          <div>
-            <p className="text-sm text-[var(--text-muted)]">
-              Email
-            </p>
-            <img src={`${session.user.image}`} width={500} height={500} />
-              
-            
-          </div>
+          {session.user.image && (
+            <div className="mt-4">
+              <p className="text-sm text-[var(--text-muted)] mb-2">
+                Profile Picture
+              </p>
+              <img 
+                src={session.user.image} 
+                alt="Profile" 
+                referrerPolicy="no-referrer"
+                className="w-24 h-24 rounded-full object-cover ring-2 ring-gray-200 dark:ring-slate-700"
+              />
+            </div>
+          )}
         </div>
       </main>
     </>

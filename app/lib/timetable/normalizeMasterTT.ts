@@ -166,13 +166,16 @@ export function normalizeMasterTT(rows: RawRow[]): MasterCourse[] {
         const time = HOUR_TIME_MAP[h]
         if (!time) continue
 
-        section.sessions.push({
-          day: d,
-          hour: h,
-          startTime: time.start,
-          endTime: time.end,
-          room: row.ROOM,
-        })
+        const exists = section.sessions.some(s => s.day === d && s.hour === h)
+        if (!exists) {
+          section.sessions.push({
+            day: d,
+            hour: h,
+            startTime: time.start,
+            endTime: time.end,
+            room: row.ROOM,
+          })
+        }
       }
     }
   }

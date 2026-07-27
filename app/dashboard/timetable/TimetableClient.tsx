@@ -46,6 +46,14 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
   
   const [localTimetable, setLocalTimetable] = useState<any>(null)
   const [isHydrated, setIsHydrated] = useState(false)
+  const [isEditingTitle, setIsEditingTitle] = useState(false)
+  const [editedTitle, setEditedTitle] = useState("")
+
+  useEffect(() => {
+    if (localTimetable?.name) {
+      setEditedTitle(localTimetable.name)
+    }
+  }, [localTimetable?.name])
 
   const isYear1 = useMemo(() => isYear1Batch(localTimetable?.bitsId || ""), [localTimetable?.bitsId])
   const isBPharm = useMemo(() => {
@@ -269,13 +277,28 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
         }))
         localStorage.setItem("student_timetables", JSON.stringify(updated))
         
-        // Sync the new active to server
-        const res = await fetch("/api/timetable/save", {
+        // Sync the new active to server via drafts endpoint
+        const draftPayload = {
+          id: timetableId,
+          name: localTimetable.name,
+          bitsId: localTimetable.bitsId,
+          isActive: true,
+          sections: selectedSections,
+        }
+        const resDraft = await fetch("/api/timetable/drafts", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(draftPayload),
+        })
+        if (!resDraft.ok) throw new Error(await resDraft.text())
+
+        // Also sync to legacy save endpoint
+        const resSave = await fetch("/api/timetable/save", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(selectedSections),
         })
-        if (!res.ok) throw new Error(await res.text())
+        if (!resSave.ok) throw new Error(await resSave.text())
         
         setLocalTimetable({ ...localTimetable, isActive: true })
         savedSectionsRef.current = JSON.stringify(selectedSections)
@@ -283,6 +306,47 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
       }
     } catch {
       showToast("Failed to set active (server sync error)")
+    }
+  }
+
+  const handleSaveTitle = async () => {
+    if (!localTimetable || editedTitle.trim() === "") {
+      setIsEditingTitle(false)
+      setEditedTitle(localTimetable?.name || "")
+      return
+    }
+    if (editedTitle === localTimetable.name) {
+      setIsEditingTitle(false)
+      return
+    }
+    const newTitle = editedTitle.trim()
+    try {
+      const stored = localStorage.getItem("student_timetables")
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        const updated = parsed.map((t: any) => t.id === timetableId ? { ...t, name: newTitle, updatedAt: Date.now() } : t)
+        localStorage.setItem("student_timetables", JSON.stringify(updated))
+      }
+
+      setLocalTimetable((prev: any) => ({ ...prev, name: newTitle }))
+      
+      const draftPayload = {
+        id: timetableId,
+        name: newTitle,
+        bitsId: localTimetable.bitsId,
+        isActive: localTimetable.isActive,
+        sections: selectedSections,
+      }
+      await fetch("/api/timetable/drafts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(draftPayload),
+      })
+      
+      setIsEditingTitle(false)
+      showToast("Title updated ✓")
+    } catch {
+      showToast("Failed to update title")
     }
   }
 
@@ -559,6 +623,55 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
   /* Master course codes for CDC matching */
   const masterCodes = new Set(master.map((c: any) => c.courseCode as string))
 
+  const titleEditor = (
+    <div className="flex items-center gap-2 max-w-[200px] md:max-w-[300px]">
+      {isEditingTitle ? (
+        <input
+          type="text"
+          value={editedTitle}
+          onChange={(e) => setEditedTitle(e.target.value)}
+          onBlur={handleSaveTitle}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleSaveTitle()
+            if (e.key === "Escape") {
+              setIsEditingTitle(false)
+              setEditedTitle(localTimetable?.name || "")
+            }
+          }}
+          autoFocus
+          className="text-base md:text-lg font-bold text-[var(--text-primary)] bg-transparent border-b-2 border-[var(--bg-accent)] outline-none w-full"
+        />
+      ) : (
+        <div className="flex items-center gap-2 max-w-full">
+          <div 
+            onClick={() => setIsEditingTitle(true)}
+            className="group flex items-center gap-2 cursor-text rounded hover:bg-[var(--bg-surface-hover)] -ml-2 px-2 py-1 transition-colors min-w-0"
+            title="Click to rename"
+          >
+            <h1 className="text-base md:text-lg font-bold text-[var(--text-primary)] truncate">
+              {localTimetable?.name || "My Timetable"}
+            </h1>
+            <svg className="w-3.5 h-3.5 shrink-0 opacity-0 group-hover:opacity-50 transition-opacity text-[var(--text-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </div>
+          {localTimetable?.shareCode && (
+            <span 
+              className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 cursor-copy shrink-0 border border-blue-200 dark:border-blue-900/50"
+              title="Copy Share Code"
+              onClick={() => {
+                navigator.clipboard.writeText(localTimetable.shareCode)
+                showToast("Share code copied!")
+              }}
+            >
+              {localTimetable.shareCode}
+            </span>
+          )}
+        </div>
+      )}
+    </div>
+  )
+
   const actionButtonsDesktop = (
     <div id="tour-action-buttons-desktop" className="hidden md:flex flex-wrap items-center justify-end gap-2">
       {/* Undo/Redo */}
@@ -595,6 +708,22 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
         <span className="xl:hidden">Clear</span>
         <span className="hidden xl:inline">Clear All</span>
       </button>
+
+      {localTimetable?.isActive ? (
+        <button 
+          disabled
+          className="px-4 py-1.5 text-xs font-bold rounded-lg border border-green-500 bg-green-50 text-green-600 shadow-sm opacity-80 cursor-default"
+        >
+          Active ✓
+        </button>
+      ) : (
+        <button 
+          onClick={handleSetActive}
+          className="px-4 py-1.5 text-xs font-bold rounded-lg transition-all border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-green-50 hover:text-green-600 hover:border-green-300 shadow-sm active:scale-95"
+        >
+          Set Active
+        </button>
+      )}
 
       <button 
         onClick={handleSave}
@@ -660,6 +789,22 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
         <span className="md:hidden">Clear</span>
         <span className="hidden md:inline">Clear All</span>
       </button>
+
+      {localTimetable?.isActive ? (
+        <button 
+          disabled
+          className="px-3 py-1.5 text-xs font-bold rounded-lg border border-green-500 bg-green-50 text-green-600 shadow-sm opacity-80 cursor-default"
+        >
+          Active ✓
+        </button>
+      ) : (
+        <button 
+          onClick={handleSetActive}
+          className="px-3 py-1.5 text-xs font-bold rounded-lg transition-all border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-green-50 hover:text-green-600 hover:border-green-300 shadow-sm active:scale-95"
+        >
+          Set Active
+        </button>
+      )}
 
       <button 
         onClick={handleSave}
@@ -730,7 +875,8 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
           {mobileView === "TIMETABLE" && (
             <div className="flex flex-col h-full">
               <div className="p-2 border-b border-[var(--border-subtle)] flex flex-col gap-2">
-                <div className="w-full overflow-x-auto pb-1 scrollbar-hide">
+                <div className="w-full flex items-center justify-between pb-1 overflow-hidden">
+                  {titleEditor}
                   {creditBadge}
                 </div>
                 <div className="w-full overflow-x-auto pb-1 scrollbar-hide">
@@ -804,7 +950,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
         <main className="flex-1 overflow-y-auto p-1.5 md:p-3 flex flex-col gap-2 min-w-0">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between px-1 gap-2">
             <div className="flex items-center gap-3 shrink-0">
-              <h1 className="text-lg font-bold text-[var(--text-primary)]">My Timetable</h1>
+              {titleEditor}
               {creditBadge}
             </div>
             <div className="flex-1 flex justify-start lg:justify-end overflow-x-auto pb-1">

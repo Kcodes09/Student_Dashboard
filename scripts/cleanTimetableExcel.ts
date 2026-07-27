@@ -49,10 +49,6 @@ for (const row of dataRows) {
     String(hours).trim() === "" &&
     (!row[COURSE_NO_COL] || String(row[COURSE_NO_COL]).trim() === "")
 
-  if (isInstructorOnly && lastTeachingRow) {
-    continue // ignore extra instructors
-  }
-
   cleaned.push(row)
   lastTeachingRow = row
 }
