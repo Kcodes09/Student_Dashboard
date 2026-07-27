@@ -62,7 +62,7 @@ for (const row of cleanedRows) {
     filled["HOUR S"] = String(filled["HOUR S"]).replace(/,/g, "").trim()
   }
 
-  last = filled
+  last = { ...filled }
   filledRows.push(filled)
 }
 

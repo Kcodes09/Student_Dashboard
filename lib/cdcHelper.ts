@@ -26,6 +26,30 @@ const BRANCH_MAP: Record<string, { type: "BE" | "MSc"; branch: string }> = {
   B7: { type: "MSc", branch: "Semiconductor and Nanoscience" },
 }
 
+export const DISCIPLINE_PREFIXES: Record<string, string[]> = {
+  A1: ["CHE"],
+  A2: ["CE"],
+  A3: ["EEE"],
+  A4: ["ME"],
+  A5: ["PHA"],
+  A7: ["CS"],
+  A8: ["INSTR"],
+  A9: ["BIOT"],
+  AA: ["ECE"],
+  AB: ["MF"],
+  AC: ["ECOM"],
+  AD: ["MAC"],
+  AE: ["AUE"],
+  AF: ["CHE"],
+  AJ: ["CE"],
+  B1: ["BIO"],
+  B2: ["CHEM"],
+  B3: ["ECON"],
+  B4: ["MATH"],
+  B5: ["PHY"],
+  B7: ["PHY"],
+}
+
 export function parseBitsId(idNumber: string) {
   const idStr = idNumber.trim().toUpperCase()
   if (idStr.length < 8) return null
@@ -284,4 +308,23 @@ export function getCdcsForId(idNumber: string, manualSemKey?: string): CDC[] {
   }
   
   return list
+}
+
+/**
+ * Returns DEL prefixes based on bitsId
+ */
+export function getDelPrefixes(idNumber: string): string[] {
+  const idStr = idNumber.trim().toUpperCase()
+  if (idStr.length < 8) return []
+
+  const codesStr = idStr.substring(4, 8)
+  const code1 = codesStr.substring(0, 2)
+  const code2 = codesStr.substring(2, 4)
+
+  const prefixes: string[] = []
+  if (DISCIPLINE_PREFIXES[code1]) prefixes.push(...DISCIPLINE_PREFIXES[code1])
+  if (DISCIPLINE_PREFIXES[code2]) prefixes.push(...DISCIPLINE_PREFIXES[code2])
+  
+  // Dual degree students might take electives from both disciplines.
+  return Array.from(new Set(prefixes))
 }

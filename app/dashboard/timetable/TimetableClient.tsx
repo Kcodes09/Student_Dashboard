@@ -9,7 +9,7 @@ import TimetableGrid from "@/components/TimetableGrid"
 import MobileTimetable from "@/components/MobileTimetable"
 
 import { generateStudentTT } from "../../lib/timetable/generateStudentTT"
-import { getCdcsForId, isYear1Batch, getYear1Cdcs, parseBitsId } from "@/lib/cdcHelper"
+import { getCdcsForId, isYear1Batch, getYear1Cdcs, parseBitsId, getDelPrefixes } from "@/lib/cdcHelper"
 
 import { useRouter } from "next/navigation"
 
@@ -41,6 +41,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
   const [courseSearch, setCourseSearch] = useState("")
   const [toast, setToast] = useState<string | null>(null)
   const [cdcHighlights, setCdcHighlights] = useState<string[]>([])
+  const [delPrefixes, setDelPrefixes] = useState<string[]>([])
   const [year1Group, setYear1Group] = useState<"group1" | "group2" | null>(null)
   
   const [localTimetable, setLocalTimetable] = useState<any>(null)
@@ -54,6 +55,8 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
 
   useEffect(() => {
     if (localTimetable?.bitsId) {
+      setDelPrefixes(getDelPrefixes(localTimetable.bitsId))
+      
       if (isYear1) {
         const masterCodes = new Set(master.map((c: any) => c.courseCode as string))
         setCdcHighlights(getYear1Cdcs(localTimetable.bitsId, masterCodes, year1Group ?? undefined))
@@ -63,6 +66,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
       }
     } else {
       setCdcHighlights([])
+      setDelPrefixes([])
     }
   }, [localTimetable?.bitsId, isYear1, isBPharm, year1Group, master])
 
@@ -83,6 +87,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
 
   // Credit limits tracking
   const activeSelectedCourses = Object.keys(selectedSections).filter(courseCode => {
+    if (!master.some(m => m.courseCode === courseCode)) return false
     const bucket = selectedSections[courseCode]
     return bucket && Object.values(bucket).some(val => val !== undefined && val !== null)
   })
@@ -96,7 +101,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
     }, 0)
   }, [activeSelectedCourses, master])
 
-  const showLimitWarning = !isYear1 && (addedCoursesCount > 8 || totalCredits > 25)
+  const showLimitWarning = !isYear1 && totalCredits > 25
 
   const creditBadge = addedCoursesCount > 0 && (
     <div className={clsx(
@@ -109,7 +114,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
       <span className="w-1 h-1 shrink-0 rounded-full bg-current opacity-50" />
       <span>{totalCredits} {totalCredits === 1 ? "Credit" : "Credits"}</span>
       {showLimitWarning && (
-         <span className="ml-1 shrink-0" title="Max 8 courses and 25 credits allowed">⚠️ Over Limit</span>
+         <span className="ml-1 shrink-0" title="Max 25 credits allowed">⚠️ Over Limit</span>
       )}
     </div>
   )
@@ -746,6 +751,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
               setSearch={setCourseSearch}
               selectedSections={selectedSections}
               cdcHighlights={cdcHighlights}
+              delPrefixes={delPrefixes}
               onClearCDC={() => setCdcHighlights([])}
               currentSessions={sessions}
               onRemoveCourse={handleRemoveCourse}
@@ -776,6 +782,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
           setSearch={setCourseSearch}
           selectedSections={selectedSections}
           cdcHighlights={cdcHighlights}
+          delPrefixes={delPrefixes}
           onClearCDC={() => setCdcHighlights([])}
           currentSessions={sessions}
           onRemoveCourse={handleRemoveCourse}

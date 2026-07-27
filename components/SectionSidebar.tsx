@@ -157,7 +157,7 @@ export default function SectionSidebar({
             >
               <div className="flex justify-between items-start mb-1.5 gap-2">
                 <span className={clsx("text-sm font-bold leading-tight", isSelected ? "text-[var(--text-accent)]" : clashInfo ? "text-red-700 dark:text-red-400" : "text-[var(--text-primary)]")}>
-                  {section.section || section.instructors.join(", ")}
+                  {section.section || "Default Section"}
                 </span>
                 {isSelected && (
                   <span className="flex shrink-0 h-5 w-5 items-center justify-center rounded-full bg-[var(--bg-accent)] text-[10px] text-white shadow-sm mt-0.5">
@@ -171,7 +171,7 @@ export default function SectionSidebar({
                 )}
               </div>
 
-              {section.section && (
+              {section.instructors && section.instructors.length > 0 && (
                 <div className="text-xs font-medium text-[var(--text-muted)] mb-2">
                   {section.instructors.join(", ")}
                 </div>

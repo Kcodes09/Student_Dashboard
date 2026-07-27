@@ -27,6 +27,20 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
   const playAlert = useAlertSound()
   const hasAlertedRef = useRef(false)
 
+  /* ---------- COURSE INSTRUCTORS MAP ---------- */
+  const courseInstructors = useMemo(() => {
+    const map = new Map<string, { type: string, instructors: string[] }[]>()
+    for (const s of sessions) {
+      if (!s.instructors || s.instructors.length === 0) continue
+      const arr = map.get(s.courseCode) || []
+      if (!arr.find(x => x.type === s.type)) {
+        arr.push({ type: s.type, instructors: s.instructors })
+      }
+      map.set(s.courseCode, arr)
+    }
+    return map
+  }, [sessions])
+
   /* ---------- BUILD CELL MAP ---------- */
   const clashMap = useMemo(() => {
     const map = new Map<string, any[]>()
@@ -162,15 +176,15 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
                         <div
                           key={`${s.courseCode}-${s.section}-${s.day}-${s.hour}`}
                           className={clsx(
-                            "rounded-md p-1.5 text-[10px] shadow-sm transition-transform",
-                            "hover:scale-[1.03] hover:shadow-md hover:z-10 cursor-pointer",
+                            "group rounded-md p-1.5 text-[10px] shadow-sm transition-transform",
+                            "hover:scale-[1.03] hover:shadow-md hover:z-[60] cursor-pointer",
+                            s.span > 1 ? "z-10" : "z-[1]",
                             getCourseColor(s.courseCode)
                           )}
                           style={{
                             position: "absolute",
                             top: 4, left: 4, right: 4,
                             height: s.span ? (s.span * 56 - 9) : undefined,
-                            zIndex: s.span > 1 ? 10 : 1,
                           }}
                         >
                           <div className="font-bold tracking-tight leading-none mb-0.5">
@@ -184,6 +198,34 @@ export default function TimetableGrid({ sessions }: { sessions: any[] }) {
                           <div className="text-[9px] opacity-75 truncate mt-0.5">
                             {s.room}
                           </div>
+
+                          {/* INSTRUCTORS TOOLTIP */}
+                          {courseInstructors.get(s.courseCode) && (
+                            <div className={clsx(
+                              "absolute left-1/2 -translate-x-1/2 hidden w-max max-w-[200px] group-hover:block bg-gray-900 dark:bg-gray-800 text-white text-[9px] rounded-md px-2 py-1.5 shadow-xl z-[70] pointer-events-none",
+                              hour <= 2 ? "top-full mt-1" : "bottom-full mb-1"
+                            )}>
+                              <div className="font-semibold mb-1 text-gray-300 uppercase tracking-wider text-[8px]">Instructors</div>
+                              <div className="space-y-1">
+                                {courseInstructors.get(s.courseCode)!.map((group, idx) => (
+                                  <div key={idx}>
+                                    <span className="text-[8px] text-gray-400 font-bold mr-1">
+                                      {group.type === "LECTURE" ? "(L)" : group.type === "PRACTICAL" ? "(P)" : group.type === "TUTORIAL" ? "(T)" : ""}
+                                    </span>
+                                    {group.instructors.map((inst, i) => (
+                                      <div key={i} className="truncate ml-[14px] -mt-[2px]">{inst}</div>
+                                    ))}
+                                  </div>
+                                ))}
+                              </div>
+                              <div className={clsx(
+                                "absolute left-1/2 -translate-x-1/2 border-[5px] border-transparent",
+                                hour <= 2 
+                                  ? "bottom-full border-b-gray-900 dark:border-b-gray-800" 
+                                  : "top-full border-t-gray-900 dark:border-t-gray-800"
+                              )} />
+                            </div>
+                          )}
                         </div>
                       ))}
                   </div>

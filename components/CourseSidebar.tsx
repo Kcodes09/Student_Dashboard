@@ -27,6 +27,7 @@ type Props = {
   setSearch: (v: string) => void
   selectedSections?: Record<string, SelectedCourseSections>
   cdcHighlights?: string[]
+  delPrefixes?: string[]
   onClearCDC?: () => void
   currentSessions?: ClashSession[]
   onRemoveCourse?: (courseCode: string) => void
@@ -48,6 +49,7 @@ export default function CourseSidebar({
   setSearch,
   selectedSections,
   cdcHighlights = [],
+  delPrefixes = [],
   onClearCDC,
   currentSessions = [],
   onRemoveCourse,
@@ -58,7 +60,7 @@ export default function CourseSidebar({
 }: Props) {
   
   const [sortBy, setSortBy] = useState<SortType>("CODE_ASC")
-  const [viewMode, setViewMode] = useState<"OTHER" | "CDC">("CDC")
+  const [viewMode, setViewMode] = useState<"OTHER" | "CDC" | "DEL" | "HSS" | "YOURS">("CDC")
   const [visibleLimit, setVisibleLimit] = useState(50)
 
   useEffect(() => {
@@ -93,13 +95,25 @@ export default function CourseSidebar({
   const filteredCourses = useMemo(() => {
     let result = sortedCourses
 
-    if (cdcHighlights.length > 0) {
-      const cdcSet = new Set(cdcHighlights)
-      if (viewMode === "CDC") {
-        result = result.filter(c => cdcSet.has(c.courseCode))
-      } else if (viewMode === "OTHER") {
-        result = result.filter(c => !cdcSet.has(c.courseCode))
-      }
+    const cdcSet = new Set(cdcHighlights)
+    if (viewMode === "CDC") {
+      result = result.filter(c => cdcSet.has(c.courseCode))
+    } else if (viewMode === "HSS") {
+      result = result.filter(c => c.courseCode.startsWith("HSS ") || c.courseCode.startsWith("GS ") || c.courseCode.startsWith("HUM "))
+    } else if (viewMode === "DEL") {
+      result = result.filter(c => !cdcSet.has(c.courseCode) && delPrefixes.some(prefix => c.courseCode.startsWith(prefix + " ")))
+    } else if (viewMode === "OTHER") {
+      result = result.filter(c => 
+        !cdcSet.has(c.courseCode) && 
+        !(c.courseCode.startsWith("HSS ") || c.courseCode.startsWith("GS ") || c.courseCode.startsWith("HUM ")) &&
+        !(delPrefixes.some(prefix => c.courseCode.startsWith(prefix + " ")))
+      )
+    } else if (viewMode === "YOURS" as any) {
+      result = result.filter(c => {
+        const bucket = selectedSections?.[c.courseCode]
+        if (!bucket) return false
+        return Object.values(bucket).some(v => v !== undefined && v !== null)
+      })
     }
 
     if (!search.trim()) return result
@@ -415,33 +429,70 @@ export default function CourseSidebar({
       </div>
 
       {/* VIEW TOGGLE */}
-      {!isLoading && cdcHighlights.length > 0 && (
+      {!isLoading && (
         <div id="tour-cdc-toggle" className="px-4 mb-4 shrink-0">
-          <div className="flex bg-[var(--bg-surface-hover)] border border-[var(--border-subtle)] rounded-lg p-1">
+          <div className="flex bg-[var(--bg-surface-hover)] border border-[var(--border-subtle)] rounded-lg p-1 overflow-x-auto scrollbar-hide gap-0.5">
+            {cdcHighlights.length > 0 && (
+              <button
+                onClick={() => setViewMode("CDC")}
+                className={clsx(
+                  "flex-1 text-[10px] sm:text-[11px] font-semibold py-1.5 px-1 rounded-md transition-all flex items-center justify-center gap-1",
+                  viewMode === "CDC" 
+                    ? "bg-[var(--bg-accent)] text-white shadow-sm" 
+                    : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                )}
+              >
+                <span>CDCs</span>
+                <span className="h-3.5 w-3.5 rounded-full text-[8px] font-black text-white flex items-center justify-center bg-black/20">
+                  {cdcHighlights.length}
+                </span>
+              </button>
+            )}
+            <button
+              onClick={() => setViewMode("HSS")}
+              className={clsx(
+                "flex-1 text-[10px] sm:text-[11px] font-semibold py-1.5 px-1 rounded-md transition-all flex items-center justify-center",
+                viewMode === "HSS" 
+                  ? "bg-[var(--bg-surface)] text-[var(--text-primary)] shadow-sm" 
+                  : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+              )}
+            >
+              HuEls
+            </button>
+            {delPrefixes.length > 0 && (
+              <button
+                onClick={() => setViewMode("DEL")}
+                className={clsx(
+                  "flex-1 text-[10px] sm:text-[11px] font-semibold py-1.5 px-1 rounded-md transition-all flex items-center justify-center",
+                  viewMode === "DEL" 
+                    ? "bg-[var(--bg-surface)] text-[var(--text-primary)] shadow-sm" 
+                    : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                )}
+              >
+                DEls
+              </button>
+            )}
             <button
               onClick={() => setViewMode("OTHER")}
               className={clsx(
-                "flex-1 text-xs font-semibold py-1.5 rounded-md transition-all",
+                "flex-1 text-[10px] sm:text-[11px] font-semibold py-1.5 px-1 rounded-md transition-all flex items-center justify-center",
                 viewMode === "OTHER" 
                   ? "bg-[var(--bg-surface)] text-[var(--text-primary)] shadow-sm" 
                   : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
               )}
             >
-              Other Courses
+              Others
             </button>
             <button
-              onClick={() => setViewMode("CDC")}
+              onClick={() => setViewMode("YOURS")}
               className={clsx(
-                "flex-1 text-xs font-semibold py-1.5 rounded-md transition-all flex items-center justify-center gap-1.5",
-                viewMode === "CDC" 
-                  ? "bg-[var(--bg-accent)] text-white shadow-sm" 
+                "flex-1 text-[10px] sm:text-[11px] font-semibold py-1.5 px-1 rounded-md transition-all flex items-center justify-center",
+                viewMode === "YOURS" 
+                  ? "bg-[var(--bg-surface)] text-[var(--text-primary)] shadow-sm" 
                   : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
               )}
             >
-              <span>My CDCs</span>
-              <span className="h-4 w-4 rounded-full text-[9px] font-black text-white flex items-center justify-center bg-black/20">
-                {cdcHighlights.length}
-              </span>
+              Yours
             </button>
           </div>
         </div>
@@ -531,7 +582,7 @@ export default function CourseSidebar({
         {selectedList.length > 0 && (
           <div className="mb-6">
             <h3 className="px-2 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider mb-2">
-              Added to Timetable
+              {viewMode === "YOURS" ? "Your Courses" : "Added to Timetable"}
             </h3>
             <div className="space-y-1.5">
               {selectedList.map(course => (

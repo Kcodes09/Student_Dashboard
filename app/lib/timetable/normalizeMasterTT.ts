@@ -147,10 +147,11 @@ export function normalizeMasterTT(rows: RawRow[]): MasterCourse[] {
     }
 
     /* ---- instructors ---- */
-    if (section!.instructors.length === 0) {
-      const rawInst = row["INSTRUCTOR_IN_CHARGE/INS TRUCTOR"]
-      if (rawInst) {
-        section!.instructors = [rawInst.trim()]
+    const rawInst = row["INSTRUCTOR_IN_CHARGE/INS TRUCTOR"]
+    if (rawInst) {
+      const inst = rawInst.trim()
+      if (inst && !section!.instructors.includes(inst)) {
+        section!.instructors.push(inst)
       }
     }
 
