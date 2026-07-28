@@ -2,20 +2,35 @@ import fs from "fs"
 import XLSX from "xlsx"
 import { normalizeMasterTT } from "../app/lib/timetable/normalizeMasterTT.js"
 
-const INPUT = "data/forward_filled_tt.xlsx"
+const INPUT = "TIMETABLE FIRST SEMESTER 2026 -27.xlsx"
 const OUTPUT = "data/mastertt.json"
 
 const workbook = XLSX.readFile(INPUT)
-const sheet = workbook.Sheets[workbook.SheetNames[0]]
+const sheetName = "Table 3"
+const sheet = workbook.Sheets[sheetName]
+
+if (!sheet) {
+  console.error(`❌ Sheet "${sheetName}" not found in the Excel file.`)
+  process.exit(1)
+}
 
 const raw = XLSX.utils.sheet_to_json<any>(sheet, {
   header: 1,
   defval: "",
+  raw: false,
 })
 
-// 🔹 First row contains ACTUAL column names
-const headerRow = raw[0]
-const dataRows = raw.slice(1)
+// 🔹 Find the actual header row dynamically
+let headerRowIndex = 0;
+for (let i = 0; i < raw.length; i++) {
+  if (raw[i].includes("COURSE NO.")) {
+    headerRowIndex = i;
+    break;
+  }
+}
+
+const headerRow = raw[headerRowIndex]
+const dataRows = raw.slice(headerRowIndex + 1)
 
 // 🔹 Build clean objects with real keys
 const cleanedRows = dataRows.map((row) => {
