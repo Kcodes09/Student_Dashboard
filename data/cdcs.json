@@ -48,9 +48,50 @@
       {
         "code": "PHY U110",
         "title": "Physics Laboratory"
+      },
+      {
+        "code": "SW E101",
+        "title": "SOCIAL CONDUCT"
+      },
+      {
+        "code": "SW E102",
+        "title": "BASIC FITNESS"
+      },
+      {
+        "code": "SW E103",
+        "title": "SPORTS & CREATIVE ARTS"
+      },
+      {
+        "code": "SW E112",
+        "title": "WELLBEING WORKSHOP"
+      },
+      {
+        "code": "SW E114",
+        "title": "COMMUNITY ENGAGEMENT PROJECT"
       }
     ],
-    "sem2": []
+    "sem2": [
+      {
+        "code": "SW E101",
+        "title": "SOCIAL CONDUCT"
+      },
+      {
+        "code": "SW E102",
+        "title": "BASIC FITNESS"
+      },
+      {
+        "code": "SW E103",
+        "title": "SPORTS & CREATIVE ARTS"
+      },
+      {
+        "code": "SW E112",
+        "title": "WELLBEING WORKSHOP"
+      },
+      {
+        "code": "SW E114",
+        "title": "COMMUNITY ENGAGEMENT PROJECT"
+      }
+    ]
   },
   "BE": {
     "Computer Science": {
