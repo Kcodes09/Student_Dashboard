@@ -73,13 +73,15 @@ export function parseBitsId(idNumber: string) {
   return { year, isYear1, branches }
 }
 
-/** Regex that matches Year-1 (UXXX) course codes like "CS U111", "MATH U101". */
-export const YEAR1_UXXX_PATTERN = /^[A-Z]+ U\d{3}$/
+/** Regex that matches Year-1 (UXXX) course codes like "CS U111", "MATH U101" and SW EXXX. */
+export const YEAR1_UXXX_PATTERN = /^([A-Z]+ U\d{3}|SW E\d{3})$/
 
 /**
  * UXXX courses that are CDCs **only** for B.Pharm (branch code A5).
  */
 export const BPHARM_ONLY_UXXX = new Set(["PHY U102", "MATH U110"])
+
+const SW_COURSES = ["SW E101", "SW E102", "SW E103", "SW E112", "SW E114"]
 
 /**
  * Group-based CDC lists for 2026 batch (non-B.Pharm).
@@ -94,12 +96,12 @@ export const BPHARM_ONLY_UXXX = new Set(["PHY U102", "MATH U110"])
  */
 export const YEAR1_GROUPS: Record<"group1" | "group2", { sem1: string[]; sem2: string[] }> = {
   group1: {
-    sem1: ["MATH U101", "MATH U113", "PHY U101", "PHY U110", "EEE U111", "BITS U103"],
-    sem2: ["MATH U102", "CHEM U101", "CHEM U110", "BIO U101", "CS U111"],
+    sem1: ["MATH U101", "MATH U113", "PHY U101", "PHY U110", "EEE U111", "BITS U103", ...SW_COURSES],
+    sem2: ["MATH U102", "CHEM U101", "CHEM U110", "BIO U101", "CS U111", ...SW_COURSES],
   },
   group2: {
-    sem1: ["MATH U101", "MATH U113", "CHEM U101", "CHEM U110", "BIO U101", "CS U111"],
-    sem2: ["MATH U102", "PHY U101", "PHY U110", "EEE U111", "BITS U103"],
+    sem1: ["MATH U101", "MATH U113", "CHEM U101", "CHEM U110", "BIO U101", "CS U111", ...SW_COURSES],
+    sem2: ["MATH U102", "PHY U101", "PHY U110", "EEE U111", "BITS U103", ...SW_COURSES],
   },
 }
 
