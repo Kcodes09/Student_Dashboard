@@ -1,7 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import type { Session } from "@/types/timetable"
+import { useSession } from "next-auth/react"
+import type { Session as TimetableSession } from "@/types/timetable"
 import { getCourseColor } from "@/components/lib/colors"
 import clsx from "clsx"
 
@@ -16,7 +17,8 @@ const DAY_NAMES: Record<string, string> = {
 }
 
 export default function AlarmsClient() {
-  const [sessions, setSessions] = useState<Session[]>([])
+  const { data: session } = useSession()
+  const [sessions, setSessions] = useState<TimetableSession[]>([])
   const [alarms, setAlarms] = useState<Record<string, number>>({})
   const [permission, setPermission] = useState<NotificationPermission>("default")
   const [toast, setToast] = useState<string | null>(null)
@@ -64,8 +66,8 @@ export default function AlarmsClient() {
     setTimeout(() => setToast(null), 3000)
   }
 
-  const handleSetAlarm = (session: Session, offset: number) => {
-    const key = `class-${session.courseCode}-${session.day}-${session.startTime}`
+  const handleSetAlarm = (sessionObj: TimetableSession, offset: number) => {
+    const key = `class-${sessionObj.courseCode}-${sessionObj.day}-${sessionObj.startTime}`
     const newAlarms = { ...alarms }
 
     if (offset === 0) {
@@ -79,11 +81,11 @@ export default function AlarmsClient() {
     showToast(offset === 0 ? "Alarm removed" : `Alarm set for ${offset} mins before`)
   }
 
-  const getAndroidClockIntentUrl = (session: Session) => {
-    const key = `class-${session.courseCode}-${session.day}-${session.startTime}`
+  const getAndroidClockIntentUrl = (sessionObj: TimetableSession) => {
+    const key = `class-${sessionObj.courseCode}-${sessionObj.day}-${sessionObj.startTime}`
     const offset = alarms[key] || 10
 
-    const [h, m] = session.startTime.split(":").map(Number)
+    const [h, m] = sessionObj.startTime.split(":").map(Number)
 
     // Subtract offset
     const totalMinutes = h * 60 + m - offset
@@ -98,7 +100,7 @@ export default function AlarmsClient() {
       if (alarmH < 0) alarmH += 24
     }
 
-    const message = `${session.courseCode}_in_${session.room}`.replace(/\s+/g, "_")
+    const message = `${sessionObj.courseCode}_in_${sessionObj.room}`.replace(/\s+/g, "_")
 
     return `intent:#Intent;action=android.intent.action.SET_ALARM;category=android.intent.category.BROWSABLE;S.android.intent.extra.alarm.MESSAGE=${message};i.android.intent.extra.alarm.HOUR=${alarmH};i.android.intent.extra.alarm.MINUTES=${alarmM};B.android.intent.extra.alarm.SKIP_UI=false;component=com.google.android.deskclock/com.android.deskclock.HandleSetApiCalls;end`
   }
@@ -107,7 +109,7 @@ export default function AlarmsClient() {
   const grouped = DAYS.reduce((acc, day) => {
     acc[day] = sessions.filter(s => s.day === day).sort((a, b) => a.startTime.localeCompare(b.startTime))
     return acc
-  }, {} as Record<string, Session[]>)
+  }, {} as Record<string, TimetableSession[]>)
 
   return (
     <div className="p-4 md:p-6 max-w-4xl mx-auto space-y-6">
