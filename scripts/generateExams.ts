@@ -6,7 +6,7 @@ import XLSX from "xlsx"
 // ---------- PATHS ----------
 const XLSX_PATH = path.join(
   process.cwd(),
-  "forward_filled_timetable.xlsx"
+  "TIMETABLE FIRST SEMESTER 2026 -27.xlsx"
 )
 
 const OUTPUT_PATH = path.join(

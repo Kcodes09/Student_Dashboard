@@ -46,6 +46,15 @@ export async function POST(req: Request) {
       // file might not exist or be empty
     }
 
+    const legacyExamsFilePath = path.join(process.cwd(), "lib", "data", "exams.json")
+    let existingLegacyExams: Record<string, any> = {}
+    try {
+      const legacyExamsContent = await fs.readFile(legacyExamsFilePath, "utf-8")
+      existingLegacyExams = JSON.parse(legacyExamsContent)
+    } catch (e) {
+      // file might not exist
+    }
+
     let updatedCount = 0
     let addedCount = 0
     let updatedExamsCount = 0
@@ -53,6 +62,18 @@ export async function POST(req: Request) {
     for (const newCourse of timetableData) {
       const extractedExams = newCourse.exams || []
       delete newCourse.exams // keep mastertt.json clean
+
+      if (extractedExams.length > 0) {
+        if (!existingLegacyExams[newCourse.courseCode]) {
+          existingLegacyExams[newCourse.courseCode] = {
+            courseTitle: newCourse.courseTitle,
+            midsem: "",
+            endsem: ""
+          }
+        } else {
+          existingLegacyExams[newCourse.courseCode].courseTitle = newCourse.courseTitle
+        }
+      }
 
       for (const exam of extractedExams) {
          const exIdx = existingExams.findIndex(e => e.courseCode === newCourse.courseCode && e.type === exam.type)
@@ -69,6 +90,14 @@ export async function POST(req: Request) {
          } else {
             existingExams.push(examEntry)
          }
+         
+         const legacyDateStr = `${exam.date} - ${exam.startTime} - ${exam.endTime}`
+         if (exam.type === "MIDSEM") {
+           existingLegacyExams[newCourse.courseCode].midsem = legacyDateStr
+         } else if (exam.type === "ENDSEM") {
+           existingLegacyExams[newCourse.courseCode].endsem = legacyDateStr
+         }
+         
          updatedExamsCount++
       }
 
@@ -84,6 +113,7 @@ export async function POST(req: Request) {
 
     await fs.writeFile(filePath, JSON.stringify(existingData, null, 2))
     await fs.writeFile(examsFilePath, JSON.stringify(existingExams, null, 2))
+    await fs.writeFile(legacyExamsFilePath, JSON.stringify(existingLegacyExams, null, 2))
 
     return NextResponse.json({
       success: true,
