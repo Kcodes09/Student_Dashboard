@@ -123,6 +123,28 @@ export default function LoginPage() {
           Continue with Google
         </button>
 
+        {/* Guest Sign In Button */}
+        <button
+          id="guest-signin-btn"
+          onClick={() => signIn("guest", { callbackUrl: "/dashboard" })}
+          className="w-full flex items-center justify-center gap-3 rounded-xl px-5 py-3 text-sm font-semibold border transition-all hover:-translate-y-0.5 active:translate-y-0"
+          style={{
+            backgroundColor: "var(--bg-surface)",
+            borderColor: "var(--border-subtle)",
+            color: "var(--text-primary)",
+            boxShadow: "var(--shadow-sm)",
+          }}
+          onMouseEnter={e => {
+            (e.currentTarget as HTMLElement).style.backgroundColor = "var(--bg-surface-hover)"
+          }}
+          onMouseLeave={e => {
+            (e.currentTarget as HTMLElement).style.backgroundColor = "var(--bg-surface)"
+          }}
+        >
+          <span className="w-5 h-5 flex items-center justify-center text-lg">👤</span>
+          Continue as Guest
+        </button>
+
         {/* Footer */}
         <p className="text-xs text-center" style={{ color: "var(--text-muted)" }}>
           By signing in, you agree to use this dashboard for academic purposes only.

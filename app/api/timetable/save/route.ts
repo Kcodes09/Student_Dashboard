@@ -14,6 +14,10 @@ export async function POST(req: Request) {
       )
     }
 
+    if (session.user.isGuest) {
+      return NextResponse.json({ ok: true, guestMode: true })
+    }
+
     const email = session.user.email
 
     // 🛡️ Preserve old behavior: accept ANY JSON

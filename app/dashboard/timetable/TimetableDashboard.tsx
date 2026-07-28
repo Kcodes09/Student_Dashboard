@@ -43,7 +43,7 @@ const MSC_BRANCHES = [
   { code: "B7", label: "Semiconductor and Nanoscience (B7)" },
 ]
 
-export default function TimetableDashboard({ userEmail }: { userEmail?: string | null }) {
+export default function TimetableDashboard({ userEmail, isGuest }: { userEmail?: string | null, isGuest?: boolean }) {
   const router = useRouter()
   const [timetables, setTimetables] = useState<LocalTimetable[]>([])
   const [loading, setLoading] = useState(true)
@@ -61,9 +61,11 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
   const [importCode, setImportCode] = useState("")
   const [isImporting, setIsImporting] = useState(false)
 
+  const LOCAL_STORAGE_KEY = isGuest ? "student_timetables_guest" : "student_timetables"
+
   useEffect(() => {
     async function init() {
-      const stored = localStorage.getItem("student_timetables")
+      const stored = localStorage.getItem(LOCAL_STORAGE_KEY)
       let parsed: LocalTimetable[] = []
       
       if (stored) {
@@ -101,7 +103,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
             serverMap.forEach(draft => merged.push(draft))
             localOnlyDrafts.forEach(t => merged.push(t))
             parsed = merged
-            localStorage.setItem("student_timetables", JSON.stringify(parsed))
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(parsed))
 
             // Upload local-only drafts to server in background
             if (localOnlyDrafts.length > 0) {
@@ -142,7 +144,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
                     updatedAt: Date.now()
                   }
                   parsed = [migratedTT]
-                  localStorage.setItem("student_timetables", JSON.stringify(parsed))
+                  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(parsed))
                   // Sync the migrated draft to the new server endpoint
                   await fetch("/api/timetable/drafts", {
                     method: "POST",
@@ -188,7 +190,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
         })
 
         if (updated) {
-          localStorage.setItem("student_timetables", JSON.stringify(parsed))
+          localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(parsed))
           let globalId = localStorage.getItem("student_bits_id")
           if (globalId) {
              if (globalId.endsWith("P") && correctCampus !== "P") {
@@ -277,7 +279,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
 
     // Save locally first (optimistic)
     const updated = [...timetables, newTT]
-    localStorage.setItem("student_timetables", JSON.stringify(updated))
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updated))
     setTimetables(updated)
     setShowModal(false)
 
@@ -303,7 +305,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
       updated[0].isActive = true
     }
     // Optimistic local delete
-    localStorage.setItem("student_timetables", JSON.stringify(updated))
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updated))
     setTimetables(updated)
 
     // Sync delete to server in background
@@ -345,10 +347,10 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
         updatedAt: Date.now()
       }
       
-      const stored = localStorage.getItem("student_timetables")
+      const stored = localStorage.getItem(LOCAL_STORAGE_KEY)
       const parsed = stored ? JSON.parse(stored) : []
       const updated = [...parsed, newDraft]
-      localStorage.setItem("student_timetables", JSON.stringify(updated))
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updated))
       setTimetables(updated)
       setImportCode("")
       
@@ -371,6 +373,18 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
     <div className="flex-1 overflow-y-auto bg-[var(--bg-main)] p-4 md:p-8 h-[calc(100vh-60px)]">
       <div className="max-w-5xl mx-auto pb-20">
         
+        {isGuest && (
+          <div className="mb-4 bg-orange-500/10 border border-orange-500/50 text-orange-600 dark:text-orange-400 p-4 rounded-xl flex items-start gap-3">
+            <span className="text-xl">⚠️</span>
+            <div>
+              <h3 className="font-semibold text-sm">Guest Mode Active</h3>
+              <p className="text-xs mt-0.5 opacity-90">
+                Timetables will only be saved locally in this browser. To sync across devices, please sign in with your BITS Mail.
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* HERO */}
         <div className="mb-8 p-6 md:p-8 rounded-3xl text-white shadow-xl relative overflow-hidden" 
           style={{ background: "linear-gradient(135deg, var(--bg-accent), #4f46e5)" }}>

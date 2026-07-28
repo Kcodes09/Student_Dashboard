@@ -206,8 +206,19 @@ export default function Navbar({ user }: NavbarProps) {
         </div>
 
         {/* RIGHT: MOBILE HAMBURGER */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="md:hidden flex items-center gap-1">
           <ClashAlert />
+          {/* Mobile Theme Toggle */}
+          <button
+            id="tour-theme-toggle-mobile"
+            onClick={toggleTheme}
+            className="rounded-lg p-2 transition-all text-base"
+            style={{ color: "var(--text-muted)" }}
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? "🌙" : "☀️"}
+          </button>
+
           {/* Tour / Info Button (Mobile) */}
           <button
             onClick={() => {
@@ -225,6 +236,7 @@ export default function Navbar({ user }: NavbarProps) {
           </button>
           
           <button
+            id="tour-hamburger-menu"
             onClick={() => setMenuOpen(prev => !prev)}
             className="rounded-lg p-2 transition-all"
             style={{ color: "var(--text-muted)" }}
@@ -259,8 +271,13 @@ export default function Navbar({ user }: NavbarProps) {
           >
             <div className="flex flex-col">
               {/* User Info */}
-              <div
-                className="px-4 py-3 flex items-center gap-3 border-b"
+              <button
+                id="tour-profile-mobile"
+                onClick={() => {
+                  window.dispatchEvent(new Event("open-profile"));
+                  setMenuOpen(false);
+                }}
+                className="px-4 py-3 flex items-center gap-3 border-b text-left hover:bg-[var(--bg-surface-hover)] transition-colors w-full"
                 style={{ borderColor: "var(--border-subtle)" }}
               >
                 {user.image ? (
@@ -285,7 +302,7 @@ export default function Navbar({ user }: NavbarProps) {
                     {user.email}
                   </span>
                 </div>
-              </div>
+              </button>
 
               {/* MOBILE NAV LINKS */}
               <div className="flex flex-col py-1">

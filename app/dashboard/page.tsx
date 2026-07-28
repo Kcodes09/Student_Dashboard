@@ -52,7 +52,7 @@ export default async function DashboardPage() {
         </div>
 
         <div id="tour-next-class">
-          <NextClassWidget userExams={userExams} />
+          <NextClassWidget userExams={userExams} isGuest={session.user?.isGuest} />
         </div>
 
         {/* Cards grid */}

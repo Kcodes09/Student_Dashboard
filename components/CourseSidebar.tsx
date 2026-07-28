@@ -37,6 +37,9 @@ type Props = {
   year1Group?: "group1" | "group2" | null
   setYear1Group?: (g: "group1" | "group2" | null) => void
   isYear1?: boolean
+  
+  // Tour
+  idPrefix?: string
 }
 
 type SortType = "CODE_ASC" | "CODE_DESC" | "NAME" | "CREDITS"
@@ -57,6 +60,7 @@ export default function CourseSidebar({
   year1Group,
   setYear1Group,
   isYear1,
+  idPrefix = "",
 }: Props) {
   
   const [sortBy, setSortBy] = useState<SortType>("CODE_ASC")
@@ -405,7 +409,7 @@ export default function CourseSidebar({
       </div>
 
       {/* SEARCH */}
-      <div id="tour-search-bar" className="px-4 shrink-0">
+      <div id={`${idPrefix}tour-search-bar`} className="px-4 shrink-0">
         <div className="relative">
           <input
             value={search}
@@ -430,7 +434,7 @@ export default function CourseSidebar({
 
       {/* VIEW TOGGLE */}
       {!isLoading && (
-        <div id="tour-cdc-toggle" className="px-4 mb-4 shrink-0">
+        <div id={`${idPrefix}tour-cdc-toggle`} className="px-4 mb-4 shrink-0">
           <div className="flex bg-[var(--bg-surface-hover)] border border-[var(--border-subtle)] rounded-lg p-1 overflow-x-auto scrollbar-hide gap-0.5">
             {cdcHighlights.length > 0 && (
               <button
@@ -530,7 +534,7 @@ export default function CourseSidebar({
       </div>
 
       {/* COURSE LIST (ONLY THIS SCROLLS) */}
-      <div id="tour-course-list" className="flex-1 overflow-y-auto px-3 pb-4 scroll-smooth">
+      <div className="flex-1 overflow-y-auto px-3 pb-4 scroll-smooth">
         {isLoading ? (
           <div className="space-y-3 p-1">
             {[1, 2, 3, 4, 5, 6].map(i => (
@@ -601,8 +605,10 @@ export default function CourseSidebar({
           )}
           
           <div className="space-y-1.5">
-            {displayedAvailable.map(course => (
-              <CourseButton key={course.courseCode} course={course} isSelectedList={false} />
+            {displayedAvailable.map((course, i) => (
+              <div key={course.courseCode} id={i === 0 ? `${idPrefix}tour-course-list` : undefined}>
+                <CourseButton course={course} isSelectedList={false} />
+              </div>
             ))}
           </div>
 

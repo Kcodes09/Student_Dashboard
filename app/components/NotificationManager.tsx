@@ -6,7 +6,7 @@ import { useSession } from "next-auth/react";
 import { useAlertSound } from "@/app/hooks/useAlertSound";
 
 export function NotificationManager() {
-  const { status } = useSession();
+  const { data: session, status } = useSession();
   const [permission, setPermission] = useState<NotificationPermission>("default");
   const [sessions, setSessions] = useState<Session[]>([]);
   
@@ -41,7 +41,8 @@ export function NotificationManager() {
     
     // Load sessions from localStorage
     try {
-      const stored = localStorage.getItem("student_dashboard_sessions");
+      const LOCAL_STORAGE_KEY = session?.user?.isGuest ? "student_dashboard_sessions_guest" : "student_dashboard_sessions";
+      const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
       if (stored) {
         setSessions(JSON.parse(stored));
       }
@@ -74,7 +75,8 @@ export function NotificationManager() {
       let alarms: Record<string, number> = {};
       
       try {
-        const storedSessions = localStorage.getItem("student_dashboard_sessions");
+        const LOCAL_STORAGE_KEY = session?.user?.isGuest ? "student_dashboard_sessions_guest" : "student_dashboard_sessions";
+        const storedSessions = localStorage.getItem(LOCAL_STORAGE_KEY);
         if (storedSessions) currentSessions = JSON.parse(storedSessions);
         
         const storedAlarms = localStorage.getItem("student_dashboard_alarms");

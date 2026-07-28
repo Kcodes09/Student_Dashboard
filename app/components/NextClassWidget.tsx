@@ -14,7 +14,7 @@ function timeToMinutes(timeStr: string): number {
   return h * 60 + m
 }
 
-export default function NextClassWidget({ userExams = [] }: { userExams?: any[] }) {
+export default function NextClassWidget({ userExams = [], isGuest }: { userExams?: any[], isGuest?: boolean }) {
   const router = useRouter()
   const [nextClass, setNextClass] = useState<Session | null>(null)
   const [upcomingExam, setUpcomingExam] = useState<any | null>(null)
@@ -53,7 +53,8 @@ export default function NextClassWidget({ userExams = [] }: { userExams?: any[] 
 
     // 2. Find next class
     function findNextClass() {
-      const raw = localStorage.getItem("student_dashboard_sessions")
+      const LOCAL_STORAGE_KEY = isGuest ? "student_dashboard_sessions_guest" : "student_dashboard_sessions"
+      const raw = localStorage.getItem(LOCAL_STORAGE_KEY)
       if (!raw) {
         setIsLoaded(true)
         return

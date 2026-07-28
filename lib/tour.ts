@@ -5,24 +5,57 @@ export function getTourSteps(pathname: string, getDriver?: () => any) {
   const steps: any[] = [];
 
   // Common steps for the Navbar (available on most pages)
-  const navbarSteps = [
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const navbarSteps: any[] = [
     {
-      element: '#tour-theme-toggle',
+      element: isMobile ? '#tour-theme-toggle-mobile' : '#tour-theme-toggle',
       popover: {
         title: 'Theme & Customization',
         description: 'Toggle between Dark and Light mode, or activate the fun World Cup mode here.',
         side: "bottom", align: 'start'
       }
-    },
-    {
+    }
+  ];
+
+  if (isMobile) {
+    navbarSteps.push(
+      {
+        element: '#tour-hamburger-menu',
+        popover: {
+          title: 'Menu',
+          description: 'Tap here to view your profile and navigation links.',
+          side: "bottom", align: 'end',
+          showButtons: ['close']
+        },
+        onHighlighted: () => {
+          const btn = document.getElementById('tour-hamburger-menu');
+          if (btn) {
+            btn.addEventListener('click', () => {
+              const drv = getDriver && getDriver();
+              setTimeout(() => { if (drv) drv.moveNext(); }, 200);
+            }, { once: true });
+          }
+        }
+      },
+      {
+        element: '#tour-profile-mobile',
+        popover: {
+          title: 'Your Profile',
+          description: 'Click here to edit your personal details, branch, and preferences.',
+          side: "bottom", align: 'start'
+        }
+      }
+    );
+  } else {
+    navbarSteps.push({
       element: '#tour-profile',
       popover: {
         title: 'Your Profile',
         description: 'Click here to edit your personal details, branch, and preferences.',
         side: "bottom", align: 'start'
       }
-    }
-  ];
+    });
+  }
 
   if (pathname === '/dashboard') {
     steps.push(
@@ -108,11 +141,30 @@ export function getTourSteps(pathname: string, getDriver?: () => any) {
       return steps;
     }
 
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-    
+    if (isMobile) {
+      steps.push({
+        element: '#tour-mobile-courses-btn',
+        popover: {
+          title: 'Course Menu',
+          description: 'Tap here to open the course sidebar and start adding subjects.',
+          side: "bottom", align: 'start',
+          showButtons: ['close']
+        },
+        onHighlighted: () => {
+          const btn = document.getElementById('tour-mobile-courses-btn');
+          if (btn) {
+            btn.addEventListener('click', () => {
+              const drv = getDriver && getDriver();
+              setTimeout(() => { if (drv) drv.moveNext(); }, 200);
+            }, { once: true });
+          }
+        }
+      });
+    }
+
     steps.push(
       {
-        element: '#tour-search-bar',
+        element: isMobile ? '#mobile-tour-search-bar' : '#desktop-tour-search-bar',
         popover: {
           title: 'Find Courses',
           description: 'Search for courses by code or name, and sort them easily.',
@@ -120,7 +172,7 @@ export function getTourSteps(pathname: string, getDriver?: () => any) {
         }
       },
       {
-        element: '#tour-cdc-toggle',
+        element: isMobile ? '#mobile-tour-cdc-toggle' : '#desktop-tour-cdc-toggle',
         popover: {
           title: 'Your CDCs',
           description: 'Toggle between your mandatory core courses (CDCs) and other electives.',
@@ -128,13 +180,37 @@ export function getTourSteps(pathname: string, getDriver?: () => any) {
         }
       },
       {
-        element: '#tour-course-list',
+        element: isMobile ? '#mobile-tour-course-list' : '#desktop-tour-course-list',
         popover: {
           title: 'Course Selection',
           description: 'Click on any course to view its sections. Selected courses will have a green checkmark or warning if sections are clashing.',
           side: "right", align: 'start'
         }
-      },
+      }
+    );
+
+    if (isMobile) {
+      steps.push({
+        element: '#tour-mobile-timetable-btn',
+        popover: {
+          title: 'Back to Timetable',
+          description: 'Tap here to return to your timetable view.',
+          side: "bottom", align: 'start',
+          showButtons: ['close']
+        },
+        onHighlighted: () => {
+          const btn = document.getElementById('tour-mobile-timetable-btn');
+          if (btn) {
+            btn.addEventListener('click', () => {
+              const drv = getDriver && getDriver();
+              setTimeout(() => { if (drv) drv.moveNext(); }, 200);
+            }, { once: true });
+          }
+        }
+      });
+    }
+
+    steps.push(
       {
         element: isMobile ? '#tour-action-buttons-mobile' : '#tour-action-buttons-desktop',
         popover: {

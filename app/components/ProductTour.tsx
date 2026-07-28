@@ -112,17 +112,16 @@ export function ProductTour() {
         border-radius: 6px !important;
         padding: 6px 14px !important;
         text-shadow: 0 0 4px rgba(255,255,255,0.4) !important;
-        box-shadow: 0 0 15px var(--bg-accent) !important;
-        animation: pulse-glow 1.5s infinite;
+        animation: pulse-glow 2s infinite;
         border: none !important;
       }
       .driver-popover-next-btn:hover {
         transform: scale(1.05);
       }
       @keyframes pulse-glow {
-        0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
-        70% { box-shadow: 0 0 0 8px rgba(59, 130, 246, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        0% { box-shadow: 0 0 0 0 var(--bg-accent); }
+        70% { box-shadow: 0 0 0 6px transparent; }
+        100% { box-shadow: 0 0 0 0 transparent; }
       }
     ` }} />
   );

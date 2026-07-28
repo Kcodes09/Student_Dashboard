@@ -11,6 +11,10 @@ export async function GET() {
       return NextResponse.json([], { status: 401 })
     }
 
+    if (session.user.isGuest) {
+      return NextResponse.json([]) // Guests have no cloud drafts
+    }
+
     const drafts = await prisma.timetableDraft.findMany({
       where: { userEmail: session.user.email },
       orderBy: { updatedAt: "desc" },
@@ -33,6 +37,11 @@ export async function POST(req: Request) {
 
     const body = await req.json()
     const { id, name, bitsId, isActive, sections } = body
+
+    if (session.user.isGuest) {
+      // Simulate success for local saving
+      return NextResponse.json({ ok: true, guestMode: true, id })
+    }
 
     if (!id || !name || !bitsId) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })

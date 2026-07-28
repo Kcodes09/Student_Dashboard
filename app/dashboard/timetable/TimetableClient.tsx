@@ -35,7 +35,7 @@ const SEM_END_UTC = "20261231T235959Z" // End of Dec
 const isMobile = () =>
   /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
 
-export default function TimetableClient({ master, timetableId }: { master: any[], timetableId: string }) {
+export default function TimetableClient({ master, timetableId, isGuest }: { master: any[], timetableId: string, isGuest?: boolean }) {
   const router = useRouter()
   const [activeCourse, setActiveCourse] = useState<string | null>(null)
   const [courseSearch, setCourseSearch] = useState("")
@@ -400,7 +400,8 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
 
   useEffect(() => {
     if (typeof window !== "undefined" && sessions.length > 0) {
-      localStorage.setItem("student_dashboard_sessions", JSON.stringify(sessions))
+      const LOCAL_STORAGE_KEY = isGuest ? "student_dashboard_sessions_guest" : "student_dashboard_sessions"
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(sessions))
       
       // Dynamically load findClashes to avoid client-side circular issues
       import("../../lib/timetable/clashDetector").then(({ findClashes }) => {
@@ -847,6 +848,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
       <div className="md:hidden h-full flex flex-col">
         <div className="flex items-center justify-between px-4 py-3 border-b bg-[var(--bg-surface)]">
           <button
+            id="tour-mobile-courses-btn"
             onClick={() => setMobileView("COURSES")}
             className={clsx(
               "text-sm font-semibold",
@@ -859,6 +861,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
           </button>
 
             <button
+            id="tour-mobile-timetable-btn"
             onClick={() => setMobileView("TIMETABLE")}
             className={clsx(
               "text-sm font-semibold",
@@ -874,6 +877,17 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
         <div className="flex-1 min-h-0 overflow-y-auto">
           {mobileView === "TIMETABLE" && (
             <div className="flex flex-col h-full">
+              {isGuest && (
+                <div className="m-4 mb-0 bg-orange-500/10 border border-orange-500/50 text-orange-600 dark:text-orange-400 p-3 rounded-xl flex items-start gap-3 flex-shrink-0">
+                  <span className="text-lg">⚠️</span>
+                  <div>
+                    <h3 className="font-semibold text-xs">Guest Mode Active</h3>
+                    <p className="text-[11px] mt-0.5 opacity-90">
+                      Timetables will only be saved locally in this browser. To sync across devices, please sign in with your BITS Mail.
+                    </p>
+                  </div>
+                </div>
+              )}
               <div className="p-2 border-b border-[var(--border-subtle)] flex flex-col gap-2">
                 <div className="w-full flex items-center justify-between pb-1 overflow-hidden">
                   {titleEditor}
@@ -904,6 +918,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
               year1Group={year1Group}
               setYear1Group={setYear1Group}
               isYear1={isYear1 && !isBPharm}
+              idPrefix="mobile-"
             />
           )}
           {mobileView === "SECTIONS" && activeCourse && (
@@ -936,6 +951,7 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
           year1Group={year1Group}
           setYear1Group={setYear1Group}
           isYear1={isYear1 && !isBPharm}
+          idPrefix="desktop-"
         />
 
         {activeCourse && (
@@ -948,6 +964,19 @@ export default function TimetableClient({ master, timetableId }: { master: any[]
         )}
 
         <main className="flex-1 overflow-y-auto p-1.5 md:p-3 flex flex-col gap-2 min-w-0">
+          
+          {isGuest && (
+            <div className="bg-orange-500/10 border border-orange-500/50 text-orange-600 dark:text-orange-400 p-4 rounded-xl flex items-start gap-3 flex-shrink-0 w-full mb-1">
+              <span className="text-xl">⚠️</span>
+              <div>
+                <h3 className="font-semibold text-sm">Guest Mode Active</h3>
+                <p className="text-xs mt-0.5 opacity-90">
+                  Timetables will only be saved locally in this browser. To sync across devices, please sign in with your BITS Mail.
+                </p>
+              </div>
+            </div>
+          )}
+
           <div className="flex flex-col lg:flex-row lg:items-center justify-between px-1 gap-2">
             <div className="flex items-center gap-3 shrink-0">
               {titleEditor}

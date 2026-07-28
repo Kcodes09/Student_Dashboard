@@ -31,7 +31,8 @@ export default function AlarmsClient() {
     }
 
     try {
-      const storedSessions = localStorage.getItem("student_dashboard_sessions")
+      const LOCAL_STORAGE_KEY = session?.user?.isGuest ? "student_dashboard_sessions_guest" : "student_dashboard_sessions"
+      const storedSessions = localStorage.getItem(LOCAL_STORAGE_KEY)
       if (storedSessions) {
         setSessions(JSON.parse(storedSessions))
       }

@@ -26,9 +26,9 @@ export default async function TimetablePage({
       <Navbar user={session.user} />
 
       {params?.id ? (
-        <TimetableClient master={master} timetableId={params.id} />
+        <TimetableClient master={master} timetableId={params.id} isGuest={session.user?.isGuest} />
       ) : (
-        <TimetableDashboard userEmail={session.user?.email} />
+        <TimetableDashboard userEmail={session.user?.email} isGuest={session.user?.isGuest} />
       )}
     </div>
   )
