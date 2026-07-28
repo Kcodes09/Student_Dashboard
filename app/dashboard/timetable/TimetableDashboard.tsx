@@ -485,7 +485,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
                 </span>
                 <button
                   onClick={(e) => deleteTimetable(e, tt.id)}
-                  className="h-8 w-8 rounded-full flex items-center justify-center text-[var(--text-muted)] bg-[var(--bg-surface-hover)] hover:bg-red-100 hover:text-red-600 dark:hover:bg-red-900/50 transition-colors z-20 opacity-0 group-hover:opacity-100"
+                  className="h-8 w-8 rounded-full flex items-center justify-center bg-red-500/20 text-red-500 hover:bg-red-500 hover:text-white transition-colors z-20 shadow-sm"
                   title="Delete Draft"
                 >
                   ✕
@@ -596,6 +596,7 @@ export default function TimetableDashboard({ userEmail }: { userEmail?: string |
               </div>
 
               <button
+                id="tour-create-draft-btn"
                 onClick={handleCreate}
                 disabled={!primary || !newName.trim()}
                 className="w-full py-3 rounded-xl text-sm font-bold text-white transition-all shadow-[0_0_15px_var(--bg-accent)] shadow-opacity-30 hover:scale-[1.02] active:scale-95 disabled:opacity-50"

@@ -81,6 +81,17 @@ export default function CalendarGrid({
     const start = new Date(year, month - 4, 1)
     const end = new Date(year, month + 2, 0)
     
+    const compreBegin = calendar.days.find(d => d.label?.toLowerCase().includes("comprehensive examinations begin"))?.date;
+    const compreEnd = calendar.days.find(d => d.label?.toLowerCase().includes("comprehensive examinations end"))?.date;
+
+    const isExamPeriod = (d: Date) => {
+       const iso = toLocalISO(d)
+       const label = calendarMap.get(iso)?.label?.toLowerCase() || ""
+       if (label.includes("mid-semester")) return true
+       if (compreBegin && compreEnd && iso >= compreBegin && iso <= compreEnd) return true
+       return false
+    }
+
     const isDayOff = (d: Date) => {
        const iso = toLocalISO(d)
        if (calendarMap.get(iso)?.holiday) return true
@@ -102,6 +113,7 @@ export default function CalendarGrid({
        let j = i
        
        while (j < days.length) {
+          if (isExamPeriod(days[j].date)) break;
           if (!days[j].isOff) {
              if (workingDays < leaveDays) {
                 workingDays++

@@ -85,6 +85,24 @@ export function getTourSteps(pathname: string, getDriver?: () => any) {
             description: 'We use this to determine specific course electives that might be locked to your batch. (e.g. 1022)',
             side: "bottom", align: 'start'
           }
+        },
+        {
+          element: '#tour-create-draft-btn',
+          popover: {
+            title: 'Create Draft',
+            description: 'Click here to create your timetable! The tour will end and you will be taken to your new draft.',
+            side: 'bottom', align: 'center',
+            showButtons: ['close']
+          },
+          onHighlighted: () => {
+            const btn = document.getElementById('tour-create-draft-btn');
+            if (btn) {
+              btn.addEventListener('click', () => {
+                const drv = getDriver && getDriver();
+                setTimeout(() => { if (drv) drv.destroy(); }, 200);
+              }, { once: true });
+            }
+          }
         }
       );
       return steps;

@@ -91,6 +91,7 @@ export function ProductTour() {
               localStorage.setItem("student_dashboard_tour_seen", "true");
               tourActiveRef.current = false;
               tour.destroy();
+              window.dispatchEvent(new Event("tour-ended"));
             }
           },
         });

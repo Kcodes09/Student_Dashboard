@@ -59,10 +59,22 @@ export default function BranchPrompt() {
     // Auto-prompt logic on first load
     const stored = localStorage.getItem("student_bits_id")
     if (!stored) {
-      const timer = setTimeout(() => setShow(true), 1500)
-      return () => {
-        clearTimeout(timer)
-        window.removeEventListener("open-profile", handleOpen)
+      const tourSeen = localStorage.getItem("student_dashboard_tour_seen")
+      if (tourSeen) {
+        const timer = setTimeout(() => setShow(true), 1500)
+        return () => {
+          clearTimeout(timer)
+          window.removeEventListener("open-profile", handleOpen)
+        }
+      } else {
+        const handleTourEnd = () => {
+          setTimeout(() => setShow(true), 500)
+        }
+        window.addEventListener("tour-ended", handleTourEnd)
+        return () => {
+          window.removeEventListener("tour-ended", handleTourEnd)
+          window.removeEventListener("open-profile", handleOpen)
+        }
       }
     }
     
