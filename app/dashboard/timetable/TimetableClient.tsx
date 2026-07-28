@@ -621,6 +621,50 @@ export default function TimetableClient({ master, timetableId, isGuest }: { mast
       setTimeout(() => URL.revokeObjectURL(link.href), 1000)
   }
 
+  /* ---------- EXPORT TEXT ---------- */
+  const exportText = async () => {
+    if (activeSelectedCourses.length === 0) {
+      showToast("No courses selected to export.")
+      return
+    }
+
+    let text = `${localTimetable?.name || "My Timetable"}:\n\n`
+    
+    activeSelectedCourses.forEach((courseCode, idx) => {
+      const course = master.find(c => c.courseCode === courseCode)
+      text += `${idx + 1}. ${courseCode} ${course?.courseTitle || ""}\n`
+      
+      const sections = selectedSections[courseCode]
+      if (sections) {
+        if (sections.LECTURE) text += `   - Lecture: ${sections.LECTURE}\n`
+        if (sections.TUTORIAL) text += `   - Tutorial: ${sections.TUTORIAL}\n`
+        if (sections.PRACTICAL) text += `   - Practical: ${sections.PRACTICAL}\n`
+      }
+      text += "\n"
+    })
+
+    try {
+      if (isMobile() && navigator.share) {
+        await navigator.share({
+          title: localTimetable?.name || "My Timetable",
+          text: text.trim()
+        })
+      } else {
+        await navigator.clipboard.writeText(text.trim())
+        showToast("Copied to clipboard!")
+      }
+    } catch (err: any) {
+      if (err.name !== "AbortError") {
+        try {
+          await navigator.clipboard.writeText(text.trim())
+          showToast("Copied to clipboard!")
+        } catch (clipboardErr) {
+          showToast("Failed to copy/share text")
+        }
+      }
+    }
+  }
+
   /* Master course codes for CDC matching */
   const masterCodes = new Set(master.map((c: any) => c.courseCode as string))
 
@@ -751,6 +795,13 @@ export default function TimetableClient({ master, timetableId, isGuest }: { mast
         <span className="xl:hidden">ICS</span>
         <span className="hidden xl:inline">Export ICS</span>
       </button>
+      <button 
+        onClick={exportText}
+        className="px-3 py-1.5 text-xs font-semibold rounded-lg transition-all text-[var(--text-primary)] border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] shadow-sm hover:shadow active:scale-95"
+      >
+        <span className="xl:hidden">Text</span>
+        <span className="hidden xl:inline">Export Text</span>
+      </button>
     </div>
   )
 
@@ -831,6 +882,13 @@ export default function TimetableClient({ master, timetableId, isGuest }: { mast
       >
         <span className="md:hidden">ICS</span>
         <span className="hidden md:inline">Export ICS</span>
+      </button>
+      <button 
+        onClick={exportText}
+        className="px-3 py-1.5 text-xs font-semibold rounded-lg transition-all text-[var(--text-primary)] border border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:bg-[var(--bg-surface-hover)] shadow-sm hover:shadow active:scale-95"
+      >
+        <span className="md:hidden">Text</span>
+        <span className="hidden md:inline">Export Text</span>
       </button>
     </div>
   )
