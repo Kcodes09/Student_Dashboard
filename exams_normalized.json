@@ -1,1 +1,5034 @@
-[]
+[
+  {
+    "courseCode": "AN F311",
+    "courseTitle": "PRINCIPLES OF\r\nAERODYNAMICS",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "AN F311",
+    "courseTitle": "PRINCIPLES OF\r\nAERODYNAMICS",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "AN F313",
+    "courseTitle": "FLIGHT MECHANICS AND\r\nCONTROLS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "AN F313",
+    "courseTitle": "FLIGHT MECHANICS AND\r\nCONTROLS",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO U101",
+    "courseTitle": "Introduction to Biological\r\nScience",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "BIO U101",
+    "courseTitle": "Introduction to Biological\r\nScience",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO F211",
+    "courseTitle": "BIOLOGICAL CHEMISTRY",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BIO F211",
+    "courseTitle": "BIOLOGICAL CHEMISTRY",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO F212",
+    "courseTitle": "MICROBIOLOGY",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "BIO F212",
+    "courseTitle": "MICROBIOLOGY",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO F213",
+    "courseTitle": "CELL BIOLOGY",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BIO F213",
+    "courseTitle": "CELL BIOLOGY",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BIO F214",
+    "courseTitle": "INTEGRATED BIOLOGY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "BIO F214",
+    "courseTitle": "INTEGRATED BIOLOGY",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO F216",
+    "courseTitle": "WATER SANITATION AND SOLID WASTE\r\nMANAGEMENT",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "BIO F216",
+    "courseTitle": "WATER SANITATION AND SOLID WASTE\r\nMANAGEMENT",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO F311",
+    "courseTitle": "RECOMBINANT DNA TECH",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "BIO F311",
+    "courseTitle": "RECOMBINANT DNA TECH",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BIO F312",
+    "courseTitle": "PLANT PHYSIOLOGY",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BIO F312",
+    "courseTitle": "PLANT PHYSIOLOGY",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO F313",
+    "courseTitle": "ANIMAL PHYSIOLOGY",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "BIO F313",
+    "courseTitle": "ANIMAL PHYSIOLOGY",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO F352",
+    "courseTitle": "CELL & TISSUE CULTR TECH",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "BIO F352",
+    "courseTitle": "CELL & TISSUE CULTR TECH",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO G510",
+    "courseTitle": "APPL OF COMP AND STATS\r\nIN BIOLOGY",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "BIO G510",
+    "courseTitle": "APPL OF COMP AND STATS\r\nIN BIOLOGY",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BIO G512",
+    "courseTitle": "MOLEC MECH OF GENE\r\nEXPRE",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BIO G512",
+    "courseTitle": "MOLEC MECH OF GENE\r\nEXPRE",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIO G514",
+    "courseTitle": "MOLECULAR\r\nIMMUNOLOGY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BIO G514",
+    "courseTitle": "MOLECULAR\r\nIMMUNOLOGY",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BIO G524",
+    "courseTitle": "ANIMAL CELL\r\nTECHNOLOGY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BIO G524",
+    "courseTitle": "ANIMAL CELL\r\nTECHNOLOGY",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BIO G525",
+    "courseTitle": "ENVIR BIOTECH & WASTE\r\nMGMT",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "BIO G525",
+    "courseTitle": "ENVIR BIOTECH & WASTE\r\nMGMT",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BIO G561",
+    "courseTitle": "ADV RECOMBINANT DNA\r\nTECH",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BIO G561",
+    "courseTitle": "ADV RECOMBINANT DNA\r\nTECH",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BIO G651",
+    "courseTitle": "PROTEIN & ENZYME\r\nBIOENGG",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BIO G651",
+    "courseTitle": "PROTEIN & ENZYME\r\nBIOENGG",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BIOT F346",
+    "courseTitle": "GENOMICS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BIOT F346",
+    "courseTitle": "GENOMICS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BIOT F422",
+    "courseTitle": "NANOBIOTECHOLOGY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BIOT F422",
+    "courseTitle": "NANOBIOTECHOLOGY",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BITS E661",
+    "courseTitle": "RESEARCH\r\nMETHODOLOGY I",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS E661",
+    "courseTitle": "RESEARCH\r\nMETHODOLOGY I",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BITS U103",
+    "courseTitle": "Engineering design and\r\nPrototyping",
+    "type": "MIDSEM",
+    "date": "03/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS U103",
+    "courseTitle": "Engineering design and\r\nPrototyping",
+    "type": "ENDSEM",
+    "date": "30/11",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F111",
+    "courseTitle": "THERMODYNAMICS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BITS F111",
+    "courseTitle": "THERMODYNAMICS",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BITS F214",
+    "courseTitle": "SCIENCE TECH &\r\nMODERNITY",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BITS F214",
+    "courseTitle": "SCIENCE TECH &\r\nMODERNITY",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F218",
+    "courseTitle": "GENERAL MATHEMATICS III",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS F218",
+    "courseTitle": "GENERAL MATHEMATICS III",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F225",
+    "courseTitle": "ENVIRONMENTAL STUDIES",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BITS F225",
+    "courseTitle": "ENVIRONMENTAL STUDIES",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BITS F232",
+    "courseTitle": "FOUNDATIONS OF DATA STRUCTURES AND\r\nALGORITHMS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "BITS F232",
+    "courseTitle": "FOUNDATIONS OF DATA STRUCTURES AND\r\nALGORITHMS",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F234",
+    "courseTitle": "INTRODUCTION TO\r\nENGINEERING DESIGN",
+    "type": "ENDSEM",
+    "date": "30/11",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F316",
+    "courseTitle": "NONLINEAR DYNA &\r\nCHAOS",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS F316",
+    "courseTitle": "NONLINEAR DYNA &\r\nCHAOS",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BITS F327",
+    "courseTitle": "ARTIFICIAL INTELLIGENCE FOR ROBOTICS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BITS F327",
+    "courseTitle": "ARTIFICIAL INTELLIGENCE FOR ROBOTICS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F385",
+    "courseTitle": "INTRO TO GENDER\r\nSTUDIES",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BITS F385",
+    "courseTitle": "INTRO TO GENDER\r\nSTUDIES",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F386",
+    "courseTitle": "QUANTUM INFO &\r\nCOMPUTING",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS F386",
+    "courseTitle": "QUANTUM INFO &\r\nCOMPUTING",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BITS F415",
+    "courseTitle": "INTRODUCTION TO MEMS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "BITS F415",
+    "courseTitle": "INTRODUCTION TO MEMS",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F416",
+    "courseTitle": "INTRO TO NANO SCIENCE",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS F416",
+    "courseTitle": "INTRO TO NANO SCIENCE",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BITS F418",
+    "courseTitle": "INTRO TO BIOMEDICAL\r\nENGG",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "BITS F418",
+    "courseTitle": "INTRO TO BIOMEDICAL\r\nENGG",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F428",
+    "courseTitle": "ESSENTIALS OF STRATE\r\nMGT",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS F428",
+    "courseTitle": "ESSENTIALS OF STRATE\r\nMGT",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BITS F431",
+    "courseTitle": "FLEXIBLE MANUFACTURING\r\nSYSTEMS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "BITS F431",
+    "courseTitle": "FLEXIBLE MANUFACTURING\r\nSYSTEMS",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F437",
+    "courseTitle": "TECHNICAL\r\nCOMMUNICATION",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS F437",
+    "courseTitle": "TECHNICAL\r\nCOMMUNICATION",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F452",
+    "courseTitle": "BLOCKCHAIN TECHNOLOGY",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "BITS F452",
+    "courseTitle": "BLOCKCHAIN TECHNOLOGY",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F459",
+    "courseTitle": "Computer Vision",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS F459",
+    "courseTitle": "Computer Vision",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "BITS F463",
+    "courseTitle": "CRYPTOGRAPHY",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "BITS F463",
+    "courseTitle": "CRYPTOGRAPHY",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "BITS F464",
+    "courseTitle": "MACHINE LEARNING",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "BITS F464",
+    "courseTitle": "MACHINE LEARNING",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE F211",
+    "courseTitle": "MECHANICS OF SOLIDS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CE F211",
+    "courseTitle": "MECHANICS OF SOLIDS",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CE F213",
+    "courseTitle": "SURVEYING",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CE F213",
+    "courseTitle": "SURVEYING",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CE F230",
+    "courseTitle": "CIVIL ENGINEERING\r\nMATERIALS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CE F230",
+    "courseTitle": "CIVIL ENGINEERING\r\nMATERIALS",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE F231",
+    "courseTitle": "FLUID MECHANICS",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "CE F231",
+    "courseTitle": "FLUID MECHANICS",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CE F312",
+    "courseTitle": "HYDRAULIC ENGINEERING",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CE F312",
+    "courseTitle": "HYDRAULIC ENGINEERING",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CE F313",
+    "courseTitle": "FOUNDATION\r\nENGINEERING",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CE F313",
+    "courseTitle": "FOUNDATION\r\nENGINEERING",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE F320",
+    "courseTitle": "DESIGN OF REINFORCED\r\nCONCRETE",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CE F320",
+    "courseTitle": "DESIGN OF REINFORCED\r\nCONCRETE",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE F323",
+    "courseTitle": "INTRO TO ENVIRN ENGG",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CE F323",
+    "courseTitle": "INTRO TO ENVIRN ENGG",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CE F378",
+    "courseTitle": "INTELLIGENT TRANSPORT SYSTEMS (ITS)",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CE F378",
+    "courseTitle": "INTELLIGENT TRANSPORT SYSTEMS (ITS)",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE F411",
+    "courseTitle": "OPER RESEARCH FOR\r\nENGIN",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CE F411",
+    "courseTitle": "OPER RESEARCH FOR\r\nENGIN",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE F417",
+    "courseTitle": "APP OF AI IN CIVIL ENGG",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CE F417",
+    "courseTitle": "APP OF AI IN CIVIL ENGG",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CE G551",
+    "courseTitle": "DYNAMICS OF\r\nSTRUCTURES",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CE G551",
+    "courseTitle": "DYNAMICS OF\r\nSTRUCTURES",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE G552",
+    "courseTitle": "ADV STR MECH &\r\nSTABILITY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CE G552",
+    "courseTitle": "ADV STR MECH &\r\nSTABILITY",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE G612",
+    "courseTitle": "ADVANCED STEEL\r\nSTRUCTURE",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:000"
+  },
+  {
+    "courseCode": "CE G612",
+    "courseTitle": "ADVANCED STEEL\r\nSTRUCTURE",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE G614",
+    "courseTitle": "PRESTRESS CONCRETE\r\nSTRUC",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CE G614",
+    "courseTitle": "PRESTRESS CONCRETE\r\nSTRUC",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CE G617",
+    "courseTitle": "ADVANCE STRUC ANALYSIS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CE G617",
+    "courseTitle": "ADVANCE STRUC ANALYSIS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CE G619",
+    "courseTitle": "FINITE ELEMENT ANALYSIS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "CE G619",
+    "courseTitle": "FINITE ELEMENT ANALYSIS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CE G620",
+    "courseTitle": "ADVANCE FOUNDATION\r\nENGG",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CE G620",
+    "courseTitle": "ADVANCE FOUNDATION\r\nENGG",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHE F211",
+    "courseTitle": "CHEMICAL PROCESS\r\nCALCULA",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHE F211",
+    "courseTitle": "CHEMICAL PROCESS\r\nCALCULA",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHE F212",
+    "courseTitle": "FLUID MECHANICS",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "CHE F212",
+    "courseTitle": "FLUID MECHANICS",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHE F213",
+    "courseTitle": "CHEM ENGG\r\nTHERMODYNAMICS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CHE F213",
+    "courseTitle": "CHEM ENGG\r\nTHERMODYNAMICS",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHE F214",
+    "courseTitle": "ENGINEERING CHEMISTRY",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHE F214",
+    "courseTitle": "ENGINEERING CHEMISTRY",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHE F311",
+    "courseTitle": "KINETICS & REACTOR\r\nDESIGN",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CHE F311",
+    "courseTitle": "KINETICS & REACTOR\r\nDESIGN",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHE F313",
+    "courseTitle": "SEPARATION PROCESSES II",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CHE F313",
+    "courseTitle": "SEPARATION PROCESSES II",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHE F314",
+    "courseTitle": "PROCESS DES PRINCIPLES I",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CHE F314",
+    "courseTitle": "PROCESS DES PRINCIPLES I",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHE F422",
+    "courseTitle": "PETRO. REFI. TECH.",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CHE F422",
+    "courseTitle": "PETRO. REFI. TECH.",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHE F497",
+    "courseTitle": "ATOMIC & MOLECULAR\r\nSIMULATION",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHE F497",
+    "courseTitle": "ATOMIC & MOLECULAR\r\nSIMULATION",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHE F498",
+    "courseTitle": "COLLOIDS AND INTERFACE ENGINEERING",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHE F498",
+    "courseTitle": "COLLOIDS AND INTERFACE ENGINEERING",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHE G528",
+    "courseTitle": "INTRO TO NANO SCI &\r\nTECH",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CHE G528",
+    "courseTitle": "INTRO TO NANO SCI &\r\nTECH",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHEM U101",
+    "courseTitle": "Atomic Structures, Bonding, and Spectroscopy",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CHEM U101",
+    "courseTitle": "Atomic Structures, Bonding, and Spectroscopy",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHEM U102",
+    "courseTitle": "Structure and Reactivity\r\nof Molecules",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CHEM U102",
+    "courseTitle": "Structure and Reactivity\r\nof Molecules",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHEM F211",
+    "courseTitle": "PHYSICAL CHEMISTRY I",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHEM F211",
+    "courseTitle": "PHYSICAL CHEMISTRY I",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHEM F212",
+    "courseTitle": "ORGANIC CHEMISTRY I",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CHEM F212",
+    "courseTitle": "ORGANIC CHEMISTRY I",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHEM F213",
+    "courseTitle": "PHYSICAL CHEMISTRY II",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHEM F213",
+    "courseTitle": "PHYSICAL CHEMISTRY II",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHEM F214",
+    "courseTitle": "INORGANIC CHEMISTRY I",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHEM F214",
+    "courseTitle": "INORGANIC CHEMISTRY I",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHEM F311",
+    "courseTitle": "ORGANIC CHEMISTRY III",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "CHEM F311",
+    "courseTitle": "ORGANIC CHEMISTRY III",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHEM F312",
+    "courseTitle": "PHYSICAL CHEMISTRY IV",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CHEM F312",
+    "courseTitle": "PHYSICAL CHEMISTRY IV",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHEM F313",
+    "courseTitle": "INSTRU METHODS OF\r\nANAL",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CHEM F313",
+    "courseTitle": "INSTRU METHODS OF\r\nANAL",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHEM F323",
+    "courseTitle": "BIOPHYSICAL CHEMISTRY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHEM F323",
+    "courseTitle": "BIOPHYSICAL CHEMISTRY",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHEM F325",
+    "courseTitle": "POLYMER CHEMISTRY",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CHEM F325",
+    "courseTitle": "POLYMER CHEMISTRY",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CHEM F326",
+    "courseTitle": "SOLID STATE CHEMISTRY",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CHEM F326",
+    "courseTitle": "SOLID STATE CHEMISTRY",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHEM F416",
+    "courseTitle": "APPLIED\r\nCRYSTALLOGRAPHY",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHEM F416",
+    "courseTitle": "APPLIED\r\nCRYSTALLOGRAPHY",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHEM G553",
+    "courseTitle": "ADVANCED PHYSICAL\r\nCHEMISTRY",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CHEM G553",
+    "courseTitle": "ADVANCED PHYSICAL\r\nCHEMISTRY",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CHEM G554",
+    "courseTitle": "PHY METHODS IN\r\nCHEMISTRY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CHEM G554",
+    "courseTitle": "PHY METHODS IN\r\nCHEMISTRY",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS U111",
+    "courseTitle": "Computational Thinking\r\nand Programming",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CS U111",
+    "courseTitle": "Computational Thinking\r\nand Programming",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F212",
+    "courseTitle": "DATA BASE SYSTEMS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CS F212",
+    "courseTitle": "DATA BASE SYSTEMS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F213",
+    "courseTitle": "OBJECT ORIENTED PROG",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CS F213",
+    "courseTitle": "OBJECT ORIENTED PROG",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS F214",
+    "courseTitle": "LOGIC IN COMPUTER SC",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CS F214",
+    "courseTitle": "LOGIC IN COMPUTER SC",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F215",
+    "courseTitle": "DIGITAL DESIGN",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CS F215",
+    "courseTitle": "DIGITAL DESIGN",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F222",
+    "courseTitle": "DISCR STRUC FOR COMP\r\nSCI",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "CS F222",
+    "courseTitle": "DISCR STRUC FOR COMP\r\nSCI",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F301",
+    "courseTitle": "PRINCIPLES OF PROGG\r\nLANG",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CS F301",
+    "courseTitle": "PRINCIPLES OF PROGG\r\nLANG",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F320",
+    "courseTitle": "FOUNDATIONS OF DATA\r\nSCIENCE",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CS F320",
+    "courseTitle": "FOUNDATIONS OF DATA\r\nSCIENCE",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F321",
+    "courseTitle": "SYSTEM SECURITY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CS F321",
+    "courseTitle": "SYSTEM SECURITY",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS F342",
+    "courseTitle": "COMPUTER ARCHITECTURE",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CS F342",
+    "courseTitle": "COMPUTER ARCHITECTURE",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS F351",
+    "courseTitle": "THEORY OF COMPUTATION",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CS F351",
+    "courseTitle": "THEORY OF COMPUTATION",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F372",
+    "courseTitle": "OPERATING SYSTEMS",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CS F372",
+    "courseTitle": "OPERATING SYSTEMS",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS F407",
+    "courseTitle": "ARTIFICIAL INTELLIGENCE",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CS F407",
+    "courseTitle": "ARTIFICIAL INTELLIGENCE",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS F422",
+    "courseTitle": "PARALLEL COMPUTING",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "CS F422",
+    "courseTitle": "PARALLEL COMPUTING",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F425",
+    "courseTitle": "DEEP LEARNING",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CS F425",
+    "courseTitle": "DEEP LEARNING",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F429",
+    "courseTitle": "NATURAL LANGUAGE\r\nPROCESSING",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CS F429",
+    "courseTitle": "NATURAL LANGUAGE\r\nPROCESSING",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS F441",
+    "courseTitle": "SEL TOPICS FROM COMP\r\nSC",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "CS F441",
+    "courseTitle": "SEL TOPICS FROM COMP\r\nSC",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS G516",
+    "courseTitle": "ADVANCED DATABASE\r\nSYSTEMS",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CS G516",
+    "courseTitle": "ADVANCED DATABASE\r\nSYSTEMS",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS G520",
+    "courseTitle": "ADVANCED DATA MINING",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CS G520",
+    "courseTitle": "ADVANCED DATA MINING",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS G525",
+    "courseTitle": "ADV COMPUTER\r\nNETWORKS",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "CS G525",
+    "courseTitle": "ADV COMPUTER\r\nNETWORKS",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS G526",
+    "courseTitle": "ADV ALGORITHMS &\r\nCOMPLEXITY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CS G526",
+    "courseTitle": "ADV ALGORITHMS &\r\nCOMPLEXITY",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "CS G553",
+    "courseTitle": "RECONFIGURABLE\r\nCOMPUTING",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "CS G553",
+    "courseTitle": "RECONFIGURABLE\r\nCOMPUTING",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "CS G623",
+    "courseTitle": "ADVANCED OPERAT\r\nSYSTEMS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "CS G623",
+    "courseTitle": "ADVANCED OPERAT\r\nSYSTEMS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "DE G514",
+    "courseTitle": "FRACTURE MECHANICS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "DE G514",
+    "courseTitle": "FRACTURE MECHANICS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "DE G531",
+    "courseTitle": "PRODUCT DESIGN",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "DE G531",
+    "courseTitle": "PRODUCT DESIGN",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "DE G611",
+    "courseTitle": "DYNAMICS & VIBRATION",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "DE G611",
+    "courseTitle": "DYNAMICS & VIBRATION",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "DE G612",
+    "courseTitle": "MATERIAL TESTING &\r\nSELECTION",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "DE G612",
+    "courseTitle": "MATERIAL TESTING &\r\nSELECTION",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ECE F211",
+    "courseTitle": "ELECTRICAL MACHINES",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ECE F211",
+    "courseTitle": "ELECTRICAL MACHINES",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECE F212",
+    "courseTitle": "ELECTROMAGNETIC THEO I",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "ECE F212",
+    "courseTitle": "ELECTROMAGNETIC THEO I",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECE F214",
+    "courseTitle": "ELECTRONIC DEVICES",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ECE F214",
+    "courseTitle": "ELECTRONIC DEVICES",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ECE F215",
+    "courseTitle": "DIGITAL DESIGN",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "ECE F215",
+    "courseTitle": "DIGITAL DESIGN",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECE F311",
+    "courseTitle": "COMMUNICATION\r\nSYSTEMS",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ECE F311",
+    "courseTitle": "COMMUNICATION\r\nSYSTEMS",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ECE F331",
+    "courseTitle": "MICROWAVE\r\nENGINEERING",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ECE F331",
+    "courseTitle": "MICROWAVE\r\nENGINEERING",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECE F434",
+    "courseTitle": "DIGITAL SIGNAL PROCESS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ECE F434",
+    "courseTitle": "DIGITAL SIGNAL PROCESS",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECE F438",
+    "courseTitle": "ELECTRIC VEHICLES",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ECE F438",
+    "courseTitle": "ELECTRIC VEHICLES",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ECON F211",
+    "courseTitle": "PRINCIPLES OF\r\nECONOMICS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ECON F211",
+    "courseTitle": "PRINCIPLES OF\r\nECONOMICS",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECON F212",
+    "courseTitle": "FUNDA OF FIN AND\r\nACCOUNT",
+    "type": "MIDSEM",
+    "date": "03/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ECON F212",
+    "courseTitle": "FUNDA OF FIN AND\r\nACCOUNT",
+    "type": "ENDSEM",
+    "date": "30/11",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECON F213",
+    "courseTitle": "MATHEMATIC & STAT\r\nMETHOD",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "ECON F213",
+    "courseTitle": "MATHEMATIC & STAT\r\nMETHOD",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECON F214",
+    "courseTitle": "ECONOMIC ENV OF\r\nBUSINESS",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ECON F214",
+    "courseTitle": "ECONOMIC ENV OF\r\nBUSINESS",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECON F311",
+    "courseTitle": "INTERNATIONAL\r\nECONOMICS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "ECON F311",
+    "courseTitle": "INTERNATIONAL\r\nECONOMICS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECON F312",
+    "courseTitle": "MONEY BANKING & FIN\r\nMARKETS",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "ECON F312",
+    "courseTitle": "MONEY BANKING & FIN\r\nMARKETS",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ECON F313",
+    "courseTitle": "ISSUES IN ECONOMIC DEV",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ECON F313",
+    "courseTitle": "ISSUES IN ECONOMIC DEV",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECON F315",
+    "courseTitle": "FINANCIAL MANAGEMENT",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "ECON F315",
+    "courseTitle": "FINANCIAL MANAGEMENT",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECON F351",
+    "courseTitle": "INDIAN ECONOMIC DEV",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ECON F351",
+    "courseTitle": "INDIAN ECONOMIC DEV",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECON F354",
+    "courseTitle": "DERIVATIVES & RISK\r\nMGMT",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ECON F354",
+    "courseTitle": "DERIVATIVES & RISK\r\nMGMT",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ECON F355",
+    "courseTitle": "BUSS ANAL & VALUATION",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ECON F355",
+    "courseTitle": "BUSS ANAL & VALUATION",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ECON F412",
+    "courseTitle": "SECUR ANAL & PORTFOL\r\nMGT",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ECON F412",
+    "courseTitle": "SECUR ANAL & PORTFOL\r\nMGT",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ECON F413",
+    "courseTitle": "FINANCIAL ENGINEERING",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ECON F413",
+    "courseTitle": "FINANCIAL ENGINEERING",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ECON F435",
+    "courseTitle": "MARKETING RESEARCH",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ECON F435",
+    "courseTitle": "MARKETING RESEARCH",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE U111",
+    "courseTitle": "ELECTRICAL SCIENCES",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "EEE U111",
+    "courseTitle": "ELECTRICAL SCIENCES",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE F211",
+    "courseTitle": "ELECTRICAL MACHINES",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "EEE F211",
+    "courseTitle": "ELECTRICAL MACHINES",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE F212",
+    "courseTitle": "ELECTROMAGNETIC THEO I",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "EEE F212",
+    "courseTitle": "ELECTROMAGNETIC THEO I",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE F214",
+    "courseTitle": "ELECTRONIC DEVICES",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "EEE F214",
+    "courseTitle": "ELECTRONIC DEVICES",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE F215",
+    "courseTitle": "DIGITAL DESIGN",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "EEE F215",
+    "courseTitle": "DIGITAL DESIGN",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE F311",
+    "courseTitle": "COMMUNICATION\r\nSYSTEMS",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE F311",
+    "courseTitle": "COMMUNICATION\r\nSYSTEMS",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE F313",
+    "courseTitle": "ANALOG & DIGITAL VLSI\r\nDES",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "EEE F313",
+    "courseTitle": "ANALOG & DIGITAL VLSI\r\nDES",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE F314",
+    "courseTitle": "FPGA BASED SYSTEM\r\nDESIGN",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "EEE F314",
+    "courseTitle": "FPGA BASED SYSTEM\r\nDESIGN",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE F411",
+    "courseTitle": "INTERNET OF THINGS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "EEE F411",
+    "courseTitle": "INTERNET OF THINGS",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE F422",
+    "courseTitle": "MODERN CONTROL\r\nSYSTEMS",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "EEE F422",
+    "courseTitle": "MODERN CONTROL\r\nSYSTEMS",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE F434",
+    "courseTitle": "DIGITAL SIGNAL PROCESS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE F434",
+    "courseTitle": "DIGITAL SIGNAL PROCESS",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE F435",
+    "courseTitle": "DIGITAL IMAGE\r\nPROCESSING",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "EEE F435",
+    "courseTitle": "DIGITAL IMAGE\r\nPROCESSING",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE F438",
+    "courseTitle": "ELECTRIC VEHICLES",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "EEE F438",
+    "courseTitle": "ELECTRIC VEHICLES",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G510",
+    "courseTitle": "RF MICROELECTRONICS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G510",
+    "courseTitle": "RF MICROELECTRONICS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE G511",
+    "courseTitle": "RF AND MICROWAVE\r\nCIRCUIT DESIGN",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G511",
+    "courseTitle": "RF AND MICROWAVE\r\nCIRCUIT DESIGN",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G512",
+    "courseTitle": "EMBEDDED SYSTEM\r\nDESIGN",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "EEE G512",
+    "courseTitle": "EMBEDDED SYSTEM\r\nDESIGN",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G513",
+    "courseTitle": "MACHINE LEARNING FOR ELECTRONICS ENGINEERS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G513",
+    "courseTitle": "MACHINE LEARNING FOR ELECTRONICS ENGINEERS",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G515",
+    "courseTitle": "REAL TIME EMBEDDED\r\nSYSTEMS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G515",
+    "courseTitle": "REAL TIME EMBEDDED\r\nSYSTEMS",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G516",
+    "courseTitle": "SIGNAL THEORY AND\r\nOPTIMIZATION",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G516",
+    "courseTitle": "SIGNAL THEORY AND\r\nOPTIMIZATION",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G539",
+    "courseTitle": "MODELLING & ANAL. OF\r\nELEC. MACH.",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "EEE G539",
+    "courseTitle": "MODELLING & ANAL. OF\r\nELEC. MACH.",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE G554",
+    "courseTitle": "SOFT SWITCHING CONV\r\nTECH",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G554",
+    "courseTitle": "SOFT SWITCHING CONV\r\nTECH",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G559",
+    "courseTitle": "ADV POWER ELECTRONICS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G559",
+    "courseTitle": "ADV POWER ELECTRONICS",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G593",
+    "courseTitle": "POWER QUALITY",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "EEE G593",
+    "courseTitle": "POWER QUALITY",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G596",
+    "courseTitle": "RENEWABLE ENERGY\r\nINTEGRATION TO GRID",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G596",
+    "courseTitle": "RENEWABLE ENERGY\r\nINTEGRATION TO GRID",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G612",
+    "courseTitle": "CODING THEORY &\r\nPRACTICE",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G612",
+    "courseTitle": "CODING THEORY &\r\nPRACTICE",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "EEE G622",
+    "courseTitle": "ADVANCED DIGITAL\r\nCOMMUNICATION",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G622",
+    "courseTitle": "ADVANCED DIGITAL\r\nCOMMUNICATION",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "EEE G626",
+    "courseTitle": "HARDWARE SOFTWARE\r\nCO-DSN",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "EEE G626",
+    "courseTitle": "HARDWARE SOFTWARE\r\nCO-DSN",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ENVS F211",
+    "courseTitle": "HYDRA & FLU MECH",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "ENVS F211",
+    "courseTitle": "HYDRA & FLU MECH",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ENVS F212",
+    "courseTitle": "ENVI CHEM & ENVI BIOTEC",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "ENVS F212",
+    "courseTitle": "ENVI CHEM & ENVI BIOTEC",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "FIN F311",
+    "courseTitle": "DERIVATIVES & RISK\r\nMGMT",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "FIN F311",
+    "courseTitle": "DERIVATIVES & RISK\r\nMGMT",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "FIN F313",
+    "courseTitle": "SECUR ANAL & PORTFOL\r\nMGT",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "FIN F313",
+    "courseTitle": "SECUR ANAL & PORTFOL\r\nMGT",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "FIN F315",
+    "courseTitle": "FINANCIAL MANAGEMENT",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "FIN F315",
+    "courseTitle": "FINANCIAL MANAGEMENT",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "FIN F414",
+    "courseTitle": "FINANCIAL RISK ANALYTICS AND\r\nMANAGEMENT",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "FIN F414",
+    "courseTitle": "FINANCIAL RISK ANALYTICS AND\r\nMANAGEMENT",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "GS F211",
+    "courseTitle": "MODERN POLITICAL\r\nCONCEPTS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "GS F211",
+    "courseTitle": "MODERN POLITICAL\r\nCONCEPTS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "GS F212",
+    "courseTitle": "ENVIRON DEV & CLIMATE",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "GS F212",
+    "courseTitle": "ENVIRON DEV & CLIMATE",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "GS F241",
+    "courseTitle": "CREATIVE WRITING",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "GS F241",
+    "courseTitle": "CREATIVE WRITING",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "GS F242",
+    "courseTitle": "CULTURAL STUDIES",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "GS F242",
+    "courseTitle": "CULTURAL STUDIES",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "GS F244",
+    "courseTitle": "REPORT & WRITE FOR\r\nMEDIA",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "GS F244",
+    "courseTitle": "REPORT & WRITE FOR\r\nMEDIA",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "GS F245",
+    "courseTitle": "EFFECTIVE PUBLIC SPEAK",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "GS F245",
+    "courseTitle": "EFFECTIVE PUBLIC SPEAK",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "GS F333",
+    "courseTitle": "PUBLIC ADMINISTRATION",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "GS F333",
+    "courseTitle": "PUBLIC ADMINISTRATION",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "GS F342",
+    "courseTitle": "COMPUTER MEDIATED\r\nCOMM",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "GS F342",
+    "courseTitle": "COMPUTER MEDIATED\r\nCOMM",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F210",
+    "courseTitle": "INTRODUCTION TO\r\nDIGITAL HUMANITIES",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F210",
+    "courseTitle": "INTRODUCTION TO\r\nDIGITAL HUMANITIES",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F213",
+    "courseTitle": "INTRODUCTION TO\r\nHEALTH HUMANITIES",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F213",
+    "courseTitle": "INTRODUCTION TO\r\nHEALTH HUMANITIES",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "HSS F222",
+    "courseTitle": "LINGUISTICS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F222",
+    "courseTitle": "LINGUISTICS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "HSS F233",
+    "courseTitle": "MAIN TRENDS IN IND\r\nHIST",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "HSS F233",
+    "courseTitle": "MAIN TRENDS IN IND\r\nHIST",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "HSS F235",
+    "courseTitle": "INTRODUCTORY\r\nPHILOSOPHY",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F235",
+    "courseTitle": "INTRODUCTORY\r\nPHILOSOPHY",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F243",
+    "courseTitle": "INTRODUCTION TO\r\nCRITICAL PEDAGOGY",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "HSS F243",
+    "courseTitle": "INTRODUCTION TO\r\nCRITICAL PEDAGOGY",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "HSS F247",
+    "courseTitle": "SOCIAL INFORMATICS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F247",
+    "courseTitle": "SOCIAL INFORMATICS",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F323",
+    "courseTitle": "ORGANIZATIONAL\r\nPSYCHOLOGY",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "HSS F323",
+    "courseTitle": "ORGANIZATIONAL\r\nPSYCHOLOGY",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "HSS F328",
+    "courseTitle": "HUMAN RESOURCES DEV",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "HSS F328",
+    "courseTitle": "HUMAN RESOURCES DEV",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F331",
+    "courseTitle": "SANKARA'S THOUGHTS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "HSS F331",
+    "courseTitle": "SANKARA'S THOUGHTS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "HSS F334",
+    "courseTitle": "SRIMAD BHAGAVAD GITA",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F334",
+    "courseTitle": "SRIMAD BHAGAVAD GITA",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "HSS F337",
+    "courseTitle": "ENGLISH LITERARY FORMS AND MOVEMENTS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F337",
+    "courseTitle": "ENGLISH LITERARY FORMS AND MOVEMENTS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F346",
+    "courseTitle": "INTERNATIONAL\r\nRELATIONS",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "HSS F346",
+    "courseTitle": "INTERNATIONAL\r\nRELATIONS",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F352",
+    "courseTitle": "TECHNOLOGY, WORK &\r\nSOCIETY",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F352",
+    "courseTitle": "TECHNOLOGY, WORK &\r\nSOCIETY",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F361",
+    "courseTitle": "URBAN POLICY AND\r\nGOVERNANCE",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F361",
+    "courseTitle": "URBAN POLICY AND\r\nGOVERNANCE",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F368",
+    "courseTitle": "ASIAN CINEMAS AND\r\nCULTURES",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "HSS F368",
+    "courseTitle": "ASIAN CINEMAS AND\r\nCULTURES",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F372",
+    "courseTitle": "INTRODUCTION TO SOCIAL\r\nPSYCHOLOGY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F372",
+    "courseTitle": "INTRODUCTION TO SOCIAL\r\nPSYCHOLOGY",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F378",
+    "courseTitle": "CINEMAS OF INDIA: FROM\r\nPAST TO PRESENT",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "HSS F378",
+    "courseTitle": "CINEMAS OF INDIA: FROM\r\nPAST TO PRESENT",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "HSS F385",
+    "courseTitle": "MENTAL HEALTH LITERACY\r\nFOR YOUTH",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "HSS F385",
+    "courseTitle": "MENTAL HEALTH LITERACY\r\nFOR YOUTH",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "HSS F390",
+    "courseTitle": "SC & HUM TWO CULTURE\r\nDEBATE",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "HSS F390",
+    "courseTitle": "SC & HUM TWO CULTURE\r\nDEBATE",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "HSS  F398",
+    "courseTitle": "MIGRATION AND\r\nDIASPORA STUDIES",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "HSS  F398",
+    "courseTitle": "MIGRATION AND\r\nDIASPORA STUDIES",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "INSTR F211",
+    "courseTitle": "ELECTRICAL MACHINES",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "INSTR F211",
+    "courseTitle": "ELECTRICAL MACHINES",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "INSTR F212",
+    "courseTitle": "ELECTROMAGNETIC\r\nTHEORY I",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "INSTR F212",
+    "courseTitle": "ELECTROMAGNETIC\r\nTHEORY I",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "INSTR F214",
+    "courseTitle": "ELECTRONIC DEVICES",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "INSTR F214",
+    "courseTitle": "ELECTRONIC DEVICES",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "INSTR F215",
+    "courseTitle": "DIGITAL DESIGN",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "INSTR F215",
+    "courseTitle": "DIGITAL DESIGN",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "INSTR F311",
+    "courseTitle": "ELECTRO INST & INST TECH",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "INSTR F311",
+    "courseTitle": "ELECTRO INST & INST TECH",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "INSTR F312",
+    "courseTitle": "TRANSD &\r\nMEASUREMENT TEC",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "INSTR F312",
+    "courseTitle": "TRANSD &\r\nMEASUREMENT TEC",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "INSTR F313",
+    "courseTitle": "ANALOG & DIGITAL VLSI\r\nDES",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "INSTR F313",
+    "courseTitle": "ANALOG & DIGITAL VLSI\r\nDES",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "INSTR F438",
+    "courseTitle": "ELECTRIC VEHICLES",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "INSTR F438",
+    "courseTitle": "ELECTRIC VEHICLES",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "IS F311",
+    "courseTitle": "COMPUTER GRAPHICS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "IS F311",
+    "courseTitle": "COMPUTER GRAPHICS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MAC F211",
+    "courseTitle": "LINEAR ALGEBRA AND ITS\r\nAPP",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MAC F211",
+    "courseTitle": "LINEAR ALGEBRA AND ITS\r\nAPP",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MAC F212",
+    "courseTitle": "OBJECT ORIENTED\r\nPROGRAMMING",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MAC F212",
+    "courseTitle": "OBJECT ORIENTED\r\nPROGRAMMING",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MAC F213",
+    "courseTitle": "DISCRETE MATHEMATICS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "MAC F213",
+    "courseTitle": "DISCRETE MATHEMATICS",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MAC F214",
+    "courseTitle": "ELEMENTARY REAL\r\nANALYSIS",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "MAC F214",
+    "courseTitle": "ELEMENTARY REAL\r\nANALYSIS",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MAC F311",
+    "courseTitle": "ALGEBRA I",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MAC F311",
+    "courseTitle": "ALGEBRA I",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MAC F312",
+    "courseTitle": "FOUNDATIONS OF DATA\r\nSCIENCE",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "MAC F312",
+    "courseTitle": "FOUNDATIONS OF DATA\r\nSCIENCE",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MAC F313",
+    "courseTitle": "STATISTICAL DATA\r\nANALYSIS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "MAC F313",
+    "courseTitle": "STATISTICAL DATA\r\nANALYSIS",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MAC F314",
+    "courseTitle": "MATHEMATICAL\r\nMODELLING",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "MAC F314",
+    "courseTitle": "MATHEMATICAL\r\nMODELLING",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH U101",
+    "courseTitle": "MULTIVARIABLE CALCULUS",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "MATH U101",
+    "courseTitle": "MULTIVARIABLE CALCULUS",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH U110",
+    "courseTitle": "Essential Precalculus and\r\nCalculus",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "MATH U110",
+    "courseTitle": "Essential Precalculus and\r\nCalculus",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH U113",
+    "courseTitle": "PROBABILITY AND\r\nSTATISTICS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "MATH U113",
+    "courseTitle": "PROBABILITY AND\r\nSTATISTICS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MATH F211",
+    "courseTitle": "MATHEMATICS III",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MATH F211",
+    "courseTitle": "MATHEMATICS III",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F212",
+    "courseTitle": "OPTIMIZATION",
+    "type": "MIDSEM",
+    "date": "03/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "MATH F212",
+    "courseTitle": "OPTIMIZATION",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F213",
+    "courseTitle": "DISCRETE MATHEMATICS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "MATH F213",
+    "courseTitle": "DISCRETE MATHEMATICS",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F214",
+    "courseTitle": "ELEMENTARY REAL\r\nANALYSIS",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "MATH F214",
+    "courseTitle": "ELEMENTARY REAL\r\nANALYSIS",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F215",
+    "courseTitle": "ALGEBRA I",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MATH F215",
+    "courseTitle": "ALGEBRA I",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F231",
+    "courseTitle": "NUMBER THEORY",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "MATH F231",
+    "courseTitle": "NUMBER THEORY",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MATH F311",
+    "courseTitle": "INTRODUCTION TO\r\nTOPOLOGY",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "MATH F311",
+    "courseTitle": "INTRODUCTION TO\r\nTOPOLOGY",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MATH F312",
+    "courseTitle": "ORDINARY DIFF\r\nEQUATIONS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "MATH F312",
+    "courseTitle": "ORDINARY DIFF\r\nEQUATIONS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F313",
+    "courseTitle": "NUMERICAL ANALYSIS",
+    "type": "MIDSEM",
+    "date": "03/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MATH F313",
+    "courseTitle": "NUMERICAL ANALYSIS",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F378",
+    "courseTitle": "ADVANCED PROBABILITY\r\nTHEORY",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "MATH F378",
+    "courseTitle": "ADVANCED PROBABILITY\r\nTHEORY",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F424",
+    "courseTitle": "APPLIED STOCHASTIC\r\nPROCESS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MATH F424",
+    "courseTitle": "APPLIED STOCHASTIC\r\nPROCESS",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MATH F426",
+    "courseTitle": "Math Theory of Finit Elem\r\nMeth",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "MATH F426",
+    "courseTitle": "Math Theory of Finit Elem\r\nMeth",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F432",
+    "courseTitle": "APPLIED STATISTICAL\r\nMETHODS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "MATH F432",
+    "courseTitle": "APPLIED STATISTICAL\r\nMETHODS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MATH F456",
+    "courseTitle": "COSMOLOGY",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MATH F456",
+    "courseTitle": "COSMOLOGY",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME F211",
+    "courseTitle": "MECHANICS OF SOLIDS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "ME F211",
+    "courseTitle": "MECHANICS OF SOLIDS",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME F212",
+    "courseTitle": "FLUID MECHANICS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ME F212",
+    "courseTitle": "FLUID MECHANICS",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME F216",
+    "courseTitle": "MATERIALS SCIENCE AND\r\nENGINEER",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "ME F216",
+    "courseTitle": "MATERIALS SCIENCE AND\r\nENGINEER",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME F217",
+    "courseTitle": "APPLIED\r\nTHERMODYNAMICS",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ME F217",
+    "courseTitle": "APPLIED\r\nTHERMODYNAMICS",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME F219",
+    "courseTitle": "MANUFACTURING\r\nPROCESSES",
+    "type": "MIDSEM",
+    "date": "04/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ME F219",
+    "courseTitle": "MANUFACTURING\r\nPROCESSES",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME F314",
+    "courseTitle": "DESIGN OF MACHINE\r\nELEMENTS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME F314",
+    "courseTitle": "DESIGN OF MACHINE\r\nELEMENTS",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME F315",
+    "courseTitle": "ADVANCED\r\nMANUFACTURING PROCESSES",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME F315",
+    "courseTitle": "ADVANCED\r\nMANUFACTURING PROCESSES",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME F316",
+    "courseTitle": "MANUFACTURING\r\nMANAGEMENT",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME F316",
+    "courseTitle": "MANUFACTURING\r\nMANAGEMENT",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME F317",
+    "courseTitle": "ENGINES MOTORS AND\r\nMOBILITY",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "ME F317",
+    "courseTitle": "ENGINES MOTORS AND\r\nMOBILITY",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME F318",
+    "courseTitle": "COMPUTER-AIDED DESIGN",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME F318",
+    "courseTitle": "COMPUTER-AIDED DESIGN",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME F319",
+    "courseTitle": "VIBRATIONS & CONTROL",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ME F319",
+    "courseTitle": "VIBRATIONS & CONTROL",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME F320",
+    "courseTitle": "ENGINEERING\r\nOPTIMIZATION",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ME F320",
+    "courseTitle": "ENGINEERING\r\nOPTIMIZATION",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME F341",
+    "courseTitle": "PRIMEMOVERS & FLUID\r\nMACH",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME F341",
+    "courseTitle": "PRIMEMOVERS & FLUID\r\nMACH",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME F418",
+    "courseTitle": "ROCKET AND SPACECRAFT PROPULSION",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ME F418",
+    "courseTitle": "ROCKET AND SPACECRAFT PROPULSION",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME G513",
+    "courseTitle": "HEATING & COOL OF BUILD",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME G513",
+    "courseTitle": "HEATING & COOL OF BUILD",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME G517",
+    "courseTitle": "APPLIED MATHEMATICS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME G517",
+    "courseTitle": "APPLIED MATHEMATICS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME G518",
+    "courseTitle": "ADV. THERMO FOR SUST.\r\nENER. SYS.",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME G518",
+    "courseTitle": "ADV. THERMO FOR SUST.\r\nENER. SYS.",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME G519",
+    "courseTitle": "ADVANCED FLUID\r\nDYNAMICS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME G519",
+    "courseTitle": "ADVANCED FLUID\r\nDYNAMICS",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME G523",
+    "courseTitle": "ENGG DATA ANALYSIS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME G523",
+    "courseTitle": "ENGG DATA ANALYSIS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME G532",
+    "courseTitle": "MACHINE TOOL\r\nENGINEERING",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "ME G532",
+    "courseTitle": "MACHINE TOOL\r\nENGINEERING",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME G533",
+    "courseTitle": "COND & RAD HEAT\r\nTRANSFER",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME G533",
+    "courseTitle": "COND & RAD HEAT\r\nTRANSFER",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME G535",
+    "courseTitle": "ADV ENGG MATHEMATICS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME G535",
+    "courseTitle": "ADV ENGG MATHEMATICS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME G615",
+    "courseTitle": "CADD &\r\nADVMANUFACTURING",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME G615",
+    "courseTitle": "CADD &\r\nADVMANUFACTURING",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME G641",
+    "courseTitle": "THEORY OF ELASTICITY &\r\nPLAST",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "ME G641",
+    "courseTitle": "THEORY OF ELASTICITY &\r\nPLAST",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "ME  G628",
+    "courseTitle": "Electric Vehicles",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME  G628",
+    "courseTitle": "Electric Vehicles",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "ME  G629",
+    "courseTitle": "Thermal Management in\r\nPackaging",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "ME  G629",
+    "courseTitle": "Thermal Management in\r\nPackaging",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MEL G528",
+    "courseTitle": "DIGITAL VLSI DESIGN",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "MEL G528",
+    "courseTitle": "DIGITAL VLSI DESIGN",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MEL G627",
+    "courseTitle": "VLSI FABRICATION\r\nTECHNOLOGY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "MEL G627",
+    "courseTitle": "VLSI FABRICATION\r\nTECHNOLOGY",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MEL G631",
+    "courseTitle": "PHYSICS AND MODELLING OF MICROELECTRONIC DEVICES",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "MEL G631",
+    "courseTitle": "PHYSICS AND MODELLING OF MICROELECTRONIC DEVICES",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MEL G643",
+    "courseTitle": "Verification, Test and Testability of VLSI Circuits",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "MEL G643",
+    "courseTitle": "Verification, Test and Testability of VLSI Circuits",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MF F311",
+    "courseTitle": "MECHATRONICS &\r\nAUTOMAT",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MF F311",
+    "courseTitle": "MECHATRONICS &\r\nAUTOMAT",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MF F421",
+    "courseTitle": "SUPPLY CHAIN\r\nMANAGEMENT",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "MF F421",
+    "courseTitle": "SUPPLY CHAIN\r\nMANAGEMENT",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MF F473",
+    "courseTitle": "PRODUCT DESIGN &\r\nDEVELOP",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MF F473",
+    "courseTitle": "PRODUCT DESIGN &\r\nDEVELOP",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MGTS F211",
+    "courseTitle": "PRINCIPLES OF\r\nMANAGEMENT",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MGTS F211",
+    "courseTitle": "PRINCIPLES OF\r\nMANAGEMENT",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MGTS F313",
+    "courseTitle": "PRODUCT AND BRAND\r\nMANAGEMENT",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "MGTS F313",
+    "courseTitle": "PRODUCT AND BRAND\r\nMANAGEMENT",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "MGTS F316",
+    "courseTitle": "MANAGERIAL &\r\nLEADERSHIP SKILLS",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MGTS F316",
+    "courseTitle": "MANAGERIAL &\r\nLEADERSHIP SKILLS",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MSE G511",
+    "courseTitle": "MECHATRONICS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MSE G511",
+    "courseTitle": "MECHATRONICS",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MSE G515",
+    "courseTitle": "SUPPLY CHAIN MODELLING AND\r\nEMPIRICAL ANALYSIS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "MSE G515",
+    "courseTitle": "SUPPLY CHAIN MODELLING AND\r\nEMPIRICAL ANALYSIS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "MSE G521",
+    "courseTitle": "WORLD-CLASS\r\nMANUFACTUR",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "MSE G521",
+    "courseTitle": "WORLD-CLASS\r\nMANUFACTUR",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHA F211",
+    "courseTitle": "PHARMACEUTICAL\r\nANALYSIS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "PHA F211",
+    "courseTitle": "PHARMACEUTICAL\r\nANALYSIS",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA F215",
+    "courseTitle": "INTRODUCTION TO\r\nMOLECULAR BIO & IMMUNOLOGY",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "PHA F215",
+    "courseTitle": "INTRODUCTION TO\r\nMOLECULAR BIO & IMMUNOLOGY",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHA F217",
+    "courseTitle": "PHARMACEUTICAL\r\nMICROBIOLOGY",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "PHA F217",
+    "courseTitle": "PHARMACEUTICAL\r\nMICROBIOLOGY",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHA F244",
+    "courseTitle": "PHYSICAL PHARMACY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA F244",
+    "courseTitle": "PHYSICAL PHARMACY",
+    "type": "ENDSEM",
+    "date": "05/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHA F311",
+    "courseTitle": "PHARMACOLOGY I",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "PHA F311",
+    "courseTitle": "PHARMACOLOGY I",
+    "type": "ENDSEM",
+    "date": "09/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA F312",
+    "courseTitle": "MEDICINAL CHEMISTRY I",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA F312",
+    "courseTitle": "MEDICINAL CHEMISTRY I",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA F315",
+    "courseTitle": "PHARMACEUTICAL\r\nFORMULATIONS II",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA F315",
+    "courseTitle": "PHARMACEUTICAL\r\nFORMULATIONS II",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHA F415",
+    "courseTitle": "PATHOPHYSIOLOGY",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "PHA F415",
+    "courseTitle": "PATHOPHYSIOLOGY",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA F422",
+    "courseTitle": "COSMETIC SCIENCE",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA F422",
+    "courseTitle": "COSMETIC SCIENCE",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHA G529",
+    "courseTitle": "NEUROPHARMACOLOGY",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G529",
+    "courseTitle": "NEUROPHARMACOLOGY",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHA G535",
+    "courseTitle": "BIOMATERIALS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G535",
+    "courseTitle": "BIOMATERIALS",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHA G537",
+    "courseTitle": "PARENTERAL PRODUCT\r\nDEVELOPMENT",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G537",
+    "courseTitle": "PARENTERAL PRODUCT\r\nDEVELOPMENT",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G538",
+    "courseTitle": "IMMUNOPHARMACOLOGY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G538",
+    "courseTitle": "IMMUNOPHARMACOLOGY",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G540",
+    "courseTitle": "MODERN PHARMACEUTICAL ANALYTICAL TECHNIQUES",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "PHA G540",
+    "courseTitle": "MODERN PHARMACEUTICAL ANALYTICAL TECHNIQUES",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G542",
+    "courseTitle": "ADVANCE PHYSICAL\r\nPHARMA",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G542",
+    "courseTitle": "ADVANCE PHYSICAL\r\nPHARMA",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G543",
+    "courseTitle": "CLINICAL RESEARCH",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G543",
+    "courseTitle": "CLINICAL RESEARCH",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHA G545",
+    "courseTitle": "IPR AND\r\nPHARMACEUTICALS",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G545",
+    "courseTitle": "IPR AND\r\nPHARMACEUTICALS",
+    "type": "ENDSEM",
+    "date": "02/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G546",
+    "courseTitle": "PHARMACEUTICAL BIO\r\nSTATISTICS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G546",
+    "courseTitle": "PHARMACEUTICAL BIO\r\nSTATISTICS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G547",
+    "courseTitle": "QUALI-BY-DESIGN IN PHARMACEUTICAL PROD\r\nDEVEL",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G547",
+    "courseTitle": "QUALI-BY-DESIGN IN PHARMACEUTICAL PROD\r\nDEVEL",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G619",
+    "courseTitle": "SCR METHOD & TECH IN\r\nPHA",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G619",
+    "courseTitle": "SCR METHOD & TECH IN\r\nPHA",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G625",
+    "courseTitle": "CELLULAR AND\r\nMOLECULAR PHARMACOLOGY",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G625",
+    "courseTitle": "CELLULAR AND\r\nMOLECULAR PHARMACOLOGY",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G626",
+    "courseTitle": "PHARMACOVIGILANCE",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G626",
+    "courseTitle": "PHARMACOVIGILANCE",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHA G632",
+    "courseTitle": "DOSAGE FORM DESIGN",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHA G632",
+    "courseTitle": "DOSAGE FORM DESIGN",
+    "type": "ENDSEM",
+    "date": "14/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHY U101",
+    "courseTitle": "Classical and Quantum\r\nWaves",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "PHY U101",
+    "courseTitle": "Classical and Quantum\r\nWaves",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHY U102",
+    "courseTitle": "Introduction to Classical\r\nand Quantum Waves",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "PHY U102",
+    "courseTitle": "Introduction to Classical\r\nand Quantum Waves",
+    "type": "ENDSEM",
+    "date": "11/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHY F211",
+    "courseTitle": "CLASSICAL MECHANICS",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "PHY F211",
+    "courseTitle": "CLASSICAL MECHANICS",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHY F212",
+    "courseTitle": "ELECTROMAGNETIC THEO I",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "PHY F212",
+    "courseTitle": "ELECTROMAGNETIC THEO I",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHY F213",
+    "courseTitle": "OPTICS",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "PHY F213",
+    "courseTitle": "OPTICS",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHY F242",
+    "courseTitle": "QUANTUM MECHANICS I",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "PHY F242",
+    "courseTitle": "QUANTUM MECHANICS I",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHY F311",
+    "courseTitle": "QUANTUM MECHANICS II",
+    "type": "MIDSEM",
+    "date": "05/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "PHY F311",
+    "courseTitle": "QUANTUM MECHANICS II",
+    "type": "ENDSEM",
+    "date": "01/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHY F312",
+    "courseTitle": "STATISTICAL MECHANICS",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "PHY F312",
+    "courseTitle": "STATISTICAL MECHANICS",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHY F313",
+    "courseTitle": "COMPUTATIONAL PHYSICS",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHY F313",
+    "courseTitle": "COMPUTATIONAL PHYSICS",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHY F346",
+    "courseTitle": "LASER SCIENCE &\r\nTECHNOLOGY",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "11:30",
+    "endTime": "1:00"
+  },
+  {
+    "courseCode": "PHY F346",
+    "courseTitle": "LASER SCIENCE &\r\nTECHNOLOGY",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHY F415",
+    "courseTitle": "GENERAL THEORY OF\r\nRELATIVITY AND COSMOLOGY",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "PHY F415",
+    "courseTitle": "GENERAL THEORY OF\r\nRELATIVITY AND COSMOLOGY",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "PHY F425",
+    "courseTitle": "ADV MATH METHODS OF\r\nPHY",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "PHY F425",
+    "courseTitle": "ADV MATH METHODS OF\r\nPHY",
+    "type": "ENDSEM",
+    "date": "16/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "PHY F428",
+    "courseTitle": "QUANTUM INFORMATION\r\nTHEORY",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "PHY F428",
+    "courseTitle": "QUANTUM INFORMATION\r\nTHEORY",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "SCM G511",
+    "courseTitle": "FUNDAMENTALS OF\r\nSUPPLY CHAIN â€“ CONCEPTS",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "SCM G511",
+    "courseTitle": "FUNDAMENTALS OF\r\nSUPPLY CHAIN â€“ CONCEPTS",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "SCM G513",
+    "courseTitle": "ADVANCED OPERATIONS MANAGEMENT",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "SCM G513",
+    "courseTitle": "ADVANCED OPERATIONS MANAGEMENT",
+    "type": "ENDSEM",
+    "date": "04/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "SCM G514",
+    "courseTitle": "LOGISTICS AND\r\nPROCUREMENT",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "4:00",
+    "endTime": "5:30"
+  },
+  {
+    "courseCode": "SCM G514",
+    "courseTitle": "LOGISTICS AND\r\nPROCUREMENT",
+    "type": "ENDSEM",
+    "date": "08/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "SCM G515",
+    "courseTitle": "MANAGEMENT\r\nACCOUNTING",
+    "type": "MIDSEM",
+    "date": "08/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "SCM G515",
+    "courseTitle": "MANAGEMENT\r\nACCOUNTING",
+    "type": "ENDSEM",
+    "date": "10/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "SNS F242",
+    "courseTitle": "ELECTRONIC DEVICES",
+    "type": "MIDSEM",
+    "date": "07/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "SNS F242",
+    "courseTitle": "ELECTRONIC DEVICES",
+    "type": "ENDSEM",
+    "date": "07/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "SNS F211",
+    "courseTitle": "FUNDA OF NANOSC &\r\nNANOTECH",
+    "type": "MIDSEM",
+    "date": "06/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "SNS F211",
+    "courseTitle": "FUNDA OF NANOSC &\r\nNANOTECH",
+    "type": "ENDSEM",
+    "date": "03/12",
+    "startTime": "14:00",
+    "endTime": "17:00"
+  },
+  {
+    "courseCode": "SNS F212",
+    "courseTitle": "QUANTUM MECHANICS",
+    "type": "MIDSEM",
+    "date": "10/10",
+    "startTime": "9:30",
+    "endTime": "11:00"
+  },
+  {
+    "courseCode": "SNS F212",
+    "courseTitle": "QUANTUM MECHANICS",
+    "type": "ENDSEM",
+    "date": "15/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  },
+  {
+    "courseCode": "SNS F241",
+    "courseTitle": "CHEMISTRY AT\r\nNANOSCALE",
+    "type": "MIDSEM",
+    "date": "09/10",
+    "startTime": "2:00",
+    "endTime": "3:30"
+  },
+  {
+    "courseCode": "SNS F241",
+    "courseTitle": "CHEMISTRY AT\r\nNANOSCALE",
+    "type": "ENDSEM",
+    "date": "12/12",
+    "startTime": "09:30",
+    "endTime": "12:30"
+  }
+]
