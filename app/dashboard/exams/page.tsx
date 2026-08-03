@@ -30,7 +30,7 @@ function normalizeCourseCode(code: string) {
 
 function toDate(exam: ExamItem) {
   const [day, month] = exam.date.split("/").map(Number)
-  return new Date(academicCalendar.year, month - 1, day)
+  return new Date(Date.UTC(academicCalendar.year, month - 1, day))
 }
 
 function getFirstMidsemDate() {
@@ -42,7 +42,10 @@ function getFirstMidsemDate() {
 
   return new Date(
     Math.min(
-      ...midsemDays.map(d => new Date(d.date).getTime())
+      ...midsemDays.map(d => {
+        const [y, m, day] = d.date.split("-").map(Number)
+        return Date.UTC(y, m - 1, day)
+      })
     )
   )
 }
@@ -108,9 +111,9 @@ export default async function ExamsPage() {
       courseTitle: e.courseTitle,
       type: e.type,
       date: `${e.date
-        .getDate()
+        .getUTCDate()
         .toString()
-        .padStart(2, "0")}/${(e.date.getMonth() + 1)
+        .padStart(2, "0")}/${(e.date.getUTCMonth() + 1)
         .toString()
         .padStart(2, "0")}`,
       startTime: e.startTime,

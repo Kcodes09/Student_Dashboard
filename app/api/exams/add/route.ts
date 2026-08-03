@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/app/lib/auth"
+import { revalidateTag } from "next/cache"
 
 import { prisma } from "@/lib/prisma"
 
@@ -21,12 +22,15 @@ export async function POST(req: Request) {
         courseCode,
         courseTitle,
         type,
-        date: new Date(year, month - 1, day),
+        date: new Date(Date.UTC(year, month - 1, day)),
         startTime,
         endTime,
         userEmail: session.user.email,
       },
     })
+
+    // @ts-expect-error Next.js 15+ canary expects 2 arguments but runtime only needs 1
+    revalidateTag(`exams-${session.user.email}`)
 
     return NextResponse.json(exam)
   } catch (err) {

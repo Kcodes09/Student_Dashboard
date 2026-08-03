@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/app/lib/auth"
 import { NextResponse } from "next/server"
+import { revalidateTag } from "next/cache"
 
 export async function POST(req: Request) {
   try {
@@ -73,6 +74,13 @@ export async function POST(req: Request) {
         data,
       },
     })
+
+    // @ts-expect-error Next.js 15+ canary expects 2 arguments but runtime only needs 1
+    revalidateTag(`timetable-${email}`)
+    if (removedCourses.length > 0) {
+      // @ts-expect-error Next.js 15+ canary expects 2 arguments but runtime only needs 1
+      revalidateTag(`exams-${email}`)
+    }
 
     return NextResponse.json({
       ok: true,
