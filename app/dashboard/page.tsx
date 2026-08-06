@@ -88,6 +88,18 @@ export default async function DashboardPage() {
           />
 
           <DashboardCard
+            title="Faculty Free Time"
+            description="Search professors to view their weekly schedule"
+            href="/dashboard/faculty"
+          />
+
+          <DashboardCard
+            title="Free Classrooms"
+            description="Find empty classrooms by day and time"
+            href="/dashboard/rooms"
+          />
+
+          <DashboardCard
             title="Alarms"
             description="Set custom alarms for your classes"
             href="/dashboard/alarms"
