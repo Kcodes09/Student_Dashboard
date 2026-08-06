@@ -100,7 +100,7 @@ export default async function CalendarPage() {
   const user: Exam[] = userExamsRaw
     .map((e: any) => ({
       courseCode: normalizeCourseCode(e.courseCode),
-      date: e.date.toISOString().slice(0, 10),
+      date: new Date(e.date).toISOString().slice(0, 10),
       startTime: e.startTime,
       endTime: e.endTime,
     }))

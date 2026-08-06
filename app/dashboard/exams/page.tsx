@@ -105,20 +105,23 @@ export default async function ExamsPage() {
   const userExamsRaw = await getCachedExams(email)
 
   const userExams: ExamItem[] = userExamsRaw
-    .map(e => ({
-      id: e.id,
-      courseCode: e.courseCode,
-      courseTitle: e.courseTitle,
-      type: e.type,
-      date: `${e.date
-        .getUTCDate()
-        .toString()
-        .padStart(2, "0")}/${(e.date.getUTCMonth() + 1)
-        .toString()
-        .padStart(2, "0")}`,
-      startTime: e.startTime,
-      endTime: e.endTime,
-    }))
+    .map(e => {
+      const d = new Date(e.date)
+      return {
+        id: e.id,
+        courseCode: e.courseCode,
+        courseTitle: e.courseTitle,
+        type: e.type,
+        date: `${d
+          .getUTCDate()
+          .toString()
+          .padStart(2, "0")}/${(d.getUTCMonth() + 1)
+          .toString()
+          .padStart(2, "0")}`,
+        startTime: e.startTime,
+        endTime: e.endTime,
+      }
+    })
 
   /* ---------- OFFICIAL EXAMS ---------- */
 

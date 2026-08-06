@@ -29,7 +29,7 @@ export default async function DashboardPage() {
     // Serialize dates for client component
     userExams = raw.map(e => ({
       ...e,
-      date: e.date.toISOString(),
+      date: new Date(e.date).toISOString(),
     }))
   }
 
